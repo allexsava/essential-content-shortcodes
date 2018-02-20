@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pixelgrade/pixcodes.svg?branch=development)](https://travis-ci.org/pixelgrade/pixcodes)
+Acid Codes - Our First Shortcode Builder
 
 ***PixCodes*** Is a WordPress plugin which offers you a nice "Add shortcode" button in your editor which opens a modal with a list of shortcodes to add in editor.
 

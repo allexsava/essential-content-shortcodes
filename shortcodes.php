@@ -50,21 +50,21 @@ class WpGradeShortcode {
 
 		if ( empty( $shortcodes ) ) {
 			$shortcodes = array(
-				'Arrow',
 				'Button',
-				'Columns',
-				'Heading',
-				'Icon',
-				'InfoBox',
-				'OpenTableReservations',
-				'ProgressBar',
-				'Quote',
-				'RestaurantMenu',
-				'Separator',
-				'Slider',
-				'Tabs',
-				'TeamMember',
-				'PixFields'
+                'Icon',
+                'Separator',
+                'Slider',
+                'Tabs',
+                'TeamMember',
+                'ProgressBar',
+                'Quote',
+                'Heading',
+//				'Arrow',
+//				'Columns',
+//				'InfoBox',
+//				'OpenTableReservations',
+//				'RestaurantMenu',
+//				'PixFields'
 			);
 		}
 

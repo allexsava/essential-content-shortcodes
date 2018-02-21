@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) die('-1');
 
-class WpGradeShortcode_Columns extends  WpGradeShortcode {
+class AcidCodesShortcode_Columns extends  AcidCodesShortcode {
 
     public function __construct($settings = array()) {
 
@@ -64,7 +64,7 @@ class WpGradeShortcode_Columns extends  WpGradeShortcode {
         );
 
 	    // allow the theme or other plugins to "hook" into this shortcode's params
-	    $this->params = apply_filters('pixcodes_filter_params_for_' . strtolower($this->name), $this->params);
+	    $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
 
         add_shortcode('col', array( $this, 'add_column_shortcode') );
         add_shortcode('row', array( $this, 'add_row_shortcode') );

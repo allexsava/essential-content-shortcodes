@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcode_Arrow extends WpGradeShortcode {
+class AcidCodesShortcode_Arrow extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 		$this->self_closed = true;
 		$this->direct      = true;
-		$this->name        = __( "Arrow", 'pixcodes_txtd' );
+		$this->name        = __( "Arrow", 'acidcodes_txtd' );
 		$this->code        = "arrow";
 		$this->icon        = "icon-arrow-right";
 

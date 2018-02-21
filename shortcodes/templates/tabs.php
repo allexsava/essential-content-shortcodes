@@ -1,6 +1,6 @@
 <?php $fade = 'fade '; ?>
-<div class="pixcode  pixcode--tabs">
-    <ul class="pixcode--tabs__nav  nav  nav-tabs">
+<div class="acidcode  acidcode--tabs">
+    <ul class="acidcode--tabs__nav  nav  nav-tabs">
         <?php
         preg_match_all( '#<title>(.*?)</title>#', $this->get_clean_content( $content ), $titles );
         $ui_tabs_keys = array();
@@ -10,7 +10,7 @@
                 <li class="<?php if ($key == 0) { echo 'active'; } ?>">
 	                <?php echo '<a href="#'.$ui_tabs_keys[$key].'" data-toggle="tab">';
 	                    if (!empty($icons[$key]) ) {
-		                    echo '<i class="pixcode pixcode--icon '. $icons[$key] .'"></i>';
+		                    echo '<i class="acidcode acidcode--icon '. $icons[$key] .'"></i>';
 	                    }
 	                    echo $title;
 	                echo '</a>'; ?>
@@ -18,7 +18,7 @@
             <?php }
         } ?>
     </ul>
-    <div class="pixcode--tabs__content  tab-content">
+    <div class="acidcode--tabs__content  tab-content">
         <?php
         if (!empty($contents) && isset($contents[1])) {
             foreach ($contents[1] as $key => $value) { ?>

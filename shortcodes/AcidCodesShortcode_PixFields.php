@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcode_PixFields extends WpGradeShortcode {
+class AcidCodesShortcode_PixFields extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 

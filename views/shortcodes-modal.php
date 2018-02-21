@@ -2,7 +2,7 @@
 // get the root
 $plug_path = dirname( dirname( __FILE__ ) );
 include_once( $plug_path . "/shortcodes.php" );
-global $wpgrade_shortcodes;
+global $acidcodes_shortcodes;
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -14,10 +14,10 @@ if ( $_GET['post_id'] ) {
 } elseif ( $post === null ) {
 	$post = get_post(1);
 } ?>
-<div id="wpgrade_shortcodes">
+<div id="acidcodes_shortcodes">
 	<div class="l_modal_header">
-		<button type="button" class="btn back"><i class="icon-reply"></i><span><?php _e( 'Back', 'pixcodes_txtd' ); ?></span></button>
-		<div class="l_modal_title"><?php _e( 'Choose shortcode:', 'pixcodes_txtd' ); ?></div>
+		<button type="button" class="btn back"><i class="icon-reply"></i><span><?php _e( 'Back', 'acidcodes_txtd' ); ?></span></button>
+		<div class="l_modal_title"><?php _e( 'Choose shortcode:', 'acidcodes_txtd' ); ?></div>
 		<button type="button" class="btn close close-reveal-modal"><i class="icon-remove"></i></button>
 	</div>
 	<div class="l_modal_body three_col">
@@ -26,7 +26,7 @@ if ( $_GET['post_id'] ) {
 		</div>
 		<ul class="l_three_col">
 			<?php
-			$shortcoces_array = $wpgrade_shortcodes->get_shortcodes();
+			$shortcoces_array = $acidcodes_shortcodes->get_shortcodes();
 			/**
 			 * In case someone has something to say about this list
 			 * here is the only place where it can be filtered
@@ -47,7 +47,7 @@ if ( $_GET['post_id'] ) {
 					</a>
 					<?php if ( ! $shortcode['direct'] && ! empty( $shortcode['params'] ) ) { ?>
 						<div class="shortcode_params details_content">
-							<form id="wpgrade_shortcodes_form">
+							<form id="acidcodes_shortcodes_form">
 								<fieldset>
 									<div class="row">
 										<?php
@@ -55,10 +55,10 @@ if ( $_GET['post_id'] ) {
 
 											// inject the key in param ... since i was too lazy to do that before
 											$param['param_key'] = $k;
-											echo $wpgrade_shortcodes->render_param( $param );
+											echo $acidcodes_shortcodes->render_param( $param );
 										} ?>
 
-										<button type="submit" class="btn hidden"><?php _e( 'Submit', 'pixcodes_txtd' ); ?></button>
+										<button type="submit" class="btn hidden"><?php _e( 'Submit', 'acidcodes_txtd' ); ?></button>
 									</div>
 								</fieldset>
 							</form>
@@ -70,8 +70,8 @@ if ( $_GET['post_id'] ) {
 		</ul>
 	</div>
 	<div class="l_modal_footer">
-		<a class="btn btn_secondary close"><?php _e( 'Cancel', 'pixcodes_txtd' ); ?></a>
-		<span><?php _e( 'or', 'pixcodes_txtd' ); ?></span>
-		<a class="btn btn_primary disabled"><?php _e( 'Insert', 'pixcodes_txtd' ); ?></a>
+		<a class="btn btn_secondary close"><?php _e( 'Cancel', 'acidcodes_txtd' ); ?></a>
+		<span><?php _e( 'or', 'acidcodes_txtd' ); ?></span>
+		<a class="btn btn_primary disabled"><?php _e( 'Insert', 'acidcodes_txtd' ); ?></a>
 	</div>
 </div>

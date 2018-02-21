@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcode_AverageScore extends WpGradeShortcode {
+class AcidCodesShortcode_AverageScore extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 		$this->self_closed = true;
-		$this->name        = __( "Average score", 'pixcodes_txtd' );
+		$this->name        = __( "Average score", 'acidcodes_txtd' );
 		$this->code        = "average_score";
 		$this->icon        = "icon-tasks";
 		$this->direct      = true;
@@ -29,7 +29,7 @@ class WpGradeShortcode_AverageScore extends WpGradeShortcode {
 		//        );
 
 		// allow the theme or other plugins to "hook" into this shortcode's params
-		$this->params = apply_filters( 'pixcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
+		$this->params = apply_filters( 'acidcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
 
 		add_shortcode( 'average_score', array( $this, 'add_shortcode' ) );
 	}

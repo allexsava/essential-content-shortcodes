@@ -1,6 +1,6 @@
 <?php
     // get needed classes
-    $classes = 'pixcode  pixcode--testimonial  testimonial';
+    $classes = 'acidcode  acidcode--testimonial  testimonial';
     $classes.= !empty($text_size) ? ' testimonial--'.$text_size.'-text' : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';

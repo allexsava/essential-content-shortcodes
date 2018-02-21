@@ -4,7 +4,7 @@
     $id = !empty($id) ? 'id="'.$id.'"' : '';
 
     // get needed classes
-    $classes = 'pixcode  pixcode--btn  btn';
+    $classes = 'acidcode  acidcode--btn  btn';
     $classes.= !empty($size) ? '  btn--'.$size : '';
     $classes.= !empty($text_size) ? '  btn--'.$text_size : '';
     $classes.= !empty($class) ? '  '.$class : '';

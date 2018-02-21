@@ -30,7 +30,7 @@ gulp.task( 'styles-watch', function() {
 gulp.task( 'zip', ['build'], function() {
 
 	return gulp.src( './' )
-		.pipe( exec( 'cd ./../; rm -rf pixcodes.zip; cd ./build/; zip -r -X ./../pixcodes.zip ./pixcodes; cd ./../; rm -rf build' ) );
+		.pipe( exec( 'cd ./../; rm -rf acidcodes.zip; cd ./build/; zip -r -X ./../acidcodes.zip ./acidcodes; cd ./../; rm -rf build' ) );
 
 } );
 
@@ -40,7 +40,7 @@ gulp.task( 'zip', ['build'], function() {
 gulp.task( 'copy-folder', function() {
 
 	return gulp.src( './' )
-		.pipe( exec( 'rm -Rf ./../build; mkdir -p ./../build/pixcodes; cp -Rf ./* ./../build/pixcodes/' ) );
+		.pipe( exec( 'rm -Rf ./../build; mkdir -p ./../build/acidcodes; cp -Rf ./* ./../build/acidcodes/' ) );
 } );
 
 /**
@@ -55,14 +55,14 @@ gulp.task( 'build', ['copy-folder'], function() {
 		'config.rb',
 		'gulpfile.js',
 		'package.json',
-		'wpgrade-core/vendor/redux2',
-		'wpgrade-core/features',
-		'wpgrade-core/tests',
-		'wpgrade-core/**/*.less',
-		'wpgrade-core/**/*.scss',
-		'wpgrade-core/**/*.rb',
-		'wpgrade-core/**/sass',
-		'wpgrade-core/**/scss',
+		'acidcodes-core/vendor/redux2',
+		'acidcodes-core/features',
+		'acidcodes-core/tests',
+		'acidcodes-core/**/*.less',
+		'acidcodes-core/**/*.scss',
+		'acidcodes-core/**/*.rb',
+		'acidcodes-core/**/sass',
+		'acidcodes-core/**/scss',
 		'pxg.json',
 		'build',
 		'.idea',
@@ -78,7 +78,7 @@ gulp.task( 'build', ['copy-folder'], function() {
 	];
 
 	files_to_remove.forEach( function( e, k ) {
-		files_to_remove[k] = '../build/pixcodes/' + e;
+		files_to_remove[k] = '../build/acidcodes/' + e;
 	} );
 
 	return gulp.src( files_to_remove, {read: false} )

@@ -4,13 +4,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcode_Testimonials extends WpGradeShortcode {
+class AcidCodesShortcode_Testimonials extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 
 		$this->self_closed = true;
 		$this->direct      = false;
-		$this->meta_prefix = get_option( 'wpgrade_metaboxes_prefix' );
+		$this->meta_prefix = get_option( 'acidcodes_metaboxes_prefix' );
 		$this->name        = "Testimonials";
 		$this->code        = "testimonials";
 		$this->icon        = "icon-group";
@@ -59,7 +59,7 @@ class WpGradeShortcode_Testimonials extends WpGradeShortcode {
 		);
 
 		// allow the theme or other plugins to "hook" into this shortcode's params
-		$this->params = apply_filters( 'pixcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
+		$this->params = apply_filters( 'acidcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
 
 		add_shortcode( 'testimonials', array( $this, 'add_shortcode' ) );
 

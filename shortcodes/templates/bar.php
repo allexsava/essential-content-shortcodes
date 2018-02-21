@@ -1,4 +1,4 @@
-<div class="pixcode  pixcode--progressbar  progressbar">
+<div class="acidcode  acidcode--progressbar  progressbar">
 	<?php if ($title): ?>
 		<div class="progressbar__title"><?php echo $title; ?></div>
 	<?php endif; ?>

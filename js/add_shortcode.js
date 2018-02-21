@@ -10,7 +10,7 @@ editor = '';
 
 		$.ajax( {
 			url: ajaxurl,
-			data: {action: 'wpgrade_get_shortcodes_modal', post_id: $( '#post_ID' ).val()},
+			data: {action: 'acidcodes_get_shortcodes_modal', post_id: $( '#post_ID' ).val()},
 			success: function( data ) {
 				content = JSON.parse( data );
 				modal_selector.html( content );
@@ -31,7 +31,7 @@ editor = '';
 					$( '.l_pxg_modal .btn_primary' ).removeClass( 'disabled' );
 					var this_btn = $( '.btn.back' );
 					this_btn.removeClass( 'active' );
-					$('body').removeClass('pixcodes_select_tags_opened');
+					$('body').removeClass('acidcodes_select_tags_opened');
 				} );
 
 				//Back Button Click
@@ -76,7 +76,7 @@ editor = '';
 					 * Each colorpicker needs to be processed.
 					 * Until wordpress will give us an update method on wpcolorpicker i'll keep removing and adding elements like in high school.
 					 */
-					$( '.wpgrade-colorpicker' ).each( function() {
+					$( '.acidcodes-colorpicker' ).each( function() {
 						// if the colorpicker is already called is probably ruined already. We will remove it and create another one.
 						if ( $( this ).hasClass( 'wp-color-picker' ) ) {
 
@@ -86,7 +86,7 @@ editor = '';
 							$root.remove(); // remove the root
 							this_span.append( this_el ); // get back our element
 							// create the colorpicker ... again
-							this_span.children( '.wpgrade-colorpicker' ).wpColorPicker( {
+							this_span.children( '.acidcodes-colorpicker' ).wpColorPicker( {
 								palettes: ['#46bcb7', '#fafafa', '#373737', '#01a279', '#45d59c', '#7abd58'],
 								change: function( event, ui ) {
 									$( '.full_width_bg' ).addClass( 's-visible' );
@@ -166,16 +166,16 @@ editor = '';
 			} // end of ajax success
 		} );
 
-		tinymce.create( 'tinymce.plugins.wpgrade', {
+		tinymce.create( 'tinymce.plugins.acidcodes', {
 			init: function( ed, url ) {
 				plugin_url = url;
-				ed.addButton( 'wpgrade', {
+				ed.addButton( 'acidcodes', {
 					title: 'Add a shortcode',
 					// text : 'PixCodes',
 					classes: 'btn pixelgrade_shortcodes',
 					onclick: function() {
 						$( '.l_pxg_modal .btn_primary' ).addClass( 'disabled' );
-						$( 'body' ).addClass( 'pixcodes_select_tags_opened' );
+						$( 'body' ).addClass( 'acidcodes_select_tags_opened' );
 						//let's clean up some more first
 						$( '.l_pxg_modal' ).removeClass( 's_active' );
 
@@ -195,7 +195,7 @@ editor = '';
 				} );
 			}
 		} );
-		tinymce.PluginManager.add( 'wpgrade', tinymce.plugins.wpgrade );
+		tinymce.PluginManager.add( 'acidcodes', tinymce.plugins.acidcodes );
 
 		// if the shortcode doesn't have params it needs to be inserted directly
 		modal_selector.on( 'click', '.insert-direct-shortcode', function() {
@@ -211,7 +211,7 @@ editor = '';
 		} );
 
 		// when submiting a panel of params
-		$( document ).on( 'submit', '#wpgrade_shortcodes_form', function( e ) {
+		$( document ).on( 'submit', '#acidcodes_shortcodes_form', function( e ) {
 			e.preventDefault();
 
 			var params = $( this ).next( '#data_params' ).data( 'params' ),

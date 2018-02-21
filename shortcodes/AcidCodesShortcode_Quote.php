@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) die('-1');
 
-class WpGradeShortcode_Quote extends  WpGradeShortcode {
+class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
 
     public function __construct($settings = array()) {
         $this->self_closed = false;
@@ -43,7 +43,7 @@ class WpGradeShortcode_Quote extends  WpGradeShortcode {
         );
 
 	    // allow the theme or other plugins to "hook" into this shortcode's params
-	    $this->params = apply_filters('pixcodes_filter_params_for_' . strtolower($this->name), $this->params);
+	    $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
 
         add_shortcode('quote', array( $this, 'add_shortcode') );
     }

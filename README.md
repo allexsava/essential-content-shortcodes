@@ -11,12 +11,12 @@ So beside having an awesome shortcodes insert interface, PixCodes offers you a w
 
 **Filter shortcodes<a name="select_shortcodes"></a>**
 
-The shortcodes list is kept in the database as a Wordpress option under the `wpgrade_shortcodes_list`.
+The shortcodes list is kept in the database as a Wordpress option under the `acidcodes_shortcodes_list`.
 
 So if you want to edit the shortcode list you will need to add this to your functions.php or somewhere in your theme:
 
 ```
-function edit_pixcodes_shortcodes_list() {
+function edit_acidcodes_shortcodes_list() {
   if ( ! is_admin() ) { //only admins should do this
     return; 
   }
@@ -30,9 +30,9 @@ function edit_pixcodes_shortcodes_list() {
     'Slider',
     'Tabs'
   );
-  update_option( 'wpgrade_shortcodes_list', $shortcodes );
+  update_option( 'acidcodes_shortcodes_list', $shortcodes );
 }
-add_action( 'admin_head', 'edit_pixcodes_shortcodes_list' );
+add_action( 'admin_head', 'edit_acidcodes_shortcodes_list' );
 ```
 
 Now check again the PixCodes modal.
@@ -41,7 +41,7 @@ Now check again the PixCodes modal.
 
 Each shortcode has his own template in the plugin's folder `shortcodes/templates` the awesome part of this is that you can overwrite them inside your theme.
 
-So if you don't like the html template of the button just copy your shortcode file from `pixcodes/shortcodes/templates/button.php` into your theme at `theme/templates/shortcodes/button.php`.
+So if you don't like the html template of the button just copy your shortcode file from `acidcodes/shortcodes/templates/button.php` into your theme at `theme/templates/shortcodes/button.php`.
 
 Now anything you put in your theme's file button.php will be outputted when in the editor there will be an `[button]` shortcode.
 
@@ -53,13 +53,13 @@ You may want the add or remove some of these params so we offer a way to do it.
 
 Let's say that for the button shortcode you want a new attribute named "Title".
 
-In this case you should use the `pixcodes_filter_params_for_{shortcode}` filter.
+In this case you should use the `acidcodes_filter_params_for_{shortcode}` filter.
 
 For the button shortcode, you should add this filter to your theme (maybe functions.php)
 ```
-add_filter('pixcodes_filter_params_for_button', 'pixcodes_edit_button_params', 10, 1);
+add_filter('acidcodes_filter_params_for_button', 'acidcodes_edit_button_params', 10, 1);
 
-function pixcodes_edit_button_params( $params ){
+function acidcodes_edit_button_params( $params ){
   $params['title'] = array(
 		'type'        => 'text',
 		'name'        => 'Title'

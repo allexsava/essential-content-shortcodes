@@ -1,6 +1,6 @@
 <?php
 // get needed classes
-$classes = 'pixcode  pixcode--heading article__headline';
+$classes = 'acidcode  acidcode--heading article__headline';
 
 // create class attribute
 $classes = $classes !== '' ? 'class="' . $classes . '"' : '';

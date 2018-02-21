@@ -1,4 +1,4 @@
-<div class="pixcode  pixcode--team-member  team-member  <?php echo $class ?>">
+<div class="acidcode  acidcode--team-member  team-member  <?php echo $class ?>">
 
 	<?php if ( !empty($image) ) : ?>
 

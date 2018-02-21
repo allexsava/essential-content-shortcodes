@@ -1,8 +1,8 @@
 <?php
 
-if (!function_exists('wpgrade_remove_spaces_around_shortcodes')) {
+if (!function_exists('acidcodes_remove_spaces_around_shortcodes')) {
 
-	function wpgrade_remove_spaces_around_shortcodes( $content ) {
+	function acidcodes_remove_spaces_around_shortcodes( $content ) {
 		$array = array(
 			'<p>[' => '[',
 			']</p>' => ']',
@@ -15,9 +15,9 @@ if (!function_exists('wpgrade_remove_spaces_around_shortcodes')) {
 	}
 }
 
-if (!function_exists('wpgrade_parse_shortcode_content')) {
+if (!function_exists('acidcodes_parse_shortcode_content')) {
 
-	function wpgrade_parse_shortcode_content( $content ) {
+	function acidcodes_parse_shortcode_content( $content ) {
 
 	   /* Parse nested shortcodes and add formatting. */
 		$content = trim( do_shortcode( shortcode_unautop( $content ) ) );

@@ -1,7 +1,7 @@
 <?php
 
-defined( 'WPGRADE_SHORTCODES_PATH' ) or define( 'WPGRADE_SHORTCODES_PATH', plugin_dir_path( __FILE__ ) );
-defined( 'WPGRADE_SHORTCODES_URL' ) or define( 'WPGRADE_SHORTCODES_URL', plugin_dir_url( dirname( __FILE__ ) . '/shortcodes.php' ) );
+defined( 'ACIDCODES_SHORTCODES_PATH' ) or define( 'ACIDCODES_SHORTCODES_PATH', plugin_dir_path( __FILE__ ) );
+defined( 'ACIDCODES_SHORTCODES_URL' ) or define( 'ACIDCODES_SHORTCODES_URL', plugin_dir_url( dirname( __FILE__ ) . '/shortcodes.php' ) );
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once 'util.php';
 
-class WpGradeShortcode {
+class AcidCodesShortcode {
 
 	public $plug_dir;
 	protected $shortcode;
@@ -46,7 +46,7 @@ class WpGradeShortcode {
 
 	public function autoload() {
 
-		$shortcodes = get_option( 'wpgrade_shortcodes_list' );
+		$shortcodes = get_option( 'acidcodes_shortcodes_list' );
 
 		if ( empty( $shortcodes ) ) {
 			$shortcodes = array(
@@ -70,15 +70,15 @@ class WpGradeShortcode {
 
 		foreach ( $shortcodes as $file ) {
 
-			$file_name = 'WpGradeShortcode_' . $file . '.php';
-			$file_path = WPGRADE_SHORTCODES_PATH . '/shortcodes/' . $file_name;
+			$file_name = 'AcidCodesShortcode_' . $file . '.php';
+			$file_path = ACIDCODES_SHORTCODES_PATH . '/shortcodes/' . $file_name;
 
 			if ( ! file_exists( $file_path ) ) {
 				continue;
 			}
 
 			include_once( $file_path );
-			$shortcode_class = 'WpGradeShortcode_' . $file;
+			$shortcode_class = 'AcidCodesShortcode_' . $file;
 			$shortcode       = new $shortcode_class();
 
 			// create a list of params needed for js to create the admin panel
@@ -109,7 +109,7 @@ class WpGradeShortcode {
 
 			foreach ( $types as $type => $assets ) {
 				foreach ( $assets as $key => $asset ) {
-					$path = WPGRADE_SHORTCODES_URL . $asset['path'];
+					$path = ACIDCODES_SHORTCODES_URL . $asset['path'];
 					if ( $type == 'js' ) {
 						wp_enqueue_script( $asset['name'], $path, $asset['deps'] );
 					} elseif ( $type == 'css' ) {
@@ -130,7 +130,7 @@ class WpGradeShortcode {
 
 			foreach ( $types as $type => $assets ) {
 				foreach ( $assets as $key => $asset ) {
-					$path = WPGRADE_SHORTCODES_URL . $asset['path'];
+					$path = ACIDCODES_SHORTCODES_URL . $asset['path'];
 					if ( $type == 'js' ) {
 						wp_enqueue_script( $asset['name'], $path, $asset['deps'] );
 					} elseif ( $type == 'css' ) {
@@ -150,7 +150,7 @@ class WpGradeShortcode {
 	public function render_param( $param ) {
 
 		$file_name = $param['type'] . '.php';
-		$file_path = WPGRADE_SHORTCODES_PATH . 'params/' . $file_name;
+		$file_path = ACIDCODES_SHORTCODES_PATH . 'params/' . $file_name;
 
 		if ( ! file_exists( $file_path ) ) {
 			echo '<span class="error">Inexistent param</span>';
@@ -164,5 +164,5 @@ class WpGradeShortcode {
 
 }
 
-global $wpgrade_shortcodes;
-$wpgrade_shortcodes = new WpGradeShortcode();
+global $acidcodes_shortcodes;
+$acidcodes_shortcodes = new AcidCodesShortcode();

@@ -40,8 +40,8 @@
 
         /*Quit the classic way to add the shortcode and create it manually here */
 
-        $('.details_content.active').find('#wpgrade_shortcodes_form').attr('id', 'wpgrade_shortcodes_form_modified'); // the most stupid thing i ever done...must change later
-        $(document).one('submit', '#wpgrade_shortcodes_form_modified', function(e){
+        $('.details_content.active').find('#acidcodes_shortcodes_form').attr('id', 'acidcodes_shortcodes_form_modified'); // the most stupid thing i ever done...must change later
+        $(document).one('submit', '#acidcodes_shortcodes_form_modified', function(e){
             e.preventDefault();
             var params = $(this).next('#data_params').data('params'),
                 form_params =  $(this).serializeArray(),

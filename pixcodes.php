@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcodes {
+class AcidCodesShortcodes {
 
 	protected static $plugin_dir;
 	public $plugin_url;
@@ -22,7 +22,7 @@ class WpGradeShortcodes {
 		self::$plugin_dir = dirname( plugin_basename( __FILE__ ) );
 		$this->plugin_url = plugin_dir_url( dirname( __FILE__ ) . '/plugin.php' );
 
-		add_action( 'admin_init', array( $this, 'wpgrade_init_plugin' ) );
+		add_action( 'admin_init', array( $this, 'acidcodes_init_plugin' ) );
 		// Register admin styles and scripts
 		add_action( 'mce_buttons_2', array( $this, 'register_admin_assets' ) );
 
@@ -32,27 +32,27 @@ class WpGradeShortcodes {
 		//add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_scripts' ) );
 
 		// Run our plugin along with wordpress init
-		add_action( 'init', array( $this, 'create_wpgrade_shortcodes' ) );
+		add_action( 'init', array( $this, 'create_acidcodes_shortcodes' ) );
 
-		add_filter( 'the_content', array( $this, 'wpgrade_remove_spaces_around_shortcodes' ) );
+		add_filter( 'the_content', array( $this, 'acidcodes_remove_spaces_around_shortcodes' ) );
 
 		// ajax load for modal
 		if ( is_admin() ) {
-			add_action( 'wp_ajax_wpgrade_get_shortcodes_modal', array( $this, 'wpgrade_get_shortcodes_modal' ) );
+			add_action( 'wp_ajax_acidcodes_get_shortcodes_modal', array( $this, 'acidcodes_get_shortcodes_modal' ) );
 		}
 
 		//prevent certain shortcodes from getting their content texturized
-		add_filter( 'no_texturize_shortcodes', array( $this, 'wpgrade_shortcodes_to_exempt_from_wptexturize' ) );
+		add_filter( 'no_texturize_shortcodes', array( $this, 'acidcodes_shortcodes_to_exempt_from_wptexturize' ) );
 
 	} // end constructor
 
-	public function wpgrade_init_plugin() {
+	public function acidcodes_init_plugin() {
 		$this->plugin_textdomain();
-		$this->add_wpgrade_shortcodes_button();
+		$this->add_acidcodes_shortcodes_button();
 	}
 
 	public function plugin_textdomain() {
-		$domain = 'pixcodes_txtd';
+		$domain = 'acidcodes_txtd';
 		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 		load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
 		load_plugin_textdomain( $domain, false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
@@ -62,7 +62,7 @@ class WpGradeShortcodes {
 	 * Registers and enqueues admin-specific styles.
 	 */
 	public function register_admin_assets( $buttons ) {
-		wp_enqueue_style( 'wpgrade-shortcodes-reveal-styles', $this->plugin_url . 'css/base.css', array( 'wp-color-picker' ) );
+		wp_enqueue_style( 'acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'css/base.css', array( 'wp-color-picker' ) );
 		wp_enqueue_script( 'select2-js', $this->plugin_url . 'js/select2/select2.js', array(
 				'jquery',
 				'jquery-ui-tabs'
@@ -88,7 +88,7 @@ class WpGradeShortcodes {
 	 * Core Functions
 	 *---------------------------------------------*/
 
-	function add_wpgrade_shortcodes_button() {
+	function add_acidcodes_shortcodes_button() {
 		//make sure the user has correct permissions
 		if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
 			return;
@@ -96,35 +96,35 @@ class WpGradeShortcodes {
 
 		// add to the visual mode only
 		if ( get_user_option( 'rich_editing' ) == 'true' ) {
-			add_filter( 'mce_external_plugins', array( $this, 'addto_mce_wpgrade_shortcodes' ) );
-			add_filter( 'mce_buttons', array( $this, 'register_wpgrade_shortcodes_button' ) );
+			add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_shortcodes' ) );
+			add_filter( 'mce_buttons', array( $this, 'register_acidcodes_shortcodes_button' ) );
 		}
 	} // end action_method_name
 
-	function register_wpgrade_shortcodes_button( $buttons ) {
-		array_push( $buttons, "wpgrade" );
+	function register_acidcodes_shortcodes_button( $buttons ) {
+		array_push( $buttons, "acidcodes" );
 
 		return $buttons;
 	} // end filter_method_name
 
-	function addto_mce_wpgrade_shortcodes( $plugin_array ) {
-		$plugin_array['wpgrade'] = $this->plugin_url . 'js/add_shortcode.js';
+	function addto_mce_acidcodes_shortcodes( $plugin_array ) {
+		$plugin_array['acidcodes'] = $this->plugin_url . 'js/add_shortcode.js';
 
 		return $plugin_array;
 	}
 
-	public function wpgrade_get_shortcodes_modal() {
+	public function acidcodes_get_shortcodes_modal() {
 		ob_start();
 		include( 'views/shortcodes-modal.php' );
 		echo json_encode( ob_get_clean() );
 		die();
 	}
 
-	public function create_wpgrade_shortcodes() {
+	public function create_acidcodes_shortcodes() {
 		include_once( 'shortcodes.php' );
 	}
 
-	function wpgrade_remove_spaces_around_shortcodes( $content ) {
+	function acidcodes_remove_spaces_around_shortcodes( $content ) {
 		$array = array(
 			'<p>[' => '[',
 			']</p>' => ']',
@@ -143,7 +143,7 @@ class WpGradeShortcodes {
 	 *
 	 * @return array
 	 */
-	function wpgrade_shortcodes_to_exempt_from_wptexturize( $shortcodes ) {
+	function acidcodes_shortcodes_to_exempt_from_wptexturize( $shortcodes ) {
 		$shortcodes[] = 'restaurantmenu';
 
 		return $shortcodes;
@@ -151,4 +151,4 @@ class WpGradeShortcodes {
 
 } // end class
 
-$WpGradeShortcodes = new WpGradeShortcodes();
+$AcidCodesShortcodes = new AcidCodesShortcodes();

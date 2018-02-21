@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class WpGradeShortcode_Circle extends WpGradeShortcode {
+class AcidCodesShortcode_Circle extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 		$this->self_closed = true;
-		$this->name        = __( "Circle Knob", 'pixcodes_txtd' );
+		$this->name        = __( "Circle Knob", 'acidcodes_txtd' );
 		$this->code        = "circle";
 		$this->icon        = "icon-circle-blank";
 		$this->direct      = false;
@@ -16,28 +16,28 @@ class WpGradeShortcode_Circle extends WpGradeShortcode {
 		$this->params = array(
 			'title'  => array(
 				'type'        => 'text',
-				'name'        => __( 'Title (inside of circle knob)', 'pixcodes_txtd' ),
+				'name'        => __( 'Title (inside of circle knob)', 'acidcodes_txtd' ),
 				'admin_class' => 'span4'
 			),
 			'color'  => array(
 				'type'        => 'text',
-				'name'        => __( 'Color (knob color in HEX format)', 'pixcodes_txtd' ),
+				'name'        => __( 'Color (knob color in HEX format)', 'acidcodes_txtd' ),
 				'admin_class' => 'span7 push1'
 			),
 			'value'  => array(
 				'type'        => 'text',
-				'name'        => __( 'Value (0 to 100)', 'pixcodes_txtd' ),
+				'name'        => __( 'Value (0 to 100)', 'acidcodes_txtd' ),
 				'admin_class' => 'span4'
 			),
 			'offset' => array(
 				'type'        => 'text',
-				'name'        => __( 'Offset Angle (starting angle in degrees - default=0)', 'pixcodes_txtd' ),
+				'name'        => __( 'Offset Angle (starting angle in degrees - default=0)', 'acidcodes_txtd' ),
 				'admin_class' => 'span7 push1'
 			),
 		);
 
 		// allow the theme or other plugins to "hook" into this shortcode's params
-		$this->params = apply_filters( 'pixcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
+		$this->params = apply_filters( 'acidcodes_filter_params_for_' . strtolower( $this->name ), $this->params );
 
 		add_shortcode( 'circle', array( $this, 'add_shortcode' ) );
 	}

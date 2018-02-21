@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: PixCodes
-Plugin URI: https://pixelgrade.com
+Plugin Name: AcidCodes
+Plugin URI: http://acidstudios.ro
 Description: WordPress shortcodes plugin everywhere. Loaded with shortcodes, awesomeness and more.
 Version: 2.3.4
-Author: PixelGrade
-Author URI: https://pixelgrade.com
-Author Email: contact@pixelgrade.com
+Author: acidcodes
+Author URI: http://acidstudios.ro
+Author Email: contact@acidstudios.ro
 */
 
 if ( ! defined( 'ABSPATH' ) ) {

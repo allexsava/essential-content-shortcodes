@@ -3,9 +3,9 @@ editor = '';
 
 	$( document ).ready( function() {
 
-		$( 'body' ).append( '<div id="pixelgrade_shortcodes_modal"  class="reveal-modal l_pxg_modal">' );
+		$( 'body' ).append( '<div id="acidcodes_shortcodes_modal"  class="reveal-modal l_acid_modal">' );
 
-		var modal_selector = $( '#pixelgrade_shortcodes_modal' ),
+		var modal_selector = $( '#acidcodes_shortcodes_modal' ),
 			plugin_url;
 
 		$.ajax( {
@@ -16,19 +16,19 @@ editor = '';
 				modal_selector.html( content );
 				//Variables
 				var details = $( '.details_container .details_content' );
-				var modal_title = $( '.l_pxg_modal .l_modal_title' );
+				var modal_title = $( '.l_acid_modal .l_modal_title' );
 				var default_title = modal_title.html();
 				var triggered_woman = '';
 
 				// fix on close
-				$( document ).on( 'reveal:close', '#pixelgrade_shortcodes_modal', function() {
+				$( document ).on( 'reveal:close', '#acidcodes_shortcodes_modal', function() {
 //					disable_details(); //we will do this before the open click
 					clean_details();
 //					$('.l_modal_header button .back').hide(); //we will show it on the open click
 					toggle_submit_btn();
 					change_title( default_title );
 					window.send_to_editor = window.send_to_editor_clone;
-					$( '.l_pxg_modal .btn_primary' ).removeClass( 'disabled' );
+					$( '.l_acid_modal .btn_primary' ).removeClass( 'disabled' );
 					var this_btn = $( '.btn.back' );
 					this_btn.removeClass( 'active' );
 					$('body').removeClass('acidcodes_select_tags_opened');
@@ -116,18 +116,18 @@ editor = '';
 				} );
 
 				//Trigger Submit Button (need few improvements :)
-				$( document ).on( 'click', ".l_pxg_modal a.btn_primary", function() {
+				$( document ).on( 'click', ".l_acid_modal a.btn_primary", function() {
 					trigger_submit_btn( triggered_woman );
 				} );
 
 				//Show the .details_container - display:block
 				var toggle_details = function() {
-					$( '.l_pxg_modal' ).toggleClass( 's_active' );
+					$( '.l_acid_modal' ).toggleClass( 's_active' );
 				};
 
 				//Show the .details_container - display:block
 				var disable_details = function() {
-					$( '.l_pxg_modal' ).removeClass( 's_active' );
+					$( '.l_acid_modal' ).removeClass( 's_active' );
 				};
 
 				//Add html content from chosen shortcode into $details container
@@ -153,7 +153,7 @@ editor = '';
 
 				//Toggle Submit button
 				var toggle_submit_btn = function() {
-					$( '.l_pxg_modal .btn_primary' ).toggleClass( 'disabled' );
+					$( '.l_acid_modal .btn_primary' ).toggleClass( 'disabled' );
 				};
 
 				//Trigger Submit button
@@ -171,13 +171,13 @@ editor = '';
 				plugin_url = url;
 				ed.addButton( 'acidcodes', {
 					title: 'Add a shortcode',
-					// text : 'PixCodes',
-					classes: 'btn pixelgrade_shortcodes',
+					// text : 'AcidCodes',
+					classes: 'btn acidcodes_shortcodes',
 					onclick: function() {
-						$( '.l_pxg_modal .btn_primary' ).addClass( 'disabled' );
+						$( '.l_acid_modal .btn_primary' ).addClass( 'disabled' );
 						$( 'body' ).addClass( 'acidcodes_select_tags_opened' );
 						//let's clean up some more first
-						$( '.l_pxg_modal' ).removeClass( 's_active' );
+						$( '.l_acid_modal' ).removeClass( 's_active' );
 
 						modal_selector.reveal( {
 							animation: 'fadeAndPop',                   //fade, fadeAndPop, none

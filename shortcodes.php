@@ -142,7 +142,7 @@ class AcidCodesShortcode {
 	}
 
 	public function get_clean_content( $content ) {
-		$content = preg_replace( '#<br class="pxg_removable" />#', '', $content ); // remove our temp brs
+		$content = preg_replace( '#<br class="acid_removable" />#', '', $content ); // remove our temp brs
 
 		return do_shortcode( $content );
 	}

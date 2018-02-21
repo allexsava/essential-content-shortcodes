@@ -11,7 +11,7 @@ Modal Styling
 //Shortcodes
 @import 'icons';
 
-#pixelgrade_shortcodes_modal {
+#acidcodes_shortcodes_modal {
   *, *:before, *:after {@include box-sizing(border-box)};
 	// @import 'mixins';
 	@import 'grid';
@@ -27,7 +27,7 @@ Modal Styling
 	}
 
 	//General
-	&.l_pxg_modal {
+	&.l_acid_modal {
 		font-size:13px;
 		font-family:Arial, sans-serif;
 		color:$base;
@@ -299,7 +299,7 @@ Modal Styling
 	}
 
 
-	&.l_pxg_modal {
+	&.l_acid_modal {
 		.l_modal_body {
 			.details_container {
 				// display:none;
@@ -434,10 +434,10 @@ Modal Styling
 	left: 0;
 }
 
-.mce-pixelgrade_shortcodes button{
+.mce-acidcodes_shortcodes button{
 	background: url(../images/open_modal.png)  3px 3px no-repeat !important;
 }
-.mce-pixelgrade_shortcodes:hover button{
+.mce-acidcodes_shortcodes:hover button{
 	background: url(../images/open_modal.png)  3px -27px no-repeat !important;
 }
 

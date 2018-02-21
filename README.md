@@ -1,10 +1,10 @@
 Acid Codes - Our First Shortcode Builder
 
-***PixCodes*** Is a WordPress plugin which offers you a nice "Add shortcode" button in your editor which opens a modal with a list of shortcodes to add in editor.
+***AcidCodes*** Is a WordPress plugin which offers you a nice "Add shortcode" button in your editor which opens a modal with a list of shortcodes to add in editor.
 
-PixCodes is build to be controlled by the theme, we needed a plugin which allows the themes to select which shortcodes they support and provide style for.
+AcidCodes is build to be controlled by the theme, we needed a plugin which allows the themes to select which shortcodes they support and provide style for.
 
-So beside having an awesome shortcodes insert interface, PixCodes offers you a way for theme developers to: 
+So beside having an awesome shortcodes insert interface, AcidCodes offers you a way for theme developers to: 
 - Select which shortcodes you want.[>>>](#select_shortcodes)
 - Edit the HTML markup of each shortcode.[>>>](#overwrite_templates)
 - Add/remove attributes.[>>>](#edit_params)
@@ -35,7 +35,7 @@ function edit_acidcodes_shortcodes_list() {
 add_action( 'admin_head', 'edit_acidcodes_shortcodes_list' );
 ```
 
-Now check again the PixCodes modal.
+Now check again the AcidCodes modal.
 
 **Shortcode Templates<a name="overwrite_templates"></a>**
 

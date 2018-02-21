@@ -82,7 +82,7 @@
             $(dim).children('span').text((span-1)+'x');
         };
 
-        $('.l_pxg_modal').on('touchstart mousedown', '.details_content.active .grid_cols_slider .handle:not(.read-only)', function(e) {
+        $('.l_acid_modal').on('touchstart mousedown', '.details_content.active .grid_cols_slider .handle:not(.read-only)', function(e) {
             var event = e.originalEvent,
                 touch = event.targetTouches ? event.targetTouches[0] : e;
 
@@ -92,7 +92,7 @@
             xStart = touch.pageX;
         });
 
-        $(document).on("touchmove mousemove", '.l_pxg_modal', function(e) {
+        $(document).on("touchmove mousemove", '.l_acid_modal', function(e) {
             var event = e.originalEvent,
                 touch = event.changedTouches ? event.changedTouches[0] : e;
 
@@ -175,7 +175,7 @@
             // ensure the editor is on visual
             switchEditors.go( editor.id, 'tmce' );
 
-            $('#pixelgrade_shortcodes_modal').trigger('reveal:close');
+            $('#acidcodes_shortcodes_modal').trigger('reveal:close');
         });
     });
 })(jQuery);

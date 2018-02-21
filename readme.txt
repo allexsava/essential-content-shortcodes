@@ -1,5 +1,5 @@
-=== PixCodes ===
-Contributors: euthelup, babbardel, pixelgrade, cristianfrumusanu
+=== AcidCodes ===
+Contributors: euthelup, babbardel, acidcodes, cristianfrumusanu
 Tags: shortcodes, insert, columns, sliders, tabs, buttons
 Requires at least: 4.2.0
 Tested up to: 4.3.0
@@ -7,11 +7,11 @@ Stable tag: 2.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-PixCodes offers you a nice interface to add shortcodes into editor.
+AcidCodes offers you a nice interface to add shortcodes into editor.
 
 == Description ==
 
-With [PixCodes](https://github.com/pixelgrade/acidcodes) you can have a shortcode insert interface.
+With [AcidCodes](https://github.com/acidcodes/acidcodes) you can have a shortcode insert interface.
 
 The awesome part is that you can filter any shortcode parameters or overwrite any shortcode template with your theme.
 
@@ -19,13 +19,13 @@ The awesome part is that you can filter any shortcode parameters or overwrite an
 
 We believe that shortcodes functionality should be offered by a plugin and the style should be provided by themes.
 
-Here is a [detailed documentation](http://github.com/pixelgrade/acidcodes/blob/master/README.md) about how you can configure some plugin settings and output.
+Here is a [detailed documentation](http://github.com/acidcodes/acidcodes/blob/master/README.md) about how you can configure some plugin settings and output.
 
 == Installation ==
 
-1. Install PixCodes either via the WordPress.org plugin directory, or by uploading the files to your `/wp-content/plugins/` directory
-2. After activating PixCodes go to any edit page and see the PixCodes in the editor toolbar
-3. For further instructions and how to filter parameters or overwrite templates, read our [detailed documentation](http://github.com/pixelgrade/acidcodes/blob/dev/README.md)
+1. Install AcidCodes either via the WordPress.org plugin directory, or by uploading the files to your `/wp-content/plugins/` directory
+2. After activating AcidCodes go to any edit page and see the AcidCodes in the editor toolbar
+3. For further instructions and how to filter parameters or overwrite templates, read our [detailed documentation](http://github.com/acidcodes/acidcodes/blob/dev/README.md)
 
 == Changelog ==
 

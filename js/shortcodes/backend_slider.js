@@ -75,7 +75,7 @@
             // ensure the editor is on visual
             switchEditors.go( editor.id, 'tmce' );
 
-            $('#pixelgrade_shortcodes_modal').trigger('reveal:close');
+            $('#acidcodes_shortcodes_modal').trigger('reveal:close');
         });
     });
 })(jQuery);

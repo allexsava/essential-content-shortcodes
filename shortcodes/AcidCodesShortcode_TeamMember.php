@@ -20,7 +20,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             'image' => array(
                 'type' => 'image',
                 'name' => 'Image',
-                'admin_class' => 'span5 push1 pxg_media_uploader'
+                'admin_class' => 'span5 push1 acid_media_uploader'
             ),
             'title' => array(
                 'type' => 'text',

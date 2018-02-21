@@ -63,7 +63,7 @@ gulp.task( 'build', ['copy-folder'], function() {
 		'acidcodes-core/**/*.rb',
 		'acidcodes-core/**/sass',
 		'acidcodes-core/**/scss',
-		'pxg.json',
+		'acid.json',
 		'build',
 		'.idea',
 		'**/*.css.map',

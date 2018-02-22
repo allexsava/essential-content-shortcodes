@@ -4,21 +4,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-class AcidCodesShortcode_PixFields extends AcidCodesShortcode {
+class AcidCodesShortcode_AcidFields extends AcidCodesShortcode {
 
 	public function __construct( $settings = array() ) {
 
-		if ( ! function_exists( 'display_pixfields' ) ) {
+		if ( ! function_exists( 'display_acidfields' ) ) {
 			return;
 		}
 
 		$this->self_closed = true;
 		$this->direct      = true;
-		$this->name        = "PixFields";
-		$this->code        = "pixfields";
+		$this->name        = "AcidFields";
+		$this->code        = "acidfields";
 		$this->icon        = "icon-list-alt";
 
-		add_shortcode( 'pixfields', array( $this, 'add_shortcode' ) );
+		add_shortcode( 'acidfields', array( $this, 'add_shortcode' ) );
 	}
 
 	public function add_shortcode( $atts, $content ) {

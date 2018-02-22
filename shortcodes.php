@@ -58,13 +58,7 @@ class AcidCodesShortcode {
                 'TeamMember',
                 'ProgressBar',
                 'Quote',
-                'Heading',
-//				'Arrow',
-//				'Columns',
-//				'InfoBox',
-//				'OpenTableReservations',
-//				'RestaurantMenu',
-//				'PixFields'
+                'Heading'
 			);
 		}
 

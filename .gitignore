@@ -4,3 +4,4 @@ bower_components
 error_log
 *.sublime-project
 .idea
+labels.json

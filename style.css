@@ -295,10 +295,10 @@ Modal Styling
   left: 0; }
 
 .mce-acidcodes_shortcodes button {
-  background: url(../assets/images/open_modal.png) 3px 3px no-repeat !important; }
+  background: url(assets/images/open_modal.png) 3px 3px no-repeat !important; }
 
 .mce-acidcodes_shortcodes:hover button {
-  background: url(../assets/images/open_modal.png) 3px -27px no-repeat !important; }
+  background: url(assets/images/open_modal.png) 3px -27px no-repeat !important; }
 
 #acidcodes_shortcodes_form .media_image_holder {
   cursor: pointer;

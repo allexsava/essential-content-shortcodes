@@ -1,6 +1,6 @@
 #acidcodes_shortcodes_modal {
-  *, *:before, *:after {@include box-sizing(border-box)};
-@import 'components/grid';
+  //*, *:before, *:after {@include box-sizing(border-box)};
+//@import 'components/grid';
 
 $base: #3f4345;
 $gray: #f6f5f1;
@@ -18,8 +18,8 @@ $grayLighter: #dcdcdc;
   font-family:Arial, sans-serif;
   color:$base;
   overflow:hidden;
-  @include border-radius(4px);
-  @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.8));
+  //@include border-radius(4px);
+  //@include box-shadow(0 3px 5px rgba(0, 0, 0, 0.8));
   //cursor: default;
 }
 i {
@@ -38,7 +38,7 @@ i {
       margin-right:5px;
       color:#939393;
       float:left;
-      @include transition(all 0.2s);
+      //@include transition(all 0.2s);
     }
     &:hover {
       i {
@@ -56,7 +56,7 @@ i {
       margin-right:0px;
     }
     span {
-      @include transition(all 0.2s);
+      //@include transition(all 0.2s);
       opacity:0;
       float:left;
     }
@@ -81,8 +81,8 @@ i {
     }
   }
   &.btn_primary {
-    @include border-radius(4px);
-    @include box-shadow(inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05));
+    //@include border-radius(4px);
+    //@include box-shadow(inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05));
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #242424;
@@ -122,7 +122,7 @@ i {
 
 //Modal Header
 .l_modal_header, .l_modal_body, .l_modal_footer {
-  @extend %cf;
+  //@extend %cf;
 }
 
 .l_modal_header {
@@ -161,7 +161,7 @@ i {
 //Modal Body
 .l_modal_body {
   //Grid Row Shortcode
-  @import 'components/grid-row';
+  //@import 'components/grid-row';
   & {
     color:$base;
   }
@@ -253,12 +253,12 @@ i {
     line-height: 22px;
     color: #555555;
     vertical-align: middle;
-    @include border-radius(2px);
+    //@include border-radius(2px);
     border: 1px solid #cccccc;
     background-color: #ffffff;
     width:100%;
     &:focus {
-      @include box-shadow(inset 0 1px 3px rgba(0,0,0,0.25));
+      //@include box-shadow(inset 0 1px 3px rgba(0,0,0,0.25));
       outline:0;
     }
   }
@@ -296,7 +296,7 @@ i {
         margin-top:10px;
         margin-bottom:0;
         opacity:0;
-        @include transition(all 0.3s);
+        //@include transition(all 0.3s);
         button[type="submit"] {
           display:none;
         }
@@ -311,7 +311,7 @@ i {
     & > ul {
       height:auto;
       opacity:1;
-      @include transition(all 0.3s);
+      //@include transition(all 0.3s);
       margin-top:0px;
       margin-bottom:10px;
     }
@@ -349,7 +349,7 @@ i {
 .row {
   width:100%;
   position:relative;
-  @extend %cf;
+  //@extend %cf;
   & > * {
     position:relative;
   }
@@ -377,9 +377,9 @@ i {
 //Color Picker
 
 .wp-picker-container {
-  & * {
-    @include box-sizing(content-box !important);
-  }
+  //& * {
+  //  @include box-sizing(content-box !important);
+  //}
   .wp-color-result {
     float:left;
     margin-top:6px;
@@ -421,10 +421,10 @@ i {
 }
 
 .mce-acidcodes_shortcodes button{
-  background: url(../images/open_modal.png)  3px 3px no-repeat !important;
+  background: url(../assets/images/open_modal.png)  3px 3px no-repeat !important;
 }
 .mce-acidcodes_shortcodes:hover button{
-  background: url(../images/open_modal.png)  3px -27px no-repeat !important;
+  background: url(../assets/images/open_modal.png)  3px -27px no-repeat !important;
 }
 
 // image upload preview -- Andrei
@@ -509,8 +509,8 @@ i {
           border-left: 1px solid #ccc;
           border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
-          @include border-top-left-radius(4px);
-          @include border-bottom-left-radius(4px);
+          //@include border-top-left-radius(4px);
+          //@include border-bottom-left-radius(4px);
 
           &.ui-state-active, &:hover {
             background-color: #f6f5f1;
@@ -527,12 +527,12 @@ i {
         min-height: 300px;
         min-width: 450px;
         max-width: 83%;
-        @include border-top-right-radius(4px);
-        @include border-bottom-left-radius(4px);
-        @include border-bottom-right-radius(4px);
+        //@include border-top-right-radius(4px);
+        //@include border-bottom-left-radius(4px);
+        //@include border-bottom-right-radius(4px);
 
         & > input, & > textarea {
-          @include border-radius(4px);
+          //@include border-radius(4px);
           padding: 2%;
           margin: 2% 5%;
           width: 92%;

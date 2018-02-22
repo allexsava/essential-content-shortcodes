@@ -58,52 +58,52 @@ gulp.task('assets/css', function () {
         .pipe(gulp.dest('./assets/css', {"mode": "0644"}));
 });
 
-gulp.task('browser-sync', function () {
-    bs({
-        // Point this to your pre-existing server.
-        proxy: config.baseurl + (u.env.port ? ':' + u.env.port : ''),
-        files: ['*.php', 'style.css', 'assets/js/main.js'],
-        // This tells BrowserSync to auto-open a tab once it boots.
-        open: true
-    }, function(err, bs) {
-        if (err) {
-            console.log(bs.options);
-        }
-    });
-});
-
-gulp.task('bs', ['styles', 'scripts', 'browser-sync', 'watch']);
+// gulp.task('browser-sync', function () {
+//     bs({
+//         // Point this to your pre-existing server.
+//         proxy: config.baseurl + (u.env.port ? ':' + u.env.port : ''),
+//         files: ['*.php', 'style.css', 'assets/js/main.js'],
+//         // This tells BrowserSync to auto-open a tab once it boots.
+//         open: true
+//     }, function(err, bs) {
+//         if (err) {
+//             console.log(bs.options);
+//         }
+//     });
+// });
+//
+// gulp.task('bs', ['styles', 'scripts', 'browser-sync', 'watch']);
 
 /**
  *   #SCRIPTS
  */
 
-gulp.task('scripts', function () {
-    gulp.src('./assets/js/plugins/*.js')
-        .pipe(concat('plugins.js'))
-        .pipe(gulp.dest('./assets/js/'));
+// gulp.task('scripts', function () {
+//     gulp.src('./assets/js/plugins/*.js')
+//         .pipe(concat('plugins.js'))
+//         .pipe(gulp.dest('./assets/js/'));
+//
+//     return gulp.src(jsFiles)
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('./assets/js/'))
+//         .pipe(notify({message: 'Scripts task complete'}));
+// });
+//
+// gulp.task('scripts-watch', function () {
+//     return gulp.watch('assets/js/**/*.js', ['scripts']);
+// });
 
-    return gulp.src(jsFiles)
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('./assets/js/'))
-        .pipe(notify({message: 'Scripts task complete'}));
-});
-
-gulp.task('scripts-watch', function () {
-    return gulp.watch('assets/js/**/*.js', ['scripts']);
-});
-
-gulp.task('watch', ['styles', 'scripts'], function () {
+gulp.task('watch', ['styles'], function () {
     gulp.watch('assets/scss/**/*.scss', ['styles']);
-    gulp.watch('assets/js/**/*.js', ['scripts']);
+    // gulp.watch('assets/js/**/*.js', ['scripts']);
 });
 
-gulp.task('watch-admin', function () {
-    gulp.watch('assets/scss/admin/*.scss', ['styles-admin']);
-});
+// gulp.task('watch-admin', function () {
+//     gulp.watch('assets/scss/admin/*.scss', ['styles-admin']);
+// });
 
 // usually there is a default task for lazy people who just wanna type gulp
-gulp.task('start', ['styles', 'scripts'], function () {
+gulp.task('start', ['styles'], function () {
     // silence
 });
 

@@ -62,8 +62,8 @@ class AcidCodesShortcodes {
 	 * Registers and enqueues admin-specific styles.
 	 */
 	public function register_admin_assets( $buttons ) {
-		wp_enqueue_style( 'acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'css/base.css', array( 'wp-color-picker' ) );
-		wp_enqueue_script( 'select2-js', $this->plugin_url . 'js/select2/select2.js', array(
+		wp_enqueue_style( 'acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'style.css', array( 'wp-color-picker' ) );
+		wp_enqueue_script( 'select2-js', $this->plugin_url . 'assets/js/select2/select2.js', array(
 				'jquery',
 				'jquery-ui-tabs'
 			) );
@@ -108,7 +108,7 @@ class AcidCodesShortcodes {
 	} // end filter_method_name
 
 	function addto_mce_acidcodes_shortcodes( $plugin_array ) {
-		$plugin_array['acidcodes'] = $this->plugin_url . 'js/add_shortcode.js';
+		$plugin_array['acidcodes'] = $this->plugin_url . 'assets/js/add_shortcode.js';
 
 		return $plugin_array;
 	}

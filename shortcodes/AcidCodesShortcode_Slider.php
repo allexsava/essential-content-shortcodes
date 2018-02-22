@@ -9,7 +9,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->backend_assets["js"] = array(
             'slider' => array(
                 'name' => 'slider',
-                'path' => 'js/shortcodes/backend_slider.js',
+                'path' => 'assets/js/shortcodes/backend_slider.js',
                 'deps'=> array( 'jquery' )
             )
         );

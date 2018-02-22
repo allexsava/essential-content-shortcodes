@@ -9,7 +9,7 @@ class AcidCodesShortcode_Tabs extends  AcidCodesShortcode {
         $this->backend_assets["js"] = array(
             'tabs' => array(
                 'name' => 'tabs',
-                'path' => 'js/shortcodes/backend_tabs.js',
+                'path' => 'assets/js/shortcodes/backend_tabs.js',
                 'deps'=> array( 'jquery' )
             )
         );

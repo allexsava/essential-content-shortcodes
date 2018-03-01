@@ -19,8 +19,8 @@ if ( $_GET['post_id'] ) {
 		<div class="col-2">
         <button type="button" class="btn back"><i class="icon-reply"></i><span><?php _e( 'Back', 'acidcodes_txtd' ); ?></span></button>
         </div>
-        <div class="col-8">
-            <span class="l_modal_title"><?php _e( 'Choose shortcode:', 'acidcodes_txtd' ); ?></span>
+        <div class="l_modal_title col-8">
+            <span class=""><?php _e( 'Choose shortcode:', 'acidcodes_txtd' ); ?></span>
         </div>
         <div class="col-2">
 		    <button type="button" class="btn close close-reveal-modal"><i class="icon-remove"></i></button>
@@ -75,9 +75,14 @@ if ( $_GET['post_id'] ) {
 			<?php } ?>
 		</ul>
 	</div>
-	<div class="l_modal_footer">
-		<a class="btn btn_secondary close"><?php _e( 'Cancel', 'acidcodes_txtd' ); ?></a>
-		<span><?php _e( 'or', 'acidcodes_txtd' ); ?></span>
-		<a class="btn btn_primary disabled"><?php _e( 'Insert', 'acidcodes_txtd' ); ?></a>
+	<div class="l_modal_footer row">
+        <div class="col-6"></div>
+        <div class="col-6">
+            <a class="btn btn_secondary close"><?php _e( 'Cancel', 'acidcodes_txtd' ); ?></a>
+            <div class="right">
+                <span><?php _e( 'or', 'acidcodes_txtd' ); ?></span>
+                <a class="btn btn_primary disabled"><?php _e( 'Insert', 'acidcodes_txtd' ); ?></a>
+            </div>
+        </div>
 	</div>
 </div>

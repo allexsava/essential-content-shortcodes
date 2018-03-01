@@ -1,0 +1,98 @@
+#acidcodes_shortcodes_modal {
+  i {
+    font-size:14px;
+  }
+
+  .btn {
+    & {
+      cursor: pointer;
+      padding: 4px 25px;
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      border: 1px solid #cccccc;
+
+      i {
+        margin-right: 5px;
+        color: #939393;
+        float: left;
+        //@include transition(all 0.2s);
+      }
+      &:hover {
+        i {
+          color: $base;
+        }
+      }
+    }
+    &.back {
+      border: none;
+      background: none;
+      line-height: 15px;
+      visibility: hidden;
+
+      i {
+        margin-right: 0px;
+      }
+      span {
+        //@include transition(all 0.2s);
+        opacity: 0;
+        float: left;
+      }
+      &.active {
+        visibility: visible;
+      }
+      &:hover {
+        i {
+          margin-right: 5px;
+        }
+        span {
+          opacity: 1;
+        }
+      }
+    }
+    &.close {
+      border: none;
+      background: none;
+      float: left;
+      i {
+        float: right;
+        margin: 0;
+      }
+    }
+    &.btn_primary {
+      font-size: 12px;
+      color: $insert-color;
+      letter-spacing: 0.2px;
+      line-height: 20px;
+
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      border-color: #222222 #222222 #000000;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        background-color: $insert-color;
+        color: $white;
+      }
+
+      &.disabled {
+        //opacity: 0.7;
+        background-image: none;
+        cursor: not-allowed;
+      }
+    }
+
+    &.btn_secondary {
+      border: none;
+      text-decoration: underline;
+      font-size: 12px;
+      color: $cancel-color;
+      letter-spacing: 0.2px;
+      line-height: 22px;
+      &:hover {
+        color: $base;
+      }
+    }
+  }
+}

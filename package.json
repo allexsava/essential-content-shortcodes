@@ -4,7 +4,7 @@
     "browser-sync": "^2.14.0",
     "del": "*",
     "es6-promise": "*",
-    "gulp": "*",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "~1.0.1",
     "gulp-beautify": "*",
     "gulp-cache": "~0.1.1",
@@ -30,5 +30,8 @@
     "gulp-zip": "~0.1.2",
     "jshint-stylish": "~0.1.5",
     "tiny-lr": "0.0.5"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.0.1"
   }
 }

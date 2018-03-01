@@ -7880,25 +7880,6 @@ html {
     -ms-flex-item-align: stretch !important;
         align-self: stretch !important; } }
 
-.l_modal_header {
-  background: #80E80F;
-  background-image: linear-gradient(0deg, rgba(60, 108, 8, 0.65) 0%, #80E80F 100%);
-  position: relative;
-  border-bottom: 1px solid #E6E6E6; }
-
-.l_modal_header .btn {
-  padding: 15px 0;
-  margin: 0; }
-
-.l_modal_title {
-  color: #FFF;
-  text-align: center;
-  margin: 0 auto;
-  padding: 15px 0;
-  font-size: 14px;
-  letter-spacing: 0.98px;
-  line-height: 16px; }
-
 #acidcodes_shortcodes_modal .l_modal_header:after, #acidcodes_shortcodes_modal .l_modal_body:after, #acidcodes_shortcodes_modal .l_modal_footer:after {
   content: "";
   display: table;
@@ -7907,7 +7888,7 @@ html {
 #acidcodes_shortcodes_modal.l_acid_modal {
   font-size: 13px;
   font-family: Arial, sans-serif;
-  color: #3f4345;
+  color: #404040;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
@@ -7948,44 +7929,45 @@ html {
 
 #acidcodes_shortcodes_modal .btn.close {
   border: none;
-  background: none; }
+  background: none;
+  float: left; }
   #acidcodes_shortcodes_modal .btn.close i {
     float: right;
     margin: 0; }
 
 #acidcodes_shortcodes_modal .btn.btn_primary {
+  font-size: 12px;
+  color: #60734D;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  background-color: #FFF;
   border-radius: 4px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #242424;
-  background-image: url("assets/images/btn_primary_bg.png"), linear-gradient(to bottom, #444444, #242424);
-  background-position: bottom center;
-  background-repeat: repeat-x;
   border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff242424', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
   #acidcodes_shortcodes_modal .btn.btn_primary:hover {
-    background-position: bottom right; }
+    background-color: #60734D;
+    color: #FFF; }
   #acidcodes_shortcodes_modal .btn.btn_primary.disabled {
-    opacity: 0.7;
     background-image: none;
     cursor: not-allowed; }
 
 #acidcodes_shortcodes_modal .btn.btn_secondary {
   border: none;
   text-decoration: underline;
-  color: #727070; }
+  font-size: 12px;
+  color: #9b9b9b;
+  letter-spacing: 0.2px;
+  line-height: 22px; }
   #acidcodes_shortcodes_modal .btn.btn_secondary:hover {
     color: #3f4345; }
 
 #acidcodes_shortcodes_modal .l_modal_body {
-  color: #3f4345; }
+  color: #404040; }
 
 #acidcodes_shortcodes_modal .l_modal_body a {
   text-decoration: none;
-  color: #3f4345; }
+  color: #404040; }
 
 #acidcodes_shortcodes_modal .l_modal_body .icon {
   font-size: 36px;
@@ -8008,23 +7990,22 @@ html {
 
 #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li {
   width: 33%;
-  height: 100px;
   display: table-cell;
   vertical-align: middle;
   padding: 0;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb; }
+  border-right: 1px solid #3C6C08;
+  border-bottom: 1px solid #3C6C08; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li:nth-last-of-type(-n+3) {
     border-bottom: none; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li:nth-child(3n) {
     border-right: none;
-    border-bottom: 1px solid #bbbbbb; }
+    border-bottom: 1px solid #3C6C08; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a {
     display: block;
-    padding: 18px 15px; }
+    padding: 40px 25px; }
     #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover {
       cursor: pointer;
-      background: #f6f5f1; }
+      background-image: linear-gradient(0deg, rgba(60, 108, 8, 0.11) 0%, rgba(128, 232, 15, 0.14) 100%); }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li .details_content {
     display: none; }
 
@@ -8067,15 +8048,6 @@ html {
 
 #acidcodes_shortcodes_modal .l_modal_body select {
   height: 32px; }
-
-#acidcodes_shortcodes_modal .l_modal_footer {
-  position: relative;
-  padding: 10px 20px;
-  text-align: right;
-  border-top: 1px solid #dcdcdc; }
-  #acidcodes_shortcodes_modal .l_modal_footer span {
-    margin: 0 15px 0 -5px;
-    color: #bbbbbb; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container {
   padding: 0px; }
@@ -8120,6 +8092,32 @@ html {
   margin-bottom: 0px;
   padding: 0; }
 
+#acidcodes_shortcodes_modal .l_modal_header {
+  background: #80E80F;
+  background-image: linear-gradient(0deg, rgba(60, 108, 8, 0.65) 0%, #80E80F 100%);
+  position: relative;
+  border-bottom: 1px solid #E6E6E6; }
+
+#acidcodes_shortcodes_modal .l_modal_header .btn {
+  padding: 15px 0;
+  margin: 0; }
+
+.l_modal_title {
+  color: #FFF;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-size: 14px;
+  letter-spacing: 0.98px;
+  line-height: 16px; }
+
+#acidcodes_shortcodes_modal .l_modal_footer {
+  position: relative;
+  padding: 10px 20px;
+  border-top: 1px solid #dcdcdc; }
+  #acidcodes_shortcodes_modal .l_modal_footer span {
+    color: #bbbbbb; }
+
 #acidcodes_shortcodes_modal.reveal-modal {
   overflow: hidden;
   visibility: hidden;
@@ -8132,31 +8130,6 @@ html {
   z-index: 160005; }
   #acidcodes_shortcodes_modal.reveal-modal #acidcodes_shortcodes {
     overflow: visible; }
-
-#acidcodes_shortcodes_modal .wp-picker-container * {
-  box-sizing: content-box !important; }
-
-#acidcodes_shortcodes_modal .wp-picker-container .wp-color-result {
-  float: left;
-  margin-top: 6px; }
-
-#acidcodes_shortcodes_modal .wp-picker-container .wp-picker-input-wrap {
-  display: inline-block;
-  line-height: 20px;
-  font-size: 12px;
-  margin-top: 5px; }
-  #acidcodes_shortcodes_modal .wp-picker-container .wp-picker-input-wrap input {
-    height: 21px;
-    line-height: 20px;
-    padding: 0 4px 1px;
-    margin-left: 6px;
-    width: 60px; }
-  #acidcodes_shortcodes_modal .wp-picker-container .wp-picker-input-wrap .hidden {
-    display: none; }
-
-#acidcodes_shortcodes_modal .wp-picker-container .wp-picker-holder {
-  position: absolute;
-  z-index: 160010; }
 
 .reveal-modal-bg {
   position: fixed;

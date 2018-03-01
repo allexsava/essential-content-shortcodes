@@ -15,10 +15,16 @@ if ( $_GET['post_id'] ) {
 	$post = get_post(1);
 } ?>
 <div id="acidcodes_shortcodes">
-	<div class="l_modal_header">
-		<button type="button" class="btn back"><i class="icon-reply"></i><span><?php _e( 'Back', 'acidcodes_txtd' ); ?></span></button>
-		<div class="l_modal_title"><?php _e( 'Choose shortcode:', 'acidcodes_txtd' ); ?></div>
-		<button type="button" class="btn close close-reveal-modal"><i class="icon-remove"></i></button>
+	<div class="l_modal_header row">
+		<div class="col-2">
+        <button type="button" class="btn back"><i class="icon-reply"></i><span><?php _e( 'Back', 'acidcodes_txtd' ); ?></span></button>
+        </div>
+        <div class="col-8">
+            <span class="l_modal_title"><?php _e( 'Choose shortcode:', 'acidcodes_txtd' ); ?></span>
+        </div>
+        <div class="col-2">
+		    <button type="button" class="btn close close-reveal-modal"><i class="icon-remove"></i></button>
+        </div>
 	</div>
 	<div class="l_modal_body three_col">
 		<div class="details_container ">

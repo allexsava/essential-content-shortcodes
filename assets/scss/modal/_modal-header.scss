@@ -1,0 +1,34 @@
+//Helpers
+.l_modal_header, .l_modal_body, .l_modal_footer {
+  @extend %cf;
+}
+
+//Modal Header
+.l_modal_header {
+  & {
+    background: $accent-color;
+    background-image: $accent-gradient;
+    position:relative;
+    border-bottom:1px solid $border-color;
+  }
+  .btn {
+    padding:15px 0;
+    margin:0;
+  }
+  .back {
+  }
+  .close {
+  }
+}
+.l_modal_title {
+  color: $white;
+  text-align:center;
+  margin:0 auto;
+  padding:15px 0;
+  font-size: 14px;
+  letter-spacing: 0.98px;
+  line-height: 16px;
+  //span {
+  //  font-weight:normal;
+  //}
+}

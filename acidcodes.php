@@ -84,6 +84,15 @@ class AcidCodesShortcodes {
 	public function register_plugin_scripts() {
 	} // end register_plugin_scripts
 
+    /**
+     * Google Fonts
+     */
+
+    public function wpb_add_google_fonts() {
+        wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;subset=latin-ext', false );
+    }
+
+
 	/*--------------------------------------------*
 	 * Core Functions
 	 *---------------------------------------------*/

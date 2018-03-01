@@ -2,14 +2,21 @@
 /*	--------------------------------------------------
 Modal Styling
 -------------------------------------------------- */
+
+//BASE
+@import "base/base";
+
 //Bootstrap
-//@import "bootstrap.scss";
-//@import "bootstrap-grid";
+@import "bootstrap.scss";
+@import "bootstrap-grid";
 //@import "bootstrap-reboot";
+
 //FontAwesome5.0
 //@import 'fontawesome';
-//Shortcodes
-//@import 'components/icons';
-//@import "vendor/select2";
+
+//COMPONENTS
+@import "modal/modal";
+
 //Shame
 @import "shame";
+

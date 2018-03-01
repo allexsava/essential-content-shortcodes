@@ -19,7 +19,9 @@ $grayLighter: #dcdcdc;
   color:$base;
   overflow:hidden;
   //@include border-radius(4px);
+  border-radius: 4px;
   //@include box-shadow(0 3px 5px rgba(0, 0, 0, 0.8));
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
   //cursor: default;
 }
 i {
@@ -83,23 +85,25 @@ i {
   &.btn_primary {
     //@include border-radius(4px);
     //@include box-shadow(inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05));
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #242424;
-    background-image:url('../images/btn_primary_bg.png'), -webkit-gradient(linear, 0 0, 0 100%, from(#383838), to(#242424));
-    background-image:url('../images/btn_primary_bg.png'), -moz-linear-gradient(top, #444444, #242424);;
-    background-image:url('../images/btn_primary_bg.png'), -webkit-linear-gradient(top, #444444, #242424);
-    background-image:url('../images/btn_primary_bg.png'), -o-linear-gradient(top, #444444, #242424);
-    background-image:url('../images/btn_primary_bg.png'), linear-gradient(to bottom, #444444, #242424);
+    background-image:url('assets/images/btn_primary_bg.png'), -webkit-gradient(linear, 0 0, 0 100%, from(#383838), to(#242424));
+    background-image:url('assets/images/btn_primary_bg.png'), -moz-linear-gradient(top, #444444, #242424);;
+    background-image:url('assets/images/btn_primary_bg.png'), -webkit-linear-gradient(top, #444444, #242424);
+    background-image:url('assets/images/btn_primary_bg.png'), -o-linear-gradient(top, #444444, #242424);
+    background-image:url('assets/images/btn_primary_bg.png'), linear-gradient(to bottom, #444444, #242424);
     background-position:bottom center;
     background-repeat: repeat-x;
     border-color: #222222 #222222 #000000;
-    // border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff242424', GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 
     &:hover {
-      background-image:url('../images/btn_primary_bg.png'), -webkit-gradient(linear, 0 0, 0 100%, from(#242424), to(#383838));
+      background-image:url('assets/images/btn_primary_bg.png'), -webkit-gradient(linear, 0 0, 0 100%, from(#242424), to(#383838));
       background-position:bottom right;
     }
 
@@ -117,44 +121,6 @@ i {
     &:hover {
       color:$base;
     }
-  }
-}
-
-//Modal Header
-.l_modal_header, .l_modal_body, .l_modal_footer {
-  //@extend %cf;
-}
-
-.l_modal_header {
-  & {
-    background:$gray;
-    position:relative;
-    padding: 0px 20px;
-    border-bottom:1px solid $grayLighter;
-  }
-  .btn {
-    padding:15px 0;
-    margin:0;
-  }
-  .back {
-    float:left;
-    width:15%;
-  }
-  .close {
-    float:right;
-    width:15%;
-  }
-}
-.l_modal_title {
-  text-align:center;
-  width:70%;
-  margin:0 auto;
-  float:left;
-  line-height:14px;
-  padding:15px 0;
-  font-weight:bold;
-  span {
-    font-weight:normal;
   }
 }
 
@@ -207,6 +173,7 @@ i {
       }
       &:nth-child(3n) {
         border-right:none;
+        border-bottom: 1px solid #bbbbbb;
       }
 
       &:hover {}
@@ -259,6 +226,7 @@ i {
     width:100%;
     &:focus {
       //@include box-shadow(inset 0 1px 3px rgba(0,0,0,0.25));
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
       outline:0;
     }
   }
@@ -273,7 +241,7 @@ i {
 
 //Modal Footer
 .l_modal_footer {
-  background:$gray;
+  //background:$gray;
   position:relative;
   padding: 10px 20px;
   text-align:right;
@@ -346,17 +314,17 @@ i {
     }
   }
 }
-.row {
-  width:100%;
-  position:relative;
-  //@extend %cf;
-  & > * {
-    position:relative;
-  }
-  .info {
-    padding: 20px 0;
-  }
-}
+//.row {
+//  width:100%;
+//  position:relative;
+//  @extend %cf;
+//  & > * {
+//    position:relative;
+//  }
+//  .info {
+//    padding: 20px 0;
+//  }
+//}
 
 &.reveal-modal {
   overflow: hidden;
@@ -377,9 +345,10 @@ i {
 //Color Picker
 
 .wp-picker-container {
-  //& * {
-  //  @include box-sizing(content-box !important);
-  //}
+  & * {
+    //@include box-sizing(content-box !important);
+    box-sizing: content-box !important;
+  }
   .wp-color-result {
     float:left;
     margin-top:6px;
@@ -511,6 +480,8 @@ i {
           border-bottom: 1px solid #ccc;
           //@include border-top-left-radius(4px);
           //@include border-bottom-left-radius(4px);
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
 
           &.ui-state-active, &:hover {
             background-color: #f6f5f1;
@@ -530,9 +501,13 @@ i {
         //@include border-top-right-radius(4px);
         //@include border-bottom-left-radius(4px);
         //@include border-bottom-right-radius(4px);
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
 
         & > input, & > textarea {
           //@include border-radius(4px);
+          border-radius: 4px;
           padding: 2%;
           margin: 2% 5%;
           width: 92%;

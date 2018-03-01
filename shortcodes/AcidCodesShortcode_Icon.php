@@ -7,8 +7,8 @@ class AcidCodesShortcode_Icon extends  AcidCodesShortcode {
     public function __construct($settings = array()) {
         $this->self_closed = true;
         $this->name = "Icon";
-        $this->code = "icon";
-        $this->icon = "icon-magic";
+        $this->code = "fa";
+        $this->icon = "fa-magic";
         $this->direct = false;
 
         $this->backend_assets["js"] = array(
@@ -46,8 +46,8 @@ class AcidCodesShortcode_Icon extends  AcidCodesShortcode {
               'type'=> 'icon_list',
               'name' => 'Select icon:',
               'icons' => array(
-                  //Font Awesome TO:DO
-
+                  //Font Awesome
+                  '500px'
                 )
             )
         );

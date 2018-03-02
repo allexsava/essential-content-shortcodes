@@ -10,7 +10,7 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
 		$this->self_closed = true;
 		$this->name        = "Heading";
 		$this->code        = "heading";
-		$this->icon        = "icon-header";
+		$this->icon        = "fas fa-heading";
 		$this->direct      = false;
 
 		$this->params = array(

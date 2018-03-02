@@ -10,7 +10,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode {
 		$this->self_closed = true;
 		$this->name        = "Separator";
 		$this->code        = "hr";
-		$this->icon        = "icon-fire";
+		$this->icon        = "fas fa-minus-square";
 		$this->direct      = false;
 
 		$this->direct = apply_filters( 'acidcodes_filter_direct_for_' . strtolower( $this->name ), $this->direct );

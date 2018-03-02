@@ -8,7 +8,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
         $this->self_closed = false;
         $this->name = "Team Member";
         $this->code = "team-member";
-        $this->icon = "icon-user";
+        $this->icon = "fas fa-user";
         $this->direct = false;
 
         $this->params = array(

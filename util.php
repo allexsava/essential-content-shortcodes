@@ -38,3 +38,9 @@ if (!function_exists('acidcodes_parse_shortcode_content')) {
 		return $content;
 	}
 }
+
+//
+//function myprefix_enqueue_google_fonts() {
+//    wp_enqueue_style( 'poppins', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500' );
+//}
+//add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_google_fonts' );

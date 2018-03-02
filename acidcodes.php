@@ -106,6 +106,7 @@ class AcidCodesShortcodes {
 		// add to the visual mode only
 		if ( get_user_option( 'rich_editing' ) == 'true' ) {
 			add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_shortcodes' ) );
+            add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_fontawesome' ) );
 			add_filter( 'mce_buttons', array( $this, 'register_acidcodes_shortcodes_button' ) );
 		}
 	} // end action_method_name
@@ -121,6 +122,13 @@ class AcidCodesShortcodes {
 
 		return $plugin_array;
 	}
+
+    function addto_mce_acidcodes_fontawesome( $plugin_array ) {
+        $plugin_array['fontawesome'] = $this->plugin_url . 'assets/js/fontawesome-all.min.js';
+
+        return $plugin_array;
+    }
+
 
 	public function acidcodes_get_shortcodes_modal() {
 		ob_start();

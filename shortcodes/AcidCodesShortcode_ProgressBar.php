@@ -8,7 +8,7 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
         $this->self_closed = true;
         $this->name = "Progress Bar";
         $this->code = "bar";
-        $this->icon = "icon-tasks";
+        $this->icon = "fas fa-percent";
         $this->direct = false;
 
         $this->params = array(

@@ -21,7 +21,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->direct = false;
         $this->name = "Slider";
         $this->code = "slider";
-        $this->icon = "icon-code";
+        $this->icon = "fas fa-images";
 
         $this->params = array(
             'slider' => array(

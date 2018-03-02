@@ -21,7 +21,7 @@ class AcidCodesShortcode_Tabs extends  AcidCodesShortcode {
         $this->direct = false;
         $this->name = "Tabs";
         $this->code = "tabs";
-        $this->icon = "icon-folder";
+        $this->icon = "fas fa-folder";
 
         $this->params = array(
             'tabs' => array(

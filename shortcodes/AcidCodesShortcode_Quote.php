@@ -8,7 +8,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
         $this->self_closed = false;
         $this->name = "Quote";
         $this->code = "quote";
-        $this->icon = "icon-quote-right";
+        $this->icon = "fas fa-quote-right";
         $this->direct = false;
 
         $this->params = array(

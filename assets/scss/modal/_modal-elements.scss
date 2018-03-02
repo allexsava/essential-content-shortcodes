@@ -88,7 +88,9 @@
         background-image: none;
         cursor: not-allowed;
         svg {
-          margin-left: 10px !important;
+          margin-left: 10px;
+          position: relative;
+          left: 20px;
         }
       }
     }

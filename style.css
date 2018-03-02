@@ -7984,7 +7984,9 @@ h1, h2, h3, h4, h5, h6, p, span {
     background-image: none;
     cursor: not-allowed; }
     #acidcodes_shortcodes_modal .btn.btn_primary.disabled svg {
-      margin-left: 10px !important; }
+      margin-left: 10px;
+      position: relative;
+      left: 20px; }
 
 #acidcodes_shortcodes_modal .btn.btn_secondary {
   border: none;

@@ -7,9 +7,12 @@ Modal Styling
 //@import "base/base";
 
 //Bootstrap
-@import "bootstrap.scss";
-@import "bootstrap-grid";
+//@import "bootstrap.scss";
+//@import "bootstrap-grid";
 //@import "bootstrap-reboot";
+
+//MATERIALIZE
+@import "materialize";
 
 //COMPONENTS
 @import "modal/modal";

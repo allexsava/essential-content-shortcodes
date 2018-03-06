@@ -16,15 +16,15 @@ if ($_GET['post_id']) {
 } ?>
 <div id="acidcodes_shortcodes">
     <div class="l_modal_header row">
-        <div class="col-2">
+        <div class="col s2">
             <button type="button" class="btn back"><i
-                        class="icon-reply"></i><span><?php _e('Back', 'acidcodes_txtd'); ?></span></button>
+                        class="fas fa-chevron-left"></i><span><?php _e('Back', 'acidcodes_txtd'); ?></span></button>
         </div>
-        <div class="l_modal_title col-8">
+        <div class="l_modal_title col s8">
             <span class=""><?php _e('Choose shortcode:', 'acidcodes_txtd'); ?></span>
         </div>
-        <div class="col-2">
-            <button type="button" class="btn close close-reveal-modal"><i class="icon-remove"></i></button>
+        <div class="col s2">
+            <button type="button" class="btn close close-reveal-modal"><i class="fas fa-times"></i></button>
         </div>
     </div>
     <div class="l_modal_body three_col">
@@ -79,17 +79,17 @@ if ($_GET['post_id']) {
         </ul>
     </div>
     <div class="l_modal_footer row">
-        <div class="col-6"></div>
-        <div class="col-6">
+        <div class="col s6"></div>
+        <div class="col s6">
             <div class="row">
-                <div class="col-6">
-                    <a class="btn btn_secondary close"><?php _e('Cancel', 'acidcodes_txtd'); ?></a>
+                <div class="col s6">
+                    <a class="btn btn_secondary cancel"><?php _e('Cancel', 'acidcodes_txtd'); ?></a>
 
                     <span><?php _e('or', 'acidcodes_txtd'); ?></span>
 
                 </div>
-                <div class="col-6">
-                    <a class="btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?><i class="icon fas fa-chevron-right"></i></a>
+                <div class="col s6">
+                    <a class="btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
                 </div>
             </div>
         </div>

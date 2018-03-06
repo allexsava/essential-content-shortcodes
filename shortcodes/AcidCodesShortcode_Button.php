@@ -17,14 +17,25 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
         $this->params = array(
             'label'     => array(
                 'type'        => 'text',
-                'name'        => __( 'Label Text', 'acidcodes_txtd' ),
-                'admin_class' => 'span6',
+                'name'        => __( 'Button Label', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6',
                 'is_content'  => true,
+            ),
+            'class'     => array(
+                'type'        => 'text',
+                'name'        => __( 'Button Class', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6'
             ),
             'link'      => array(
                 'type'        => 'text',
                 'name'        => __( 'Link URL', 'acidcodes_txtd' ),
-                'admin_class' => 'span5 push1'
+                'admin_class' => 'col s6'
+            ),
+
+            'id'        => array(
+                'type'        => 'text',
+                'name'        => __( 'Button ID', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6'
             ),
             'size'      => array(
                 'type'        => 'select',
@@ -35,28 +46,17 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'large' => __( 'Large', 'acidcodes_txtd' ),
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'span6'
+                'admin_class' => 'input-field col s6 slct'
             ),
-            'text_size' => array(
+            'shape'      => array(
                 'type'        => 'select',
-                'name'        => __( 'Text Size', 'acidcodes_txtd' ),
+                'name'        => __( 'Button Shape', 'acidcodes_txtd' ),
                 'options'     => array(
-                    ''      => __( '-- Select Size --', 'acidcodes_txtd' ),
-                    'gamma' => __( 'Small', 'acidcodes_txtd' ),
-                    'beta'  => __( 'Large', 'acidcodes_txtd' ),
-                    'alpha' => __( 'Huge', 'acidcodes_txtd' )
+                    ''      => __( '-- Select Shape --', 'acidcodes_txtd' ),
+                    'square' => __( 'Square', 'acidcodes_txtd' ),
+                    'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'span5 push1'
-            ),
-            'class'     => array(
-                'type'        => 'text',
-                'name'        => __( 'Class', 'acidcodes_txtd' ),
-                'admin_class' => 'span3'
-            ),
-            'id'        => array(
-                'type'        => 'text',
-                'name'        => __( 'ID', 'acidcodes_txtd' ),
-                'admin_class' => 'span2 push1'
+                'admin_class' => 'input-field col s6'
             ),
             'newtab'    => array(
                 'type'        => 'switch',

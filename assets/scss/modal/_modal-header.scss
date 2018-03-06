@@ -8,18 +8,14 @@
   .l_modal_header {
     & {
       background: $accent-color;
-      background-image: $accent-gradient;
+      background-color: $accent-color;
       position: relative;
       border-bottom: 1px solid $border-color;
     }
-    .btn {
-      padding: 10px;
-      margin: 0;
+    .back, .close {
+      box-shadow: none;
     }
-    .back {
-    }
-    .close {
-    }
+    margin-bottom: 0;
   }
 }
 
@@ -27,7 +23,7 @@
   color: $white;
   text-align: center;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 14px;
   letter-spacing: 0.98px;
   line-height: 16px;

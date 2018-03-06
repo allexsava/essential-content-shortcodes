@@ -59,7 +59,11 @@
           padding: 25px 25px;
           &:hover {
             cursor: pointer;
-            background-image: $rectangle-hover;
+            background-color: $rectangle-hover;
+            color: $white;
+            svg {
+              color: $white;
+            }
           }
         }
         .details_content {
@@ -89,20 +93,20 @@
       color: $grayDarker;
     }
     select, textarea, input, .uneditable-input {
-      display: inline-block;
-      font-family: Arial, sans-serif;
-      padding: 4px 6px;
-      margin-bottom: 8px;
-      line-height: 22px;
-      color: #555555;
-      vertical-align: middle;
-      //@include border-radius(2px);
-      border: 1px solid #cccccc;
-      background-color: #ffffff;
-      width: 100%;
+      //display: inline-block;
+      //font-family: Arial, sans-serif;
+      //padding: 4px 6px;
+      //margin-bottom: 8px;
+      //line-height: 22px;
+      //color: #555555;
+      //vertical-align: middle;
+      ////@include border-radius(2px);
+      //border: 1px solid #cccccc;
+      //background-color: #ffffff;
+      //width: 100%;
       &:focus {
         //@include box-shadow(inset 0 1px 3px rgba(0,0,0,0.25));
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+        //box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
         outline: 0;
       }
     }

@@ -63,11 +63,13 @@ class AcidCodesShortcodes {
 	 */
 	public function register_admin_assets( $buttons ) {
 		wp_enqueue_style( 'acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'style.css', array( 'wp-color-picker' ) );
-		wp_enqueue_script( 'select2-js', $this->plugin_url . 'assets/js/select2/select2.js', array(
-				'jquery',
-				'jquery-ui-tabs'
-			) );
-		wp_enqueue_script( 'wp-color-picker' );
+        wp_enqueue_script( 'materialize-js', $this->plugin_url . 'assets/js/materialize/materialize.min.js' );
+//        wp_enqueue_script('main-js', get_template_directory_uri().'assets/js/main.js', array('jquery'), true);
+//		wp_enqueue_script( 'select2-js', $this->plugin_url . 'assets/js/select2/select2.js', array(
+//				'jquery',
+//				'jquery-ui-tabs'
+//			) );
+//		wp_enqueue_script( 'wp-color-picker' );
 
 		return $buttons;
 	} // end register_admin_assets
@@ -76,6 +78,7 @@ class AcidCodesShortcodes {
 	 * Registers and enqueues plugin-specific styles.Usually we base on the theme style and this is empty
 	 */
 	public function register_plugin_styles() {
+//        wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;subset=latin-ext', false );
 	} // end register_plugin_styles
 
 	/**
@@ -83,14 +86,6 @@ class AcidCodesShortcodes {
 	 */
 	public function register_plugin_scripts() {
 	} // end register_plugin_scripts
-
-    /**
-     * Google Fonts
-     */
-
-    public function wpb_add_google_fonts() {
-        wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;subset=latin-ext', false );
-    }
 
 
 	/*--------------------------------------------*
@@ -107,7 +102,8 @@ class AcidCodesShortcodes {
 		if ( get_user_option( 'rich_editing' ) == 'true' ) {
 			add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_shortcodes' ) );
             add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_fontawesome' ) );
-			add_filter( 'mce_buttons', array( $this, 'register_acidcodes_shortcodes_button' ) );
+            add_filter( 'mce_external_plugins', array( $this, 'addto_mce_acidcodes_main' ) );
+            add_filter( 'mce_buttons', array( $this, 'register_acidcodes_shortcodes_button' ) );
 		}
 	} // end action_method_name
 
@@ -129,8 +125,13 @@ class AcidCodesShortcodes {
         return $plugin_array;
     }
 
+    function addto_mce_acidcodes_main( $plugin_array ) {
+        $plugin_array['main'] = $this->plugin_url . 'assets/js/main.js';
 
-	public function acidcodes_get_shortcodes_modal() {
+        return $plugin_array;
+    }
+
+    public function acidcodes_get_shortcodes_modal() {
 		ob_start();
 		include( 'views/shortcodes-modal.php' );
 		echo json_encode( ob_get_clean() );

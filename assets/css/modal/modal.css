@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 #acidcodes_shortcodes_modal.l_acid_modal {
   font-size: 13px;
   font-family: Arial, sans-serif;
-  color: #404040;
+  color: #424242;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
@@ -39,85 +39,72 @@ h1, h2, h3, h4, h5, h6, p, span {
   top: 0;
   left: 0; }
 
+.none, #acidcodes_shortcodes_modal .btn.back, #acidcodes_shortcodes_modal .btn.close, #acidcodes_shortcodes_modal .btn.cancel, #acidcodes_shortcodes_modal .btn.btn_primary.disabled {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
 #acidcodes_shortcodes_modal i {
   font-size: 14px; }
 
 #acidcodes_shortcodes_modal .btn {
-  cursor: pointer;
-  padding: 4px 25px;
-  display: inline-block;
-  text-align: center;
-  line-height: 20px;
-  border: 1px solid #cccccc; }
-  #acidcodes_shortcodes_modal .btn i {
-    margin-right: 5px;
-    color: #939393;
-    float: left; }
-  #acidcodes_shortcodes_modal .btn:hover i {
-    color: #3f4345; }
-
-#acidcodes_shortcodes_modal .btn.back {
-  border: none;
-  background: none;
-  line-height: 25px;
-  visibility: hidden; }
-  #acidcodes_shortcodes_modal .btn.back svg {
-    margin-right: 0px;
-    color: #FFF; }
-  #acidcodes_shortcodes_modal .btn.back span {
-    opacity: 1;
+  margin: 0; }
+  #acidcodes_shortcodes_modal .btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #cccccc; }
+    #acidcodes_shortcodes_modal .btn i {
+      margin-right: 5px;
+      color: #939393;
+      float: left; }
+    #acidcodes_shortcodes_modal .btn:hover i {
+      color: #3f4345; }
+  #acidcodes_shortcodes_modal .btn.back {
+    padding: 10px;
+    line-height: 15px;
+    visibility: hidden; }
+    #acidcodes_shortcodes_modal .btn.back svg {
+      margin-right: 0px;
+      color: #FFF; }
+    #acidcodes_shortcodes_modal .btn.back span {
+      opacity: 1;
+      float: right;
+      margin-left: 5px;
+      color: #FFF; }
+    #acidcodes_shortcodes_modal .btn.back.active {
+      visibility: visible;
+      color: #FFF; }
+    #acidcodes_shortcodes_modal .btn.back:hover i {
+      margin-right: 5px; }
+    #acidcodes_shortcodes_modal .btn.back:hover span {
+      opacity: 1; }
+  #acidcodes_shortcodes_modal .btn.close {
+    padding: 10px 15px;
     float: right;
-    margin-left: 5px;
-    color: #FFF; }
-  #acidcodes_shortcodes_modal .btn.back.active {
-    visibility: visible;
-    color: #FFF; }
-  #acidcodes_shortcodes_modal .btn.back:hover i {
-    margin-right: 5px; }
-  #acidcodes_shortcodes_modal .btn.back:hover span {
+    color: #FFF;
     opacity: 1; }
-
-#acidcodes_shortcodes_modal .btn.close {
-  border: none;
-  background: none;
-  float: left;
-  color: #FFF;
-  opacity: 1; }
-  #acidcodes_shortcodes_modal .btn.close svg {
-    float: right;
-    margin: 0; }
-
-#acidcodes_shortcodes_modal .btn.btn_primary {
-  font-size: 12px;
-  float: left;
-  color: #60734D;
-  letter-spacing: 0.2px;
-  line-height: 20px;
-  background-color: #FFF;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  #acidcodes_shortcodes_modal .btn.btn_primary:hover {
-    background-color: #60734D;
-    color: #FFF; }
+    #acidcodes_shortcodes_modal .btn.close svg {
+      float: right;
+      margin: 0; }
+  #acidcodes_shortcodes_modal .btn.cancel {
+    color: #757575;
+    float: left; }
   #acidcodes_shortcodes_modal .btn.btn_primary.disabled {
-    background-image: none;
+    background: none !important;
     cursor: not-allowed; }
     #acidcodes_shortcodes_modal .btn.btn_primary.disabled svg {
       margin-left: 10px;
       position: relative;
       left: 20px; }
-
-#acidcodes_shortcodes_modal .btn.btn_secondary {
-  border: none;
-  text-decoration: underline;
-  font-size: 12px;
-  color: #9b9b9b;
-  letter-spacing: 0.2px;
-  line-height: 22px; }
-  #acidcodes_shortcodes_modal .btn.btn_secondary:hover {
-    color: #3f4345; }
+  #acidcodes_shortcodes_modal .btn.btn_secondary {
+    border: none;
+    text-decoration: underline;
+    font-size: 12px;
+    color: #9b9b9b;
+    letter-spacing: 0.2px; }
+    #acidcodes_shortcodes_modal .btn.btn_secondary:hover {
+      color: #3f4345; }
 
 .mce-acidcodes_shortcodes button {
   background: url(assets/images/open_modal.png) 3px 3px no-repeat !important; }
@@ -212,16 +199,16 @@ h1, h2, h3, h4, h5, h6, p, span {
       float: right; }
 
 #acidcodes_shortcodes_modal .l_modal_body {
-  color: #404040; }
+  color: #424242; }
 
 #acidcodes_shortcodes_modal .l_modal_body a {
   text-decoration: none;
-  color: #404040;
+  color: #424242;
   font-size: 14px;
   letter-spacing: 1.3px; }
 
 #acidcodes_shortcodes_modal .l_modal_body .icon {
-  color: #80E80F;
+  color: #00E676;
   font-size: 36px;
   clear: both;
   display: block;
@@ -245,8 +232,8 @@ h1, h2, h3, h4, h5, h6, p, span {
   display: table-cell;
   vertical-align: middle;
   padding: 0;
-  border-right: 1px solid #3C6C08;
-  border-bottom: 1px solid #3C6C08; }
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li:nth-last-of-type(-n+3) {
     border-bottom: none; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li:nth-child(3n) {
@@ -256,7 +243,10 @@ h1, h2, h3, h4, h5, h6, p, span {
     padding: 25px 25px; }
     #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover {
       cursor: pointer;
-      background-image: linear-gradient(0deg, rgba(60, 108, 8, 0.11) 0%, rgba(128, 232, 15, 0.14) 100%); }
+      background-color: #69F0AE;
+      color: #FFF; }
+      #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover svg {
+        color: #FFF; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li .details_content {
     display: none; }
 
@@ -278,20 +268,8 @@ h1, h2, h3, h4, h5, h6, p, span {
   font-size: 12px;
   color: #bbbbbb; }
 
-#acidcodes_shortcodes_modal .l_modal_body select, #acidcodes_shortcodes_modal .l_modal_body textarea, #acidcodes_shortcodes_modal .l_modal_body input, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input {
-  display: inline-block;
-  font-family: Arial, sans-serif;
-  padding: 4px 6px;
-  margin-bottom: 8px;
-  line-height: 22px;
-  color: #555555;
-  vertical-align: middle;
-  border: 1px solid #cccccc;
-  background-color: #ffffff;
-  width: 100%; }
-  #acidcodes_shortcodes_modal .l_modal_body select:focus, #acidcodes_shortcodes_modal .l_modal_body textarea:focus, #acidcodes_shortcodes_modal .l_modal_body input:focus, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input:focus {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
-    outline: 0; }
+#acidcodes_shortcodes_modal .l_modal_body select:focus, #acidcodes_shortcodes_modal .l_modal_body textarea:focus, #acidcodes_shortcodes_modal .l_modal_body input:focus, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input:focus {
+  outline: 0; }
 
 #acidcodes_shortcodes_modal .l_modal_body input[type="checkbox"],
 #acidcodes_shortcodes_modal .l_modal_body input[type="radio"] {
@@ -344,20 +322,20 @@ h1, h2, h3, h4, h5, h6, p, span {
   padding: 0; }
 
 #acidcodes_shortcodes_modal .l_modal_header {
-  background: #80E80F;
-  background-image: linear-gradient(0deg, rgba(60, 108, 8, 0.65) 0%, #80E80F 100%);
-  position: relative;
-  border-bottom: 1px solid #E6E6E6; }
-
-#acidcodes_shortcodes_modal .l_modal_header .btn {
-  padding: 10px;
-  margin: 0; }
+  margin-bottom: 0; }
+  #acidcodes_shortcodes_modal .l_modal_header {
+    background: #00E676;
+    background-color: #00E676;
+    position: relative;
+    border-bottom: 1px solid #E6E6E6; }
+  #acidcodes_shortcodes_modal .l_modal_header .back, #acidcodes_shortcodes_modal .l_modal_header .close {
+    box-shadow: none; }
 
 .l_modal_title {
   color: #FFF;
   text-align: center;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 14px;
   letter-spacing: 0.98px;
   line-height: 16px; }
@@ -366,9 +344,12 @@ h1, h2, h3, h4, h5, h6, p, span {
   position: relative;
   padding: 10px 20px;
   border-top: 1px solid #dcdcdc;
-  background-color: #E6E6E6; }
+  background-color: #E6E6E6;
+  margin-bottom: 0; }
   #acidcodes_shortcodes_modal .l_modal_footer span {
     color: #bbbbbb;
-    line-height: 30px; }
+    line-height: 35px; }
+  #acidcodes_shortcodes_modal .l_modal_footer * .row {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=modal.css.map */

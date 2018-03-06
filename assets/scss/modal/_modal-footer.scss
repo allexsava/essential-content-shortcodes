@@ -5,9 +5,13 @@
     padding: 10px 20px;
     border-top: 1px solid $grayLighter;
     background-color: $border-color;
+    margin-bottom: 0;
     span {
       color: $grayDarker;
-      line-height: 30px;
+      line-height: 35px;
+    }
+    * .row {
+      margin-bottom: 0;
     }
   }
 

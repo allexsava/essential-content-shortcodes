@@ -17,16 +17,19 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
         $this->params = array(
             'label'     => array(
                 'type'        => 'text',
-                'name'        => __( 'Button Label', 'acidcodes_txtd' ),
+                'name'        => __( 'Button Name', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
+                'help-text'        => 'eg Read More',
                 'is_content'  => true,
             ),
             'class'     => array(
                 'type'        => 'text',
                 'name'        => __( 'Button Class', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
+                'admin_class' => 'col s6',
+                'help-text'        => 'eg .btn-acid'
             ),
             'link'      => array(
+                'value'       => 'http://',
                 'type'        => 'text',
                 'name'        => __( 'Link URL', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6'
@@ -35,7 +38,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
             'id'        => array(
                 'type'        => 'text',
                 'name'        => __( 'Button ID', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
+                'admin_class' => 'col s6',
+                'help-text'        => 'eg #first-btn'
             ),
             'size'      => array(
                 'type'        => 'select',
@@ -46,7 +50,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'large' => __( 'Large', 'acidcodes_txtd' ),
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'input-field col s6 slct'
+                'admin_class' => 'input-field hide-list col s6',
+                'help-text'        => 'eg small, large, huge'
             ),
             'shape'      => array(
                 'type'        => 'select',
@@ -56,7 +61,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'square' => __( 'Square', 'acidcodes_txtd' ),
                     'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'input-field col s6'
+                'admin_class' => 'input-field hide-list col s6',
+                'help-text'        => 'eg square, rounded'
             ),
             'newtab'    => array(
                 'type'        => 'switch',

@@ -1,0 +1,21 @@
+.input-field.col label {
+  color: transparent !important;
+}
+
+.hide-list .dropdown-content li:nth-child(1) {
+  display: none;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: $black;
+}
+
+.dropdown-content li > a, .dropdown-content li > span:hover {
+  color: white;
+  background-color: #69F0AE;
+}
+
+.dropdown-content li > a, .dropdown-content li.active > span {
+  color: white;
+  background-color: #00e675;
+}

@@ -1,6 +1,10 @@
 /*	--------------------------------------------------
 Modal Styling
 -------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, p, span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; }
+
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -3701,7 +3705,6 @@ small {
   height: 36px;
   line-height: 36px;
   padding: 0 2rem;
-  text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
 
@@ -4416,8 +4419,8 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a; }
+    border-bottom: 1px solid #00E676;
+    box-shadow: 0 1px 0 0 #00E676; }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -4431,7 +4434,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #26a69a; }
+    color: #00E676; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=password]:not(.browser-default).validate + label,
@@ -4685,7 +4688,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #26a69a; }
+      color: #00E676; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -7047,10 +7050,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
-h1, h2, h3, h4, h5, h6, p, span {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300; }
-
 #acidcodes_shortcodes_modal .l_modal_header:after, #acidcodes_shortcodes_modal .l_modal_body:after, #acidcodes_shortcodes_modal .l_modal_footer:after {
   content: "";
   display: table;
@@ -7139,13 +7138,20 @@ h1, h2, h3, h4, h5, h6, p, span {
   #acidcodes_shortcodes_modal .btn.cancel, #acidcodes_shortcodes_modal .cancel.btn-large {
     color: #757575;
     float: right; }
-  #acidcodes_shortcodes_modal .btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.btn-large {
-    background: none !important;
-    cursor: not-allowed; }
-    #acidcodes_shortcodes_modal .btn.btn_primary.disabled svg, #acidcodes_shortcodes_modal .btn_primary.disabled.btn-large svg {
-      margin-right: 10px;
-      position: relative;
-      right: 20px; }
+  #acidcodes_shortcodes_modal .btn.btn_primary, #acidcodes_shortcodes_modal .btn_primary.btn-large {
+    background: #00E676;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+    #acidcodes_shortcodes_modal .btn.btn_primary:hover, #acidcodes_shortcodes_modal .btn_primary.btn-large:hover {
+      background: #00E676;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+      color: #FFF; }
+    #acidcodes_shortcodes_modal .btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.btn-large {
+      background: none !important;
+      cursor: not-allowed; }
+      #acidcodes_shortcodes_modal .btn.btn_primary.disabled svg, #acidcodes_shortcodes_modal .btn_primary.disabled.btn-large svg {
+        margin-right: 10px;
+        position: relative;
+        right: 20px; }
   #acidcodes_shortcodes_modal .btn.btn_secondary, #acidcodes_shortcodes_modal .btn_secondary.btn-large {
     border: none;
     text-decoration: underline;
@@ -7156,9 +7162,9 @@ h1, h2, h3, h4, h5, h6, p, span {
       color: #3f4345; }
 
 .mce-acidcodes_shortcodes button {
-  background: url(assets/images/open_modal.png) 3px 3px no-repeat !important; }
+  background: url(assets/images/acid-icon.png) 3px 3px no-repeat !important; }
   .mce-acidcodes_shortcodes button:hover {
-    background: url(assets/images/open_modal.png) 3px -27px no-repeat !important; }
+    background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important; }
 
 #acidcodes_shortcodes_form .media_image_holder {
   cursor: pointer;
@@ -7276,6 +7282,9 @@ h1, h2, h3, h4, h5, h6, p, span {
   #acidcodes_shortcodes_modal .l_modal_body ul > li {
     text-align: center; }
 
+#acidcodes_shortcodes_modal .l_modal_body label {
+  color: #424242; }
+
 #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li {
   width: 33%;
   display: table-cell;
@@ -7299,6 +7308,19 @@ h1, h2, h3, h4, h5, h6, p, span {
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li .details_content {
     display: none; }
 
+#acidcodes_shortcodes_modal .l_modal_body .s6 {
+  padding: 0 0 0 35px; }
+
+#acidcodes_shortcodes_modal .l_modal_body span.help-text {
+  font-size: 12px;
+  color: #BDBDBD;
+  line-height: 16px;
+  display: inline-block;
+  margin-bottom: 15px; }
+
+#acidcodes_shortcodes_modal .l_modal_body input[type=text]:not(.browser-default) {
+  height: 2rem; }
+
 #acidcodes_shortcodes_modal .l_modal_body form {
   border: none; }
 
@@ -7307,22 +7329,24 @@ h1, h2, h3, h4, h5, h6, p, span {
   padding: 0;
   margin: 0; }
 
-#acidcodes_shortcodes_modal .l_modal_body label {
-  display: block;
-  margin-bottom: 5px; }
-
 #acidcodes_shortcodes_modal .l_modal_body .help-block {
   display: block;
   margin-bottom: 10px;
   font-size: 12px;
   color: #bbbbbb; }
 
-#acidcodes_shortcodes_modal .l_modal_body select:focus, #acidcodes_shortcodes_modal .l_modal_body textarea:focus, #acidcodes_shortcodes_modal .l_modal_body input:focus, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input:focus {
-  outline: 0; }
+#acidcodes_shortcodes_modal .l_modal_body select, #acidcodes_shortcodes_modal .l_modal_body textarea, #acidcodes_shortcodes_modal .l_modal_body input, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input {
+  margin-bottom: 5px; }
+  #acidcodes_shortcodes_modal .l_modal_body select:focus, #acidcodes_shortcodes_modal .l_modal_body textarea:focus, #acidcodes_shortcodes_modal .l_modal_body input:focus, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input:focus {
+    outline: 0; }
 
 #acidcodes_shortcodes_modal .l_modal_body input[type="checkbox"],
 #acidcodes_shortcodes_modal .l_modal_body input[type="radio"] {
   width: auto; }
+
+#acidcodes_shortcodes_modal .l_modal_body [type="checkbox"]:checked + label:before {
+  border-left-color: #00E676;
+  border-bottom-color: #00E676; }
 
 #acidcodes_shortcodes_modal .l_modal_body select {
   height: 32px; }
@@ -7400,5 +7424,22 @@ h1, h2, h3, h4, h5, h6, p, span {
     line-height: 35px; }
   #acidcodes_shortcodes_modal .l_modal_footer * .row {
     margin-bottom: 0; }
+
+.input-field.col label {
+  color: transparent !important; }
+
+.hide-list .dropdown-content li:nth-child(1) {
+  display: none; }
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #000; }
+
+.dropdown-content li > a, .dropdown-content li > span:hover {
+  color: white;
+  background-color: #69F0AE; }
+
+.dropdown-content li > a, .dropdown-content li.active > span {
+  color: white;
+  background-color: #00e675; }
 
 /*# sourceMappingURL=to.css.map */

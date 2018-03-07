@@ -6,7 +6,7 @@
     // get needed classes
     $classes = 'acidcode  acidcode--btn  btn';
     $classes.= !empty($size) ? '  btn--'.$size : '';
-    $classes.= !empty($text_size) ? '  btn--'.$text_size : '';
+    $classes.= !empty($shape) ? '  btn--'.$shape : '';
     $classes.= !empty($class) ? '  '.$class : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';

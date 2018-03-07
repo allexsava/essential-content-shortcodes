@@ -79,21 +79,13 @@
       float: left;
     }
     &.btn_primary {
-      //font-size: 12px;
-      //float: left;
-      //color: $insert-color;
-      //letter-spacing: 0.2px;
-      //line-height: 20px;
-      //
-      //background-color: $white;
-      //border-radius: 4px;
-      //box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-      //border-color: #222222 #222222 #000000;
-      //border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      background: $accent-color;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
 
       &:hover {
-        //background-color: $insert-color;
-        //color: $white;
+        background: #00E676;
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 8px 8px 0 rgba(0,0,0,0.24);
+        color: $white;
       }
 
       &.disabled {
@@ -124,8 +116,8 @@
 }
 
 .mce-acidcodes_shortcodes button {
-  background: url(assets/images/open_modal.png) 3px 3px no-repeat !important;
+  background: url(assets/images/acid-icon.png) 3px 3px no-repeat !important;
   &:hover {
-    background: url(assets/images/open_modal.png) 3px -27px no-repeat !important;
+    background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important;
   }
 }

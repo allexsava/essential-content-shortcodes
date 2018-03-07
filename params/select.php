@@ -11,4 +11,5 @@ if ( isset($param['admin_class'] ) ) $class = $param['admin_class']; ?>
                 <option value="<?php echo $i ?>"><?php echo $opt ?></option>
             <?php } ?>
         </select>
+        <span class="help-text"><?php echo $param['help-text'] ?></span>
     </span>

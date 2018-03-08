@@ -139,6 +139,10 @@ editor = '';
                     $(details).find('.input-field select:not(".initialized")').material_select();
 				};
 
+				//TextArea
+                $('#content').trigger('autoresize');
+                $('#content_text').trigger('autoresize');
+
 				//Change modal title
 				var change_title = function( $title ) {
 					modal_title.html( $title );

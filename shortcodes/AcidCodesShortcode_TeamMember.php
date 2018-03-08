@@ -12,51 +12,51 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
         $this->direct = false;
 
         $this->params = array(
-            'name' => array(
-                'type' => 'text',
-                'name' => 'Name',
-                'admin_class' => 'span6'
-            ),
             'image' => array(
                 'type' => 'image',
                 'name' => 'Image',
-                'admin_class' => 'span5 push1 acid_media_uploader'
+                'admin_class' => 'col s6 span5 push1 acid_media_uploader'
+            ),
+            'name' => array(
+                'type' => 'text',
+                'name' => 'Name',
+                'admin_class' => 'col s6 span6'
             ),
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
-                'admin_class' => 'span6'
+                'admin_class' => 'col s6 span6'
             ),
             'imagelink' => array(
                 'type' => 'text',
                 'name' => 'Image Link',
-                'admin_class' => 'span5 push1'
+                'admin_class' => 'col s6 span5 push1'
             ),
             'content' => array(
                 'type' => 'textarea',
                 'name' => 'Description',
-                'admin_class' => 'span12',
+                'admin_class' => 'input-field col s12 span12',
                 'is_content' => true
             ),
             'social_twitter' => array(
                 'type' => 'text',
                 'name' => 'Twitter Link',
-                'admin_class' => 'span6'
+                'admin_class' => 'col s6 span6'
             ),
             'social_facebook' => array(
                 'type' => 'text',
                 'name' => 'Facebook Link',
-                'admin_class' => 'span5 push1'
+                'admin_class' => 'col s6 span5 push1'
             ),
             'social_linkedin' => array(
                 'type' => 'text',
                 'name' => 'LinkedIn Link',
-                'admin_class' => 'span6'
+                'admin_class' => 'col s6 span6'
             ),
             'social_pinterest' => array(
                 'type' => 'text',
                 'name' => 'Pinterest Link',
-                'admin_class' => 'span5 push1'
+                'admin_class' => 'col s6 span5 push1'
             ),
         );
 

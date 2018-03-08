@@ -101,9 +101,11 @@
       padding: 0;
       margin: 0;
     }
-    label {
+
+    .input-field label.active {
       //display: block;
       //margin-bottom: 5px;
+      color: $accent-color;
     }
     .help-block {
       display: block;

@@ -81,6 +81,7 @@
     &.btn_primary {
       background: $accent-color;
       box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+      border: none;
 
       &:hover {
         background: #00E676;
@@ -115,9 +116,6 @@
   }
 }
 
-.mce-acidcodes_shortcodes button {
-  background: url(assets/images/acid-icon.png) 3px 3px no-repeat !important;
-  &:hover {
-    background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important;
-  }
+.markers label {
+  margin-bottom: 15px;
 }

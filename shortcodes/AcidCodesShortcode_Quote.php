@@ -15,30 +15,35 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
             'content_text' => array(
                 'type' => 'textarea',
                 'name' => 'Text',
-                'admin_class' => 'span-12',
+                'admin_class' => 'input-field col s12 span-12',
                 'is_content' => true
             ),
             'text_size' => array(
                 'type' => 'select',
                 'name' => 'Text size',
-                'options' => array('small' => 'Small', 'medium' => 'Medium', 'big' => 'Big'),
-                'admin_class' => 'span-12'
+                'options' => array(
+                    '' => '--Select Size--',
+                    'small' => 'Small',
+                    'medium' => 'Medium',
+                    'big' => 'Big'
+                ),
+                'admin_class' => 'input-field hide-list col s6 span-12'
             ),            
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
-                'admin_class' => 'span-6',
+                'admin_class' => 'col s6 span-6',
             ),
 
             'link' => array(
                 'type' => 'text',
                 'name' => 'Author link',
-                'admin_class' => 'span-6'
+                'admin_class' => 'col s6 span-6'
             ),
             'author_title' => array(
                 'type' => 'text',
                 'name' => 'Author title',
-                'admin_class' => 'span-12',
+                'admin_class' => 'col s6 span-12',
             ),            
         );
 

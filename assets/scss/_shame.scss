@@ -1,6 +1,6 @@
-.input-field.col label {
-  color: transparent !important;
-}
+//.input-field.col label {
+//  color: transparent !important;
+//}
 
 .hide-list .dropdown-content li:nth-child(1) {
   display: none;
@@ -18,4 +18,21 @@
 .dropdown-content li > a, .dropdown-content li.active > span {
   color: white;
   background-color: #00e675;
+}
+
+textarea.materialize-textarea {
+  padding: 0;
+}
+
+//.input-field label {
+//  font-weight: 300;
+//}
+
+.input-field.col label {
+  left: 0;
+}
+
+.input-field.col.s12 {
+  margin-top: 0;
+  padding-right: 35px;
 }

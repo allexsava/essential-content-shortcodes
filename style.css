@@ -7057,7 +7057,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 #acidcodes_shortcodes_modal.l_acid_modal {
   font-size: 13px;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #424242;
   overflow: hidden;
   border-radius: 4px;
@@ -7140,7 +7140,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     float: left; }
   #acidcodes_shortcodes_modal .btn.btn_primary, #acidcodes_shortcodes_modal .btn_primary.btn-large {
     background: #00E676;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+    border: none; }
     #acidcodes_shortcodes_modal .btn.btn_primary:hover, #acidcodes_shortcodes_modal .btn_primary.btn-large:hover {
       background: #00E676;
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
@@ -7161,17 +7162,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     #acidcodes_shortcodes_modal .btn.btn_secondary:hover, #acidcodes_shortcodes_modal .btn_secondary.btn-large:hover {
       color: #3f4345; }
 
-.mce-acidcodes_shortcodes button {
-  background: url(assets/images/acid-icon.png) 3px 3px no-repeat !important; }
-  .mce-acidcodes_shortcodes button:hover {
-    background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important; }
+.markers label {
+  margin-bottom: 15px; }
 
 #acidcodes_shortcodes_form .media_image_holder {
   cursor: pointer;
   vertical-align: middle;
   width: 200px;
   text-align: center;
-  height: 140px;
+  height: 170px;
   background: #ddd;
   border-radius: 10px;
   padding-top: 20px; }
@@ -7329,6 +7328,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding: 0;
   margin: 0; }
 
+#acidcodes_shortcodes_modal .l_modal_body .input-field label.active {
+  color: #00E676; }
+
 #acidcodes_shortcodes_modal .l_modal_body .help-block {
   display: block;
   margin-bottom: 10px;
@@ -7425,9 +7427,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   #acidcodes_shortcodes_modal .l_modal_footer * .row {
     margin-bottom: 0; }
 
-.input-field.col label {
-  color: transparent !important; }
-
 .hide-list .dropdown-content li:nth-child(1) {
   display: none; }
 
@@ -7441,5 +7440,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .dropdown-content li > a, .dropdown-content li.active > span {
   color: white;
   background-color: #00e675; }
+
+textarea.materialize-textarea {
+  padding: 0; }
+
+.input-field.col label {
+  left: 0; }
+
+.input-field.col.s12 {
+  margin-top: 0;
+  padding-right: 35px; }
 
 /*# sourceMappingURL=style.css.map */

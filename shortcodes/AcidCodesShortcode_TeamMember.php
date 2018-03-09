@@ -20,12 +20,14 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             'name' => array(
                 'type' => 'text',
                 'name' => 'Name',
-                'admin_class' => 'col s6 span6'
+                'admin_class' => 'col s6 span6',
+                'help-text'   => 'eg Team member name'
             ),
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
-                'admin_class' => 'col s6 span6'
+                'admin_class' => 'col s6 span6',
+                'help-text'   => 'eg Fontend Developer, SEO '
             ),
             'imagelink' => array(
                 'type' => 'text',
@@ -38,22 +40,31 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'admin_class' => 'input-field col s12 span12',
                 'is_content' => true
             ),
+            'social' => array(
+                'type' => 'social-label',
+                'name' => 'Social Media',
+                'admin_class' => 'col s12 span12 social-media',
+            ),
             'social_twitter' => array(
+                'value'       => 'https://',
                 'type' => 'text',
                 'name' => 'Twitter Link',
                 'admin_class' => 'col s6 span6'
             ),
             'social_facebook' => array(
+                'value'       => 'https://',
                 'type' => 'text',
                 'name' => 'Facebook Link',
                 'admin_class' => 'col s6 span5 push1'
             ),
             'social_linkedin' => array(
+                'value'       => 'https://',
                 'type' => 'text',
                 'name' => 'LinkedIn Link',
                 'admin_class' => 'col s6 span6'
             ),
             'social_pinterest' => array(
+                'value'       => 'https://',
                 'type' => 'text',
                 'name' => 'Pinterest Link',
                 'admin_class' => 'col s6 span5 push1'

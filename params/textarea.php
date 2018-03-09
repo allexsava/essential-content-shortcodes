@@ -13,4 +13,3 @@ if (isset($param['rows'])) $rows = $param['rows'];
             <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
         <?php endif; ?>
 </span>
-

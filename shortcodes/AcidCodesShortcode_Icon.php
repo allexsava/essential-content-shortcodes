@@ -49,10 +49,16 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                 'help-text'   => 'eg small, medium, big'
             ),
             'class' => array(
-                'type' => 'tags',
+                'type' => 'select',
                 'name' => 'Custom CSS Class',
-                'admin_class' => 'col s6 span12',
-                'options' => array('icon-border', 'pull-right', 'pull-left', 'icon-spin', 'icon-rotate-90', 'icon-rotate-180', 'icon-rotate-270', 'icon-flip-horizontal', 'icon-flip-vertical', 'icon-2x', 'icon-3x', 'icon-4x'),
+                'admin_class' => 'col s6 span12 input-field',
+                'options'     => array(
+                    '' => '--Select Size--',
+                    'small' => __( 'Small', 'acidcodes_txtd' ),
+                    'large' => __( 'Large', 'acidcodes_txtd' ),
+                    'huge'  => __( 'Huge', 'acidcodes_txtd' )
+                ),
+                'options' => array('--Select CSS Class--','icon-border', 'pull-right', 'pull-left', 'icon-spin', 'icon-rotate-90', 'icon-rotate-180', 'icon-rotate-270', 'icon-flip-horizontal', 'icon-flip-vertical', 'icon-2x', 'icon-3x', 'icon-4x'),
                 'value' => array('')
             ),
             'name' => array(

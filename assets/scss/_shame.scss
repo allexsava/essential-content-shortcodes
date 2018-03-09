@@ -20,10 +20,6 @@
   background-color: #00e675;
 }
 
-textarea.materialize-textarea {
-  padding: 0;
-}
-
 //.input-field label {
 //  font-weight: 300;
 //}
@@ -35,4 +31,11 @@ textarea.materialize-textarea {
 .input-field.col.s12 {
   margin-top: 0;
   padding-right: 35px;
+}
+
+.media_image_holder svg.fa-image {
+  color: $white;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 40px;
 }

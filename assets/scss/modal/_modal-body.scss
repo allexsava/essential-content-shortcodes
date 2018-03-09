@@ -22,6 +22,7 @@
       padding: 0;
       float: left;
       width: 100%;
+      margin-top: 5px;
       li {
         float: left;
         list-style: none;
@@ -86,6 +87,10 @@
       line-height: 16px;
       display: inline-block;
       margin-bottom: 15px;
+    }
+
+    span.social-label {
+      margin: 5px 0 20px;
     }
 
     input[type=text]:not(.browser-default) {

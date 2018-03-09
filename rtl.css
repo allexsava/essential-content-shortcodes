@@ -7165,6 +7165,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .markers label {
   margin-bottom: 15px; }
 
+span.social-media {
+  margin: 5px 0 20px; }
+  span.social-media label {
+    font-size: 1rem; }
+
+span.input-special-margin {
+  margin-top: 19px; }
+
 #acidcodes_shortcodes_form .media_image_holder {
   cursor: pointer;
   vertical-align: middle;
@@ -7272,7 +7280,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin: 0;
   padding: 0;
   float: right;
-  width: 100%; }
+  width: 100%;
+  margin-top: 5px; }
   #acidcodes_shortcodes_modal .l_modal_body ul li {
     float: right;
     list-style: none;
@@ -7316,6 +7325,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 16px;
   display: inline-block;
   margin-bottom: 15px; }
+
+#acidcodes_shortcodes_modal .l_modal_body span.social-label {
+  margin: 5px 0 20px; }
 
 #acidcodes_shortcodes_modal .l_modal_body input[type=text]:not(.browser-default) {
   height: 2rem; }
@@ -7441,14 +7453,17 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   color: white;
   background-color: #00e675; }
 
-textarea.materialize-textarea {
-  padding: 0; }
-
 .input-field.col label {
   right: 0; }
 
 .input-field.col.s12 {
   margin-top: 0;
   padding-left: 35px; }
+
+.media_image_holder svg.fa-image {
+  color: #FFF;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 40px; }
 
 /*# sourceMappingURL=to.css.map */

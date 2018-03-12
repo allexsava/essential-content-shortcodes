@@ -45,7 +45,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'select',
                 'name'        => __( 'Button Size', 'acidcodes_txtd' ),
                 'options'     => array(
-                    '' => '--Select Size--',
+                    '' => 'Select Size',
                     'small' => __( 'Small', 'acidcodes_txtd' ),
                     'large' => __( 'Large', 'acidcodes_txtd' ),
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
@@ -57,7 +57,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'select',
                     'name'        => __( 'Button Shape', 'acidcodes_txtd' ),
                 'options'     => array(
-                    ''      => __( '--Select Shape--', 'acidcodes_txtd' ),
+                    ''      => __( 'Select Shapew', 'acidcodes_txtd' ),
                     'square' => __( 'Square', 'acidcodes_txtd' ),
                     'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),

@@ -22,57 +22,57 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'type' => 'select',
                 'name' => 'Alignment',
                 'options' => array(
-                    '' => '-- Select Alignment --',
+                    '' => 'Select Alignment',
                     'center' => 'Center',
                     'left' => 'Left',
                     'right' => 'Right'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span12',
+                'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg center, left, right'
             ),
             'size' => array(
                 'type' => 'select',
                 'name' => 'Size',
                 'options' => array(
-                    '' => '-- Select Size --',
+                    '' => 'Select Size',
                     'regular' => 'Regular',
                     'double' => 'Double'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span6',
+                'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg regular, double'
             ),
             'weight' => array(
                 'type' => 'select',
                 'name' => 'Weight',
                 'options' => array(
-                    '' => '-- Select Weight --',
+                    '' => 'Select Weight',
                     'thin' => 'Thin',
                     'thick' => 'Thick'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span5 push1',
+                'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg thin, thick'
             ),
             'color' => array(
                 'type' => 'select',
                 'name' => 'Color',
                 'options' => array(
-                    '' => '-- Select Color --',
+                    '' => 'Select Color',
                     'dark' => 'Dark',
                     'white' => 'Light',
                     'color' => 'Color'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span6',
+                'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
             ),
             'style' => array(
                 'type' => 'select',
                 'name' => 'Style',
                 'options' => array(
-                    '' => '-- Select Style --',
+                    '' => 'Select Style',
                     'dotted' => 'Dotted',
                     'striped' => 'Striped'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span5 push1',
+                'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg dotted, striped'
             )
         );

@@ -36,6 +36,64 @@
 .media_image_holder svg.fa-image {
   color: $white;
   text-align: center;
-  font-size: 45px;
-  margin-top: 40px;
+  font-size: 40px;
+}
+
+.input-special-margin label {
+  margin-top: -5px;
+}
+
+.shame-margin {
+  margin: 20px 0px 10px 0px;
+}
+
+.media_image_holder label {
+  display: block;
+  font-size: 15px;
+  color: #7b7b7b !important;
+}
+.align-clear {
+  clear: both;
+}
+.acid_media_uploader {
+  margin-bottom: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: $rectangle-hover;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: $rectangle-hover;
+}
+input[type=range]::-ms-thumb {
+  background-color: $rectangle-hover;
+}
+input[type=range] + .thumb {
+  background-color: $rectangle-hover;
+}
+
+li.icon.active svg {
+  color: $white;
+  padding: 5px;
+  transition: padding .5s;
+  margin: 0 auto;
+  display: block;
+}
+
+li.icon svg {
+  margin: 0 auto;
+  display: block;
+}
+
+li.icon.active {
+  background-color: $rectangle-hover;
+}
+
+ul.acid_icon_list .row > li {
+  clear: none !important;
+}
+
+ul.acid_icon_list {
+  overflow: scroll;
+  height: 230px;
 }

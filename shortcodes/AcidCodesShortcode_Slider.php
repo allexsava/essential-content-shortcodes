@@ -19,32 +19,84 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
 
         $this->self_closed = false;
         $this->direct = false;
-        $this->name = "Slider";
+        $this->name = "Carousel";
         $this->code = "slider";
         $this->icon = "fas fa-images";
 
         $this->params = array(
-            'slider' => array(
-                'type' => 'slider',
-                'name' => 'Slider',
+            'image' => array(
+                'type' => 'image',
+                'admin_class' => 'col s6 span5 push1 acid_media_uploader'
             ),
-            'navigation_style' => array(
+
+            'type' => array(
                 'type' => 'select',
-                'name' => 'Navigation Style',
-                'options' => array('arrows' => 'Arrows', 'bullets' => 'Bullets', 'both' => 'Arrows and Bullets', 'none' => 'None'),
-                'admin_class' => 'span10 push2'
+                'name' => 'Slider Type',
+                'options' => array(
+                    '' => 'Select Slider',
+                    'carousel' => 'Carousel',
+                    'width' => 'Full-width',
+                ),
+                'admin_class' => 'input-field hide-list col s6',
+                'help-text'   => 'eg carousel, full-width'
             ),
-            'custom_slider_transition' => array(
-                'type' => 'select',
-                'name' => 'Slider transition',
-                'options' => array('move' => 'Move/Drag', 'fade' => 'Fade'),
-                'admin_class' => 'span10 push2'
-            ),            
+            'social' => array(
+                'type' => 'social-label',
+                'name' => 'Slider Options',
+                'admin_class' => 'col s12 social-media',
+            ),
+            'slider_duration' => array(
+                'value'       => '200',
+                'type' => 'text',
+                'name' => 'Slider Duration',
+                'admin_class' => 'col s6',
+                'help-text'   => 'Transition duration in milliseconds. (Default: 200)'
+            ),
+            'slider_padding' => array(
+                'value'       => '0',
+                'type' => 'text',
+                'name' => 'Slider Padding',
+                'admin_class' => 'col s6',
+                'help-text'   => 'Set the padding between non center items. (Default: 0)'
+            ),
+            'shift'    => array(
+                'type'        => 'range',
+                'name'        => __( 'Slider Shift'),
+                'admin_class' => 'range-field col s6',
+                'help-text'   => 'Set the spacing of the center item. (Default: 0)'
+            ),
+            'navigation'    => array(
+                'type'        => 'switch',
+                'name'        => __( 'Slider Navigation', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6 shame-margin'
+            ),
+            'loop'    => array(
+                'type'        => 'switch',
+                'name'        => __( 'Slider Loop', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6'
+            )
+//            'slider' => array(
+//                'type' => 'slider',
+//                'name' => 'Slider',
+//            ),
+            //            'navigation_style' => array(
+//                'type' => 'select',
+//                'name' => 'Navigation Style',
+//                'options' => array('arrows' => 'Arrows', 'bullets' => 'Bullets', 'both' => 'Arrows and Bullets', 'none' => 'None'),
+//                'admin_class' => 'span10 push2'
+//            ),
+//            'custom_slider_transition' => array(
+//                'type' => 'select',
+//                'name' => 'Slider transition',
+//                'options' => array('move' => 'Move/Drag', 'fade' => 'Fade'),
+//                'admin_class' => 'span10 push2'
+//            ),
 //            'autoheight' => array(
 //                'type' => 'switch',
 //                'name' => 'Let slider autoheight?',
 //                'admin_class' => 'span10 push2'
 //            ),
+
         );
 
         // allow the theme or other plugins to "hook" into this shortcode's params

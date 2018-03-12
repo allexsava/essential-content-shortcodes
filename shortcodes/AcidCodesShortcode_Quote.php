@@ -22,7 +22,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'type' => 'select',
                 'name' => 'Text size',
                 'options' => array(
-                    '' => '--Select Size--',
+                    '' => 'Select Size',
                     'small' => 'Small',
                     'medium' => 'Medium',
                     'big' => 'Big'
@@ -32,18 +32,18 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
-                'admin_class' => 'col s6 span-6',
+                'admin_class' => 'col s6',
             ),
 
             'link' => array(
                 'type' => 'text',
                 'name' => 'Author link',
-                'admin_class' => 'col s6 span-6'
+                'admin_class' => 'col s6'
             ),
             'author_title' => array(
                 'type' => 'text',
                 'name' => 'Author title',
-                'admin_class' => 'col s6 span-12',
+                'admin_class' => 'col s6',
             ),            
         );
 

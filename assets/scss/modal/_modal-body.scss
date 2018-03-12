@@ -110,7 +110,7 @@
     .input-field label.active {
       //display: block;
       //margin-bottom: 5px;
-      color: $accent-color;
+      color: $rectangle-hover;
     }
     .help-block {
       display: block;
@@ -143,8 +143,8 @@
     }
 
     [type="checkbox"]:checked + label:before {
-      border-right-color: $accent-color;
-      border-bottom-color: $accent-color;
+      border-right-color: $rectangle-hover;
+      border-bottom-color: $rectangle-hover;
     }
 
     select {

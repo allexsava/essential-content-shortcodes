@@ -57,7 +57,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'select',
                     'name'        => __( 'Button Shape', 'acidcodes_txtd' ),
                 'options'     => array(
-                    ''      => __( 'Select Shapew', 'acidcodes_txtd' ),
+                    ''      => __( 'Select Shape', 'acidcodes_txtd' ),
                     'square' => __( 'Square', 'acidcodes_txtd' ),
                     'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),

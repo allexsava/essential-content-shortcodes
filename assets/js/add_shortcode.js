@@ -135,13 +135,21 @@ editor = '';
 					clean_details();
 					details.html( $content ).addClass( 'active' );
 
+
                     //reInitialize materialize select
                     $(details).find('.input-field select:not(".initialized")').material_select();
 				};
 
+
+				// Tabs Init
+                $(document).ready(function(){
+                    $('ul.tabs').tabs();
+                });
+
 				//TextArea
                 $('#content').trigger('autoresize');
                 $('#content_text').trigger('autoresize');
+
 
 				//Change modal title
 				var change_title = function( $title ) {
@@ -190,7 +198,7 @@ editor = '';
 							animation: 'fadeAndPop',                   //fade, fadeAndPop, none
 							animationspeed: 400,                       //how fast animtions are
 							closeonbackgroundclick: true,              //if you click background will modal close?
-							dismissmodalclass: 'close'    //the class of a button or element that will close an open modal
+							dismissmodalclass: 'cancel'    //the class of a button or element that will close an open modal
 						} );
 						editor = ed;
 						get_current_editor_selected_content = function() {

@@ -7,7 +7,9 @@ Modal Styling
 @import "base/base";
 
 //MATERIALIZE
-@import "materialize";
+#acidcodes_shortcodes_modal {
+  @import "materialize";
+}
 
 //FONT-AWESOME
 @import "font-awesome/fontawesome";

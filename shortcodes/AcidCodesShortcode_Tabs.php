@@ -30,8 +30,8 @@ class AcidCodesShortcode_Tabs extends  AcidCodesShortcode {
             ),
         );
 
-	    // allow the theme or other plugins to "hook" into this shortcode's params
-	    $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
+        // allow the theme or other plugins to "hook" into this shortcode's params
+        $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
 
         add_shortcode('tabs', array( $this, 'add_tabs_shortcode') );
         add_shortcode('tab', array( $this, 'add_tab_shortcode') );
@@ -59,40 +59,40 @@ class AcidCodesShortcode_Tabs extends  AcidCodesShortcode {
         if ( isset( $icons[1] ) ) {
             $icons = $icons[1];
         }
-		// prepare content
-	    preg_match_all ( '#<body>([\s\S]*?)</body>#', $this->get_clean_content( $content ), $contents );
+        // prepare content
+        preg_match_all ( '#<body>([\s\S]*?)</body>#', $this->get_clean_content( $content ), $contents );
 
-	    /**
-	     * Template localization between plugin and theme
-	     */
-	    $located = locate_template("templates/shortcodes/{$this->code}.php", false, false);
-	    if(!$located) {
-		    $located = dirname(__FILE__).'/templates/'.$this->code.'.php';
-	    }
-	    // load it
-	    ob_start();
-	    require $located;
-	    return ob_get_clean();
+        /**
+         * Template localization between plugin and theme
+         */
+        $located = locate_template("templates/shortcodes/{$this->code}.php", false, false);
+        if(!$located) {
+            $located = dirname(__FILE__).'/templates/'.$this->code.'.php';
+        }
+        // load it
+        ob_start();
+        require $located;
+        return ob_get_clean();
     }
 
     public function add_tab_shortcode( $atts, $content ) {
         $title = '';
-		$icon = '';
-         extract( shortcode_atts( array(
-             'title' => '',
-             'icon' => ''
-         ), $atts ) );
+        $icon = '';
+        extract( shortcode_atts( array(
+            'title' => '',
+            'icon' => ''
+        ), $atts ) );
 
-	    /**
-	     * Template localization between plugin and theme
-	     */
-	    $located = locate_template("templates/shortcodes/tab.php", false, false);
-	    if(!$located) {
-		    $located = dirname(__FILE__).'/templates/tab.php';
-	    }
-	    // load it
-	    ob_start();
-	    require $located;
-	    return ob_get_clean();
+        /**
+         * Template localization between plugin and theme
+         */
+        $located = locate_template("templates/shortcodes/tab.php", false, false);
+        if(!$located) {
+            $located = dirname(__FILE__).'/templates/tab.php';
+        }
+        // load it
+        ob_start();
+        require $located;
+        return ob_get_clean();
     }
 }

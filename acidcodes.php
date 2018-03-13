@@ -30,7 +30,7 @@ class AcidCodesShortcodes
 
         // Register site styles and scripts
         // not used right now
-        add_action('wp_enqueue_scripts', array($this, 'register_plugin_styles'));
+//        add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 //		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_scripts' ) );
 
         // Run our plugin along with wordpress init
@@ -73,6 +73,7 @@ class AcidCodesShortcodes
         if (get_user_option('rich_editing') == 'true') {
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_fontawesome'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
         }
@@ -83,30 +84,16 @@ class AcidCodesShortcodes
      */
     public function register_admin_assets($buttons)
     {
-		wp_enqueue_style( 'acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'style.css', array( 'wp-color-picker' ) );
-        wp_enqueue_script('materialize-js', $this->plugin_url . 'assets/js/materialize/materialize.min.js');
-//        wp_enqueue_script('main-js', get_template_directory_uri().'assets/js/main.js', array('jquery'), true);
-//		wp_enqueue_script( 'select2-js', $this->plugin_url . 'assets/js/select2/select2.js', array(
-//				'jquery',
-//				'jquery-ui-tabs'
-//			) );
-//		wp_enqueue_script( 'wp-color-picker' );
-
+        wp_enqueue_style('acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'style.css', array('wp-color-picker'));
         return $buttons;
     } // end register_plugin_styles
 
     /**
-     * Registers and enqueues plugin-specific styles. Usually we base on the theme style and this is empty
-     */
-    public function register_plugin_styles()
-    {
-
-
-//       wp_enqueue_style('acidcodes-style', get_stylesheet_uri());
-
-
-    } // end register_plugin_scripts
-
+     * Register and enqueue style sheet.
+//     */
+//    public function register_plugin_styles() {
+//
+//    }
 
     /*--------------------------------------------*
      * Core Functions
@@ -136,6 +123,13 @@ class AcidCodesShortcodes
     function addto_mce_acidcodes_fontawesome($plugin_array)
     {
         $plugin_array['fontawesome'] = $this->plugin_url . 'assets/js/fontawesome-all.min.js';
+
+        return $plugin_array;
+    }
+
+    function addto_mce_acidcodes_materialize($plugin_array)
+    {
+        $plugin_array['materialize'] = $this->plugin_url . 'assets/js/materialize/materialize.min.js';
 
         return $plugin_array;
     }

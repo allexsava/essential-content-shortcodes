@@ -9,6 +9,6 @@ if ( isset($param['admin_class'] ) ) $class = $param['admin_class']; ?>
         <label>Add images</label>
         <input type="hidden" class="media_image_input" name="<?php echo $param['param_key'] ?>" />
         <img class="upload_preview" />
-        <i class="icon-edit" ></i>
+<!--        <i class="fas fa-edit" ></i>-->
     </div>
 </span>

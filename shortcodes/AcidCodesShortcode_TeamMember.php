@@ -31,7 +31,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'type' => 'text',
                 'name' => 'Title',
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg Fontend Developer, SEO '
+                'help-text'   => 'eg Fontend Developer, CEO'
             ),
             'content' => array(
                 'type' => 'textarea',

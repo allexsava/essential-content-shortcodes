@@ -122,7 +122,7 @@ class AcidCodesShortcodes
 
     function addto_mce_acidcodes_fontawesome($plugin_array)
     {
-        $plugin_array['fontawesome'] = $this->plugin_url . 'assets/js/fontawesome-all.min.js';
+        $plugin_array['fontawesome'] = $this->plugin_url . 'assets/js/font-awesome/fontawesome-all.min.js';
 
         return $plugin_array;
     }

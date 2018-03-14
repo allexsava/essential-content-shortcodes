@@ -4,9 +4,9 @@
     $id = !empty($id) ? 'id="'.$id.'"' : '';
 
     // get needed classes
-    $classes = 'acidcode  acidcode--btn  btn';
-    $classes.= !empty($size) ? '  btn--'.$size : '';
-    $classes.= !empty($shape) ? '  btn--'.$shape : '';
+    $classes = 'acidcode waves-effect acidcode--btn  btn';
+    $classes.= !empty($size) ? '  btn-'.$size : '';
+    $classes.= !empty($shape) ? '  btn-'.$shape : '';
     $classes.= !empty($class) ? '  '.$class : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';

@@ -1,4 +1,9 @@
 //Modal Body
+%mpf {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
 #acidcodes_shortcodes_modal {
   .l_modal_body {
     & {
@@ -18,16 +23,12 @@
       margin: 0 auto 10px;
     }
     ul {
-      margin: 0;
-      padding: 0;
-      float: left;
+      @extend %mpf;
       width: 100%;
       margin-top: 5px;
       li {
-        float: left;
+        @extend %mpf;
         list-style: none;
-        margin: 0;
-        padding: 0;
       }
       & > li {
         text-align: center;
@@ -52,7 +53,6 @@
         }
         &:nth-child(3n) {
           border-right: none;
-          //border-bottom: 1px solid $grid_border-color;
         }
 
         &:hover {
@@ -109,8 +109,6 @@
     }
 
     .input-field label.active {
-      //display: block;
-      //margin-bottom: 5px;
       color: $rectangle-hover;
     }
     .help-block {
@@ -121,8 +119,6 @@
     }
     select, textarea, input, .uneditable-input {
       &:focus {
-        //@include box-shadow(inset 0 1px 3px rgba(0,0,0,0.25));
-        //box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
         outline: 0;
       }
     }
@@ -143,15 +139,12 @@
   &.l_acid_modal {
     .l_modal_body {
       .details_container {
-        // display:none;
         padding: 0px;
         .details_content {
-          // display:block;
           height: 0;
           margin-top: 10px;
           margin-bottom: 0;
           opacity: 0;
-          //@include transition(all 0.3s);
           button[type="submit"] {
             display: none;
           }
@@ -166,7 +159,6 @@
       & > ul {
         height: auto;
         opacity: 1;
-        //@include transition(all 0.3s);
         margin-top: 0px;
         margin-bottom: 10px;
       }

@@ -64,10 +64,30 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'        => 'eg square, rounded'
             ),
+            'waves_color'      => array(
+                'type'        => 'select',
+                'name'        => __( 'Waves Color', 'acidcodes_txtd' ),
+                'options'     => array(
+                    ''      => __( 'Select Color', 'acidcodes_txtd' ),
+                    'waves-light' => __( 'Light', 'acidcodes_txtd' ),
+                    'waves-red' => __( 'Red', 'acidcodes_txtd' ),
+                    'waves-yellow' => __( 'Yellow', 'acidcodes_txtd' ),
+                    'waves-orange' => __( 'Orange', 'acidcodes_txtd' ),
+                    'waves-purple' => __( 'Purple', 'acidcodes_txtd' ),
+                    'waves-green' => __( 'Green', 'acidcodes_txtd' ),
+                    'waves-teal' => __( 'Teal', 'acidcodes_txtd' )
+                ),
+                'admin_class' => 'input-field hide-list col s6'
+            ),
+            'waves_effect'    => array(
+                'type'        => 'switch',
+                'name'        => __( 'Waves effect', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6',
+            ),
             'newtab'    => array(
                 'type'        => 'switch',
                 'name'        => __( 'Open in a new tab?', 'acidcodes_txtd' ),
-                'admin_class' => 'span5 push2'
+                'admin_class' => 'col s6'
             ),
         );
 

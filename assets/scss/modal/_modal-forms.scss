@@ -38,6 +38,16 @@
     &:hover i.active {
       display:block;
     }
+    svg.fa-image {
+      color: $white;
+      text-align: center;
+      font-size: 40px;
+    }
+    label {
+      display: block;
+      font-size: 15px;
+      color: #7b7b7b !important;
+    }
   }
 }
 
@@ -58,7 +68,6 @@
         li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
         li a { display:block; }
         li.ui-tabs-active {
-          //padding-bottom: 0;
           padding-right: .1em;
           border-right-width: 1px;
         }
@@ -68,7 +77,6 @@
         padding: 1em 1em 1em 0;
         width: 83.33333%;
         float:left;
-        // margin-left: 82px;
       }
 
       .tabs-heads, .slider-heads {
@@ -78,8 +86,6 @@
           border-left: 1px solid #ccc;
           border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
-          //@include border-top-left-radius(4px);
-          //@include border-bottom-left-radius(4px);
           border-top-left-radius: 4px;
           border-bottom-left-radius: 4px;
 
@@ -94,19 +100,10 @@
       }
 
       .tab, .slide {
-        //border: 1px solid #ccc;
         min-height: 300px;
         min-width: 450px;
         max-width: 83%;
-        //@include border-top-right-radius(4px);
-        //@include border-bottom-left-radius(4px);
-        //@include border-bottom-right-radius(4px);
-        //border-top-right-radius: 4px;
-        //border-bottom-left-radius: 4px;
-        //border-bottom-right-radius: 4px;
-
         & > input, & > textarea {
-          //@include border-radius(4px);
           border-radius: 4px;
           padding: 2%;
           margin: 2% 5%;

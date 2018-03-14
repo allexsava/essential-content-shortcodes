@@ -15,7 +15,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
             'content_text' => array(
                 'type' => 'textarea',
                 'name' => 'Text',
-                'admin_class' => 'input-field col s12 span-12',
+                'admin_class' => 'input-field col s12',
                 'is_content' => true
             ),
             'text_size' => array(
@@ -27,7 +27,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'medium' => 'Medium',
                     'big' => 'Big'
                 ),
-                'admin_class' => 'input-field hide-list col s6 span-12 input-special-margin'
+                'admin_class' => 'input-field hide-list col s6 input-special-margin'
             ),            
             'author' => array(
                 'type' => 'text',

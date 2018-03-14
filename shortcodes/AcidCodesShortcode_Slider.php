@@ -26,7 +26,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->params = array(
             'image' => array(
                 'type' => 'image',
-                'admin_class' => 'col s6 span5 push1 acid_media_uploader'
+                'admin_class' => 'col s6 acid_media_uploader'
             ),
 
             'type' => array(

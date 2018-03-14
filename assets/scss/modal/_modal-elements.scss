@@ -4,27 +4,28 @@
   box-shadow: none;
 }
 
+%equal-margin-display {
+  margin: 0 auto;
+  display: block;
+}
+
 #acidcodes_shortcodes_modal {
   i {
     font-size: 14px;
   }
 
   .btn {
-    //padding: 10px;
     margin: 0;
     & {
       cursor: pointer;
-      //padding: 4px 25px;
       display: inline-block;
       text-align: center;
-      //line-height: 20px;
       border: 1px solid #cccccc;
 
       i {
         margin-right: 5px;
         color: #939393;
         float: left;
-        //@include transition(all 0.2s);
       }
       &:hover {
         i {
@@ -43,7 +44,6 @@
         color: $white;
       }
       span {
-        //@include transition(all 0.2s);
         opacity: 1;
         float: right;
         margin-left: 5px;
@@ -90,7 +90,6 @@
       }
 
       &.disabled {
-        //opacity: 0.7;
         background: none !important;
         @extend .none;
         cursor: not-allowed;
@@ -108,25 +107,101 @@
       font-size: 12px;
       color: $cancel-color;
       letter-spacing: 0.2px;
-      //line-height: 22px;
       &:hover {
         color: $base;
       }
     }
   }
+
+  .input-field.col label {
+    left: 0;
+  }
+
+  .select-wrapper input.select-dropdown {
+    margin: 0;
+  }
+
+  input[type=range]::-webkit-slider-thumb, ::-moz-range-thumb, ::-ms-thumb, + .thumb {
+    background-color: $rectangle-hover;
+  }
+
+  .hide-list .dropdown-content li:nth-child(1) {
+    display: none;
+  }
+
+  .dropdown-content {
+    li {
+      > a {
+        color: $black;
+      }
+      > span {
+        color: $black;
+        &:hover{
+          color: $white;
+          background-color: $rectangle-hover;
+        }
+      }
+      &.active >span {
+        color: $white;
+        background-color: $accent-color;
+      }
+    }
+  }
+
 }
 
 .markers label {
   margin-bottom: 15px;
 }
-
 span.social-media {
   margin: 5px 0 20px;
   label {
     font-size: 1rem;
   }
 }
-
 span.input-special-margin {
   margin-top: 19px;
+}
+
+.shame-margin {
+  margin: 20px 0px 10px 0px;
+}
+.align-clear {
+  clear: both;
+}
+.acid_media_uploader {
+  margin-bottom: 10px;
+}
+.input-field.col.s12 {
+  margin-top: 0;
+  padding-right: 35px;
+}
+.input-special-margin label {
+  margin-top: -5px;
+}
+li.icon {
+  svg {
+    @extend %equal-margin-display;
+  }
+  &.active {
+    background-color: $rectangle-hover;
+    svg {
+      @extend %equal-margin-display;
+      color: $white;
+      padding: 5px;
+      transition: padding .5s;
+    }
+  }
+}
+
+ul.acid_icon_list {
+  overflow: scroll;
+  height: 230px;
+  .row > li {
+    clear: none !important;
+  }
+}
+
+.scroll-height .dropdown-content.select-dropdown {
+  height: 300px ;
 }

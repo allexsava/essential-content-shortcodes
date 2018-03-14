@@ -142,9 +142,9 @@ editor = '';
 
 
 				// Tabs Init
-                $(document).ready(function(){
-                    $('ul.tabs').tabs();
-                });
+                // $(document).ready(function(){
+                 //    $('ul.tabs').tabs();
+                // });
 
 				//TextArea
                 $('#content').trigger('autoresize');
@@ -198,7 +198,7 @@ editor = '';
 							animation: 'fadeAndPop',                   //fade, fadeAndPop, none
 							animationspeed: 400,                       //how fast animtions are
 							closeonbackgroundclick: true,              //if you click background will modal close?
-							dismissmodalclass: 'cancel'    //the class of a button or element that will close an open modal
+							dismissmodalclass: 'close'    //the class of a button or element that will close an open modal
 						} );
 						editor = ed;
 						get_current_editor_selected_content = function() {

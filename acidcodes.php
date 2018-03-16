@@ -16,6 +16,9 @@ if (!defined('ABSPATH')) {
 class AcidCodesShortcodes
 {
 
+    protected $loader;
+    protected $version;
+    protected $acidcodes;
     protected static $plugin_dir;
     public $plugin_url;
 
@@ -28,10 +31,12 @@ class AcidCodesShortcodes
         // Register admin styles and scripts
         add_action('mce_buttons_2', array($this, 'register_admin_assets'));
 
-        // Register site styles and scripts
-        // not used right now
-//        add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
-//		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_scripts' ) );
+        //hack
+        $this->acidcodes = 'acidcodes';
+        $this->version = '1.2.3';
+
+        $this->load_dependencies();
+        $this->define_public_hooks();
 
         // Run our plugin along with wordpress init
         add_action('init', array($this, 'create_acidcodes_shortcodes'));
@@ -47,6 +52,25 @@ class AcidCodesShortcodes
         add_filter('no_texturize_shortcodes', array($this, 'acidcodes_shortcodes_to_exempt_from_wptexturize'));
 
     } // end constructor
+
+    private function load_dependencies()
+    {
+
+        /**
+         * The class responsible for orchestrating the actions and filters of the
+         * core plugin.
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'acidcodes/includes/class-acidcodes-loader.php';
+
+        /**
+         * The class responsible for defining all actions that occur in the public-facing
+         * side of the site.
+         */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'acidcodes/includes/class-acidcodes-public.php';
+
+        $this->loader = new AcidCodesShortcodes_Loader();
+
+    }
 
     public function acidcodes_init_plugin()
     {
@@ -88,12 +112,6 @@ class AcidCodesShortcodes
         return $buttons;
     } // end register_plugin_styles
 
-    /**
-     * Register and enqueue style sheet.
-//     */
-//    public function register_plugin_styles() {
-//
-//    }
 
     /*--------------------------------------------*
      * Core Functions
@@ -102,9 +120,9 @@ class AcidCodesShortcodes
     /**
      * Registers and enqueues plugin-specific scripts..Usually we base on theme front-end scripts and this is empty.
      */
-    public function register_plugin_scripts()
-    {
-    } // end action_method_name
+//    public function register_plugin_scripts()
+//    {
+//    } // end action_method_name
 
     function register_acidcodes_shortcodes_button($buttons)
     {
@@ -181,6 +199,78 @@ class AcidCodesShortcodes
         return $shortcodes;
     }
 
+    /**
+     * Register all of the hooks related to the public-facing functionality
+     * of the plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     */
+    private function define_public_hooks() {
+
+        $plugin_public = new AcidCodesShortcodes_Public( $this->get_acidcodes(), $this->get_version() );
+
+        add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
+        add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ) );
+
+    }
+
+    /**
+     * Run the loader to execute all of the hooks with WordPress.
+     *
+     * @since    1.0.0
+     */
+    public function run() {
+        $this->loader->run();
+    }
+
+    /**
+     * The name of the plugin used to uniquely identify it within the context of
+     * WordPress and to define internationalization functionality.
+     *
+     * @since     1.0.0
+     * @return    string    The name of the plugin.
+     */
+    public function get_acidcodes() {
+        return $this->acidcodes;
+    }
+
+    /**
+     * The reference to the class that orchestrates the hooks with the plugin.
+     *
+     * @since     1.0.0
+     * @return    Gridable_Loader    Orchestrates the hooks of the plugin.
+     */
+    public function get_loader() {
+        return $this->loader;
+    }
+
+    /**
+     * Retrieve the version number of the plugin.
+     *
+     * @since     1.0.0
+     * @return    string    The version number of the plugin.
+     */
+    public function get_version() {
+        return $this->version;
+    }
+
 } // end class
 
-$AcidCodesShortcodes = new AcidCodesShortcodes();
+
+/**
+ * Begins execution of the plugin.
+ *
+ * Since everything within the plugin is registered via hooks,
+ * then kicking off the plugin from this point in the file does
+ * not affect the page life cycle.
+ *
+ * @since    1.0.0
+ */
+function run_acidcodes() {
+    global $AcidCodesShortcodes;
+    $AcidCodesShortcodes = new AcidCodesShortcodes();
+    $AcidCodesShortcodes->run();
+
+}
+run_acidcodes();

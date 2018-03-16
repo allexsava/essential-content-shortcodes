@@ -16,7 +16,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'type' => 'textarea',
                 'name' => 'Text',
                 'admin_class' => 'input-field col s12',
-                'is_content' => true
+                'is_content' => true,
             ),
             'text_size' => array(
                 'type' => 'select',
@@ -44,7 +44,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'type' => 'text',
                 'name' => 'Author title',
                 'admin_class' => 'col s6',
-            ),            
+            )
         );
 
 	    // allow the theme or other plugins to "hook" into this shortcode's params
@@ -60,6 +60,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
 			'author' => '',
             'author_title' => '',
 			'link' => '',
+            'predefined' => ''
         ), $atts ) );
 
 	    /**

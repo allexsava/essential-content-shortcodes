@@ -35,7 +35,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'options' => array(
                     '' => 'Select Slider',
                     'carousel' => 'Carousel',
-                    'width' => 'Full-width',
+                    'carousel-slider' => 'Full-width',
                 ),
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg carousel, full-width'
@@ -75,27 +75,6 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'name'        => __( 'Slider Loop', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6'
             )
-//            'slider' => array(
-//                'type' => 'slider',
-//                'name' => 'Slider',
-//            ),
-            //            'navigation_style' => array(
-//                'type' => 'select',
-//                'name' => 'Navigation Style',
-//                'options' => array('arrows' => 'Arrows', 'bullets' => 'Bullets', 'both' => 'Arrows and Bullets', 'none' => 'None'),
-//                'admin_class' => 'span10 push2'
-//            ),
-//            'custom_slider_transition' => array(
-//                'type' => 'select',
-//                'name' => 'Slider transition',
-//                'options' => array('move' => 'Move/Drag', 'fade' => 'Fade'),
-//                'admin_class' => 'span10 push2'
-//            ),
-//            'autoheight' => array(
-//                'type' => 'switch',
-//                'name' => 'Let slider autoheight?',
-//                'admin_class' => 'span10 push2'
-//            ),
 
         );
 
@@ -119,22 +98,31 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
 
     public function add_slider_shortcode( $atts, $content ) {
 
-         extract( shortcode_atts( array(
-             'navigation_style' => 'arrow',
-             'bullets' => 'true',
-             'autoheight' => 'true',
-             'custom_slider_transition' => 'move'
-         ), $atts ) );
+//         extract( shortcode_atts( array(
+//             'navigation_style' => 'arrow',
+//             'bullets' => 'true',
+//             'autoheight' => 'true',
+//             'custom_slider_transition' => 'move'
+//         ), $atts ) );
+//
+//        if ( $navigation_style == 'arrows' ) {
+//            $navigation_style = 'data-arrows';
+//        } elseif ( $navigation_style == 'bullets' ) {
+//            $navigation_style = 'data-bullets';
+//        }elseif ( $navigation_style == 'both' ) {
+//            $navigation_style = 'data-arrows data-bullets';
+//        }
+//
+//        $navigation_style .= ' data-autoheight';
 
-        if ( $navigation_style == 'arrows' ) {
-            $navigation_style = 'data-arrows';
-        } elseif ( $navigation_style == 'bullets' ) {
-            $navigation_style = 'data-bullets';
-        }elseif ( $navigation_style == 'both' ) {
-            $navigation_style = 'data-arrows data-bullets';
+        //create an array with only the registered params - dynamic since we filter them and have no way of knowing for sure
+        $extract_params = array();
+        if (isset($this->params)) {
+            foreach ($this->params as $key => $value) {
+                $extract_params[$key] = '';
+            }
         }
-
-        $navigation_style .= ' data-autoheight';
+        extract(shortcode_atts($extract_params, $atts));
 
         /**
          * Template localization between plugin and theme
@@ -156,6 +144,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
 //             'title' => '',
 //             'icon' => ''
 //         ), $atts ) );
+
 
         /**
          * Template localization between plugin and theme

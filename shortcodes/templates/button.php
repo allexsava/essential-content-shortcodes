@@ -4,10 +4,12 @@
     $id = !empty($id) ? 'id="'.$id.'"' : '';
 
     // get needed classes
-    $classes = 'acidcode waves-effect acidcode--btn  btn';
-    $classes.= !empty($size) ? '  btn-'.$size : '';
-    $classes.= !empty($shape) ? '  btn-'.$shape : '';
+    $classes = 'acidcode acidcode--btn  btn';
+    $classes.= !empty($size) ? '  btn_size-'.$size : '';
+    $classes.= !empty($shape) ? '  btn_shape-'.$shape : '';
     $classes.= !empty($class) ? '  '.$class : '';
+    $classes.=!empty($waves_color) ? '  '.$waves_color : '';
+    $classes.=!empty($waves_effect) ? ' waves-effect ' : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 

@@ -145,6 +145,7 @@
           margin-top: 10px;
           margin-bottom: 0;
           opacity: 0;
+          @extend %transition;
           button[type="submit"] {
             display: none;
           }

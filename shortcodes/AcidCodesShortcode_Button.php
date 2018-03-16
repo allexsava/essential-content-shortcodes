@@ -77,12 +77,12 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'waves-green' => __( 'Green', 'acidcodes_txtd' ),
                     'waves-teal' => __( 'Teal', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'input-field hide-list col s6'
+                'admin_class' => 'input-field hide-list col s6 scroll-height'
             ),
             'waves_effect'    => array(
                 'type'        => 'switch',
                 'name'        => __( 'Waves effect', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6',
+                'admin_class' => 'col s6 shame-margin',
             ),
             'newtab'    => array(
                 'type'        => 'switch',

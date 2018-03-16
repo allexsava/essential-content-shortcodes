@@ -1,3 +1,7 @@
+<?php
+$content = !empty($content) ? $this->get_clean_content($content) : '';
+?>
+
 <div class="acidcode  acidcode--team-member  team-member  <?php echo $class ?>">
 
 	<?php if ( !empty($image) ) : ?>
@@ -52,28 +56,28 @@
         	<?php if ( !empty($social_twitter) ) : ?>
                 <li class="team-member__social-link">
                     <a class="team-member__social-link__link" href="<?php echo $social_twitter; ?>" target="_blank">
-                        <i class="shc  shc--icon  icon-twitter"></i>
+                        <i class="shc  shc--icon  fab fa-twitter"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_facebook) ) : ?>
                 <li class="team-member__social-link">
                     <a class="team-member__social-link__link" href="<?php echo $social_facebook; ?>" target="_blank">
-                        <i class="shc  shc--icon  icon-facebook"></i>
+                        <i class="shc  shc--icon  fab fa-facebook-f"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_linkedin) ) : ?>
                 <li class="team-member__social-link">
                     <a class="team-member__social-link__link" href="<?php echo $social_linkedin; ?>" target="_blank">
-                        <i class="shc  shc--icon  icon-linkedin"></i>
+                        <i class="shc  shc--icon  fab fa-linkedin-in"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_pinterest) ) : ?>
                 <li class="team-member__social-link">
                     <a class="team-member__social-link__link" href="<?php echo $social_pinterest; ?>" target="_blank">
-                        <i class="shc  shc--icon  icon-pinterest"></i>
+                        <i class="shc  shc--icon  fab fa-pinterest-p"></i>
                     </a>
                 </li>
         	<?php endif; ?>

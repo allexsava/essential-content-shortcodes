@@ -1,15 +1,10 @@
 @charset "UTF-8";
-/*	--------------------------------------------------
-Modal Styling
--------------------------------------------------- */
 
 //BASE
 @import "base/base";
 
-//MATERIALIZE
-#acidcodes_shortcodes_modal {
-  @import "materialize";
-}
+//MODAL
+@import "materialize/materialize";
 
 //FONT-AWESOME
 @import "font-awesome/fontawesome";

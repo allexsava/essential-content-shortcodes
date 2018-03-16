@@ -8,6 +8,10 @@
   margin: 0 auto;
   display: block;
 }
+%transition {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
 
 #acidcodes_shortcodes_modal {
   i {
@@ -44,7 +48,8 @@
         color: $white;
       }
       span {
-        opacity: 1;
+        @extend %transition;
+        opacity: 0;
         float: right;
         margin-left: 5px;
         color: $white;
@@ -203,5 +208,5 @@ ul.acid_icon_list {
 }
 
 .scroll-height .dropdown-content.select-dropdown {
-  height: 300px ;
+  height: 150px ;
 }

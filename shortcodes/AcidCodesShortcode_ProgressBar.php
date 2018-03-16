@@ -15,17 +15,17 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
-                'admin_class' => 'col s6 span8'
+                'admin_class' => 'col s6'
             ),
             'progress' => array(
                 'type' => 'text',
                 'name' => 'Progress',
-                'admin_class' => 'col s6 span3'
+                'admin_class' => 'col s6'
             ),
 	        'markers' => array(
 		        'type' => 'switch',
 		        'name' => 'Markers',
-		        'admin_class' => 'span2 push1 markers'
+		        'admin_class' => 'markers'
 	        ),
 	        array(
 		        'type' => 'info',

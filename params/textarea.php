@@ -8,7 +8,7 @@ if (isset($param['rows'])) $rows = $param['rows'];
 ?>
 
 <span class="<?php echo $class; ?>">
-    <textarea class="materialize-textarea" type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>" <?php echo $is_content ?>><?php if (isset($param['predefined'])) echo $param['predefined'] ?></textarea>
+    <textarea class="custom-textarea" type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>" <?php echo $is_content ?> ><?php if (isset($param['predefined'])) echo $param['predefined'] ?></textarea>
         <?php if (!empty($param['name'])) : ?>
             <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
         <?php endif; ?>

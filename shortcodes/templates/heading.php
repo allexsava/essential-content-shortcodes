@@ -13,6 +13,6 @@ if ( ! empty( $subtitle ) ) {
 }
 
 echo '<hgroup ' . $classes . '>
-	<h2 class="headline__secondary">' . $subtitle . '</h2>
 	<h1 class="headline__primary">' . $title . '</h1>
+	<h2 class="headline__secondary">' . $subtitle . '</h2>
 </hgroup>';

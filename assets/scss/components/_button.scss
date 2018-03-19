@@ -1,0 +1,30 @@
+.acidcode__btn--size-small {
+  @extend .font-style;
+}
+
+.acidcode__btn--size-large {
+  @extend .font-style;
+}
+
+.acidcode__btn--size-huge {
+  @extend .font-style;
+  height: 70px;
+  line-height: 70px;
+}
+
+.acidcode__btn--shape-square {
+  border-radius: 0px;
+}
+
+.acidcode__btn--shape-rounded {
+  border-radius: 5px;
+}
+
+/**
+
+ */
+/* Legend
+ */
+//acidcode //block
+//acidcode__btn //element button
+//acidcode__btn--huge //modifier

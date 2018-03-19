@@ -12,12 +12,17 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
         $this->direct = false;
 
         $this->params = array(
-            'content_text' => array(
-                'type' => 'textarea',
-                'name' => 'Text',
-                'admin_class' => 'input-field col s12',
-                'is_content' => true,
+            'quote_type' => array(
+                'type' => 'select',
+                'name' => 'Quote type',
+                'options' => array(
+                    '' => 'Select Type',
+                    'blockquote' => 'Block Quote',
+                    'quote' => 'Quote'
+                ),
+                'admin_class' => 'input-field hide-list col s6 input-special-margin'
             ),
+
             'text_size' => array(
                 'type' => 'select',
                 'name' => 'Text size',
@@ -28,7 +33,13 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'big' => 'Big'
                 ),
                 'admin_class' => 'input-field hide-list col s6 input-special-margin'
-            ),            
+            ),
+            'content_text' => array(
+                'type' => 'textarea',
+                'name' => 'Text',
+                'admin_class' => 'input-field col s12',
+                'is_content' => true,
+            ),
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
@@ -39,11 +50,6 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'type' => 'text',
                 'name' => 'Author link',
                 'admin_class' => 'col s6'
-            ),
-            'author_title' => array(
-                'type' => 'text',
-                'name' => 'Author title',
-                'admin_class' => 'col s6',
             )
         );
 
@@ -55,6 +61,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
 
     public function add_shortcode($atts, $content){
         extract( shortcode_atts( array(
+            'quote_type' => '',
 			'content_text' => '',
             'text_size' => 'medium',
 			'author' => '',

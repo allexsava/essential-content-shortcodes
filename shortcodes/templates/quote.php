@@ -2,6 +2,7 @@
     // get needed classes
     $classes = 'acidcode  acidcode--testimonial  testimonial';
     $classes.= !empty($text_size) ? ' testimonial_size--'.$text_size.'-text' : '';
+    $classes.= !empty($quote_type) ? ' quote_type--'.$quote_type : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 

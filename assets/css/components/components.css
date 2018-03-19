@@ -1,0 +1,47 @@
+.font-style, .acidcode__btn--size-small, .acidcode__btn--size-large, .acidcode__btn--size-huge {
+  font-family: sans-serif;
+  font-weight: 300; }
+
+.align-center, .acidcode__separator--align-center {
+  text-align: center; }
+
+.align-left, .acidcode__separator--align-left {
+  text-align: left; }
+
+.align-right, .acidcode__separator--align-right {
+  text-align: right; }
+
+.acidcode__btn--size-huge {
+  height: 70px;
+  line-height: 70px; }
+
+.acidcode__btn--shape-square {
+  border-radius: 0px; }
+
+.acidcode__btn--shape-rounded {
+  border-radius: 5px; }
+
+/**
+
+ */
+/* Legend
+ */
+.acidcode__separator--weight-thin {
+  background-color: #bbb;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+.acidcode__separator--weight-thick {
+  background-color: #bbb;
+  border: 0;
+  height: 5px;
+  margin-bottom: 1.5em; }
+
+.acidcode__separator--style-dotted {
+  border: 0;
+  border-top: 1px dotted;
+  background-color: transparent;
+  color: #bbb; }
+
+/*# sourceMappingURL=components.css.map */

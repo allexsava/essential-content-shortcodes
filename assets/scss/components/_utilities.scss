@@ -1,0 +1,19 @@
+// Extends, Functions
+
+//Font
+$primary-font: sans-serif;
+
+.font-style {
+  font-family: $primary-font;
+  font-weight: 300;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}

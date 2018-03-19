@@ -151,7 +151,7 @@
           }
           &.active {
             margin-top: 0;
-            margin-bottom: 10px;
+            //margin-bottom: 10px;
             opacity: 1;
             height: auto;
           }
@@ -182,7 +182,7 @@
       .l_modal_body {
         .details_container {
           display: block;
-          padding: 20px;
+          padding: 20px 20px 0px 20px;
         }
         & > ul {
           height: 0;

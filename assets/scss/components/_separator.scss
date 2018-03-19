@@ -1,0 +1,34 @@
+.acidcode__separator--align-center {
+  @extend .align-center;
+}
+.acidcode__separator--align-left {
+  @extend .align-left;
+}
+.acidcode__separator--align-right {
+  @extend .align-right;
+}
+.acidcode__separator--size-regular {}
+.acidcode__separator--size-double {
+}
+.acidcode__separator--weight-thin {
+  background-color: #bbb;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+.acidcode__separator--weight-thick {
+  background-color: #bbb;
+  border: 0;
+  height: 5px;
+  margin-bottom: 1.5em;
+}
+.acidcode__separator--color-dark {}
+.acidcode__separator--color-light {}
+.acidcode__separator--color-color {}
+.acidcode__separator--style-dotted {
+  border: 0;
+  border-top: 1px dotted;
+  background-color: transparent;
+  color: #bbb;
+}
+.acidcode__separator--style-striped {}

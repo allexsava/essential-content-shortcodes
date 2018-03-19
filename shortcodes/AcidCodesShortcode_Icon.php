@@ -67,6 +67,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                     'rotate-270' => 'icon-rotate-270',
                     'flip-h' => 'icon-flip-horizontal',
                     'flip-v' => 'icon-flip-vertical'),
+                'help-text'   => 'eg icon-border, pull-right, icon-rotate-90',
                 'value' => array('')
             ),
             'name' => array(

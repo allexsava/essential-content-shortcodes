@@ -1,6 +1,6 @@
 <?php
-$classes = !empty($type) ? ' '.$type : '';
-$return_string = '<div class="carousel '. $classes . '">';
+$classes = !empty($type) ? 'acidcode__carousel--type-'.$type : '';
+$return_string = '<div class="acidcode  acidcode__carousel '. $classes . '">';
 $return_string .= do_shortcode($content);
 
 $return_string .= '</div>';

@@ -30,16 +30,18 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg center, left, right'
             ),
-            'size' => array(
+            'style' => array(
                 'type' => 'select',
-                'name' => 'Size',
+                'name' => 'Style',
                 'options' => array(
-                    '' => 'Select Size',
+                    '' => 'Select Style',
                     'regular' => 'Regular',
-                    'double' => 'Double'
+                    'double' => 'Double',
+                    'dotted' => 'Dotted',
+                    'striped' => 'Striped'
                 ),
-                'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg regular, double'
+                'admin_class' => 'scroll-height input-field hide-list col s6',
+                'help-text'   => 'eg regular, dotted, striped'
             ),
             'weight' => array(
                 'type' => 'select',
@@ -57,23 +59,16 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'name' => 'Color',
                 'options' => array(
                     '' => 'Select Color',
-                    'dark' => 'Dark',
-                    'white' => 'Light',
-                    'color' => 'Color'
+                    'light' => 'Light',
+                    'red' => 'Red',
+                    'yellow' => 'Yellow',
+                    'orange' => 'Orange',
+                    'purple' => 'Purple',
+                    'green' => 'Green',
+                    'teal' => 'Teal'
                 ),
-                'admin_class' => 'input-field hide-list col s6',
+                'admin_class' => 'scroll-height input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
-            ),
-            'style' => array(
-                'type' => 'select',
-                'name' => 'Style',
-                'options' => array(
-                    '' => 'Select Style',
-                    'dotted' => 'Dotted',
-                    'striped' => 'Striped'
-                ),
-                'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg dotted, striped'
             )
         );
 

@@ -1,6 +1,6 @@
 <?php
 
-$output = '<i class="acidcode  acidcode--icon '. $name . '  ' . $type . '  ' . $size . '  ' . $class . '"></i>';
+$output = '<i class="acidcode  acidcode__icon '. $name . ' acidcode__icon--type-' . $type . ' ' . $size . ' ' . $class . '" data-fa-transform="shrink-8 '. $transform .'"></i>';
 
 if ( ! empty( $link ) ) {
 	$link = ' href="' . esc_attr( $link ) . '" ';

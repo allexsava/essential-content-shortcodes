@@ -131,6 +131,12 @@
       border-right-color: $rectangle-hover;
       border-bottom-color: $rectangle-hover;
     }
+    input[type=range] + .thumb {
+      background-color: $accent-color;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      background-color: $accent-color;
+    }
 
     select {
       height: 32px;

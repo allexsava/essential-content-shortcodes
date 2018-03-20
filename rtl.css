@@ -9776,6 +9776,7 @@ button.acidcode__btn--floating {
   font-family: sans-serif;
   font-weight: 300; }
 
+/* Button section */
 .align-center, .acidcode__separator--align-center {
   text-align: center; }
 
@@ -9784,6 +9785,11 @@ button.acidcode__btn--floating {
 
 .align-right, .acidcode__separator--align-right {
   text-align: left; }
+
+/* Separator section */
+/* Icon section */
+.icon-height, svg.acidcode__icon--type-circle, .acidcode__icon--type-rectangle {
+  height: 2em; }
 
 .acidcode__btn--size-huge {
   height: 70px;
@@ -9800,23 +9806,62 @@ button.acidcode__btn--floating {
  */
 /* Legend
  */
+svg.acidcode__icon--type-circle {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 900px; }
+
+.acidcode__icon--type-rectangle {
+  background: rgba(0, 0, 0, 0.2); }
+
+.acidcode__separator {
+  background-color: transparent;
+  border: 0px; }
+
 .acidcode__separator--weight-thin {
-  background-color: #bbb;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
+  border-bottom-width: 1px; }
 
 .acidcode__separator--weight-thick {
-  background-color: #bbb;
-  border: 0;
-  height: 5px;
-  margin-bottom: 1.5em; }
+  border-bottom-width: 5px; }
+
+.acidcode__separator--color-light {
+  border-bottom-color: lightgray; }
+
+.acidcode__separator--color-red {
+  border-bottom-color: red; }
+
+.acidcode__separator--color-yellow {
+  border-bottom-color: yellow; }
+
+.acidcode__separator--color-orange {
+  border-bottom-color: orange; }
+
+.acidcode__separator--color-purple {
+  border-bottom-color: purple; }
+
+.acidcode__separator--color-green {
+  border-bottom-color: green; }
+
+.acidcode__separator--color-teal {
+  border-bottom-color: gray; }
+
+.acidcode__separator--style-regular {
+  border-bottom-style: solid; }
+
+.acidcode__separator--style-double {
+  border-bottom-style: double; }
 
 .acidcode__separator--style-dotted {
-  border: 0;
-  border-top: 1px dotted;
-  background-color: transparent;
-  color: #bbb; }
+  border-bottom-style: dotted; }
+
+.acidcode__separator--style-striped {
+  background-image: url("../../images/separator.png");
+  height: 0.5rem; }
+
+.team-member__social-link {
+  display: inline-block; }
+
+.team-member__social-link__link {
+  color: green; }
 
 /*!
  * Font Awesome Free 5.0.8 by @fontawesome - https://fontawesome.com
@@ -12942,6 +12987,12 @@ ul.acid_icon_list {
 #acidcodes_shortcodes_modal .l_modal_body [type="checkbox"]:checked + label:before {
   border-left-color: #69F0AE;
   border-bottom-color: #69F0AE; }
+
+#acidcodes_shortcodes_modal .l_modal_body input[type=range] + .thumb {
+  background-color: #00E676; }
+
+#acidcodes_shortcodes_modal .l_modal_body input[type=range]::-webkit-slider-thumb {
+  background-color: #00E676; }
 
 #acidcodes_shortcodes_modal .l_modal_body select {
   height: 32px; }

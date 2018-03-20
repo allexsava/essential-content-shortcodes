@@ -55,19 +55,26 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
             ),
             'class' => array(
                 'type' => 'select',
-                'name' => 'Custom CSS Class',
+                'name' => 'Icon Alignment',
                 'admin_class' => 'col s6 input-field hide-list scroll-height',
-                'options' => array('Select CSS Class',
-                    'fa-border' => 'icon-border',
+                'options' => array('Select Alignment',
                     'fa-pull-right' => 'pull-right',
                     'fa-pull-left' => 'pull-left',
-                    'fa-spin' => 'icon-spin',
+                    'fa-spin' => 'icon-spin'),
+                'help-text'   => 'eg pull-right, pull-left, icon-spin',
+                'value' => array('')
+            ),
+            'transform' => array(
+                'type' => 'select',
+                'name' => 'Power Transforms',
+                'admin_class' => 'col s6 input-field hide-list scroll-height',
+                'options' => array('Select Power',
                     'rotate-90' => 'icon-rotate-90',
                     'rotate-180' => 'icon-rotate-180',
                     'rotate-270' => 'icon-rotate-270',
                     'flip-h' => 'icon-flip-horizontal',
                     'flip-v' => 'icon-flip-vertical'),
-                'help-text'   => 'eg icon-border, pull-right, icon-rotate-90',
+                'help-text'   => 'eg icon-rotate-90, icon-flip-horizontal',
                 'value' => array('')
             ),
             'name' => array(

@@ -26,7 +26,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'text',
                 'name'        => __( 'Button Class', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg .btn-acid'
+                'help-text'   => 'eg btn-acid'
             ),
             'link'      => array(
                 'value'       => 'http://',
@@ -39,7 +39,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'text',
                 'name'        => __( 'Button ID', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg #first-btn'
+                'help-text'   => 'eg first-btn'
             ),
             'size'      => array(
                 'type'        => 'select',

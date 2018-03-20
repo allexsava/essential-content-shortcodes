@@ -2,7 +2,7 @@
 $content = !empty($content) ? $this->get_clean_content($content) : '';
 ?>
 
-<div class="acidcode  acidcode--team-member  team-member  <?php echo $class ?>">
+<div class="acidcode  acidcode__team-member <?php echo $class ?>">
 
 	<?php if ( !empty($image) ) : ?>
 

@@ -8,6 +8,7 @@ $primary-font: sans-serif;
   font-weight: 300;
 }
 
+/* Button section */
 .align-center {
   text-align: center;
 }
@@ -16,4 +17,23 @@ $primary-font: sans-serif;
 }
 .align-right {
   text-align: right;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+/* Separator section */
+@mixin border-width($width) {
+  border-bottom-width: $width;
+}
+@mixin border-color($color) {
+  border-bottom-color: $color;
+}
+@mixin border-style($style) {
+  border-bottom-style: $style;
+}
+
+/* Icon section */
+.icon-height {
+  height: 2em;
 }

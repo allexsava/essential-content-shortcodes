@@ -13,11 +13,11 @@
 }
 
 .acidcode__btn--shape-square {
-  border-radius: 0px;
+  @include border-radius(0px);
 }
 
 .acidcode__btn--shape-rounded {
-  border-radius: 5px;
+  @include border-radius(5px);
 }
 
 /**

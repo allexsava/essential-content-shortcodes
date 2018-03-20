@@ -33,7 +33,7 @@ class AcidCodesShortcodes
 
         //hack
         $this->acidcodes = 'acidcodes';
-        $this->version = '1.2.3';
+        $this->version = '1.2.4';
 
         $this->load_dependencies();
         $this->define_public_hooks();
@@ -212,7 +212,6 @@ class AcidCodesShortcodes
 
         add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
         add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ) );
-
     }
 
     /**

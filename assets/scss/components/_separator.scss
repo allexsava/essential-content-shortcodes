@@ -1,3 +1,7 @@
+.acidcode__separator {
+  background-color: transparent;
+  border: 0px;
+}
 .acidcode__separator--align-center {
   @extend .align-center;
 }
@@ -7,28 +11,43 @@
 .acidcode__separator--align-right {
   @extend .align-right;
 }
-.acidcode__separator--size-regular {}
-.acidcode__separator--size-double {
-}
 .acidcode__separator--weight-thin {
-  background-color: #bbb;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
+  @include border-width(1px);
 }
 .acidcode__separator--weight-thick {
-  background-color: #bbb;
-  border: 0;
-  height: 5px;
-  margin-bottom: 1.5em;
+  @include border-width(5px);
 }
-.acidcode__separator--color-dark {}
-.acidcode__separator--color-light {}
-.acidcode__separator--color-color {}
+.acidcode__separator--color-light {
+  @include border-color(lightgray);
+}
+.acidcode__separator--color-red {
+  @include border-color(red);
+}
+.acidcode__separator--color-yellow {
+  @include border-color(yellow);
+}
+.acidcode__separator--color-orange {
+  @include border-color(orange);
+}
+.acidcode__separator--color-purple {
+  @include border-color(purple);
+}
+.acidcode__separator--color-green {
+  @include border-color(green);
+}
+.acidcode__separator--color-teal {
+  @include border-color(gray);
+}
+.acidcode__separator--style-regular {
+  @include border-style(solid);
+}
+.acidcode__separator--style-double {
+  @include border-style(double);
+}
 .acidcode__separator--style-dotted {
-  border: 0;
-  border-top: 1px dotted;
-  background-color: transparent;
-  color: #bbb;
+  @include border-style(dotted);
 }
-.acidcode__separator--style-striped {}
+.acidcode__separator--style-striped {
+  background-image: url("../../images/separator.png");
+  height: 0.5rem;
+}

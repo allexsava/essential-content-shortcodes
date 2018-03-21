@@ -1,6 +1,19 @@
-.team-member__social-link {
+.acidcode__team-member--social-link {
+  &__link {
+    @include padding(0px 35px 0px 0px);
+    box-shadow: none !important;
+    //-webkit-box-shadow:none;
+  }
   display: inline-block;
 }
-.team-member__social-link__link {
-  color: green;
+.acidcode__team-member--name {
+  @include margin(25px 0px 0px 0px);
+  @extend .align-left;
+  font-size: 14px;
+}
+.acidcode__team-member--position {
+  @include margin(0px);
+}
+.acidcode__team-member--description {
+  @include margin(0px 0px 20px 0px);
 }

@@ -83,6 +83,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             'title' => '',
             'image' => '',
             'imagelink' => '',
+            'content' => '',
             'social_twitter' => '',
             'social_facebook' => '',
             'social_linkedin' => '',

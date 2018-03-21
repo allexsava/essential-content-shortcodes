@@ -1,0 +1,67 @@
+blockquote {
+  &.acidcode__quote--type-quote {
+    &.acidcode__quote--size-regular {
+      &:before {
+        @include font-size(90px);
+        line-height: 1.1;
+        @extend .blockquote-general;
+      }
+      @include font-size(16px);
+    }
+    &.acidcode__quote--size-small {
+      &:before {
+        @include font-size(70px);
+        line-height: 1.2;
+        @extend .blockquote-general;
+      }
+      @include font-size(14px);
+    }
+    &.acidcode__quote--size-medium {
+      &:before {
+        line-height: 1.05;
+        @include font-size(110px);
+        @extend .blockquote-general;
+      }
+      @include font-size(18px);
+    }
+    &.acidcode__quote--size-big {
+      &:before {
+        @include font-size(130px);
+        line-height: 1;
+        @extend .blockquote-general;
+      }
+      @include font-size(20px);
+    }
+    border: none;
+    .acidcode__quote--content {
+      @include margin(0px 0px 20px 0px);
+    }
+    .acidcode__quote--author-name {
+      text-transform: uppercase;
+    }
+  }
+}
+blockquote {
+  &.acidcode__quote--type-blockquote {
+    &.acidcode__quote--size-regular {
+      @include font-size(16px);
+    }
+    &.acidcode__quote--size-small {
+      @include font-size(14px);
+    }
+    &.acidcode__quote--size-medium {
+      @include font-size(18px);
+    }
+    &.acidcode__quote--size-big {
+      @include font-size(20px);
+    }
+    border-color: #00E676;
+    .acidcode__quote--content {
+      @include margin(0px 0px 20px 15px);
+    }
+    .acidcode__quote--author-name {
+      text-transform: uppercase;
+      @include margin(0px 0px 0px 15px);
+    }
+  }
+}

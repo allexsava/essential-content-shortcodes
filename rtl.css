@@ -9377,6 +9377,74 @@ small {
     -webkit-transform: scale(1);
             transform: scale(1); }
 
+.tabs {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 48px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  white-space: nowrap; }
+  .tabs.tabs-transparent {
+    background-color: transparent; }
+    .tabs.tabs-transparent .tab a,
+    .tabs.tabs-transparent .tab.disabled a,
+    .tabs.tabs-transparent .tab.disabled a:hover {
+      color: rgba(255, 255, 255, 0.7); }
+    .tabs.tabs-transparent .tab a:hover,
+    .tabs.tabs-transparent .tab a.active {
+      color: #fff; }
+    .tabs.tabs-transparent .indicator {
+      background-color: #fff; }
+  .tabs.tabs-fixed-width {
+    display: -ms-flexbox;
+    display: flex; }
+    .tabs.tabs-fixed-width .tab {
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase; }
+    .tabs .tab a {
+      color: rgba(238, 110, 115, 0.7);
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 24px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: color .28s ease; }
+      .tabs .tab a:hover, .tabs .tab a.active {
+        background-color: transparent;
+        color: #ee6e73; }
+    .tabs .tab.disabled a,
+    .tabs .tab.disabled a:hover {
+      color: rgba(238, 110, 115, 0.7);
+      cursor: default; }
+  .tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #f6b2b5;
+    will-change: left, right; }
+
+@media only screen and (max-width: 992px) {
+  .tabs {
+    display: -ms-flexbox;
+    display: flex; }
+    .tabs .tab {
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+      .tabs .tab a {
+        padding: 0 12px; } }
+
 .material-tooltip {
   padding: 10px 8px;
   font-size: 1rem;
@@ -9776,11 +9844,12 @@ button.acidcode__btn--floating {
   font-family: sans-serif;
   font-weight: 300; }
 
+/* Functions */
 /* Button section */
 .align-center, .acidcode__separator--align-center {
   text-align: center; }
 
-.align-left, .acidcode__separator--align-left {
+.align-left, .acidcode__separator--align-left, .acidcode__team-member--name {
   text-align: right; }
 
 .align-right, .acidcode__separator--align-right {
@@ -9790,6 +9859,15 @@ button.acidcode__btn--floating {
 /* Icon section */
 .icon-height, svg.acidcode__icon--type-circle, .acidcode__icon--type-rectangle {
   height: 2em; }
+
+/* Quote Section */
+.blockquote-general, blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-small:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
+  content: "\201C";
+  font-family: sans-serif;
+  display: block;
+  float: right;
+  color: #00E676;
+  margin: -1rem 0px 0px 30px; }
 
 .acidcode__btn--size-huge {
   height: 70px;
@@ -9808,10 +9886,12 @@ button.acidcode__btn--floating {
  */
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 900px; }
+  border-radius: 900px;
+  width: 2em !important; }
 
 .acidcode__icon--type-rectangle {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+  width: 2em !important; }
 
 .acidcode__separator {
   background-color: transparent;
@@ -9857,11 +9937,67 @@ svg.acidcode__icon--type-circle {
   background-image: url("../../images/separator.png");
   height: 0.5rem; }
 
-.team-member__social-link {
+.acidcode__team-member--social-link {
   display: inline-block; }
+  .acidcode__team-member--social-link__link {
+    padding: 0px 0px 0px 35px;
+    box-shadow: none !important; }
 
-.team-member__social-link__link {
-  color: green; }
+.acidcode__team-member--name {
+  margin: 25px 0px 0px 0px;
+  font-size: 14px; }
+
+.acidcode__team-member--position {
+  margin: 0px; }
+
+.acidcode__team-member--description {
+  margin: 0px 0px 20px 0px; }
+
+blockquote.acidcode__quote--type-quote {
+  border: none; }
+  blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular {
+    font-size: 16px; }
+    blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular:before {
+      font-size: 90px;
+      line-height: 1.1; }
+  blockquote.acidcode__quote--type-quote.acidcode__quote--size-small {
+    font-size: 14px; }
+    blockquote.acidcode__quote--type-quote.acidcode__quote--size-small:before {
+      font-size: 70px;
+      line-height: 1.2; }
+  blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium {
+    font-size: 18px; }
+    blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium:before {
+      line-height: 1.05;
+      font-size: 110px; }
+  blockquote.acidcode__quote--type-quote.acidcode__quote--size-big {
+    font-size: 20px; }
+    blockquote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
+      font-size: 130px;
+      line-height: 1; }
+  blockquote.acidcode__quote--type-quote .acidcode__quote--content {
+    margin: 0px 0px 20px 0px; }
+  blockquote.acidcode__quote--type-quote .acidcode__quote--author-name {
+    text-transform: uppercase; }
+
+blockquote.acidcode__quote--type-blockquote {
+  border-color: #00E676; }
+  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-regular {
+    font-size: 16px; }
+  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-small {
+    font-size: 14px; }
+  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-medium {
+    font-size: 18px; }
+  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-big {
+    font-size: 20px; }
+  blockquote.acidcode__quote--type-blockquote .acidcode__quote--content {
+    margin: 0px 15px 20px 0px; }
+  blockquote.acidcode__quote--type-blockquote .acidcode__quote--author-name {
+    text-transform: uppercase;
+    margin: 0px 15px 0px 0px; }
+
+.acidcode__heading--headline-secondary {
+  font-style: italic; }
 
 /*!
  * Font Awesome Free 5.0.8 by @fontawesome - https://fontawesome.com

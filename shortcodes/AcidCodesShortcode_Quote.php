@@ -28,6 +28,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'name' => 'Text size',
                 'options' => array(
                     '' => 'Select Size',
+                    'regular' => 'Regular',
                     'small' => 'Small',
                     'medium' => 'Medium',
                     'big' => 'Big'

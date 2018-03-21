@@ -8,6 +8,24 @@ $primary-font: sans-serif;
   font-weight: 300;
 }
 
+/* Functions */
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
+@mixin float($float) {
+  float: $float;
+}
+@mixin font-size($size) {
+  font-size: $size;
+}
+
 /* Button section */
 .align-center {
   text-align: center;
@@ -36,4 +54,14 @@ $primary-font: sans-serif;
 /* Icon section */
 .icon-height {
   height: 2em;
+}
+
+/* Quote Section */
+.blockquote-general {
+  content: "\201C";
+  font-family: sans-serif;
+  display: block;
+  @include float(left);
+  color: #00E676;
+  @include margin(-1rem 30px 0px 0px);
 }

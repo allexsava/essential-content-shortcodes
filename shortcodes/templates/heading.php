@@ -1,6 +1,6 @@
 <?php
 // get needed classes
-$classes = 'acidcode  acidcode--heading article__headline';
+$classes = 'acidcode  acidcode__heading article__headline';
 
 // create class attribute
 $classes = $classes !== '' ? 'class="' . $classes . '"' : '';
@@ -13,6 +13,6 @@ if ( ! empty( $subtitle ) ) {
 }
 
 echo '<hgroup ' . $classes . '>
-	<h1 class="headline__primary">' . $title . '</h1>
-	<h2 class="headline__secondary">' . $subtitle . '</h2>
+	<h1 class="acidcode__heading--headline-primary">' . $title . '</h1>
+	<h2 class="acidcode__heading--headline-secondary">' . $subtitle . '</h2>
 </hgroup>';

@@ -1,4 +1,4 @@
-// jQuery(document).ready(function($){
-//     console.log('main loaded');
-//
-// });
+jQuery(document).ready(function($){
+
+
+});

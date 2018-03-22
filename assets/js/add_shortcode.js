@@ -8,7 +8,7 @@ editor = '';
 		var modal_selector = $( '#acidcodes_shortcodes_modal' ),
 			plugin_url;
 
-		$.ajax( {
+        $.ajax( {
 			url: ajaxurl,
 			data: {action: 'acidcodes_get_shortcodes_modal', post_id: $( '#post_ID' ).val()},
 			success: function( data ) {
@@ -113,7 +113,23 @@ editor = '';
 							$( this ).select2( {tags: options} );
 						}
 					} );
-				} );
+
+
+					//button element
+					(function wavesEffect(){
+                        $('.waves__color select').on('change', function(){
+                            console.log($(this).val());
+                            if($(this).val() !== 'no-color'){
+                                $('.waves__effect #waves_effect').attr('checked', true);
+                            } else {
+                                $('.waves__effect #waves_effect').attr('checked', false);
+							}
+                        });
+					})();
+
+                    //$('#acidcodes_shortcodes_form').parsley();
+
+                } );
 
 				//Trigger Submit Button (need few improvements :)
 				$( document ).on( 'click', ".l_acid_modal a.btn_primary", function() {
@@ -174,6 +190,7 @@ editor = '';
 				//Trigger Submit button
 				var trigger_submit_btn = function( $button ) {
 					$button.trigger( 'click' );
+
 				};
 
 				$( document ).trigger( 'shortcodes_modal:ready' );
@@ -230,7 +247,7 @@ editor = '';
 		$( document ).on( 'submit', '#acidcodes_shortcodes_form', function( e ) {
 			e.preventDefault();
 
-			var params = $( this ).next( '#data_params' ).data( 'params' ),
+            var params = $( this ).next( '#data_params' ).data( 'params' ),
 				form_params = $( this ).serializeShortcodeParams(),
 				user_params_string = '',
 				user_params = {},

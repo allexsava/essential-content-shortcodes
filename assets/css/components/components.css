@@ -53,7 +53,9 @@ svg.acidcode__icon--type-circle {
 
 .acidcode__separator {
   background-color: transparent;
-  border: 0px; }
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  border-bottom-style: solid; }
 
 .acidcode__separator--weight-thin {
   border-bottom-width: 1px; }
@@ -94,6 +96,9 @@ svg.acidcode__icon--type-circle {
 .acidcode__separator--style-striped {
   background-image: url("../../images/separator.png");
   height: 0.5rem; }
+
+.acidcode__separator--weight-thin.acidcode__separator--style-double {
+  border-bottom-width: 3px; }
 
 .acidcode__team-member--social-link {
   display: inline-block; }

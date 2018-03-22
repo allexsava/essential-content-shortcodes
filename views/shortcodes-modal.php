@@ -56,6 +56,7 @@ if ($_GET['post_id']) {
                     <?php if (!$shortcode['direct'] && !empty($shortcode['params'])) { ?>
                         <div class="shortcode_params details_content">
                             <form id="acidcodes_shortcodes_form">
+                                <div class="alerts"></div>
                                 <fieldset>
                                     <div class="row">
                                         <?php

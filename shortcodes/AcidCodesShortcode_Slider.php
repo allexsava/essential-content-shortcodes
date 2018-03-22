@@ -47,15 +47,19 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
             ),
             'slider_duration' => array(
                 'value'       => '200',
-                'type' => 'text',
+                'type' => 'number',
                 'name' => 'Slider Duration',
+                'min'  => '0',
+                'max'  => '5000',
                 'admin_class' => 'col s6',
                 'help-text'   => 'Transition duration in milliseconds. (Default: 200)'
             ),
             'slider_padding' => array(
                 'value'       => '0',
-                'type' => 'text',
+                'type' => 'number',
                 'name' => 'Slider Padding',
+                'min'  => '0',
+                'max'  => '100',
                 'admin_class' => 'col s6',
                 'help-text'   => 'Set the padding between non center items. (Default: 0)'
             ),

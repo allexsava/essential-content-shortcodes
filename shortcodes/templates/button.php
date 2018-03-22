@@ -22,4 +22,5 @@
     // get target
     $target = !empty($newtab) ? 'target="_blank"' : '';
 
+    $validation = !empty($validation) ? $validation : '';
 echo '<a '.$id.' '.$classes.' '.$href.' '.$target.'>'.$content.'</a>';

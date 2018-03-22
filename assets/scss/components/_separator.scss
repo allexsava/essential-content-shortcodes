@@ -1,6 +1,8 @@
 .acidcode__separator {
   background-color: transparent;
-  border: 0px;
+  @include border-width(1px);
+  @include border-color(black);
+  @include border-style(solid);
 }
 .acidcode__separator--align-center {
   @extend .align-center;
@@ -50,4 +52,8 @@
 .acidcode__separator--style-striped {
   background-image: url("../../images/separator.png");
   height: 0.5rem;
+}
+
+.acidcode__separator--weight-thin.acidcode__separator--style-double {
+  border-bottom-width: 3px;
 }

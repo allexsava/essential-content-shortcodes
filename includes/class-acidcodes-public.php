@@ -82,6 +82,7 @@ class AcidCodesShortcodes_Public {
         wp_enqueue_script( $this->acidcodes, plugin_dir_url( __FILE__ ) . '../assets/js/materialize/materialize.min.js', array(), $this->version, 'all' );
         wp_register_script( 'fontawesome-script', plugin_dir_url( __FILE__ ) . '../assets/js/font-awesome/fontawesome-all.min.js', array(), $this->version, 'all' );
         wp_enqueue_script('fontawesome-script');
+
     }
 
 }

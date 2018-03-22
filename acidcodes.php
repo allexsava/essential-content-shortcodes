@@ -95,9 +95,10 @@ class AcidCodesShortcodes
 
         // add to the visual mode only
         if (get_user_option('rich_editing') == 'true') {
-            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_fontawesome'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
+//            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
         }
@@ -151,6 +152,13 @@ class AcidCodesShortcodes
 
         return $plugin_array;
     }
+
+//    function addto_mce_acidcodes_parsley($plugin_array)
+//    {
+//        $plugin_array['parsley'] = $this->plugin_url . 'assets/js/parsleyjs/parsley.min.js';
+//
+//        return $plugin_array;
+//    }
 
     function addto_mce_acidcodes_main($plugin_array)
     {

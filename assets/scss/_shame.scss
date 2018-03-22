@@ -17,3 +17,16 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   background-color: $accent-color;
   outline: 1px solid slategrey;
 }
+ul.parsley-errors-list {
+  width: 155px!important;
+  overflow: hidden;
+}
+
+select[required]{
+  display: inline!important;
+  position: absolute;
+  height: 0px!important;
+  width: 0px!important;
+  line-height: 0px!important;
+  border: none!important;
+}

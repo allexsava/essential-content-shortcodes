@@ -20,8 +20,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'name'        => __( 'Button Name', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
                 'help-text'   => 'eg Read More',
-                'is_content'  => true,
-                'required'  => true,
+                'is_content'  => true
 
             ),
             'class'     => array(
@@ -54,8 +53,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg small, large, huge',
-                'required' =>true
+                'help-text'   => 'eg small, large, huge'
             ),
             'shape'      => array(
                 'type'        => 'select',
@@ -66,8 +64,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'        => 'eg square, rounded',
-                'required' =>true
+                'help-text'        => 'eg square, rounded'
             ),
             'waves_color'      => array(
                 'type'        => 'select',

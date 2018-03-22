@@ -55,7 +55,7 @@ if ($_GET['post_id']) {
                     </a>
                     <?php if (!$shortcode['direct'] && !empty($shortcode['params'])) { ?>
                         <div class="shortcode_params details_content">
-                            <form id="acidcodes_shortcodes_form">
+                            <form id="acidcodes_shortcodes_form" novalidate="novalidate">
                                 <div class="alerts"></div>
                                 <fieldset>
                                     <div class="row">
@@ -67,8 +67,7 @@ if ($_GET['post_id']) {
                                             echo $acidcodes_shortcodes->render_param($param);
                                         } ?>
 
-                                        <button type="submit"
-                                                class="btn hidden"><?php _e('Submit', 'acidcodes_txtd'); ?></button>
+                                        <button type="submit" class="btn hidden"><?php _e('Submit', 'acidcodes_txtd'); ?></button>
                                     </div>
                                 </fieldset>
                             </form>

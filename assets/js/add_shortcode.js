@@ -133,7 +133,11 @@ editor = '';
 
 				//Trigger Submit Button (need few improvements :)
 				$( document ).on( 'click', ".l_acid_modal a.btn_primary", function() {
-					trigger_submit_btn( triggered_woman );
+                    if($("#acidcodes_shortcodes_form").valid()){
+                        trigger_submit_btn( triggered_woman );
+					} else {
+                        $("#acidcodes_shortcodes_form").addClass('invalid');
+					}
 				} );
 
 				//Show the .details_container - display:block

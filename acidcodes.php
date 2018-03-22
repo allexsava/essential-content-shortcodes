@@ -96,6 +96,7 @@ class AcidCodesShortcodes
         // add to the visual mode only
         if (get_user_option('rich_editing') == 'true') {
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_fontawesome'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_validate'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
 //            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
@@ -159,6 +160,13 @@ class AcidCodesShortcodes
 //
 //        return $plugin_array;
 //    }
+
+    function addto_mce_acidcodes_validate($plugin_array)
+    {
+        $plugin_array['validate'] = 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js';
+
+        return $plugin_array;
+    }
 
     function addto_mce_acidcodes_main($plugin_array)
     {

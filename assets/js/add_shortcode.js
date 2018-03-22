@@ -250,7 +250,6 @@ editor = '';
 		// when submiting a panel of params
 		$( document ).on( 'submit', '#acidcodes_shortcodes_form', function( e ) {
 			e.preventDefault();
-
             var params = $( this ).next( '#data_params' ).data( 'params' ),
 				form_params = $( this ).serializeShortcodeParams(),
 				user_params_string = '',
@@ -258,11 +257,9 @@ editor = '';
 				shortcode_content = '';
 
 			$.each( form_params, function( i, e ) {
-
-				if ( e.class == 'is_shortcode_content' ) {
-
+				//if ( e.class == 'is_shortcode_content valid' ) {
+                if (e.class && e.class.indexOf("is_shortcode_content")!== -1) {
 					shortcode_content = e.value;
-
 				} else if ( e.value !== '' ) { // don't include the empty params and the content param
 
 					user_params_string += ' ' + e.name + '="' + e.value + '"';
@@ -270,10 +267,8 @@ editor = '';
 				}
 
 			} );
-
 			//a little bit of cleanup to make sure we keep new lines when adding to TinyMce
 			shortcode_content = shortcode_content.replace( /(?:\r\n|\r|\n)/g, "<br />" );
-
 			if ( params.self_closed ) {
 				editor.selection.setContent( '[' + params.code + user_params_string + ']' );
 			} else if ( params.one_line ) {

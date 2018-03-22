@@ -20,8 +20,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'name'        => __( 'Button Name', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
                 'help-text'   => 'eg Read More',
+                'required' => true,
                 'is_content'  => true
-
             ),
             'class'     => array(
                 'type'        => 'text',
@@ -53,7 +53,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg small, large, huge'
+                'help-text'   => 'eg small, large, huge',
+                'required' => true
             ),
             'shape'      => array(
                 'type'        => 'select',

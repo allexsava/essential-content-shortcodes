@@ -55,5 +55,5 @@
 }
 
 .acidcode__separator--weight-thin.acidcode__separator--style-double {
-  border-bottom-width: 3px;
+  @include border-width(3px);
 }

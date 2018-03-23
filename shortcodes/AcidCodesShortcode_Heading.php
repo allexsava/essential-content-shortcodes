@@ -16,12 +16,14 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
 		$this->params = array(
             'title' => array(
                 'type'        => 'text',
-                'name'        => 'Title',
+                'name'        => 'Heading',
+                'required' => true,
                 'admin_class' => 'col s6 span7 push1'
             ),
 			'subtitle' => array(
 				'type'        => 'text',
-				'name'        => 'Subtitle',
+				'name'        => 'Subheading',
+                'required' => true,
 				'admin_class' => 'col s6 span7 push1'
 			),
 		);

@@ -23,10 +23,12 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'name' => 'Alignment',
                 'options' => array(
                     '' => 'Select Alignment',
+                    'no-alignment' => 'No Alignment',
                     'center' => 'Center',
                     'left' => 'Left',
                     'right' => 'Right'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg center, left, right'
             ),
@@ -40,6 +42,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                     'dotted' => 'Dotted',
                     'striped' => 'Striped'
                 ),
+                'required' => true,
                 'admin_class' => 'scroll-height input-field hide-list col s6',
                 'help-text'   => 'eg regular, dotted, striped'
             ),
@@ -51,6 +54,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                     'thin' => 'Thin',
                     'thick' => 'Thick'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg thin, thick'
             ),
@@ -59,6 +63,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'name' => 'Color',
                 'options' => array(
                     '' => 'Select Color',
+                    'no-color' =>'No color',
                     'light' => 'Light',
                     'red' => 'Red',
                     'yellow' => 'Yellow',
@@ -67,6 +72,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                     'green' => 'Green',
                     'teal' => 'Teal'
                 ),
+                'required' => true,
                 'admin_class' => 'scroll-height input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
             )

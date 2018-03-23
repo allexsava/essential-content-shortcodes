@@ -36,6 +36,7 @@
     }
     label {
       color: $font-color;
+      cursor: default;
     }
 
     .l_three_col {
@@ -85,7 +86,7 @@
       font-size: 12px;
       color: $help-text-color;
       line-height: 16px;
-      display: inline-block;
+      display: block;
       margin-bottom: 15px;
     }
 
@@ -98,6 +99,11 @@
       margin: 0px 0px 5px 0px;
     }
     input[type=number]:not(.browser-default) {
+      height: 2rem;
+      margin: 0px 0px 5px 0px;
+    }
+
+    input[type=url]:not(.browser-default) {
       height: 2rem;
       margin: 0px 0px 5px 0px;
     }

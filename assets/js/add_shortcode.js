@@ -127,11 +127,16 @@ editor = '';
                         });
 					})();
 
-                    //$('#acidcodes_shortcodes_form').parsley();
+                    (function resetForm(){
+                       $('.acidcode__btn.cancel').on('click', function(){
+                       	$('#acidcodes_shortcodes_form')[0].reset();
+                           $('#acidcodes_shortcodes_form').validate().destroy();
+					   });
+                    })();
 
                 } );
 
-				//Trigger Submit Button (need few improvements :)
+				//Trigger Submit Button (need few improvemen ts :)
 				$( document ).on( 'click', ".l_acid_modal a.btn_primary", function() {
                     if($("#acidcodes_shortcodes_form").valid()){
                         trigger_submit_btn( triggered_woman );

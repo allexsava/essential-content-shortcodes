@@ -20,6 +20,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'blockquote' => 'Block Quote',
                     'quote' => 'Quote'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6 input-special-margin'
             ),
 
@@ -33,13 +34,8 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'medium' => 'Medium',
                     'big' => 'Big'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6 input-special-margin'
-            ),
-            'content_text' => array(
-                'type' => 'textarea',
-                'name' => 'Text',
-                'admin_class' => 'input-field col s12',
-                'is_content' => true,
             ),
             'author' => array(
                 'type' => 'text',
@@ -51,6 +47,13 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'type' => 'text',
                 'name' => 'Author link',
                 'admin_class' => 'col s6'
+            ),
+            'content_text' => array(
+                'type' => 'textarea',
+                'name' => 'Text',
+                'required' => true,
+                'admin_class' => 'input-field col s12',
+                'is_content' => true,
             )
         );
 

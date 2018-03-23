@@ -31,9 +31,10 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
 
             ),
             'link'      => array(
-                'value'       => 'http://',
-                'type'        => 'text',
+                'value' => 'https://',
+                'type'        => 'url',
                 'name'        => __( 'Link URL', 'acidcodes_txtd' ),
+                'required' => true,
                 'admin_class' => 'col s6'
             ),
 
@@ -65,13 +66,15 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'rounded' => __( 'Rounded', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'        => 'eg square, rounded'
+                'help-text'        => 'eg square, rounded',
+                'required' => true
             ),
             'waves_color'      => array(
                 'type'        => 'select',
                 'name'        => __( 'Waves Color', 'acidcodes_txtd' ),
                 'options'     => array(
                     ''      => __( 'Select Color', 'acidcodes_txtd' ),
+                    'no-color' => __( 'No color', 'acidcodes_txtd' ),
                     'waves-light' => __( 'Light', 'acidcodes_txtd' ),
                     'waves-red' => __( 'Red', 'acidcodes_txtd' ),
                     'waves-yellow' => __( 'Yellow', 'acidcodes_txtd' ),
@@ -79,7 +82,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'waves-purple' => __( 'Purple', 'acidcodes_txtd' ),
                     'waves-green' => __( 'Green', 'acidcodes_txtd' ),
                     'waves-teal' => __( 'Teal', 'acidcodes_txtd' ),
-                    'no-color' => __( 'No color', 'acidcodes_txtd' ),
 
                 ),
                 'admin_class' => 'input-field hide-list col s6 scroll-height waves__color',

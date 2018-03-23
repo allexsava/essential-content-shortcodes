@@ -38,6 +38,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                     'carousel-slider' => 'Full-width',
                 ),
                 'admin_class' => 'input-field hide-list col s6',
+                'required' => true,
                 'help-text'   => 'eg carousel, full-width'
             ),
             'social' => array(

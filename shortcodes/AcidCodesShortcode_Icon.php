@@ -29,11 +29,13 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                 'type' => 'select',
                 'name' => 'Background Shape',
                 'options' => array(
-                    '' => 'Select Type',
+                    '' => 'Select Shape',
+                    'no-shape' => 'No Shape',
                     'circle' => 'Circle',
                     'rectangle' => 'Rectangle'
                 ),
                 'admin_class' => 'input-field hide-list col s6',
+                'required' => true,
                 'help-text'   => 'eg circle, rectangle'
             ),
             'size' => array(
@@ -51,6 +53,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                     'fa-10x' => '10x',
                 ),
                 'admin_class' => 'input-field hide-list col s6 scroll-height',
+                'required' => true,
                 'help-text'   => 'eg small, medium, big'
             ),
             'class' => array(
@@ -867,6 +870,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                     "fab fa-yoast",
                     "fab fa-youtube"
                 ),
+                'required' => true,
                 'admin_class' => 'col s12'
             )
         );

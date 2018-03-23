@@ -15,11 +15,13 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
+                'required' => true,
                 'admin_class' => 'col s6'
             ),
             'progress' => array(
                 'type' => 'text',
                 'name' => 'Progress',
+                'required' => true,
                 'admin_class' => 'col s6'
             ),
 	        'markers' => array(
@@ -30,7 +32,7 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
 	        array(
 		        'type' => 'info',
 		        'value' => 'You can use a simple number to represent the length in pixels or a percentage value (like 96%).',
-		        'admin_class' => 'span8 push1'
+		        'admin_class' => 'help-text span8 push1'
 	        )
         );
 

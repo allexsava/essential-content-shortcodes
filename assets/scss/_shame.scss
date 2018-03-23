@@ -20,7 +20,7 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
 
 #acidcodes_shortcodes_modal .l_modal_body label.active.error,
 #acidcodes_shortcodes_modal .l_modal_body label.error {
-  margin-top: 35px;
+  position: relative;
   color: #bf291e;
   background: #fff;
   width: 100%;
@@ -33,4 +33,53 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
 
 #acidcodes_shortcodes_modal .l_modal_body label.active.error {
   color: #69F0AE;
+}
+
+select{
+  display: inline;
+  position: absolute;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 0px;
+  width: 0px;
+  top: 2em;
+  left: 3em;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hack {
+  opacity: 0;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 0px !important;
+  line-height: 0;
+  display: -webkit-box;
+}
+
+ul.acid_icon_list label.error {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 0px !important;
+}
+
+.flex-grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.select-wrapper span.caret {
+  height: 0;
+}
+
+#acidcodes_shortcodes_modal .l_modal_body ul.acid_icon_list label#name-error {
+  position: absolute;
+}
+textarea.materialize-textarea.error {
+  margin: 0;
 }

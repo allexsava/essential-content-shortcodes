@@ -58,7 +58,7 @@ if ($_GET['post_id']) {
                             <form id="acidcodes_shortcodes_form" novalidate="novalidate">
                                 <div class="alerts"></div>
                                 <fieldset>
-                                    <div class="row">
+                                    <div class="row flex-grid">
                                         <?php
                                         foreach ($shortcode['params'] as $k => $param) {
 
@@ -83,7 +83,7 @@ if ($_GET['post_id']) {
         <div class="col s6">
             <div class="row">
                 <div class="col s6">
-                    <a class="acidcode__btn btn_secondary cancel"><?php _e('Cancel', 'acidcodes_txtd'); ?></a>
+                    <a class="acidcode__btn btn_secondary cancel"><?php _e('Reset', 'acidcodes_txtd'); ?></a>
 
                     <span><?php _e('or', 'acidcodes_txtd'); ?></span>
 

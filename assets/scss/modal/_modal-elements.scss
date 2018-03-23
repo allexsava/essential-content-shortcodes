@@ -201,7 +201,8 @@ li.icon {
 
 ul.acid_icon_list {
   overflow: scroll;
-  height: 230px;
+  height: 245px;
+  position: relative;
   .row > li {
     clear: none !important;
   }

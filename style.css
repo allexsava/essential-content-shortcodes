@@ -9879,6 +9879,16 @@ button.acidcode__btn--floating {
 .acidcode__btn--shape-rounded {
   border-radius: 5px; }
 
+.acidcode__btn--alignment-center {
+  margin: 0 auto;
+  display: table; }
+
+.acidcode__btn--alignment-left {
+  float: left; }
+
+.acidcode__btn--alignment-right {
+  float: right; }
+
 /**
 
  */
@@ -12788,8 +12798,8 @@ readers do not read off random characters that represent icons */
 .mce-acidcodes_shortcodes button:hover {
   background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important; }
 
-.none, #acidcodes_shortcodes_modal .acidcode__btn.back, #acidcodes_shortcodes_modal .back.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.close, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.cancel, #acidcodes_shortcodes_modal .cancel.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large {
-  background: none;
+.none, #acidcodes_shortcodes_modal .acidcode__btn.back, #acidcodes_shortcodes_modal .back.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.close, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.cancel, #acidcodes_shortcodes_modal .cancel.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large, #acidcodes_shortcodes_modal .acidcode__btn.btn_settings, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large {
+  background: none !important;
   border: none;
   box-shadow: none; }
 
@@ -12797,7 +12807,7 @@ li.icon svg, li.icon.active svg {
   margin: 0 auto;
   display: block; }
 
-#acidcodes_shortcodes_modal .acidcode__btn.back span, #acidcodes_shortcodes_modal .back.acidcode__btn--size-large span, #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content {
+#acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content {
   transition-property: all;
   transition-duration: 0.3s; }
 
@@ -12856,12 +12866,17 @@ li.icon svg, li.icon.active svg {
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
       color: #FFF; }
     #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large {
-      background: none !important;
       cursor: not-allowed; }
       #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled svg, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large svg {
         margin-left: 10px;
         position: relative;
         left: 20px; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_settings, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large {
+    cursor: pointer;
+    color: #9f9f9f; }
+    #acidcodes_shortcodes_modal .acidcode__btn.btn_settings svg, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large svg {
+      left: 0;
+      color: #9f9f9f; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large {
     border: none;
     text-decoration: underline;
@@ -12923,19 +12938,42 @@ span.input-special-margin {
 .input-special-margin label {
   margin-top: -5px; }
 
-li.icon.active {
-  background-color: #69F0AE; }
-  li.icon.active svg {
-    color: #FFF;
-    padding: 5px;
-    transition: padding .5s; }
+li.icon {
+  cursor: pointer; }
+  li.icon.active {
+    background-color: #69F0AE; }
+    li.icon.active svg {
+      color: #FFF;
+      padding: 5px;
+      transition: padding .5s; }
+  li.icon:hover {
+    background: #00E676;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s; }
+    li.icon:hover svg {
+      color: #fff;
+      z-index: 12; }
 
 ul.acid_icon_list {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 245px;
   position: relative; }
   ul.acid_icon_list .row > li {
     clear: none !important; }
+    ul.acid_icon_list .row > li svg {
+      width: 0.75em !important; }
+  ul.acid_icon_list::-webkit-scrollbar {
+    width: 1em; }
+  ul.acid_icon_list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); }
+  ul.acid_icon_list::-webkit-scrollbar-thumb {
+    background-color: #00E676;
+    outline: 1px solid slategrey; }
+
+.icon__special-title {
+  margin-bottom: 5px;
+  font-weight: 500 !important; }
 
 .scroll-height .dropdown-content.select-dropdown {
   height: 150px; }
@@ -13080,9 +13118,11 @@ ul.acid_icon_list {
     #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover {
       cursor: pointer;
       background-color: #69F0AE;
-      color: #FFF; }
+      color: #FFF;
+      transition: all 0.4s; }
       #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover svg {
-        color: #FFF; }
+        color: #FFF;
+        transition: all 0.4s; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li .details_content {
     display: none; }
 
@@ -13295,5 +13335,11 @@ ul.acid_icon_list label.error {
 
 textarea.materialize-textarea.error {
   margin: 0; }
+
+.shortcode.shortcode_settings {
+  display: none !important; }
+
+.shortcode.shortcode_bar {
+  border-bottom: none !important; }
 
 /*# sourceMappingURL=style.css.map */

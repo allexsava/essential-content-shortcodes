@@ -2823,6 +2823,16 @@ button.acidcode__btn--floating {
 .acidcode__btn--shape-rounded {
   border-radius: 5px; }
 
+.acidcode__btn--alignment-center {
+  margin: 0 auto;
+  display: table; }
+
+.acidcode__btn--alignment-left {
+  float: left; }
+
+.acidcode__btn--alignment-right {
+  float: right; }
+
 /**
 
  */

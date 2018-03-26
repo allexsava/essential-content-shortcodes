@@ -47,7 +47,7 @@ if ($_GET['post_id']) {
                 if ($shortcode["direct"]) {
                     $class .= ' insert-direct-shortcode';
                 } ?>
-                <li class="shortcode">
+                <li class="shortcode <?php echo 'shortcode_'.strtolower($shortcode["code"]); ?>">
                     <a class="details <?php echo $class; ?>" data-params='<?php echo $shortcode_js; ?>'
                        data-trigger-open="<?php echo $data_trigger_open ?>">
                         <i class="icon <?php echo $shortcode["icon"]; ?>"></i>
@@ -79,7 +79,9 @@ if ($_GET['post_id']) {
         </ul>
     </div>
     <div class="l_modal_footer row">
-        <div class="col s6"></div>
+        <div class="col s6">
+            <a class="acidcode__btn btn_settings"><i class="fas fa-cogs"></i> <?php _e('Settings', 'acidcodes_txtd'); ?></a>
+        </div>
         <div class="col s6">
             <div class="row">
                 <div class="col s6">

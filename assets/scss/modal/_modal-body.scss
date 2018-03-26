@@ -66,8 +66,10 @@
             cursor: pointer;
             background-color: $rectangle-hover;
             color: $white;
+            @include transition(all 0.4s);
             svg {
               color: $white;
+              @include transition(all 0.4s);
             }
           }
         }

@@ -145,6 +145,12 @@ editor = '';
 					}
 				} );
 
+				//Display Settings Section
+                $( document ).on( 'click', '.l_modal_footer.row div.col.s6 a.btn_settings', function() {
+						console.log('here');
+						$('.shortcode_settings .details.shortcode_Settings_open').click();
+				} );
+
 				//Show the .details_container - display:block
 				var toggle_details = function() {
 					$( '.l_acid_modal' ).toggleClass( 's_active' );

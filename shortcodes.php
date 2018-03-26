@@ -58,7 +58,8 @@ class AcidCodesShortcode {
                 'TeamMember',
                 'ProgressBar',
                 'Quote',
-                'Heading'
+                'Heading',
+                'Settings'
 			);
 		}
 

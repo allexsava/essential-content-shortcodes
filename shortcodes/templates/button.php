@@ -7,6 +7,7 @@
     $classes = 'acidcode acidcode__btn';
     $classes.= !empty($size) ? '  acidcode__btn--size-'.$size : '';
     $classes.= !empty($shape) ? '  acidcode__btn--shape-'.$shape : '';
+    $classes.= !empty($alignment) ? '  acidcode__btn--alignment-'.$alignment : '';
     $classes.= !empty($class) ? '  '.$class : '';
     $classes.=!empty($waves_color) ? '  '.$waves_color : '';
     $classes.=!empty($waves_effect) ? ' waves-effect ' : '';
@@ -22,5 +23,7 @@
     // get target
     $target = !empty($newtab) ? 'target="_blank"' : '';
 
-    $validation = !empty($validation) ? $validation : '';
-echo '<a '.$id.' '.$classes.' '.$href.' '.$target.'>'.$content.'</a>';
+    $validation = !empty($validation) ? $validation : ''; ?>
+<div class="button-alignment">
+    <?php echo '<a '.$id.' '.$classes.' '.$href.' '.$target.'>'.$content.'</a>'; ?>
+</div>

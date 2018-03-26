@@ -1,5 +1,5 @@
 .none {
-  background: none;
+  background: none !important;
   border: none;
   box-shadow: none;
 }
@@ -12,7 +12,11 @@
   transition-property: all;
   transition-duration: 0.3s;
 }
-
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
 #acidcodes_shortcodes_modal {
   i {
     font-size: 14px;
@@ -48,7 +52,7 @@
         color: $white;
       }
       span {
-        @extend %transition;
+        //@extend %transition;
         opacity: 0;
         float: right;
         margin-left: 5px;
@@ -95,7 +99,6 @@
       }
 
       &.disabled {
-        background: none !important;
         @extend .none;
         cursor: not-allowed;
         svg {
@@ -104,6 +107,15 @@
           left: 20px;
         }
       }
+    }
+    &.btn_settings {
+      svg {
+        left: 0;
+        color: #9f9f9f;
+      }
+      @extend .none;
+      cursor: pointer;
+      color: #9f9f9f;
     }
 
     &.btn_secondary {
@@ -197,15 +209,43 @@ li.icon {
       transition: padding .5s;
     }
   }
+  &:hover {
+    background:$accent-color;
+    @include box-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+    @include transition(all 0.3s);
+    svg {
+      color: #fff;
+      z-index: 12;
+    }
+  }
+  cursor: pointer;
 }
 
 ul.acid_icon_list {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 245px;
   position: relative;
   .row > li {
     clear: none !important;
+    svg {
+      width: 0.75em !important;
+    }
   }
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+  &::-webkit-scrollbar-track {
+    @include box-shadow(inset 0 0 4px rgba(0,0,0,0.1));
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+    outline: 1px solid slategrey;
+  }
+}
+.icon__special-title {
+  margin-bottom: 5px;
+  font-weight: 500 !important;
 }
 
 .scroll-height .dropdown-content.select-dropdown {

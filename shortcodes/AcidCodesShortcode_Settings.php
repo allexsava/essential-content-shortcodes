@@ -25,7 +25,7 @@ class AcidCodesShortcode_Settings extends AcidCodesShortcode {
         // allow the theme or other plugins to "hook" into this shortcode's params
         $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
 
-        add_shortcode('quote', array( $this, 'add_shortcode') );
+        add_shortcode('settings', array( $this, 'add_shortcode') );
     }
 
     public function add_shortcode($atts, $content){

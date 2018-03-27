@@ -9968,6 +9968,23 @@ svg.acidcode__icon--type-circle {
 .acidcode__team-member--description {
   margin: 0px 0px 20px 0px; }
 
+.progress {
+  background-color: #69F0AE;
+  height: 11px; }
+  .progress .determinate {
+    height: 11px;
+    background-color: #05af5c; }
+
+.progressbar__tooltip.markers-on {
+  position: absolute;
+  top: -3px;
+  right: -35px;
+  color: #242423;
+  font-size: 12px; }
+
+.progressbar__tooltip.markers-off {
+  display: none; }
+
 blockquote.acidcode__quote--type-quote {
   border: none; }
   blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular {
@@ -12835,10 +12852,12 @@ li.icon svg, li.icon.active svg {
       margin-right: 0px;
       color: #FFF; }
     #acidcodes_shortcodes_modal .acidcode__btn.back span, #acidcodes_shortcodes_modal .back.acidcode__btn--size-large span {
+      transition: all 0.1s ease-in;
       opacity: 0;
       float: right;
       margin-left: 5px;
-      color: #FFF; }
+      color: #FFF;
+      line-height: 1.1; }
     #acidcodes_shortcodes_modal .acidcode__btn.back.active, #acidcodes_shortcodes_modal .back.active.acidcode__btn--size-large {
       visibility: visible;
       color: #FFF; }
@@ -12873,10 +12892,13 @@ li.icon svg, li.icon.active svg {
         left: 20px; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_settings, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large {
     cursor: pointer;
-    color: #9f9f9f; }
+    color: #9b9b9b; }
+    #acidcodes_shortcodes_modal .acidcode__btn.btn_settings:hover, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large:hover {
+      color: #3f4345; }
     #acidcodes_shortcodes_modal .acidcode__btn.btn_settings svg, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large svg {
       left: 0;
-      color: #9f9f9f; }
+      color: #9f9f9f;
+      margin-right: 7px; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large {
     border: none;
     text-decoration: underline;
@@ -13247,7 +13269,8 @@ ul.acid_icon_list {
   padding: 10px 0;
   font-size: 14px;
   letter-spacing: 0.98px;
-  line-height: 16px; }
+  line-height: 16px;
+  font-family: 'Roboto',sans-serif; }
 
 #acidcodes_shortcodes_modal .l_modal_footer {
   position: relative;
@@ -13260,6 +13283,10 @@ ul.acid_icon_list {
     line-height: 35px; }
   #acidcodes_shortcodes_modal .l_modal_footer * .row {
     margin-bottom: 0; }
+  #acidcodes_shortcodes_modal .l_modal_footer a {
+    font-family: 'Roboto', sans-serif; }
+  #acidcodes_shortcodes_modal .l_modal_footer .insert-button {
+    cursor: not-allowed; }
 
 .acidcode .acidcode--btn {
   display: none; }
@@ -13268,7 +13295,8 @@ ul.acid_icon_list {
   padding: 0px; }
 
 ul.dropdown-content.select-dropdown::-webkit-scrollbar {
-  width: 1em; }
+  width: 1em;
+  -webkit-transition: all 1s linear; }
 
 ul.dropdown-content.select-dropdown::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); }
@@ -13283,14 +13311,11 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   color: #bf291e;
   background: #fff;
   width: 100%;
-  -webkit-transform: none;
-  transform: none;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
   font-size: 13px; }
 
 #acidcodes_shortcodes_modal .l_modal_body label.active.error {
-  color: #69F0AE; }
+  color: #69F0AE;
+  font-family: "Roboto"; }
 
 select {
   display: inline;

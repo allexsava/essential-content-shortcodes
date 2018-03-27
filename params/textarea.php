@@ -1,8 +1,9 @@
 <?php
 $class = "span12";
 if (isset($param['admin_class'])) $class = $param['admin_class'];
-$is_content = '';
-if (isset($param['is_content'])) $is_content = 'class="is_shortcode_content"';
+//$is_content = '';
+//if (isset($param['is_content'])) $is_content = 'class="is_shortcode_content"';
+$is_content = isset($param['is_content']) ? 'class="is_shortcode_content"' : '';
 $rows = 3;
 if (isset($param['rows'])) $rows = $param['rows'];
 if (isset($param['required'])) $required = "required";

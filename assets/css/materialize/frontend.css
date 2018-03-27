@@ -2912,6 +2912,23 @@ svg.acidcode__icon--type-circle {
 .acidcode__team-member--description {
   margin: 0px 0px 20px 0px; }
 
+.progress {
+  background-color: #69F0AE;
+  height: 11px; }
+  .progress .determinate {
+    height: 11px;
+    background-color: #05af5c; }
+
+.progressbar__tooltip.markers-on {
+  position: absolute;
+  top: -3px;
+  right: -35px;
+  color: #242423;
+  font-size: 12px; }
+
+.progressbar__tooltip.markers-off {
+  display: none; }
+
 blockquote.acidcode__quote--type-quote {
   border: none; }
   blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular {

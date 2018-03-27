@@ -46,17 +46,17 @@
       padding: 10px;
       line-height: 15px;
       visibility: hidden;
-
       svg {
         margin-right: 0px;
         color: $white;
       }
       span {
-        //@extend %transition;
+        @include transition(all 0.1s ease-in);
         opacity: 0;
         float: right;
         margin-left: 5px;
         color: $white;
+        line-height: 1.1;
       }
       &.active {
         visibility: visible;
@@ -109,13 +109,17 @@
       }
     }
     &.btn_settings {
+      @extend .none;
+      cursor: pointer;
+      color: #9b9b9b;
+      &:hover {
+        color: $base;
+      }
       svg {
         left: 0;
         color: #9f9f9f;
+        margin-right: 7px;
       }
-      @extend .none;
-      cursor: pointer;
-      color: #9f9f9f;
     }
 
     &.btn_secondary {

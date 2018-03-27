@@ -13,6 +13,12 @@
     * .row {
       margin-bottom: 0;
     }
+    a {
+      font-family: 'Roboto', sans-serif;
+    }
+    .insert-button {
+      cursor: not-allowed;
+    }
   }
 
 }

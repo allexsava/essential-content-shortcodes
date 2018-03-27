@@ -90,8 +90,8 @@ if ($_GET['post_id']) {
                     <span><?php _e('or', 'acidcodes_txtd'); ?></span>
 
                 </div>
-                <div class="col s6">
-                    <a class="acidcode__btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
+                <div class="col s6 insert-button">
+                    <a id="insert-button" class="acidcode__btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@
 
 ul.dropdown-content.select-dropdown::-webkit-scrollbar {
   width: 1em;
+  -webkit-transition: all 1s linear;
 }
 
 ul.dropdown-content.select-dropdown::-webkit-scrollbar-track {
@@ -24,15 +25,12 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   color: #bf291e;
   background: #fff;
   width: 100%;
-  -webkit-transform: none;
-  transform: none;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
   font-size: 13px;
 }
 
 #acidcodes_shortcodes_modal .l_modal_body label.active.error {
   color: #69F0AE;
+  font-family: "Roboto";
 }
 
 select{
@@ -94,3 +92,4 @@ textarea.materialize-textarea.error {
 //#acidcodes_shortcodes_modal .l_modal_body .acid_icon_list li svg {
 //  width: 0.75em !important;
 //}
+

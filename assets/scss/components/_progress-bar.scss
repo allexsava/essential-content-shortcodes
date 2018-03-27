@@ -1,0 +1,21 @@
+.progress {
+  background-color: $rectangle-hover;
+  height: 11px;
+  .determinate {
+    height: 11px;
+    background-color: #05af5c;
+    //transition: all 1s 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+.progressbar__tooltip {
+  &.markers-on {
+    position: absolute;
+    top: -3px;
+    right: -35px;
+    color: #242423;
+    font-size: 12px;
+  }
+  &.markers-off {
+    display: none;
+  }
+}

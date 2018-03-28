@@ -2951,7 +2951,7 @@ blockquote.acidcode__quote--type-quote {
     blockquote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
       font-size: 130px;
       line-height: 1; }
-  blockquote.acidcode__quote--type-quote .acidcode__quote--content {
+  blockquote.acidcode__quote--type-quote .acidcode__quote-content {
     margin: 0px 0px 20px 0px; }
   blockquote.acidcode__quote--type-quote .acidcode__quote--author-name {
     text-transform: uppercase; }
@@ -2966,13 +2966,13 @@ blockquote.acidcode__quote--type-blockquote {
     font-size: 18px; }
   blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-big {
     font-size: 20px; }
-  blockquote.acidcode__quote--type-blockquote .acidcode__quote--content {
+  blockquote.acidcode__quote--type-blockquote .acidcode__quote-content {
     margin: 0px 0px 20px 15px; }
   blockquote.acidcode__quote--type-blockquote .acidcode__quote--author-name {
     text-transform: uppercase;
     margin: 0px 0px 0px 15px; }
 
-.acidcode__heading--headline-secondary {
+.acidcode__heading-subtitle {
   font-style: italic; }
 
 /*# sourceMappingURL=frontend.css.map */

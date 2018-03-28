@@ -98,8 +98,8 @@ class AcidCodesShortcodes
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_fontawesome'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_validate'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
-//            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
+//            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
         }

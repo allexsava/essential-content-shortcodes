@@ -1,5 +1,5 @@
 <?php
-$class= "span12";
+$class= "acidcode acidcode__url";
 $required = '';
 $value = '';
 if ( isset($param['admin_class'] ) ) $class = $param['admin_class'];

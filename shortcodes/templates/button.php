@@ -24,6 +24,4 @@
     $target = !empty($newtab) ? 'target="_blank"' : '';
 
     $validation = !empty($validation) ? $validation : ''; ?>
-<div class="button-alignment">
     <?php echo '<a '.$id.' '.$classes.' '.$href.' '.$target.'>'.$content.'</a>'; ?>
-</div>

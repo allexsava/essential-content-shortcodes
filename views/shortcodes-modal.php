@@ -14,10 +14,10 @@ if ($_GET['post_id']) {
 } elseif ($post === null) {
     $post = get_post(1);
 } ?>
-<div id="acidcodes_shortcodes">
+<div id="acidcodes_shortcodes" data-plugin-url="<?php echo WP_PLUGIN_DIR.'/acidcodes/'; ?>">
     <div class="l_modal_header row">
         <div class="col s2">
-            <button type="button" class="acidcode__btn back"><i
+            <button type="button" class="acidcode__btn acidcode__btn--back"><i
                         class="fas fa-chevron-left"></i><span><?php _e('Back', 'acidcodes_txtd'); ?></span></button>
         </div>
         <div class="l_modal_title col s8">

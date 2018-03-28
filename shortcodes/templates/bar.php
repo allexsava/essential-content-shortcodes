@@ -1,5 +1,4 @@
 <?php
-//$markers = isset($param['markers']) ? 'markers-on' : '';
 $marker='';
 $marker=!empty($markers) ? ' markers-on ' : 'markers-off';
 ?>

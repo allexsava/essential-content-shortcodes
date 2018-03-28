@@ -9,7 +9,7 @@ if ( ! empty( $link ) ) {
 		$link .= ' target="_blank" ';
 	}
 
-	$output = '<a class="acidcode-icon-link" ' . $link . '">' . $output . '</a>';
+	$output = '<a class="acidcode__icon-link" ' . $link . '">' . $output . '</a>';
 }
 
 echo $output;

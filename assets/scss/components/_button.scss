@@ -21,7 +21,7 @@
 }
 
 .acidcode__btn--alignment-center {
-  margin: 0 auto;
+  @include margin(0 auto);
   display: table;
 }
 .acidcode__btn--alignment-left {

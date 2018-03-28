@@ -29,13 +29,13 @@ editor = '';
 					change_title( default_title );
 					window.send_to_editor = window.send_to_editor_clone;
 					$( '.l_acid_modal .btn_primary' ).removeClass( 'disabled' );
-					var this_btn = $( '.btn.back' );
+					var this_btn = $( '.btn.acidcode__btn--back' );
 					this_btn.removeClass( 'active' );
 					$('body').removeClass('acidcodes_select_tags_opened');
 				} );
 
 				//Back Button Click
-				$( document ).on( 'click', '.l_modal_header button.back', function() {
+				$( document ).on( 'click', '.l_modal_header button.acidcode__btn--back', function() {
 					toggle_details();
 					toggle_back_btn();
 					toggle_submit_btn();
@@ -116,7 +116,7 @@ editor = '';
 
 
 					//button element
-					(function wavesEffect(){
+					function wavesEffect(){
                         $('.waves__color select').on('change', function(){
                             console.log($(this).val());
                             if($(this).val() !== 'no-color'){
@@ -125,14 +125,45 @@ editor = '';
                                 $('.waves__effect #waves_effect').attr('checked', false);
 							}
                         });
-					})();
+					}
 
-                    (function resetForm(){
+                    function resetForm(){
                        $('.acidcode__btn.cancel').on('click', function(){
                        	$('#acidcodes_shortcodes_form')[0].reset();
-                           $('#acidcodes_shortcodes_form').validate().destroy();
+                       	$('#acidcodes_shortcodes_form').validate().destroy();
+                       	$('.select-wrapper ul li').removeClass('active');
+
 					   });
-                    })();
+                    }
+
+
+					function disableInsertOnSettings(){
+                        var data_params = $('#data_params');
+                        var params_json = data_params.data('params');
+                        if(params_json.code === 'settings'){
+                            $('.insert-button #insert-button').addClass('disabled');
+                        } else {
+                            $('.insert-button #insert-button').removeClass('disabled');
+                        }
+
+					}
+
+					// function formChangeEvent(){
+                     //    $('.insert-button #insert-button').addClass('disabled');
+                     //    var data_params = $('#data_params');
+                     //    var params_json = data_params.data('params');
+                     //    if(params_json.code !== 'settings'){
+                    //
+                     //        $('#acidcodes_shortcodes_form').on('keyup change paste', 'input, select, textarea', function(){
+                    //
+                     //            $('.insert-button #insert-button').removeClass('disabled');
+                     //        })
+                     //    }
+					// }
+
+					wavesEffect();
+					resetForm();
+                    disableInsertOnSettings();
 
                 } );
 
@@ -147,8 +178,12 @@ editor = '';
 
 				//Display Settings Section
                 $( document ).on( 'click', '.l_modal_footer.row div.col.s6 a.btn_settings', function() {
-						console.log('here');
-						$('.shortcode_settings .details.shortcode_Settings_open').click();
+                    $( '.l_acid_modal' ).removeClass( 's_active' );
+                    $( '.details_content' ).removeClass( 'active' );
+
+                    $( 'button.acidcode__btn--back' ).removeClass( 'active' );
+                    $( '.shortcode_settings .details.shortcode_Settings_open' ).click();
+
 				} );
 
 				//Show the .details_container - display:block
@@ -192,15 +227,41 @@ editor = '';
 					details.html( '' ).removeClass( 'active' );
 				};
 
-				//Toggle Back button visibility
-				var toggle_back_btn = function() {
-					$( 'button.back' ).toggleClass( 'active' );
-				};
+                //Toggle Back button visibility
+                var toggle_back_btn = function() {
+                    $( 'button.acidcode__btn--back' ).toggleClass( 'active' );
+                };
 
-				//Toggle Submit button
+                //Toggle Submit button
 				var toggle_submit_btn = function() {
 					$( '.l_acid_modal .btn_primary' ).toggleClass( 'disabled' );
 				};
+
+                // FUNCTION FOR ENABLE/DISABLE INSERT BUTTON
+
+                var inputSelector = ':input[required]:visible';
+                function checkForm() {
+                    // here, "this" is an input element
+                    var isValidForm = true;
+                    $(this.form).find(inputSelector).each(function() {
+                        if (!this.value.trim()) {
+                            isValidForm = false;
+                        }
+                    });
+                    $(this.form).find('.acidcode__btn.btn_primary').prop('disabled', !isValidForm);
+                    return isValidForm;
+                }
+
+                // ENABLE/DISABLE INSERT BUTTON
+
+                $('.acidcode__btn.btn_primary').closest('form')
+                // in a user hacked to remove "disabled" attribute, also monitor the submit event
+                    .submit(function() {
+                        // launch checkForm for the first encountered input,
+                        // use its return value to prevent default if form is not valid
+                        return checkForm.apply($(this).find(':input')[0]);
+                    })
+                    .find(inputSelector).keyup(checkForm).keyup();
 
 				//Trigger Submit button
 				var trigger_submit_btn = function( $button ) {
@@ -225,6 +286,7 @@ editor = '';
 						$( 'body' ).addClass( 'acidcodes_select_tags_opened' );
 						//let's clean up some more first
 						$( '.l_acid_modal' ).removeClass( 's_active' );
+                        $( 'button.acidcode__btn--back' ).removeClass( 'active' );
 
 						modal_selector.reveal( {
 							animation: 'fadeAndPop',                   //fade, fadeAndPop, none

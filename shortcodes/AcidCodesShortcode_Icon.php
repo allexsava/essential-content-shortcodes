@@ -80,6 +80,12 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                 'help-text'   => 'eg icon-rotate-90, icon-flip-horizontal',
                 'value' => array('')
             ),
+            'link' => array(
+                'value'       => 'https://',
+                'type' => 'url',
+                'name' => 'Icon Link',
+                'admin_class' => 'col s6 acidcode__icon-link'
+            ),
             'name' => array(
                 'type' => 'icon_list',
                 'name' => 'Select icon:',

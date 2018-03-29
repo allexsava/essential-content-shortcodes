@@ -5,17 +5,11 @@
 }
 
 %equal-margin-display {
-  margin: 0 auto;
+  @include margin(0 auto);
   display: block;
 }
 %transition {
-  transition-property: all;
-  transition-duration: 0.3s;
-}
-@mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
-  box-shadow: $shadow;
+  @include transition(all 0.3s);
 }
 #acidcodes_shortcodes_modal {
   i {
@@ -23,30 +17,17 @@
   }
 
   .acidcode__btn {
-    margin: 0;
     & {
       cursor: pointer;
       display: inline-block;
-      text-align: center;
-      border: 1px solid #cccccc;
-
-      i {
-        margin-right: 5px;
-        color: #939393;
-        float: left;
-      }
-      &:hover {
-        i {
-          color: $base;
-        }
-      }
     }
     &.acidcode__btn--back {
       @extend .none;
-      padding: 10px;
+      @include padding(10px);
       line-height: 15px;
       visibility: hidden;
       svg {
+        //@include margin(margin-right, 0);
         margin-right: 0px;
         color: $white;
       }

@@ -47,11 +47,6 @@
 .acidcode__btn--alignment-right {
   float: right; }
 
-/**
-
- */
-/* Legend
- */
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 900px;
@@ -126,21 +121,21 @@ svg.acidcode__icon--type-circle {
 .acidcode__team-member--description {
   margin: 0px 0px 20px 0px; }
 
-.progress {
+.acidcode__progress {
   background-color: #69F0AE;
   height: 11px; }
-  .progress .determinate {
+  .acidcode__progress .acidcode__progress-determinate {
     height: 11px;
     background-color: #05af5c; }
 
-.progressbar__tooltip.markers-on {
+.acidcode__markers-on {
   position: absolute;
   top: -3px;
   right: -35px;
   color: #242423;
   font-size: 12px; }
 
-.progressbar__tooltip.markers-off {
+.acidcode__markers-off {
   display: none; }
 
 blockquote.acidcode__quote--type-quote {
@@ -167,7 +162,7 @@ blockquote.acidcode__quote--type-quote {
       line-height: 1; }
   blockquote.acidcode__quote--type-quote .acidcode__quote-content {
     margin: 0px 0px 20px 0px; }
-  blockquote.acidcode__quote--type-quote .acidcode__quote--author-name {
+  blockquote.acidcode__quote--type-quote .acidcode__quote-author-name {
     text-transform: uppercase; }
 
 blockquote.acidcode__quote--type-blockquote {
@@ -182,7 +177,7 @@ blockquote.acidcode__quote--type-blockquote {
     font-size: 20px; }
   blockquote.acidcode__quote--type-blockquote .acidcode__quote-content {
     margin: 0px 0px 20px 15px; }
-  blockquote.acidcode__quote--type-blockquote .acidcode__quote--author-name {
+  blockquote.acidcode__quote--type-blockquote .acidcode__quote-author-name {
     text-transform: uppercase;
     margin: 0px 0px 0px 15px; }
 

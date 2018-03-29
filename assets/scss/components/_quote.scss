@@ -36,7 +36,7 @@ blockquote {
     .acidcode__quote-content {
       @include margin(0px 0px 20px 0px);
     }
-    .acidcode__quote--author-name {
+    .acidcode__quote-author-name {
       text-transform: uppercase;
     }
   }
@@ -59,7 +59,7 @@ blockquote {
     .acidcode__quote-content {
       @include margin(0px 0px 20px 15px);
     }
-    .acidcode__quote--author-name {
+    .acidcode__quote-author-name {
       text-transform: uppercase;
       @include margin(0px 0px 0px 15px);
     }

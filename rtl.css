@@ -9889,11 +9889,6 @@ button.acidcode__btn--floating {
 .acidcode__btn--alignment-right {
   float: left; }
 
-/**
-
- */
-/* Legend
- */
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 900px;
@@ -9968,21 +9963,21 @@ svg.acidcode__icon--type-circle {
 .acidcode__team-member--description {
   margin: 0px 0px 20px 0px; }
 
-.progress {
+.acidcode__progress {
   background-color: #69F0AE;
   height: 11px; }
-  .progress .determinate {
+  .acidcode__progress .acidcode__progress-determinate {
     height: 11px;
     background-color: #05af5c; }
 
-.progressbar__tooltip.markers-on {
+.acidcode__markers-on {
   position: absolute;
   top: -3px;
   left: -35px;
   color: #242423;
   font-size: 12px; }
 
-.progressbar__tooltip.markers-off {
+.acidcode__markers-off {
   display: none; }
 
 blockquote.acidcode__quote--type-quote {
@@ -10009,7 +10004,7 @@ blockquote.acidcode__quote--type-quote {
       line-height: 1; }
   blockquote.acidcode__quote--type-quote .acidcode__quote-content {
     margin: 0px 0px 20px 0px; }
-  blockquote.acidcode__quote--type-quote .acidcode__quote--author-name {
+  blockquote.acidcode__quote--type-quote .acidcode__quote-author-name {
     text-transform: uppercase; }
 
 blockquote.acidcode__quote--type-blockquote {
@@ -10024,7 +10019,7 @@ blockquote.acidcode__quote--type-blockquote {
     font-size: 20px; }
   blockquote.acidcode__quote--type-blockquote .acidcode__quote-content {
     margin: 0px 15px 20px 0px; }
-  blockquote.acidcode__quote--type-blockquote .acidcode__quote--author-name {
+  blockquote.acidcode__quote--type-blockquote .acidcode__quote-author-name {
     text-transform: uppercase;
     margin: 0px 15px 0px 0px; }
 
@@ -12773,12 +12768,18 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5\ Regular';
   font-weight: 400; }
 
+#acidcodes_shortcodes_modal h1, #acidcodes_shortcodes_modal h2, #acidcodes_shortcodes_modal h3, #acidcodes_shortcodes_modal h4, #acidcodes_shortcodes_modal h5, #acidcodes_shortcodes_modal h6, #acidcodes_shortcodes_modal p, #acidcodes_shortcodes_modal span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+/* Functions */
 #acidcodes_shortcodes_modal .l_modal_header:after, #acidcodes_shortcodes_modal .l_modal_body:after, #acidcodes_shortcodes_modal .l_modal_footer:after {
   content: "";
   display: table;
   clear: both; }
 
 #acidcodes_shortcodes_modal.l_acid_modal {
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #424242;
   overflow: hidden;
@@ -12790,7 +12791,7 @@ readers do not read off random characters that represent icons */
   visibility: hidden;
   top: 100px;
   right: 50%;
-  margin-right: -300px;
+  margin: 0 -300px 0 0;
   width: 580px;
   background: #FFF;
   position: absolute;
@@ -12802,10 +12803,8 @@ readers do not read off random characters that represent icons */
   position: fixed;
   height: 100%;
   width: 100%;
-  background: #fff;
   background: rgba(0, 0, 0, 0.8);
   z-index: 160001;
-  display: none;
   top: 0;
   right: 0; }
 
@@ -12825,88 +12824,83 @@ li.icon svg, li.icon.active svg {
   display: block; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content {
-  transition-property: all;
-  transition-duration: 0.3s; }
+  transition: all 0.3s; }
 
 #acidcodes_shortcodes_modal i {
   font-size: 14px; }
 
 #acidcodes_shortcodes_modal .acidcode__btn, #acidcodes_shortcodes_modal .acidcode__btn--size-large {
-  margin: 0; }
-  #acidcodes_shortcodes_modal .acidcode__btn, #acidcodes_shortcodes_modal .acidcode__btn--size-large {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    border: 1px solid #cccccc; }
-    #acidcodes_shortcodes_modal .acidcode__btn i, #acidcodes_shortcodes_modal .acidcode__btn--size-large i {
-      margin-left: 5px;
-      color: #939393;
-      float: right; }
-    #acidcodes_shortcodes_modal .acidcode__btn:hover i, #acidcodes_shortcodes_modal .acidcode__btn--size-large:hover i {
-      color: #3f4345; }
-  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large {
-    padding: 10px;
-    line-height: 15px;
-    visibility: hidden; }
-    #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back svg, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large svg {
-      margin-left: 0px;
-      color: #FFF; }
-    #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back span, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large span {
-      transition: all 0.1s ease-in;
-      opacity: 0;
-      float: left;
-      margin-right: 5px;
-      color: #FFF;
-      line-height: 1.1; }
-    #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back.active, #acidcodes_shortcodes_modal .acidcode__btn--back.active.acidcode__btn--size-large {
-      visibility: visible;
-      color: #FFF; }
-    #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover i, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large:hover i {
-      margin-left: 5px; }
-    #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover span, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large:hover span {
-      opacity: 1; }
-  #acidcodes_shortcodes_modal .acidcode__btn.close, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large {
-    padding: 10px 15px;
+  cursor: pointer;
+  display: inline-block; }
+
+#acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large {
+  padding: 10px;
+  line-height: 15px;
+  visibility: hidden; }
+  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back svg, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large svg {
+    margin-left: 0px;
+    color: #FFF; }
+  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back span, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large span {
+    transition: all 0.1s ease-in;
+    opacity: 0;
     float: left;
+    margin-right: 5px;
     color: #FFF;
+    line-height: 1.1; }
+  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back.active, #acidcodes_shortcodes_modal .acidcode__btn--back.active.acidcode__btn--size-large {
+    visibility: visible;
+    color: #FFF; }
+  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover i, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large:hover i {
+    margin-left: 5px; }
+  #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover span, #acidcodes_shortcodes_modal .acidcode__btn--back.acidcode__btn--size-large:hover span {
     opacity: 1; }
-    #acidcodes_shortcodes_modal .acidcode__btn.close svg, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large svg {
-      float: left;
-      margin: 0; }
-  #acidcodes_shortcodes_modal .acidcode__btn.cancel, #acidcodes_shortcodes_modal .cancel.acidcode__btn--size-large {
-    color: #757575;
-    float: right; }
-  #acidcodes_shortcodes_modal .acidcode__btn.btn_primary, #acidcodes_shortcodes_modal .btn_primary.acidcode__btn--size-large {
+
+#acidcodes_shortcodes_modal .acidcode__btn.close, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large {
+  padding: 10px 15px;
+  float: left;
+  color: #FFF;
+  opacity: 1; }
+  #acidcodes_shortcodes_modal .acidcode__btn.close svg, #acidcodes_shortcodes_modal .close.acidcode__btn--size-large svg {
+    float: left;
+    margin: 0; }
+
+#acidcodes_shortcodes_modal .acidcode__btn.cancel, #acidcodes_shortcodes_modal .cancel.acidcode__btn--size-large {
+  color: #757575;
+  float: right; }
+
+#acidcodes_shortcodes_modal .acidcode__btn.btn_primary, #acidcodes_shortcodes_modal .btn_primary.acidcode__btn--size-large {
+  background: #00E676;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  border: none; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_primary:hover, #acidcodes_shortcodes_modal .btn_primary.acidcode__btn--size-large:hover {
     background: #00E676;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-    border: none; }
-    #acidcodes_shortcodes_modal .acidcode__btn.btn_primary:hover, #acidcodes_shortcodes_modal .btn_primary.acidcode__btn--size-large:hover {
-      background: #00E676;
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
-      color: #FFF; }
-    #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large {
-      cursor: not-allowed; }
-      #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled svg, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large svg {
-        margin-right: 10px;
-        position: relative;
-        right: 20px; }
-  #acidcodes_shortcodes_modal .acidcode__btn.btn_settings, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large {
-    cursor: pointer;
-    color: #9b9b9b; }
-    #acidcodes_shortcodes_modal .acidcode__btn.btn_settings:hover, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large:hover {
-      color: #3f4345; }
-    #acidcodes_shortcodes_modal .acidcode__btn.btn_settings svg, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large svg {
-      right: 0;
-      color: #9f9f9f;
-      margin-left: 7px; }
-  #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large {
-    border: none;
-    text-decoration: underline;
-    font-size: 12px;
-    color: #9b9b9b;
-    letter-spacing: 0.2px; }
-    #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary:hover, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large:hover {
-      color: #3f4345; }
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+    color: #FFF; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large {
+    cursor: not-allowed; }
+    #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled svg, #acidcodes_shortcodes_modal .btn_primary.disabled.acidcode__btn--size-large svg {
+      margin-right: 10px;
+      position: relative;
+      right: 20px; }
+
+#acidcodes_shortcodes_modal .acidcode__btn.btn_settings, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large {
+  cursor: pointer;
+  color: #9b9b9b; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_settings:hover, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large:hover {
+    color: #3f4345; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_settings svg, #acidcodes_shortcodes_modal .btn_settings.acidcode__btn--size-large svg {
+    right: 0;
+    color: #9f9f9f;
+    margin-left: 7px; }
+
+#acidcodes_shortcodes_modal .acidcode__btn.btn_secondary, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large {
+  border: none;
+  text-decoration: underline;
+  font-size: 12px;
+  color: #9b9b9b;
+  letter-spacing: 0.2px; }
+  #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary:hover, #acidcodes_shortcodes_modal .btn_secondary.acidcode__btn--size-large:hover {
+    color: #3f4345; }
 
 #acidcodes_shortcodes_modal .input-field.col label {
   right: 0; }
@@ -13095,25 +13089,31 @@ ul.acid_icon_list {
   padding: 0;
   float: right; }
 
+#acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover, #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover svg {
+  color: #FFF;
+  transition: all 0.4s; }
+
 #acidcodes_shortcodes_modal .l_modal_body {
   color: #424242; }
 
 #acidcodes_shortcodes_modal .l_modal_body a {
-  text-decoration: none;
-  color: #424242;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  letter-spacing: 1.3px; }
+  color: #424242;
+  letter-spacing: 1.3px;
+  text-decoration: none; }
 
 #acidcodes_shortcodes_modal .l_modal_body .icon {
-  color: #00E676;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
+  color: #00E676;
   clear: both;
   display: block;
   margin: 0 auto 10px; }
 
 #acidcodes_shortcodes_modal .l_modal_body ul {
   width: 100%;
-  margin-top: 5px; }
+  margin: 5px 0 0 0; }
   #acidcodes_shortcodes_modal .l_modal_body ul li {
     list-style: none; }
   #acidcodes_shortcodes_modal .l_modal_body ul > li {
@@ -13139,12 +13139,7 @@ ul.acid_icon_list {
     padding: 25px 25px; }
     #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover {
       cursor: pointer;
-      background-color: #69F0AE;
-      color: #FFF;
-      transition: all 0.4s; }
-      #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover svg {
-        color: #FFF;
-        transition: all 0.4s; }
+      background-color: #69F0AE; }
   #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li .details_content {
     display: none; }
 
@@ -13152,26 +13147,21 @@ ul.acid_icon_list {
   padding: 0 0 0 35px; }
 
 #acidcodes_shortcodes_modal .l_modal_body span.help-text {
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #BDBDBD;
   line-height: 16px;
   display: block;
-  margin-bottom: 15px; }
+  margin: 0 0 15px 0; }
 
 #acidcodes_shortcodes_modal .l_modal_body span.social-label {
   margin: 5px 0 20px; }
 
-#acidcodes_shortcodes_modal .l_modal_body input[type=text]:not(.browser-default) {
-  height: 2rem;
-  margin: 0px 0px 5px 0px; }
-
-#acidcodes_shortcodes_modal .l_modal_body input[type=number]:not(.browser-default) {
-  height: 2rem;
-  margin: 0px 0px 5px 0px; }
-
+#acidcodes_shortcodes_modal .l_modal_body input[type=text]:not(.browser-default),
+#acidcodes_shortcodes_modal .l_modal_body input[type=number]:not(.browser-default),
 #acidcodes_shortcodes_modal .l_modal_body input[type=url]:not(.browser-default) {
   height: 2rem;
-  margin: 0px 0px 5px 0px; }
+  margin: 0 0 5px 0; }
 
 #acidcodes_shortcodes_modal .l_modal_body form {
   border: none; }
@@ -13186,7 +13176,8 @@ ul.acid_icon_list {
 
 #acidcodes_shortcodes_modal .l_modal_body .help-block {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #bbbbbb; }
 
@@ -13213,30 +13204,28 @@ ul.acid_icon_list {
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container {
   padding: 0px; }
   #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content {
+    margin: 10px 0 0 0;
     height: 0;
-    margin-top: 10px;
-    margin-bottom: 0;
     opacity: 0; }
     #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content button[type="submit"] {
       display: none; }
     #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .details_container .details_content.active {
-      margin-top: 0;
-      opacity: 1;
-      height: auto; }
+      margin: 0 0 0 0;
+      height: auto;
+      opacity: 1; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body > ul {
   height: auto;
   opacity: 1;
-  margin-top: 0px;
-  margin-bottom: 10px; }
+  margin: 0 0 10px 0; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .inline {
-  margin-top: 20px; }
+  margin: 20px 0 0 0; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .inline label {
   float: right;
   line-height: 31px;
-  margin-left: 13px; }
+  margin: 0 0 0 13px; }
 
 #acidcodes_shortcodes_modal.l_acid_modal .l_modal_body .inline input {
   width: auto; }
@@ -13248,8 +13237,7 @@ ul.acid_icon_list {
 #acidcodes_shortcodes_modal.l_acid_modal.s_active .l_modal_body > ul {
   height: 0;
   opacity: 0;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 10px 0 0 0;
   padding: 0; }
 
 #acidcodes_shortcodes_modal .l_modal_header {

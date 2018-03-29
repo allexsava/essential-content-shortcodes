@@ -4,28 +4,28 @@
   padding: 0;
   float: left;
 }
+%a-style {
+  color: $white;
+  @include transition(all 0.4s);
+}
 #acidcodes_shortcodes_modal {
   .l_modal_body {
     & {
       color: $font-color;
     }
     a {
-      text-decoration: none;
-      color: $font-color;
-      font-size: 14px;
-      letter-spacing: 1.3px;
+      @include font-source-roboto($size: 14px, $color: $font-color, $ls: 1.3px, $td: none);
     }
     .icon {
-      color: $accent-color;
-      font-size: 36px;
+      @include font-source-roboto($size: 36px, $color: $accent-color);
       clear: both;
       display: block;
-      margin: 0 auto 10px;
+      @include margin(0 auto 10px);
     }
     ul {
       @extend %mpf;
       width: 100%;
-      margin-top: 5px;
+      @include margin(5px 0 0 0);
       li {
         @extend %mpf;
         list-style: none;
@@ -45,31 +45,25 @@
         width: 33%;
         display: table-cell;
         vertical-align: middle;
-        padding: 0;
-        border-right: 1px solid $grid_border-color;
-        border-bottom: 1px solid $grid_border-color;
+        @include padding(0);
+        @include border(1px, solid, $grid_border-color, right);
+        @include border(1px, solid, $grid_border-color, bottom);
 
         &:nth-last-of-type(-n+3) {
-          border-bottom: none;
+          @include border-direction(bottom, none)
         }
         &:nth-child(3n) {
-          border-right: none;
+          @include border-direction(right,none)
         }
-
-        &:hover {
-        }
-
         a {
           display: block;
-          padding: 25px 25px;
+          @include padding(25px 25px);
           &:hover {
             cursor: pointer;
             background-color: $rectangle-hover;
-            color: $white;
-            @include transition(all 0.4s);
+            @extend %a-style;
             svg {
-              color: $white;
-              @include transition(all 0.4s);
+              @extend %a-style;
             }
           }
         }
@@ -81,33 +75,26 @@
     }
 
     .s6 {
-      padding: 0 35px 0 0;
+      @include padding(0 35px 0 0);
     }
 
     span.help-text {
-      font-size: 12px;
-      color: $help-text-color;
-      line-height: 16px;
+      @include font-source-roboto($size: 12px, $color: $help-text-color, $lh: 16px);
       display: block;
-      margin-bottom: 15px;
+      @include margin( 0 0 15px 0)
     }
 
     span.social-label {
-      margin: 5px 0 20px;
+      @include margin(5px 0 20px);
     }
 
-    input[type=text]:not(.browser-default) {
-      height: 2rem;
-      margin: 0px 0px 5px 0px;
-    }
-    input[type=number]:not(.browser-default) {
-      height: 2rem;
-      margin: 0px 0px 5px 0px;
-    }
-
-    input[type=url]:not(.browser-default) {
-      height: 2rem;
-      margin: 0px 0px 5px 0px;
+    input[type=text],
+    input[type=number],
+    input[type=url] {
+      &:not(.browser-default) {
+        @include height-opacity($height: 2rem, $opacity: false);
+        @include margin(0 0 5px 0);
+      }
     }
 
     //Forms Styling
@@ -125,9 +112,8 @@
     }
     .help-block {
       display: block;
-      margin-bottom: 10px;
-      font-size: 12px;
-      color: $grayDarker;
+      @include margin(0 0 10px 0);
+      @include font-source-roboto($size: 12px, $color: $grayDarker, $weight: false,  $lh: false, $ls:false);
     }
     select, textarea, input, .uneditable-input {
       &:focus {
@@ -140,8 +126,8 @@
     }
 
     [type="checkbox"]:checked + label:before {
-      border-right-color: $rectangle-hover;
-      border-bottom-color: $rectangle-hover;
+      @include border-direction(right-color, $rectangle-hover);
+      @include border-direction(bottom-color, $rectangle-hover);
     }
     input[type=range] + .thumb {
       background-color: $accent-color;
@@ -159,36 +145,30 @@
       .details_container {
         padding: 0px;
         .details_content {
-          height: 0;
-          margin-top: 10px;
-          margin-bottom: 0;
-          opacity: 0;
+          @include margin(10px 0 0 0);
+          @include height-opacity($height: 0, $opacity: 0);
           @extend %transition;
           button[type="submit"] {
             display: none;
           }
           &.active {
-            margin-top: 0;
-            //margin-bottom: 10px;
-            opacity: 1;
-            height: auto;
+            @include margin(0 0 0 0);
+            @include height-opacity($height: auto, $opacity: 1);
           }
         }
       }
       & > ul {
-        height: auto;
-        opacity: 1;
-        margin-top: 0px;
-        margin-bottom: 10px;
+        @include height-opacity($height: auto, $opacity: 1);
+        @include margin(0 0 10px 0);
       }
       .inline {
         & {
-          margin-top: 20px;
+          @include margin(20px 0 0 0);
         }
         label {
           float: left;
           line-height: 31px;
-          margin-right: 13px;
+          @include margin(0 13px 0 0);
         }
         input {
           width: auto;
@@ -200,13 +180,11 @@
       .l_modal_body {
         .details_container {
           display: block;
-          padding: 20px 20px 0px 20px;
+          @include padding(20px 20px 0px 20px);
         }
         & > ul {
-          height: 0;
-          opacity: 0;
-          margin-top: 10px;
-          margin-bottom: 0px;
+          @include height-opacity($height: 0, $opacity: 0);
+          @include margin(10px 0 0 0);
           padding: 0;
         }
       }

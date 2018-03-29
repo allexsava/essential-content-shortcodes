@@ -1,6 +1,45 @@
+/* Functions */
 @mixin transition($transition...) {
   -moz-transition:    $transition;
   -o-transition:      $transition;
   -webkit-transition: $transition;
   transition:         $transition;
+}
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+@mixin border($width, $style, $color, $direction: false) {
+  @if $direction {border-#{$direction}: $width $style $color;}
+  @else {border: $width $style $color;}
+}
+
+@mixin border-direction($direction, $color){
+  border-#{$direction}: $color;
+}
+
+@mixin height-opacity($height:false, $opacity:false){
+  @if $height { height: $height; }
+  @if $opacity { opacity: $opacity; }
+}
+
+@mixin font-source-roboto($size: false, $color: false, $weight: false,  $lh: false, $ls: false, $td: false) {
+  font-family: 'Roboto', sans-serif;
+  @if $size { font-size: $size; }
+  @if $color { color: $color; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+  @if $ls { letter-spacing: $ls; }
+  @if $td { text-decoration: $td; }
+}
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
 }

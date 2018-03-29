@@ -1,6 +1,6 @@
 <?php $fade = 'fade '; ?>
 <div class="acidcode  acidcode--tabs">
-    <ul class="acidcode--tabs__nav  nav  nav-tabs">
+    <ul class="acidcode--tabs__nav  nav  nav-tabs tabs">
         <?php
         preg_match_all( '#<title>(.*?)</title>#', $this->get_clean_content( $content ), $titles );
         $ui_tabs_keys = array();

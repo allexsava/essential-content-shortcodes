@@ -26,9 +26,9 @@
                     // add new tab content
 
                     var content = '<div id="t'+new_index+'" class="tab" data-tab="'+new_index+'">'+
-                        '<input type="text" class="tab_title" placeholder="Title"/>'+
-                        '<input type="text" class="tab_icon" placeholder="Font Awesome Icon Class" /><a class="tip_icon" title="See the list with all icons classes" href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><i class="icon-external-link"></i></a>'+
-                        '<textarea class="tab_content" placeholder="Content" rows="10"></textarea>'+
+                        '<input type="text" class="acidcode__tabs--tab-title" placeholder="Title"/>'+
+                        '<input type="text" class="acidcode__tabs--tab-icon" placeholder="Font Awesome Icon Class" /><a class="tip_icon" title="See the list with all icons classes" href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><i class="icon-external-link"></i></a>'+
+                        '<textarea class="acidcode__tabs--tab-content" placeholder="Content" rows="10"></textarea>'+
                         '</div>';
                     $(ui.newPanel).before(content);
 
@@ -42,19 +42,20 @@
 
         $('.details_content.active').find('#acidcodes_shortcodes_form').attr('id', 'acidcodes_shortcodes_form_modified'); // the most stupid thing i ever done...must change later
         $(document).one('submit', '#acidcodes_shortcodes_form_modified', function(e){
+
             e.preventDefault();
             var params = $(this).next('#data_params').data('params'),
                 form_params =  $(this).serializeArray(),
                 params_String = '';
 
             output = '<p>[tabs]</p>';
-            $(this).find('.param-tabs .ui-tabs-panel').each(function(i,el){
+            console.log('hi');
+            $(this).find('.param-tabs').each(function(i,el){
 
                 var params_string = false,
-                    title = $(el).find('input.tab_title').val(),
-                    icon = $(el).find('input.tab_icon').val(),
-                    content = $(el).find('textarea.tab_content').val();
-
+                    title = $(el).find('input.acidcode__tabs--tab-title').val(),
+                    icon = $(el).find('input.acidcode__tabs--tab-icon').val(),
+                    content = $(el).find('textarea.acidcode__tabs--tab-content').val();
 
                 if ( typeof title !== 'undefined' ) {
                     params_string = ' title="'+ title +'"';

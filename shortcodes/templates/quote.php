@@ -16,14 +16,14 @@
             <a href="<?php echo $link; ?>">
         <?php endif ?>
 
-            <div class="acidcode__quote--author-name"><?php echo $author; ?></div>
+            <div class="acidcode__quote-author-name"><?php echo $author; ?></div>
         
         <?php if(!empty($link)) : ?>
             </a>
         <?php endif ?>
 
         <?php if(!empty($author_title)) : ?>
-            <div class="acidcode__quote--author-title"><?php echo $author_title; ?></div>
+            <div class="acidcode__quote-author-title"><?php echo $author_title; ?></div>
         <?php endif; ?>
 
     <?php endif; ?>

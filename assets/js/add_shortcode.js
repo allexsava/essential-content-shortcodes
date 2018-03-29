@@ -207,10 +207,10 @@ editor = '';
 				};
 
 
-				// Tabs Init
-                // $(document).ready(function(){
-                 //    $('ul.tabs').tabs();
-                // });
+				//Tabs Init
+                $(document).ready(function(){
+                    $('ul.tabs').tabs();
+                });
 
 				//TextArea
                 $('#content').trigger('autoresize');

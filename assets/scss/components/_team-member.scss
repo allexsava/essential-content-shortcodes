@@ -1,8 +1,7 @@
 .acidcode__team-member--social-link {
   &__link {
     @include padding(0px 35px 0px 0px);
-    box-shadow: none !important;
-    //-webkit-box-shadow:none;
+    @include box-shadow(none !important);
   }
   display: inline-block;
 }

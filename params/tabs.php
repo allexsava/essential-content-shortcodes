@@ -2,13 +2,13 @@
 $class = "span12";
 if (isset($param['admin_class'])) $class = $param['admin_class']; ?>
 
-<div class="acidcode acidcode__tabs row">
-    <ul class="tabs">
+<div class="acidcode acidcode__tabs params-tabs row">
+    <ul class="tabs tabs-head">
         <li class="tab" data-index="1"><a href="#t1">Tab 1</a></li>
         <li class="tab" data-index="0"><a href="#t-last">New Tab</a></li>
     </ul>
 
-    <div id="t1" class="row" data-tab="1">
+    <div id="t1" class="row tab" data-tab="1">
         <span class="col s6">
             <input type="text" class="acidcode__tabs--tab-title" placeholder="Title"/>
         </span>

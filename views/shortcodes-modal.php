@@ -87,10 +87,10 @@ if ($_GET['post_id']) {
                 <div class="col s6">
                     <a class="acidcode__btn btn_secondary cancel"><?php _e('Reset', 'acidcodes_txtd'); ?></a>
 
-                    <span><?php _e('or', 'acidcodes_txtd'); ?></span>
+                    <span class="acidcode__span-or"><?php _e('or', 'acidcodes_txtd'); ?></span>
 
                 </div>
-                <div class="col s6 insert-button">
+                <div class="col s6 acidcode__insert-button">
                     <a id="insert-button" class="acidcode__btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
                 </div>
             </div>

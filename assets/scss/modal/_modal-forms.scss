@@ -1,28 +1,12 @@
-// image upload preview -- Andrei
 #acidcodes_shortcodes_form {
   .media_image_holder {
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
     background: #ddd;
-    border-radius:10px;
-    padding: 30px 20px;
+    @include border-direction(radius, 10px);
+    @include padding(30px 20px);
     position: relative;
-
-    i {
-      color: #eee;
-      border-top: 16px;
-      font-size: 100px;
-      cursor: pointer;
-
-      &.icon-edit {
-        display:none;
-        position: absolute;
-        top: 35px;
-        left: 70px;
-        z-index:10;
-      }
-    }
 
     .upload_preview {
       display:none;
@@ -30,7 +14,7 @@
       top: 0px;
       left: 0px;
       z-index:9;
-      border-radius: 10px;
+      @include border-direction(radius, 10px);
       height: 100%;
       width: 100%;
     }
@@ -38,11 +22,9 @@
     &:hover i.active {
       display:block;
     }
-    svg.fa-image {
-      color: $white;
-      text-align: center;
-      font-size: 40px;
-    }
+    //svg.fa-image {
+    //  @include font-source-roboto($size: 40px, $color: $white, $ta: center);
+    //}
     label {
       display: block;
       font-size: 15px;
@@ -50,7 +32,9 @@
     }
   }
 }
-
+.acidcode__image-upload {
+  @include font-source-roboto($size: 40px, $color: $white, $ta: center);
+}
 #TB_window {
   z-index: 1000500;
 }

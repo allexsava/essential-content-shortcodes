@@ -1,0 +1,9 @@
+.acidcode__carousel .acidcode__carousel-item {
+  @include box-shadow(none);
+  &:hover {
+    @include box-shadow(none);
+  }
+  .acidcode__carousel-img {
+    @include box-shadow(none);
+  }
+}

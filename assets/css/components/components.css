@@ -105,6 +105,13 @@ svg.acidcode__icon--type-circle {
 .acidcode__separator--weight-thin.acidcode__separator--style-double {
   border-bottom-width: 3px; }
 
+.acidcode__carousel .acidcode__carousel-item {
+  box-shadow: none; }
+  .acidcode__carousel .acidcode__carousel-item:hover {
+    box-shadow: none; }
+  .acidcode__carousel .acidcode__carousel-item .acidcode__carousel-img {
+    box-shadow: none; }
+
 .acidcode__team-member--social-link {
   display: inline-block; }
   .acidcode__team-member--social-link__link {

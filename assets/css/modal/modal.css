@@ -74,14 +74,14 @@ li.icon svg, li.icon.active svg {
     transition: all 0.1s ease-in;
     opacity: 0;
     float: right;
-    margin-left: 5px;
+    margin: 0 0 0 5px;
     color: #FFF;
     line-height: 1.1; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back.active {
     visibility: visible;
     color: #FFF; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover i {
-    margin-right: 5px; }
+    margin: 0 5px 0 0; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover span {
     opacity: 1; }
 
@@ -95,7 +95,6 @@ li.icon svg, li.icon.active svg {
     margin: 0; }
 
 #acidcodes_shortcodes_modal .acidcode__btn.cancel {
-  color: #757575;
   float: left; }
 
 #acidcodes_shortcodes_modal .acidcode__btn.btn_primary {
@@ -109,7 +108,7 @@ li.icon svg, li.icon.active svg {
   #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled {
     cursor: not-allowed; }
     #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled svg {
-      margin-left: 10px;
+      margin: 0 0 0 10px;
       position: relative;
       left: 20px; }
 
@@ -120,15 +119,16 @@ li.icon svg, li.icon.active svg {
     color: #3f4345; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_settings svg {
     left: 0;
-    color: #9f9f9f;
-    margin-right: 7px; }
+    color: #9b9b9b;
+    margin: 0 7px 0 0; }
 
 #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary {
   border: none;
-  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #9b9b9b;
-  letter-spacing: 0.2px; }
+  letter-spacing: 0.2px;
+  text-decoration: underline; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_secondary:hover {
     color: #3f4345; }
 
@@ -168,8 +168,8 @@ span.social-media {
 span.input-special-margin {
   margin-top: 19px; }
 
-.shame-margin {
-  margin: 20px 0px 10px 0px; }
+.checkbox-special-margin {
+  margin: 20px 0 10px 0; }
 
 .align-clear {
   clear: both; }
@@ -181,9 +181,6 @@ span.input-special-margin {
   margin-top: 0;
   padding-right: 35px; }
 
-.input-special-margin label {
-  margin-top: -5px; }
-
 li.icon {
   cursor: pointer; }
   li.icon.active {
@@ -191,7 +188,7 @@ li.icon {
     li.icon.active svg {
       color: #FFF;
       padding: 5px;
-      transition: padding .5s; }
+      transition: padding 0.5s; }
   li.icon:hover {
     background: #00E676;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
@@ -201,8 +198,8 @@ li.icon {
       z-index: 12; }
 
 ul.acid_icon_list {
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   height: 245px;
   position: relative; }
   ul.acid_icon_list .row > li {
@@ -232,17 +229,6 @@ ul.acid_icon_list {
   border-radius: 10px;
   padding: 30px 20px;
   position: relative; }
-  #acidcodes_shortcodes_form .media_image_holder i {
-    color: #eee;
-    border-top: 16px;
-    font-size: 100px;
-    cursor: pointer; }
-    #acidcodes_shortcodes_form .media_image_holder i.icon-edit {
-      display: none;
-      position: absolute;
-      top: 35px;
-      left: 70px;
-      z-index: 10; }
   #acidcodes_shortcodes_form .media_image_holder .upload_preview {
     display: none;
     position: absolute;
@@ -254,14 +240,16 @@ ul.acid_icon_list {
     width: 100%; }
   #acidcodes_shortcodes_form .media_image_holder:hover i.active {
     display: block; }
-  #acidcodes_shortcodes_form .media_image_holder svg.fa-image {
-    color: #FFF;
-    text-align: center;
-    font-size: 40px; }
   #acidcodes_shortcodes_form .media_image_holder label {
     display: block;
     font-size: 15px;
     color: #7b7b7b !important; }
+
+.acidcode__image-upload {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  color: #FFF;
+  text-align: center; }
 
 #TB_window {
   z-index: 1000500; }
@@ -496,14 +484,17 @@ ul.acid_icon_list {
   border-top: 1px solid #dcdcdc;
   background-color: #E6E6E6;
   margin-bottom: 0; }
-  #acidcodes_shortcodes_modal .l_modal_footer span {
-    color: #bbbbbb;
-    line-height: 35px; }
   #acidcodes_shortcodes_modal .l_modal_footer * .row {
     margin-bottom: 0; }
   #acidcodes_shortcodes_modal .l_modal_footer a {
     font-family: 'Roboto', sans-serif; }
-  #acidcodes_shortcodes_modal .l_modal_footer .insert-button {
-    cursor: not-allowed; }
+
+.acidcode__span-or {
+  font-family: 'Roboto', sans-serif;
+  color: #bbbbbb;
+  line-height: 35px; }
+
+.acidcode__insert-button {
+  cursor: not-allowed; }
 
 /*# sourceMappingURL=modal.css.map */

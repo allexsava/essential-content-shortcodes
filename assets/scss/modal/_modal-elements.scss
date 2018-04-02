@@ -162,7 +162,7 @@ span.input-special-margin {
 }
 
 .checkbox-special-margin {
-  @include margin(20px 0 10px 0);
+  @include margin(40px 0 10px 0);
 }
 .align-clear {
   clear: both;
@@ -218,6 +218,10 @@ ul.acid_icon_list {
   &::-webkit-scrollbar-thumb {
     background-color: $accent-color;
     outline: 1px solid slategrey;
+  }
+  label.error {
+    left: 0px;
+    position: absolute;
   }
 }
 .icon__special-title {

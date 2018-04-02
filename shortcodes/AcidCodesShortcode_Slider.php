@@ -36,6 +36,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                     '5' => '5'
                 ),
                 'admin_class' => 'input-field hide-list col s6',
+                'required' => true,
                 'help-text'   => '1, 2...'
             ),
             'type' => array(
@@ -54,7 +55,8 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'type' => 'image',
                 'name' => 'Image',
                 'admin_class' => 'col s6 acid_media_uploader',
-                'number' => 5
+                'number' => 5,
+                'required' => true
             ),
             'url' => array(
                 'type' => 'hidden'
@@ -88,15 +90,11 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'admin_class' => 'range-field col s6',
                 'help-text'   => 'Set the spacing of the center item. (Default: 0)'
             ),
-            'navigation'    => array(
+            'autoplay'    => array(
+                'value' => 'off',
                 'type'        => 'switch',
-                'name'        => __( 'Slider Navigation', 'acidcodes_txtd' ),
+                'name'        => __( 'Slider Autoplay', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6 checkbox-special-margin'
-            ),
-            'loop'    => array(
-                'type'        => 'switch',
-                'name'        => __( 'Slider Loop', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
             )
 
         );

@@ -100,7 +100,7 @@ class AcidCodesShortcodes
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
 //            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
-            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
+            //add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
         }
     } // end register_admin_assets
@@ -170,9 +170,9 @@ class AcidCodesShortcodes
 
     function addto_mce_acidcodes_main($plugin_array)
     {
-        $plugin_array['main'] = $this->plugin_url . 'assets/js/main.js';
+        //$plugin_array['main'] = $this->plugin_url . 'assets/js/main.js';
 
-        return $plugin_array;
+        //return $plugin_array;
     }
 
     public function acidcodes_get_shortcodes_modal()

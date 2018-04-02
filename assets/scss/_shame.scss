@@ -22,15 +22,9 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
 #acidcodes_shortcodes_modal .l_modal_body label.active.error,
 #acidcodes_shortcodes_modal .l_modal_body label.error {
   position: relative;
-  color: #bf291e;
+  @include font-source-roboto($size: 13px, $color: $error-color);
   background: #fff;
   width: 100%;
-  font-size: 13px;
-}
-
-#acidcodes_shortcodes_modal .l_modal_body label.active.error {
-  color: #69F0AE;
-  font-family: "Roboto";
 }
 
 select{
@@ -59,12 +53,9 @@ select{
   display: -webkit-box;
 }
 
-ul.acid_icon_list label.error {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin-top: 0px !important;
-}
+//ul.acid_icon_list label.error {
+//  left: 0px;
+//}
 
 .flex-grid{
   display: flex;
@@ -75,9 +66,9 @@ ul.acid_icon_list label.error {
   height: 0;
 }
 
-#acidcodes_shortcodes_modal .l_modal_body ul.acid_icon_list label#name-error {
-  position: absolute;
-}
+//#acidcodes_shortcodes_modal .l_modal_body ul.acid_icon_list label#name-error {
+//  position: absolute;
+//}
 textarea.materialize-textarea.error {
   margin: 0;
 }

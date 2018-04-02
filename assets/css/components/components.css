@@ -105,12 +105,33 @@ svg.acidcode__icon--type-circle {
 .acidcode__separator--weight-thin.acidcode__separator--style-double {
   border-bottom-width: 3px; }
 
-.acidcode__carousel .acidcode__carousel-item {
+.carousel .acidcode__carousel-item {
   box-shadow: none; }
-  .acidcode__carousel .acidcode__carousel-item:hover {
+  .carousel .acidcode__carousel-item:hover {
     box-shadow: none; }
-  .acidcode__carousel .acidcode__carousel-item .acidcode__carousel-img {
+  .carousel .acidcode__carousel-item .acidcode__carousel-img {
     box-shadow: none; }
+
+.acidcode__carousel .middle-indicator-text {
+  box-shadow: none; }
+  .acidcode__carousel .middle-indicator-text:hover {
+    box-shadow: none; }
+
+.middle-indicator {
+  position: absolute;
+  top: 50%; }
+
+.middle-indicator-text {
+  font-size: 4.2rem; }
+
+a.middle-indicator-text {
+  color: white !important; }
+
+.content-indicator {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border-radius: 50px; }
 
 .acidcode__team-member--social-link {
   display: inline-block; }

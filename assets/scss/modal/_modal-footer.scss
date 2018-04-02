@@ -17,8 +17,6 @@
 }
 .acidcode__span-or {
   @include font-source-roboto( $color: $grayDarker, $lh: 35px);
-  //color: $grayDarker;
-  //line-height: 35px;
 }
 .acidcode__insert-button {
   cursor: not-allowed;

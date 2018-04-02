@@ -151,12 +151,16 @@ editor = '';
 
                     function numberOfImages(){
 						var verify = $('#data_params').data('params').code;
-						if(verify === 'slider'){
+                        console.log(verify);
+
+                        if(verify === 'slider'){
                             $('#acidcodes_shortcodes_form .acid_media_uploader').hide();
                             $('#acidcodes_shortcodes_form select[name="number"]').on('change', function(){
                                 $('#acidcodes_shortcodes_form .acid_media_uploader').hide();
                                 $('#acidcodes_shortcodes_form .acid_media_uploader:lt('+$(this).val()+')').show();
                             });
+						} else {
+                            $('#acidcodes_shortcodes_form .acid_media_uploader').show();
 						}
 
 

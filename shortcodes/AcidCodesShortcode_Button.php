@@ -111,6 +111,11 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'name'        => __( 'Open in a new tab?', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6'
             ),
+            'pulse'    => array(
+                'type'        => 'switch',
+                'name'        => __( 'Floating button', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6'
+            ),
 
         );
 

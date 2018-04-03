@@ -11,6 +11,7 @@
     $classes.= !empty($class) ? '  '.$class : '';
     $classes.=!empty($waves_color) ? '  '.$waves_color : '';
     $classes.=!empty($waves_effect) ? ' waves-effect ' : '';
+    $classes.=!empty($pulse) ? ' btn-floating pulse ' : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 

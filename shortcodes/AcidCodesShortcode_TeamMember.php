@@ -14,6 +14,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
         $this->params = array(
             'image' => array(
                 'type' => 'image',
+                'name'        => 'Image',
                 'required' => true,
                 'admin_class' => 'col s6 acid_media_uploader'
             ),

@@ -33,7 +33,7 @@ class AcidCodesShortcodes
 
         //hack
         $this->acidcodes = 'acidcodes';
-        $this->version = '1.2.4';
+        $this->version = '1.0.0';
 
         $this->load_dependencies();
         $this->define_public_hooks();
@@ -154,12 +154,6 @@ class AcidCodesShortcodes
         return $plugin_array;
     }
 
-//    function addto_mce_acidcodes_parsley($plugin_array)
-//    {
-//        $plugin_array['parsley'] = $this->plugin_url . 'assets/js/parsleyjs/parsley.min.js';
-//
-//        return $plugin_array;
-//    }
 
     function addto_mce_acidcodes_validate($plugin_array)
     {

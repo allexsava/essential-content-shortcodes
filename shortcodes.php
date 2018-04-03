@@ -54,7 +54,7 @@ class AcidCodesShortcode {
                 'Icon',
                 'Separator',
                 'Slider',
-                'Tabs',
+                'Parallax',
                 'TeamMember',
                 'ProgressBar',
                 'Quote',

@@ -103,16 +103,16 @@ editor = '';
 						}
 					} );
 
-					$( '.details_container .input-tags select' ).each( function() {
-
-						var options = $( this ).data( 'options' );
-						if ( $( this ).hasClass( 'select2-offscreen' ) ) {
-							$( this ).select2( "destroy" );
-							$( this ).select2( {tags: options} );
-						} else {
-							$( this ).select2( {tags: options} );
-						}
-					} );
+					// $( '.details_container .input-tags select' ).each( function() {
+                    //
+					// 	var options = $( this ).data( 'options' );
+					// 	if ( $( this ).hasClass( 'select2-offscreen' ) ) {
+					// 		$( this ).select2( "destroy" );
+					// 		$( this ).select2( {tags: options} );
+					// 	} else {
+					// 		$( this ).select2( {tags: options} );
+					// 	}
+					// } );
 
 
 					//button element
@@ -227,9 +227,9 @@ editor = '';
 
 
 				//Tabs Init
-                $(document).ready(function(){
-                    $('ul.tabs').tabs();
-                });
+                // $(document).ready(function(){
+                 //    $('ul.tabs').tabs();
+                // });
 
 				//TextArea
                 $('#content').trigger('autoresize');
@@ -326,6 +326,7 @@ editor = '';
 		} );
 		tinymce.PluginManager.add( 'acidcodes', tinymce.plugins.acidcodes );
 
+
 		// if the shortcode doesn't have params it needs to be inserted directly
 		modal_selector.on( 'click', '.insert-direct-shortcode', function() {
 
@@ -339,7 +340,7 @@ editor = '';
 			modal_selector.trigger( 'reveal:close' );
 		} );
 
-		// when submiting a panel of params
+        // when submiting a panel of params
 		$( document ).on( 'submit', '#acidcodes_shortcodes_form', function( e ) {
 			e.preventDefault();
             var params = $( this ).next( '#data_params' ).data( 'params' ),

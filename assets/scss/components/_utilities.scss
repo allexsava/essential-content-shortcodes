@@ -1,7 +1,7 @@
 // Extends, Functions
 
 //Font
-$primary-font: sans-serif;
+$primary-font: "Roboto";
 $accent-color: #00E676;
 $rectangle-hover: #69F0AE;
 
@@ -57,6 +57,8 @@ $rectangle-hover: #69F0AE;
 }
 @mixin border-radius($radius) {
   border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
 }
 
 /* Separator section */

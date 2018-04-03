@@ -100,7 +100,8 @@ li.icon svg, li.icon.active svg {
 #acidcodes_shortcodes_modal .acidcode__btn.btn_primary {
   background: #00E676;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-  border: none; }
+  border: none;
+  padding: 0 35px 0 35px; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_primary:hover {
     background: #00E676;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
@@ -141,6 +142,9 @@ li.icon svg, li.icon.active svg {
 #acidcodes_shortcodes_modal input[type=range]::-webkit-slider-thumb, #acidcodes_shortcodes_modal ::-moz-range-thumb, #acidcodes_shortcodes_modal ::-ms-thumb, #acidcodes_shortcodes_modal + .thumb {
   background-color: #69F0AE; }
 
+#acidcodes_shortcodes_modal .acidcode__icon-link {
+  margin-left: 0; }
+
 #acidcodes_shortcodes_modal .hide-list .dropdown-content li:nth-child(1) {
   display: none; }
 
@@ -156,6 +160,17 @@ li.icon svg, li.icon.active svg {
 #acidcodes_shortcodes_modal .dropdown-content li.active > span {
   color: #FFF;
   background-color: #00E676; }
+
+ul.dropdown-content.select-dropdown::-webkit-scrollbar {
+  width: 1em;
+  -webkit-transition: all 1s linear; }
+
+ul.dropdown-content.select-dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); }
+
+ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
+  background-color: #00E676;
+  outline: 1px solid slategrey; }
 
 .markers label {
   margin-bottom: 15px; }
@@ -179,7 +194,8 @@ span.input-special-margin {
 
 .input-field.col.s12 {
   margin-top: 0;
-  padding-right: 35px; }
+  padding-right: 35px;
+  padding-left: 0; }
 
 li.icon {
   cursor: pointer; }
@@ -295,6 +311,13 @@ ul.acid_icon_list {
 #acidcodes_shortcodes_modal .l_modal_body label {
   color: #424242;
   cursor: default; }
+  #acidcodes_shortcodes_modal .l_modal_body label.active.error, #acidcodes_shortcodes_modal .l_modal_body label.error {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #bf291e;
+    background: #fff;
+    width: 100%; }
 
 #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li {
   width: 33%;
@@ -361,7 +384,7 @@ ul.acid_icon_list {
 #acidcodes_shortcodes_modal .l_modal_body input[type="radio"] {
   width: auto; }
 
-#acidcodes_shortcodes_modal .l_modal_body [type="checkbox"]:checked + label:before {
+#acidcodes_shortcodes_modal .l_modal_body [type="checkbox"]:checked + span:not(.lever):before {
   border-right-color: #69F0AE;
   border-bottom-color: #69F0AE; }
 

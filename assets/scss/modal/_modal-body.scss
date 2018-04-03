@@ -37,6 +37,12 @@
     label {
       color: $font-color;
       cursor: default;
+      &.active.error, &.error {
+        position: relative;
+        @include font-source-roboto($size: 13px, $color: $error-color);
+        background: #fff;
+        width: 100%;
+      }
     }
 
     .l_three_col {
@@ -125,7 +131,7 @@
       width: auto;
     }
 
-    [type="checkbox"]:checked + label:before {
+    [type="checkbox"]:checked + span:not(.lever):before {
       @include border-direction(right-color, $rectangle-hover);
       @include border-direction(bottom-color, $rectangle-hover);
     }

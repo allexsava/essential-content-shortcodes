@@ -71,6 +71,7 @@
       background: $accent-color;
       @include box-shadow(0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24));
       border: none;
+      @include padding(0 35px 0 35px);
 
       &:hover {
         background: $accent-color;
@@ -123,6 +124,10 @@
     background-color: $rectangle-hover;
   }
 
+  .acidcode__icon-link {
+    margin-left: 0;
+  }
+
   .hide-list .dropdown-content li:nth-child(1) {
     display: none;
   }
@@ -146,6 +151,19 @@
     }
   }
 
+}
+ul.dropdown-content.select-dropdown::-webkit-scrollbar {
+  width: 1em;
+  -webkit-transition: all 1s linear;
+}
+
+ul.dropdown-content.select-dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
+
+ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
+  background-color: $accent-color;
+  outline: 1px solid slategrey;
 }
 
 .markers label {
@@ -173,6 +191,7 @@ span.input-special-margin {
 .input-field.col.s12 {
   @include margin-direction(0, top);
   @include padding-direction(35px, right);
+  @include padding-direction(0,left);
 }
 li.icon {
   svg {

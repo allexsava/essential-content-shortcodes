@@ -83,6 +83,23 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'help-text'        => 'eg square, rounded',
                 'required' => true
             ),
+            'effect'      => array(
+                'type'        => 'select',
+                'name'        => __( 'Button Effect', 'acidcodes_txtd' ),
+                'options'     => array(
+                    '' => 'Select Effect',
+                    'waves-effect' => __( 'Waves effect', 'acidcodes_txtd' ),
+                    'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
+                ),
+                'admin_class' => 'input-field hide-list col s6 button_effect',
+                'help-text'   => 'eg waves, pulse'
+            ),
+            'newtab'    => array(
+                'type'        => 'switch',
+                'name'        => __( 'Open in a new tab?', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6 acidcode__newtab'
+            ),
+
             'waves_color'      => array(
                 'type'        => 'select',
                 'name'        => __( 'Waves Color', 'acidcodes_txtd' ),
@@ -99,25 +116,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
 
                 ),
                 'help-text'        => 'eg orange, purple',
-                'admin_class' => 'input-field hide-list col s6 scroll-height waves__color',
-            ),
-            'effect'      => array(
-                'type'        => 'select',
-                'name'        => __( 'Button Effect', 'acidcodes_txtd' ),
-                'options'     => array(
-                    '' => 'Select Effect',
-                    'waves-effect' => __( 'Waves effect', 'acidcodes_txtd' ),
-                    'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
-                ),
-                'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg waves, pulse'
-            ),
-            'newtab'    => array(
-                'type'        => 'switch',
-                'name'        => __( 'Open in a new tab?', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
-            ),
-
+                'admin_class' => 'input-field hide-list col s6 scroll-height-button hidden acidcode__waves-color',
+            )
         );
 
         // allow the theme or other plugins to "hook" into this shortcode's params

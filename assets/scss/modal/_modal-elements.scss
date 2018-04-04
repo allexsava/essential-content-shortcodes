@@ -178,6 +178,9 @@ span.input-special-margin {
 .checkbox-special-margin {
   @include margin(40px 0 10px 0);
 }
+.acidcode__newtab {
+  margin-left: 0 !important;
+}
 .align-clear {
   clear: both;
 }
@@ -255,5 +258,18 @@ ul.acid_icon_list {
 }
 
 .scroll-height .dropdown-content.select-dropdown {
-  height: 150px ;
+  height: 150px;
+}
+.scroll-height-button .dropdown-content.select-dropdown {
+  height: 100px;
+}
+.acidcode__waves-color {
+  @include margin-direction(0!important, bottom);
+  span.help-text {
+    margin-bottom: 0!important;
+  }
+  @include transition(all 6s linear);
+}
+.material-tooltip {
+  z-index: 160006 !important;
 }

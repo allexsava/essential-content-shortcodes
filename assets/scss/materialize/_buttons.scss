@@ -15,18 +15,18 @@
 // Disabled shared style
 .acidcode__btn.disabled,
 .acidcode__btn--floating.disabled,
-.acidcode__btn--large.disabled,
-.acidcode__btn--small.disabled,
+.acidcode__btn--size-large.disabled,
+.acidcode__btn--size-small.disabled,
 .acidcode__btn--flat.disabled,
 .acidcode__btn:disabled,
 .acidcode__btn--floating:disabled,
-.acidcode__btn--large:disabled,
-.acidcode__btn--small:disabled,
+.acidcode__btn--size-large:disabled,
+.acidcode__btn--size-small:disabled,
 .acidcode__btn--flat:disabled,
 .acidcode__btn[disabled],
 .acidcode__btn--floating[disabled],
-.acidcode__btn--large[disabled],
-.acidcode__btn--small[disabled],
+.acidcode__btn--size-large[disabled],
+.acidcode__btn--size-small[disabled],
 .acidcode__btn--flat[disabled] {
   pointer-events: none;
   background-color: $button-disabled-background !important;
@@ -42,8 +42,8 @@
 // Shared icon styles
 .acidcode__btn,
 .acidcode__btn--floating,
-.acidcode__btn--large,
-.acidcode__btn--small,
+.acidcode__btn--size-large,
+.acidcode__btn--size-small,
 .acidcode__btn--flat {
   font-size: $button-font-size;
   outline: 0;
@@ -86,7 +86,7 @@
   &:before {
     border-radius: 0;
   }
-  &.acidcode__btn--large {
+  &.acidcode__btn--size-large {
     &.halfway-fab {
       bottom: -$button-floating-large-size / 2;
     }
@@ -98,7 +98,7 @@
     }
   }
 
-  &.acidcode__btn--small {
+  &.acidcode__btn--size-small {
     &.halfway-fab {
       bottom: -$button-floating-small-size / 2;
     }
@@ -292,7 +292,7 @@ button.acidcode__btn--floating {
 }
 
 // Large button
-.acidcode__btn--large {
+.acidcode__btn--size-large {
   @extend .acidcode__btn;
   height: $button-large-height;
   line-height: $button-large-height;
@@ -305,7 +305,7 @@ button.acidcode__btn--floating {
 }
 
 // Small button
-.acidcode__btn--small {
+.acidcode__btn--size-small {
   @extend .acidcode__btn;
   height: $button-small-height;
   line-height: $button-small-height;

@@ -7,7 +7,7 @@ if (isset($param['required'])) $required = "required"; ?>
 
 <span class="<?php echo $class; ?>">
     <label for="<?php echo $param['param_key'] ?>"></label>
-    <select name="<?php echo $param['param_key'] ?>" <?php echo $required; ?>>
+    <select class="tooltipped" data-tooltip="dgsgfdu" name="<?php echo $param['param_key'] ?>" <?php echo $required; ?>>
         <?php
         $options = $param['options'];
         foreach ($options as $i => $opt) { ?>

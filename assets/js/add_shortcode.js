@@ -117,12 +117,11 @@ editor = '';
 
 					//button element
 					function wavesEffect(){
-                        $('.waves__color select').on('change', function(){
-                            console.log($(this).val());
-                            if($(this).val() !== 'no-color'){
-                                $('.waves__effect #waves_effect').attr('checked', true);
+                        $('.button_effect select').on('change', function(){
+                            if($(this).val() === 'waves-effect'){
+                                $('.acidcode__waves-color').removeClass('hidden');
                             } else {
-                                $('.waves__effect #waves_effect').attr('checked', false);
+                                $('.acidcode__waves-color').addClass('hidden');
 							}
                         });
 					}
@@ -133,6 +132,7 @@ editor = '';
                        	$('#acidcodes_shortcodes_form').validate().destroy();
                        	$('.select-wrapper ul li').removeClass('active');
                        	$('#acidcodes_shortcodes_form .acid_media_uploader').hide();
+                       	$('.acidcode__waves-color').addClass('hidden');
 
 					   });
                     }
@@ -186,6 +186,7 @@ editor = '';
 
                 } );
 
+
 				//Trigger Submit Button (need few improvemen ts :)
 				$( document ).on( 'click', ".l_acid_modal a.btn_primary", function() {
                     if($("#acidcodes_shortcodes_form").valid()){
@@ -220,10 +221,26 @@ editor = '';
 					clean_details();
 					details.html( $content ).addClass( 'active' );
 
-
                     //reInitialize materialize select
                     $(details).find('.input-field select:not(".initialized")').material_select();
-				};
+                    // var data_select_id = $('select.initialized').data('select-id');
+                    // console.log(data_select_id);
+
+					$('select.initialized').each(function(i,v){
+                    var data_select_id = $(this).data('select-id');
+                    var data_tooltip = $(this).data('tooltip');
+
+					$('#select-options-'+data_select_id).attr('data-tooltip',data_tooltip);
+					$('#select-options-'+data_select_id).addClass('tooltipped');
+                    $(this).removeClass('tooltipped');
+                    $(this).removeAttr('data-tooltip');
+                    });
+
+					setTimeout(function(){
+                        $('.tooltipped').tooltip({delay: 50});
+                    },3000);
+
+                };
 
 
 				//Tabs Init

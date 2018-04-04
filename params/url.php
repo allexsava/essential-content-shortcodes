@@ -12,5 +12,4 @@ if (isset($param['value'] ) ) $value = $param['value'];
 <span class="<?php echo $class; ?>" >
     <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
     <input placeholder="<?php echo $param['value'] ?>" <?php echo $required; ?> type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>"<?php echo $is_content ?> />
-    <span class="help-text"><?php echo $param['help-text'] ?></span>
 </span>

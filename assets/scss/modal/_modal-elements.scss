@@ -124,10 +124,6 @@
     background-color: $rectangle-hover;
   }
 
-  .acidcode__icon-link {
-    margin-left: 0;
-  }
-
   .hide-list .dropdown-content li:nth-child(1) {
     display: none;
   }
@@ -193,6 +189,9 @@ span.input-special-margin {
   @include padding-direction(35px, right);
   @include padding-direction(0,left);
 }
+textarea.acidcode__textarea.error {
+  margin: 0;
+}
 li.icon {
   svg {
     @extend %equal-margin-display;
@@ -217,7 +216,9 @@ li.icon {
   }
   cursor: pointer;
 }
-
+.acidcode__icon-link {
+  margin-left: 0 !important;
+}
 ul.acid_icon_list {
   @include overflow(hidden,scroll);
   height: 245px;
@@ -242,10 +243,15 @@ ul.acid_icon_list {
     left: 0px;
     position: absolute;
   }
+  padding: 0 10px !important;
+}
+.row .acidcode__list-icon {
+  @include padding(0!important);
 }
 .icon__special-title {
   @include margin-direction(5px, bottom);
   font-weight: 500 !important;
+  @include padding-direction(3px !important,left);
 }
 
 .scroll-height .dropdown-content.select-dropdown {

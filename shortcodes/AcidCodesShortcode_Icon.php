@@ -1043,7 +1043,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                     "fab fa-youtube-square"
                 ),
                 'required' => true,
-                'admin_class' => 'col s12'
+                'admin_class' => 'col s12 acidcode__list-icon'
             )
         );
 

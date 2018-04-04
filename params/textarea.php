@@ -10,7 +10,7 @@ if (isset($param['required'])) $required = "required";
 ?>
 
 <span class="<?php echo $class; ?>">
-    <textarea <?php echo $required; ?> class="materialize-textarea" type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>" <?php echo $is_content ?> ><?php if (isset($param['predefined'])) echo $param['predefined'] ?></textarea>
+    <textarea <?php echo $required; ?> class="materialize-textarea acidcode__textarea" type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>" <?php echo $is_content ?> ><?php if (isset($param['predefined'])) echo $param['predefined'] ?></textarea>
         <?php if (!empty($param['name'])) : ?>
             <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
         <?php endif; ?>

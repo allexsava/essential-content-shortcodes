@@ -6,14 +6,6 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
 
     public function __construct($settings = array()) {
 
-//        $this->backend_assets["js"] = array(
-//            'slider' => array(
-//                'name' => 'slider',
-//                'path' => 'assets/js/shortcodes/backend_slider.js',
-//                'deps'=> array( 'jquery' )
-//            )
-//        );
-
         // load backend assets only when an editor is present
         add_action( 'mce_buttons_2', array( $this, 'load_backend_assets' ) );
 

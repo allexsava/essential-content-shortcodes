@@ -77,6 +77,12 @@
           display: none;
         }
       }
+      .shortcode.shortcode_settings{
+        display:none!important;
+      }
+      .shortcode.shortcode_bar {
+        border-bottom: none !important;
+      }
 
     }
 

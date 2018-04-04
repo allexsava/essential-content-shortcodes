@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-//BASE
-@import "base/base";
+//COMPONENTS
+@import "modal/modal";
 
-//MODAL
+//MATERIALIZE
 @import "materialize/materialize";
 
 //FRONTEND
@@ -11,9 +11,6 @@
 
 //FONT-AWESOME
 @import "font-awesome/fontawesome";
-
-//COMPONENTS
-@import "modal/modal";
 
 //Shame
 @import "shame";

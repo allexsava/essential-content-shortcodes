@@ -101,19 +101,20 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'help-text'        => 'eg orange, purple',
                 'admin_class' => 'input-field hide-list col s6 scroll-height waves__color',
             ),
-            'waves_effect'    => array(
-                'type'        => 'switch',
-                'name'        => __( 'Waves effect', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6 waves__effect',
+            'effect'      => array(
+                'type'        => 'select',
+                'name'        => __( 'Button Effect', 'acidcodes_txtd' ),
+                'options'     => array(
+                    '' => 'Select Effect',
+                    'waves-effect' => __( 'Waves effect', 'acidcodes_txtd' ),
+                    'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
+                ),
+                'admin_class' => 'input-field hide-list col s6',
+                'help-text'   => 'eg waves, pulse'
             ),
             'newtab'    => array(
                 'type'        => 'switch',
                 'name'        => __( 'Open in a new tab?', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
-            ),
-            'pulse'    => array(
-                'type'        => 'switch',
-                'name'        => __( 'Floating button', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6'
             ),
 

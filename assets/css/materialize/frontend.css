@@ -2179,31 +2179,6 @@ td, th {
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased; }
 
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Thin), url("assets/fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("assets/fonts/roboto/Roboto-Thin.woff") format("woff");
-  font-weight: 100; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Light), url("assets/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("assets/fonts/roboto/Roboto-Light.woff") format("woff");
-  font-weight: 300; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Regular), url("assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("assets/fonts/roboto/Roboto-Regular.woff") format("woff");
-  font-weight: 400; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Medium), url("assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("assets/fonts/roboto/Roboto-Medium.woff") format("woff");
-  font-weight: 500; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Bold), url("assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("assets/fonts/roboto/Roboto-Bold.woff") format("woff");
-  font-weight: 700; }
-
 a {
   text-decoration: none; }
 
@@ -2431,8 +2406,8 @@ small {
 .acidcode__btn--small:disabled,
 .acidcode__btn--flat:disabled,
 .acidcode__btn[disabled],
-[disabled].acidcode__btn--large,
-[disabled].acidcode__btn--small,
+.acidcode__btn--large[disabled],
+.acidcode__btn--small[disabled],
 .acidcode__btn--floating[disabled],
 .acidcode__btn--large[disabled],
 .acidcode__btn--small[disabled],
@@ -2455,8 +2430,8 @@ small {
   .acidcode__btn--small:disabled:hover,
   .acidcode__btn--flat:disabled:hover,
   .acidcode__btn[disabled]:hover,
-  [disabled].acidcode__btn--large:hover,
-  [disabled].acidcode__btn--small:hover,
+  .acidcode__btn--large[disabled]:hover,
+  .acidcode__btn--small[disabled]:hover,
   .acidcode__btn--floating[disabled]:hover,
   .acidcode__btn--large[disabled]:hover,
   .acidcode__btn--small[disabled]:hover,
@@ -2967,6 +2942,9 @@ button.acidcode__btn--floating {
   float: left;
   color: #00E676;
   margin: -1rem 30px 0px 0px; }
+
+.acidcode__btn, .acidcode__btn--large, .acidcode__btn--small {
+  z-index: 1; }
 
 .acidcode__btn--size-huge {
   height: 70px;

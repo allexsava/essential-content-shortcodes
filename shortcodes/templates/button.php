@@ -9,9 +9,8 @@
     $classes.= !empty($shape) ? '  acidcode__btn--shape-'.$shape : '';
     $classes.= !empty($alignment) ? '  acidcode__btn--alignment-'.$alignment : '';
     $classes.= !empty($class) ? '  '.$class : '';
+    $classes.=!empty($effect) ? '  ' .$effect : '';
     $classes.=!empty($waves_color) ? '  '.$waves_color : '';
-    $classes.=!empty($waves_effect) ? ' waves-effect ' : '';
-    $classes.=!empty($pulse) ? ' btn-floating pulse ' : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 

@@ -2470,7 +2470,7 @@ small {
 .acidcode__btn--size-large:disabled,
 .acidcode__btn--flat:disabled,
 .acidcode__btn[disabled],
-[disabled].acidcode__btn--size-large,
+.acidcode__btn--size-large[disabled],
 .acidcode__btn--floating[disabled],
 .acidcode__btn--size-large[disabled],
 .acidcode__btn--flat[disabled] {
@@ -2489,7 +2489,7 @@ small {
   .acidcode__btn--size-large:disabled:hover,
   .acidcode__btn--flat:disabled:hover,
   .acidcode__btn[disabled]:hover,
-  [disabled].acidcode__btn--size-large:hover,
+  .acidcode__btn--size-large[disabled]:hover,
   .acidcode__btn--floating[disabled]:hover,
   .acidcode__btn--size-large[disabled]:hover,
   .acidcode__btn--flat[disabled]:hover {
@@ -2954,6 +2954,9 @@ button.acidcode__btn--floating {
   float: left;
   color: #00E676;
   margin: -1rem 30px 0px 0px; }
+
+.acidcode__btn, .acidcode__btn--size-large {
+  z-index: 1; }
 
 .acidcode__btn--size-huge {
   height: 70px;

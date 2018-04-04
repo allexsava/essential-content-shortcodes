@@ -27,6 +27,9 @@
   color: #00E676;
   margin: -1rem 30px 0px 0px; }
 
+.acidcode__btn {
+  z-index: 1; }
+
 .acidcode__btn--size-huge {
   height: 70px;
   line-height: 70px; }

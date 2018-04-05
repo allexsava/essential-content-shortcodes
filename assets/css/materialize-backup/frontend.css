@@ -2926,7 +2926,7 @@ button.acidcode__btn--floating {
     -webkit-transform: scale(1.5);
             transform: scale(1.5); } }
 
-.font-style, .acidcode__btn--size-small, .acidcode__btn--size-large, .acidcode__btn--size-huge {
+.font-style, .entry-content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-huge {
   font-family: "Roboto";
   font-weight: 300; }
 
@@ -2955,31 +2955,50 @@ button.acidcode__btn--floating {
   color: #00E676;
   margin: -1rem 30px 0px 0px; }
 
-.acidcode__btn, .acidcode__btn--size-large {
-  z-index: 1; }
+.entry-content a.acidcode__btn, .entry-content a.acidcode__btn--size-large {
+  z-index: 1;
+  box-shadow: none;
+  background-color: #00e676; }
 
-.acidcode__btn--size-huge {
+.entry-content a.acidcode__btn:hover, .entry-content a.acidcode__btn--size-large:hover {
+  box-shadow: none; }
+
+.entry-content a.acidcode__btn--size-huge {
   height: 70px;
   line-height: 70px; }
 
-.acidcode__btn--shape-square {
+.entry-content a.acidcode__btn--shape-square {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px; }
 
-.acidcode__btn--shape-rounded {
+.entry-content a.acidcode__btn--shape-rounded {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px; }
 
-.acidcode__btn--alignment-center {
+.entry-content a.acidcode__btn--shape-pill {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px; }
+
+.entry-content a.acidcode__btn--shape-outline {
+  border: 2px solid #00E676;
+  background-color: #fff;
+  color: #00E676; }
+  .entry-content a.acidcode__btn--shape-outline:hover {
+    background-color: #00E676;
+    color: #fff;
+    box-shadow: none; }
+
+.entry-content a.acidcode__btn--alignment-center {
   margin: 0 auto;
   display: table; }
 
-.acidcode__btn--alignment-left {
+.entry-content a.acidcode__btn--alignment-left {
   float: left; }
 
-.acidcode__btn--alignment-right {
+.entry-content a.acidcode__btn--alignment-right {
   float: right; }
 
 svg.acidcode__icon--type-circle {

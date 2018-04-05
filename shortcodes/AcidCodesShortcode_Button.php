@@ -77,11 +77,15 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'options'     => array(
                     ''      => __( 'Select Shape', 'acidcodes_txtd' ),
                     'square' => __( 'Square', 'acidcodes_txtd' ),
-                    'rounded' => __( 'Rounded', 'acidcodes_txtd' )
+                    'rounded' => __( 'Rounded', 'acidcodes_txtd' ),
+                    'pill' => __( 'Pill', 'acidcodes_txtd' ),
+                    'outline' => __( 'Outline', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'        => 'eg square, rounded',
-                'required' => true
+                'required' => true,
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
             ),
             'effect'      => array(
                 'type'        => 'select',
@@ -92,7 +96,9 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6 button_effect',
-                'help-text'   => 'eg waves, pulse'
+                'help-text'   => 'eg waves, pulse',
+                'tooltip'  => true,
+                'tooltip-position' => 'left'
             ),
             'newtab'    => array(
                 'type'        => 'switch',

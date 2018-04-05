@@ -1,35 +1,56 @@
-.acidcode__btn {
+.entry-content a.acidcode__btn {
   z-index: 1;
+  box-shadow: none;
+  background-color: #00e676;
 }
-.acidcode__btn--size-small {
+.entry-content a.acidcode__btn:hover {
+  box-shadow: none;
+}
+.entry-content a.acidcode__btn--size-small {
   @extend .font-style;
 }
 
-.acidcode__btn--size-large {
+.entry-content a.acidcode__btn--size-large {
   @extend .font-style;
 }
 
-.acidcode__btn--size-huge {
+.entry-content a.acidcode__btn--size-huge {
   @extend .font-style;
   height: 70px;
   line-height: 70px;
 }
 
-.acidcode__btn--shape-square {
+.entry-content a.acidcode__btn--shape-square {
   @include border-radius(0px);
 }
 
-.acidcode__btn--shape-rounded {
+.entry-content a.acidcode__btn--shape-rounded {
   @include border-radius(5px);
 }
 
-.acidcode__btn--alignment-center {
+.entry-content a.acidcode__btn--shape-pill {
+@include border-radius(16px);
+}
+
+.entry-content a.acidcode__btn--shape-outline {
+  border: 2px solid $accent-color;
+  background-color: #fff;
+  color: $accent-color;
+  &:hover {
+    background-color: $accent-color;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+
+.entry-content a.acidcode__btn--alignment-center {
   @include margin(0 auto);
   display: table;
 }
-.acidcode__btn--alignment-left {
+.entry-content a.acidcode__btn--alignment-left {
   float: left;
 }
-.acidcode__btn--alignment-right {
+.entry-content a.acidcode__btn--alignment-right {
   float: right;
 }

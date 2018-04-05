@@ -30,3 +30,11 @@ select{
   display: flex;
   flex-wrap: wrap;
 }
+.material-tooltip .backdrop {
+  background-color: transparent;
+  color: #000;
+}
+.material-tooltip {
+  background-color: transparent;
+  color: #000;
+}

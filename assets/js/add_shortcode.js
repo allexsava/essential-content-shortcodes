@@ -179,10 +179,70 @@ editor = '';
                      //    }
 					// }
 
+					function tooltip(){
+                        // var data_select_id = $('select.initialized').data('select-id');
+                        // console.log(data_select_id);
+                        //
+                        // $('select.initialized').each(function(i,v){
+                        // var data_select_id = $(this).data('select-id');
+                        // var data_tooltip = $(this).data('tooltip');
+                        //
+                        // $('#select-options-'+data_select_id).parent('.select-wrapper').attr('data-tooltip',data_tooltip);
+                        // $('#select-options-'+data_select_id).parent('.select-wrapper').addClass('tooltipped');
+                        // $(this).removeClass('tooltipped');
+                        // $(this).removeAttr('data-tooltip');
+                        // });
+                        //
+                        //
+                        // $('.dropdown-content.select-dropdown li').on('mouseenter',function(){
+                        // console.log($(this).find('span').text());
+                        // });
+
+						$('select.initialized').each(function(i,v){
+
+                            var _this = this;
+								data_select_id = $(this).data('select-id'),
+								data_active_tooltip = $(this).data('active-tooltip'),
+								data_param_key = $(this).attr('name'),
+								data_gifs_loc = $(this).data('gifs-loc'),
+								data_tooltip_pos = $(this).data('tooltip-position');
+
+                            	if(data_active_tooltip){
+                                    $('#select-options-'+data_select_id+'>li').not(':first-child').each(function(i,v){
+                                    	var img_size = $(this).find('span').text().toLowerCase();
+                                    	var img = data_gifs_loc+'select-'+data_param_key+'/'+img_size+'.gif';
+                                    	console.log(img);
+                                    	$(this).addClass('tooltipped');
+                                    	$(this).attr('data-tooltip', '<img src="'+img+'"/>');
+                                        $(this).tooltip({
+											position: data_tooltip_pos,
+                                            delay: 50,
+											html: true,
+                                        });
+                                    	});
+
+                                    // $('#select-options-'+data_select_id+'>li').on('mouseenter', function(){
+                                    //     //console.log($(this).find('span').text());
+                                    // })
+
+
+								}
+
+
+
+                        });
+
+					}
+
 					wavesEffect();
 					resetForm();
                     disableInsertOnSettings();
                     numberOfImages();
+                    tooltip();
+
+                    $('.tooltipped__input').tooltip({
+						delay: 100
+					});
 
                 } );
 
@@ -223,27 +283,11 @@ editor = '';
 
                     //reInitialize materialize select
                     $(details).find('.input-field select:not(".initialized")').material_select();
-                    // var data_select_id = $('select.initialized').data('select-id');
-                    // console.log(data_select_id);
-
-					$('select.initialized').each(function(i,v){
-                    var data_select_id = $(this).data('select-id');
-                    var data_tooltip = $(this).data('tooltip');
-
-					$('#select-options-'+data_select_id).attr('data-tooltip',data_tooltip);
-					$('#select-options-'+data_select_id).addClass('tooltipped');
-                    $(this).removeClass('tooltipped');
-                    $(this).removeAttr('data-tooltip');
-                    });
-
-					setTimeout(function(){
-                        $('.tooltipped').tooltip({delay: 50});
-                    },3000);
 
                 };
 
 
-				//Tabs Init
+                //Tabs Init
                 // $(document).ready(function(){
                  //    $('ul.tabs').tabs();
                 // });

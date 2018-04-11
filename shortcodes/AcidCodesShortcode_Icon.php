@@ -36,7 +36,8 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                 ),
                 'admin_class' => 'input-field hide-list col s6',
                 'required' => true,
-                'help-text'   => 'eg circle, rectangle'
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
             ),
             'size' => array(
                 'type' => 'select',
@@ -59,11 +60,10 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
             'class' => array(
                 'type' => 'select',
                 'name' => 'Icon Alignment',
-                'admin_class' => 'col s6 input-field hide-list scroll-height',
+                'admin_class' => 'col s6 input-field hide-list',
                 'options' => array('Select Alignment',
                     'fa-pull-right' => 'pull-right',
-                    'fa-pull-left' => 'pull-left',
-                    'fa-spin' => 'icon-spin'),
+                    'fa-pull-left' => 'pull-left'),
                 'help-text'   => 'eg pull-right, pull-left, icon-spin',
                 'value' => array('')
             ),
@@ -76,7 +76,8 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
                     'rotate-180' => 'icon-rotate-180',
                     'rotate-270' => 'icon-rotate-270',
                     'flip-h' => 'icon-flip-horizontal',
-                    'flip-v' => 'icon-flip-vertical'),
+                    'flip-v' => 'icon-flip-vertical',
+                    'fa-spin' => 'icon-spin'),
                 'help-text'   => 'eg icon-rotate-90, icon-flip-horizontal',
                 'value' => array('')
             ),

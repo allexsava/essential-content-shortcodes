@@ -211,7 +211,7 @@ editor = '';
                                     $('#select-options-'+data_select_id+'>li').not(':first-child').each(function(i,v){
                                     	var img_size = $(this).find('span').text().toLowerCase();
                                     	var img = data_gifs_loc+'select-'+data_param_key+'/'+img_size+'.gif';
-                                    	console.log(img);
+                                    	//console.log(img);
                                     	$(this).addClass('tooltipped');
                                     	$(this).attr('data-tooltip', '<img src="'+img+'"/>');
                                         $(this).tooltip({
@@ -227,10 +227,14 @@ editor = '';
 
 
 								}
-
-
-
                         });
+
+						//Add tooltip to input type checkbox
+                        data_gifs_loc = $('label.tooltipped__input').data('gifs-loc')
+						$('label.tooltipped__input').attr('data-tooltip', '<img src="'+data_gifs_loc+'"/>');
+
+                        data_gifs_loc_parallax = $('.media_image_holder.tooltipped__input').data('gifs-loc')
+                        $('.media_image_holder.tooltipped__input').attr('data-tooltip', '<img src="'+data_gifs_loc_parallax+'"/>');
 
 					}
 
@@ -241,7 +245,8 @@ editor = '';
                     tooltip();
 
                     $('.tooltipped__input').tooltip({
-						delay: 100
+						delay: 100,
+                        html: true
 					});
 
                 } );

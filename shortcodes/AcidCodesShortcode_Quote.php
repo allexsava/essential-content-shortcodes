@@ -21,6 +21,8 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'quote' => 'Quote'
                 ),
                 'required' => true,
+                'tooltip'  => true,
+                'tooltip-position' => 'right',
                 'admin_class' => 'input-field hide-list col s6 input-special-margin'
             ),
 
@@ -37,6 +39,13 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'required' => true,
                 'admin_class' => 'input-field hide-list col s6 input-special-margin'
             ),
+            'content_text' => array(
+                'type' => 'textarea',
+                'name' => 'Text',
+                'required' => true,
+                'admin_class' => 'input-field col s12',
+                'is_content' => true,
+            ),
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
@@ -48,13 +57,6 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'name' => 'Author link',
                 'admin_class' => 'col s6'
             ),
-            'content_text' => array(
-                'type' => 'textarea',
-                'name' => 'Text',
-                'required' => true,
-                'admin_class' => 'input-field col s12',
-                'is_content' => true,
-            )
         );
 
 	    // allow the theme or other plugins to "hook" into this shortcode's params

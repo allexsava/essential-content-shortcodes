@@ -27,12 +27,14 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
 	        'markers' => array(
 		        'type' => 'switch',
 		        'name' => 'Markers',
-		        'admin_class' => 'markers'
+		        'admin_class' => 'markers',
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
 	        ),
 	        array(
 		        'type' => 'info',
 		        'value' => 'You can use a simple number to represent the length in pixels or a percentage value (like 96%).',
-		        'admin_class' => 'help-text span8 push1'
+		        'admin_class' => 'pb__help-text'
 	        )
         );
 

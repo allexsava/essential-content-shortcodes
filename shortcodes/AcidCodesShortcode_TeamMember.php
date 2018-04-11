@@ -26,6 +26,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'help-text'   => 'eg Team member name'
             ),
             'imagelink' => array(
+                'value'       => 'https://',
                 'type' => 'url',
                 'name' => 'Image Link',
                 'admin_class' => 'col s6 align-clear'

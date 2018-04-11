@@ -41,7 +41,8 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 ),
                 'admin_class' => 'input-field hide-list col s6',
                 'required' => true,
-                'help-text'   => 'eg carousel, full-width'
+                'tooltip'  => true,
+                'tooltip-position' => 'left'
             ),
             'image' => array(
                 'type' => 'image',
@@ -74,13 +75,14 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'min'  => '0',
                 'max'  => '100',
                 'admin_class' => 'col s6',
-                'help-text'   => 'Set the padding between non center items. (Default: 0)'
+                'help-text'   => 'Set the padding between non center items. (Default: 0)',
+                'tooltip-position' => 'left'
             ),
             'shift'    => array(
                 'type'        => 'range',
                 'name'        => __( 'Slider Shift'),
                 'admin_class' => 'range-field col s6',
-                'help-text'   => 'Set the spacing of the center item. (Default: 0)'
+                'tooltip-position' => 'right'
             ),
             'autoplay'    => array(
                 'value' => 'off',

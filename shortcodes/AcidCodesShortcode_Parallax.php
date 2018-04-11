@@ -18,7 +18,19 @@ class AcidCodesShortcode_Parallax extends AcidCodesShortcode {
                 'type'        => 'image',
                 'name'        => 'Image',
                 'required' => true,
-                'admin_class' => 'col s6 span7 push1'
+                'admin_class' => 'col s6',
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
+            ),
+            'title' => array(
+                'type'        => 'text',
+                'name'        => 'Heading',
+                'admin_class' => 'col s6'
+            ),
+            'subtitle' => array(
+                'type'        => 'text',
+                'name'        => 'Subheading',
+                'admin_class' => 'col s6'
             ),
         );
 

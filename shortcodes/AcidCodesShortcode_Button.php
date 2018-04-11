@@ -54,7 +54,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg small, large, huge',
                 'required' => true
             ),
             'alignment'      => array(
@@ -68,7 +67,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'right'  => __( 'Right', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg small, large, huge',
                 'required' => true
             ),
             'shape'      => array(
@@ -82,7 +80,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'outline' => __( 'Outline', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'        => 'eg square, rounded',
                 'required' => true,
                 'tooltip'  => true,
                 'tooltip-position' => 'right'
@@ -96,7 +93,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6 button_effect',
-                'help-text'   => 'eg waves, pulse',
                 'tooltip'  => true,
                 'tooltip-position' => 'left'
             ),

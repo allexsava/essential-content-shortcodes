@@ -28,5 +28,4 @@ $gifs = $url.'/acidcodes/assets/images/gifs/';
         <?php } ?>
     </select>
     <label><?php echo $param['name'] ?></label>
-    <span class="help-text"><?php echo $param['help-text'] ?></span>
 </span>

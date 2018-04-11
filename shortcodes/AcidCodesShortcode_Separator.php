@@ -44,6 +44,8 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 ),
                 'required' => true,
                 'admin_class' => 'scroll-height input-field hide-list col s6',
+                'tooltip'  => true,
+                'tooltip-position' => 'left',
                 'help-text'   => 'eg regular, dotted, striped'
             ),
             'weight' => array(
@@ -56,7 +58,9 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 ),
                 'required' => true,
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg thin, thick'
+                'help-text'   => 'eg thin, thick',
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
             ),
             'color' => array(
                 'type' => 'select',

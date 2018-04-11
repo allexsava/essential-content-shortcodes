@@ -87,13 +87,13 @@
     }
 
     .s6 {
-      @include padding(0 35px 10px 0);
+      @include padding(0 35px 23px 0);
     }
 
-    span.help-text {
+    span.pb__help-text {
       @include font-source-roboto($size: 12px, $color: $help-text-color, $lh: 16px);
       display: block;
-      @include margin( 0 0 15px 0)
+      @include margin( 20px 0 0 0)
     }
 
     span.social-label {

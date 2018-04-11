@@ -2179,31 +2179,6 @@ td, th {
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased; }
 
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Thin), url("/acidcodes/assets/fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("/acidcodes/assets/fonts/roboto/Roboto-Thin.woff") format("woff");
-  font-weight: 100; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Light), url("/acidcodes/assets/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("/acidcodes/assets/fonts/roboto/Roboto-Light.woff") format("woff");
-  font-weight: 300; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Regular), url("/acidcodes/assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("/acidcodes/assets/fonts/roboto/Roboto-Regular.woff") format("woff");
-  font-weight: 400; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Medium), url("/acidcodes/assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("/acidcodes/assets/fonts/roboto/Roboto-Medium.woff") format("woff");
-  font-weight: 500; }
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Bold), url("/acidcodes/assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("/acidcodes/assets/fonts/roboto/Roboto-Bold.woff") format("woff");
-  font-weight: 700; }
-
 a {
   text-decoration: none; }
 
@@ -3016,7 +2991,7 @@ button.acidcode__btn--floating {
 
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 900px;
+  border-radius: 20px;
   width: 2em !important; }
 
 .acidcode__icon--type-rectangle {

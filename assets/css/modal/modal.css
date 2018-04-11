@@ -369,15 +369,15 @@ ul.acid_icon_list {
   border-bottom: none !important; }
 
 #acidcodes_shortcodes_modal .l_modal_body .s6 {
-  padding: 0 35px 10px 0; }
+  padding: 0 35px 23px 0; }
 
-#acidcodes_shortcodes_modal .l_modal_body span.help-text {
+#acidcodes_shortcodes_modal .l_modal_body span.pb__help-text {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #BDBDBD;
   line-height: 16px;
   display: block;
-  margin: 0 0 15px 0; }
+  margin: 20px 0 0 0; }
 
 #acidcodes_shortcodes_modal .l_modal_body span.social-label {
   margin: 5px 0 20px; }

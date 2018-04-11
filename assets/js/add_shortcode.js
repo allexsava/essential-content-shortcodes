@@ -151,7 +151,6 @@ editor = '';
 
                     function numberOfImages(){
 						var verify = $('#data_params').data('params').code;
-                        console.log(verify);
 
                         if(verify === 'slider'){
                             $('#acidcodes_shortcodes_form .acid_media_uploader').hide();
@@ -418,9 +417,10 @@ editor = '';
 			$.each( form_params, function( i, e ) {
 				//if ( e.class == 'is_shortcode_content valid' ) {
                 if (e.class && e.class.indexOf("is_shortcode_content")!== -1) {
+                //if ( e.class == 'is_shortcode_content' ) {
 					shortcode_content = e.value;
-				} else if ( e.value !== '' ) { // don't include the empty params and the content param
 
+				} else if ( e.value !== '' ) { // don't include the empty params and the content param
 					user_params_string += ' ' + e.name + '="' + e.value + '"';
 					user_params[e.name] = e.value;
 				}

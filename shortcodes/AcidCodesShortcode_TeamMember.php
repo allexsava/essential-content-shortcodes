@@ -16,27 +16,30 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'type' => 'image',
                 'name'        => 'Image',
                 'required' => true,
-                'admin_class' => 'col s6 acid_media_uploader'
+                'admin_class' => 'col s6 acid_media_uploader',
+                'image_uploader' => 'image__uploader--tm'
             ),
             'name' => array(
                 'type' => 'text',
                 'name' => 'Name',
                 'required' => true,
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg Team member name'
-            ),
-            'imagelink' => array(
-                'value'       => 'https://',
-                'type' => 'url',
-                'name' => 'Image Link',
-                'admin_class' => 'col s6 align-clear'
+                'help-text'   => 'eg Team member name',
+                'is_text_tooltip' => true
             ),
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
                 'required' => true,
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg Frontend Developer, CEO'
+                'help-text'   => 'eg Frontend Developer, CEO',
+                'is_text_tooltip' => true
+            ),
+            'imagelink' => array(
+                'value'       => 'https://',
+                'type' => 'url',
+                'name' => 'Image Link',
+                'admin_class' => 'col s6'
             ),
             'content' => array(
                 'type' => 'textarea',

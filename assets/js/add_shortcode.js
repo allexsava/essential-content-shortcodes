@@ -133,6 +133,7 @@ editor = '';
                        	$('.select-wrapper ul li').removeClass('active');
                        	$('#acidcodes_shortcodes_form .acid_media_uploader').hide();
                        	$('.acidcode__waves-color').addClass('hidden');
+                       	$('.acid_icon_list .icon-container ul li').removeClass('hidden');
 
 					   });
                     }
@@ -162,8 +163,39 @@ editor = '';
                             $('#acidcodes_shortcodes_form .acid_media_uploader').show();
 						}
 
-
                     }
+
+                    function textTooltip(){
+						$('#acidcodes_shortcodes_form input, #acidcodes_shortcodes_form label').each(function(i,v){
+							if($(this).data('text-tooltip') === 'is_text'){
+								var referenceId = $(this).data('tooltip-id');
+								$('#'+referenceId).addClass('text-tooltip');
+							}
+						});
+					}
+
+
+					function iconKeyup(){
+                        $('.icon-container').each(function(i,v){
+                        	var _this = this;
+							var _i = i;
+
+                            $("#acidcode__search-id").on("keyup", function() {
+                            var searchVal = $(this).val();
+                            var filterItems = $(_this).find('ul li');
+
+                            if ( searchVal !== '' ) {
+                                filterItems.addClass('hidden');
+                                $('[data-icon*="' + searchVal.toLowerCase() + '"]').removeClass('hidden');
+                            } else {
+                                filterItems.removeClass('hidden');
+                            }
+
+                            });
+                        });
+					}
+
+
 
 					// function formChangeEvent(){
                      //    $('.acidcode__insert-button #insert-button').addClass('disabled');
@@ -208,16 +240,22 @@ editor = '';
 
                             	if(data_active_tooltip){
                                     $('#select-options-'+data_select_id+'>li').not(':first-child').each(function(i,v){
-                                    	var img_size = $(this).find('span').text().toLowerCase();
-                                    	var img = data_gifs_loc+'select-'+data_param_key+'/'+img_size+'.gif';
-                                    	//console.log(img);
-                                    	$(this).addClass('tooltipped');
-                                    	$(this).attr('data-tooltip', '<img src="'+img+'"/>');
-                                        $(this).tooltip({
-											position: data_tooltip_pos,
-                                            delay: 50,
-											html: true,
-                                        });
+
+                                    	if($(this).find('span').text().indexOf('No effect') !== -1){
+                                    		return;
+                                    	} else{
+                                            var img_size = $(this).find('span').text().toLowerCase();
+                                            var img = data_gifs_loc+'select-'+data_param_key+'/'+img_size+'.gif';
+                                            //console.log(img);
+                                            $(this).addClass('tooltipped');
+                                            $(this).attr('data-tooltip', '<img src="'+img+'"/>');
+                                            $(this).tooltip({
+                                                position: data_tooltip_pos,
+                                                delay: 50,
+                                                html: true,
+                                            });
+										}
+
                                     	});
 
                                     // $('#select-options-'+data_select_id+'>li').on('mouseenter', function(){
@@ -235,6 +273,11 @@ editor = '';
                         data_gifs_loc_parallax = $('.media_image_holder.tooltipped__input').data('gifs-loc')
                         $('.media_image_holder.tooltipped__input').attr('data-tooltip', '<img src="'+data_gifs_loc_parallax+'"/>');
 
+                        $('.tooltipped__input-text').tooltip({
+                            delay: 50,
+							tooltip: "Carousel autoplay"
+						});
+
 					}
 
 					wavesEffect();
@@ -248,6 +291,8 @@ editor = '';
                         html: true
 					});
 
+                    textTooltip();
+                    iconKeyup();
                 } );
 
 
@@ -314,6 +359,7 @@ editor = '';
                 //Toggle Back button visibility
                 var toggle_back_btn = function() {
                     $( 'button.acidcode__btn--back' ).toggleClass( 'active' );
+                    $('.acid_icon_list .icon-container ul li').removeClass('hidden');
                 };
 
                 //Toggle Submit button

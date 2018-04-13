@@ -66,6 +66,7 @@
     &.cancel {
       @extend .none;
       float: left;
+      @include margin(0 20px);
     }
     &.btn_primary {
       background: $accent-color;
@@ -112,8 +113,11 @@
     }
   }
 
-  .input-field.col label {
-    left: 0;
+  .input-field {
+    &.col label {
+      left: 0;
+    }
+    margin-bottom: 0;
   }
 
   .select-wrapper input.select-dropdown {
@@ -166,17 +170,13 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   @include margin-direction(15px, bottom);
 }
 span.social-media {
-  @include margin(5px 0 20px);
+  @include margin(20px 0 20px);
   label {
     font-size: 1rem;
   }
 }
 span.input-special-margin {
   @include margin-direction(19px, top);
-}
-
-.checkbox-special-margin {
-  @include margin(40px 0 10px 0);
 }
 .acidcode__newtab {
   margin-left: 0 !important;
@@ -198,6 +198,7 @@ textarea.acidcode__textarea.error {
 li.icon {
   svg {
     @extend %equal-margin-display;
+    @include padding(0 2px);
   }
   &.active {
     background-color: $rectangle-hover;
@@ -222,9 +223,9 @@ li.icon {
 .acidcode__icon-link {
   margin-left: 0 !important;
 }
-ul.acid_icon_list {
+div.acid_icon_list {
   @include overflow(hidden,scroll);
-  height: 245px;
+  height: 265px;
   position: relative;
   .row > li {
     clear: none !important;
@@ -244,17 +245,17 @@ ul.acid_icon_list {
   }
   label.error {
     left: 0px;
-    position: absolute;
+    position: absolute !important;
   }
   padding: 0 10px !important;
 }
-.row .acidcode__list-icon {
-  @include padding(0!important);
-}
+//.row .acidcode__list-icon {
+//  @include padding(0!important);
+//}
 .icon__special-title {
   @include margin-direction(5px, bottom);
   font-weight: 500 !important;
-  @include padding-direction(3px !important,left);
+  @include padding-direction(2px !important,left);
 }
 
 .scroll-height .dropdown-content.select-dropdown {
@@ -263,6 +264,10 @@ ul.acid_icon_list {
 .scroll-height-button .dropdown-content.select-dropdown {
   height: 100px;
 }
+.scroll-height-separator .dropdown-content.select-dropdown {
+  height: 100px;
+}
+
 .acidcode__waves-color {
   @include margin-direction(0!important, bottom);
   span.help-text {

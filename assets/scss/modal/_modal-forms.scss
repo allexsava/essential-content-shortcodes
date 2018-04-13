@@ -26,6 +26,20 @@
       display: block;
       @include font-source-roboto($size: 15px);
     }
+    &.image__uploader--tm {
+      @include padding(73px 20px);
+    }
+    &.image__uploader--pr {
+      @include padding(35px 20px);
+    }
+
+  }
+
+  .input-field .acidcode__textarea{
+    @include margin-direction(20px, bottom);
+  }
+  textarea.materialize-textarea.acidcode__textarea {
+    @include padding(.8rem 0 3rem 0);
   }
 }
 .acidcode__image-upload {

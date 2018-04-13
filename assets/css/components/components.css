@@ -1,5 +1,5 @@
-.font-style, .entry-content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-huge {
-  font-family: "Roboto";
+.font-style, .entry-content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large {
+  font-family: "Roboto", sans-serif;
   font-weight: 300; }
 
 /* Functions */
@@ -35,9 +35,23 @@
 .entry-content a.acidcode__btn:hover {
   box-shadow: none; }
 
+.entry-content a.acidcode__btn--size-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 43px;
+  line-height: 43px;
+  letter-spacing: 0.5px;
+  padding: 0 20px; }
+
 .entry-content a.acidcode__btn--size-huge {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
   height: 70px;
-  line-height: 70px; }
+  line-height: 70px;
+  letter-spacing: 0.5px;
+  padding: 0 35px; }
 
 .entry-content a.acidcode__btn--shape-square {
   border-radius: 0px;

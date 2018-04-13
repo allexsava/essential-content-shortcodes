@@ -18,7 +18,7 @@
     }
     .icon {
       @include font-source-roboto($size: 36px, $color: $accent-color);
-      clear: both;
+      //clear: both;
       display: block;
       @include margin(0 auto 10px);
     }
@@ -32,6 +32,7 @@
       }
       & > li {
         text-align: center;
+        text-transform: capitalize;
       }
     }
     label {
@@ -88,6 +89,15 @@
 
     .s6 {
       @include padding(0 35px 23px 0);
+      &.slider__fix-margin {
+        @include padding(0 35px 7px 0);
+      }
+      &.range-field {
+        @include padding(0 35px 0 0);
+      }
+      &.checkbox-special-margin {
+        @include margin(38px 0 0 0);
+      }
     }
 
     span.pb__help-text {
@@ -192,7 +202,7 @@
       .l_modal_body {
         .details_container {
           display: block;
-          @include padding(20px 20px 0px 20px);
+          @include padding(20px 0px 20px 30px);
         }
         & > ul {
           @include height-opacity($height: 0, $opacity: 0);
@@ -201,5 +211,8 @@
         }
       }
     }
+  }
+  .row.flex-grid {
+    margin-bottom: 0;
   }
 }

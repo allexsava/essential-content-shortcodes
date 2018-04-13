@@ -22,19 +22,16 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
                 'type' => 'text',
                 'name' => 'Progress',
                 'required' => true,
-                'admin_class' => 'col s6'
+                'admin_class' => 'col s6',
+                'help-text'   => 'eg 96%, 100px',
+                'is_text_tooltip' => true
             ),
 	        'markers' => array(
 		        'type' => 'switch',
 		        'name' => 'Markers',
-		        'admin_class' => 'markers',
+		        'admin_class' => 'col s6 markers',
                 'tooltip'  => true,
                 'tooltip-position' => 'right'
-	        ),
-	        array(
-		        'type' => 'info',
-		        'value' => 'You can use a simple number to represent the length in pixels or a percentage value (like 96%).',
-		        'admin_class' => 'pb__help-text'
 	        )
         );
 

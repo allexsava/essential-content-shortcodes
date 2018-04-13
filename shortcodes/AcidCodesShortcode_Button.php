@@ -21,13 +21,15 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'admin_class' => 'col s6',
                 'help-text'   => 'eg Read More',
                 'required' => true,
-                'is_content'  => true
+                'is_content'  => true,
+                'is_text_tooltip' => true
             ),
             'class'     => array(
                 'type'        => 'text',
                 'name'        => __( 'Button Class', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg btn-acid'
+                'help-text'   => 'eg btn-acid',
+                'is_text_tooltip' => true
 
             ),
             'link'      => array(
@@ -42,7 +44,8 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'type'        => 'text',
                 'name'        => __( 'Button ID', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg first-btn'
+                'help-text'   => 'eg first-btn',
+                'is_text_tooltip' => true
             ),
             'size'      => array(
                 'type'        => 'select',
@@ -50,6 +53,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'options'     => array(
                     '' => 'Select Size',
                     'small' => __( 'Small', 'acidcodes_txtd' ),
+                    'medium' =>__( 'Medium', 'acidcodes_txtd' ),
                     'large' => __( 'Large', 'acidcodes_txtd' ),
                     'huge'  => __( 'Huge', 'acidcodes_txtd' )
                 ),
@@ -89,8 +93,9 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'name'        => __( 'Button Effect', 'acidcodes_txtd' ),
                 'options'     => array(
                     '' => 'Select Effect',
+                    'no-effect' =>__( 'No effect', 'acidcodes_txtd' ),
+                    'pulse' => __( 'Pulse effect', 'acidcodes_txtd' ),
                     'waves-effect' => __( 'Waves effect', 'acidcodes_txtd' ),
-                    'pulse' => __( 'Pulse effect', 'acidcodes_txtd' )
                 ),
                 'admin_class' => 'input-field hide-list col s6 button_effect',
                 'tooltip'  => true,
@@ -117,7 +122,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'waves-teal' => __( 'Teal', 'acidcodes_txtd' ),
 
                 ),
-                'help-text'        => 'eg orange, purple',
                 'admin_class' => 'input-field hide-list col s6 scroll-height-button hidden acidcode__waves-color',
             )
         );

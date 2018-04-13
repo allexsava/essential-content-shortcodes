@@ -53,7 +53,8 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
             ),
 
             'link' => array(
-                'type' => 'text',
+                'type' => 'url',
+                'value'       => 'https://',
                 'name' => 'Author link',
                 'admin_class' => 'col s6'
             ),

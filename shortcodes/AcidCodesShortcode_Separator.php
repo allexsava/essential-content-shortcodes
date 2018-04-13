@@ -77,7 +77,7 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                     'teal' => 'Teal'
                 ),
                 'required' => true,
-                'admin_class' => 'scroll-height input-field hide-list col s6',
+                'admin_class' => 'scroll-height-separator input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
             )
         );

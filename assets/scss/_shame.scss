@@ -26,10 +26,10 @@ select{
 .row .col {
   @include padding(0);
 }
-.flex-grid {
-  display: flex;
-  flex-wrap: wrap;
-}
+//.flex-grid {
+//  display: flex;
+//  flex-wrap: wrap;
+//}
 .material-tooltip .backdrop {
   background-color: transparent;
   color: #000;
@@ -37,4 +37,21 @@ select{
 .material-tooltip {
   background-color: transparent;
   color: #000;
+}
+.text-tooltip{
+  background:#e6e6e6;
+  color:#716e6e;
+}
+
+input#acidcode__search-id {
+  background-image: url(assets/images/search-icon.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: -5px;
+  text-indent: 30px;
+}
+
+
+.hidden {
+  display: none !important;
 }

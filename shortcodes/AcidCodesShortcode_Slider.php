@@ -49,7 +49,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'name' => 'Image',
                 'admin_class' => 'col s6 acid_media_uploader',
                 'number' => 5,
-                'required' => true
+                'required' => true,
             ),
             'url' => array(
                 'type' => 'hidden'
@@ -65,8 +65,10 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'name' => 'Slider Duration',
                 'min'  => '0',
                 'max'  => '5000',
-                'admin_class' => 'col s6',
-                'help-text'   => 'Transition duration in milliseconds. (Default: 200)'
+                'admin_class' => 'col s6 slider__fix-margin',
+                'help-text'   => 'Transition duration in milliseconds.',
+                'is_text_tooltip' => true,
+                'tooltip-position' => 'bottom'
             ),
             'slider_padding' => array(
                 'value'       => '0',
@@ -74,8 +76,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'name' => 'Slider Padding',
                 'min'  => '0',
                 'max'  => '100',
-                'admin_class' => 'col s6',
-                'help-text'   => 'Set the padding between non center items. (Default: 0)',
+                'admin_class' => 'col s6 slider__fix-margin',
                 'tooltip-position' => 'left'
             ),
             'shift'    => array(
@@ -88,7 +89,8 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'value' => 'off',
                 'type'        => 'switch',
                 'name'        => __( 'Slider Autoplay', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6 checkbox-special-margin'
+                'admin_class' => 'col s6 checkbox-special-margin',
+                'is_text_tooltip' => true
             )
 
         );

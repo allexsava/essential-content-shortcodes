@@ -24,6 +24,13 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'is_content'  => true,
                 'is_text_tooltip' => true
             ),
+            'link'      => array(
+                'value' => 'https://',
+                'type'        => 'url',
+                'name'        => __( 'Link URL', 'acidcodes_txtd' ),
+                'required' => true,
+                'admin_class' => 'col s6'
+            ),
             'class'     => array(
                 'type'        => 'text',
                 'name'        => __( 'Button Class', 'acidcodes_txtd' ),
@@ -32,14 +39,6 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'is_text_tooltip' => true
 
             ),
-            'link'      => array(
-                'value' => 'https://',
-                'type'        => 'url',
-                'name'        => __( 'Link URL', 'acidcodes_txtd' ),
-                'required' => true,
-                'admin_class' => 'col s6'
-            ),
-
             'id'        => array(
                 'type'        => 'text',
                 'name'        => __( 'Button ID', 'acidcodes_txtd' ),
@@ -83,7 +82,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'pill' => __( 'Pill', 'acidcodes_txtd' ),
                     'outline' => __( 'Outline', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'input-field hide-list col s6',
+                'admin_class' => 'input-field hide-list col s6 scroll-height',
                 'required' => true,
                 'tooltip'  => true,
                 'tooltip-position' => 'right'

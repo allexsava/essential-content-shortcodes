@@ -23,7 +23,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                 'required' => true,
                 'tooltip'  => true,
                 'tooltip-position' => 'right',
-                'admin_class' => 'input-field hide-list col s6 input-special-margin'
+                'admin_class' => 'input-field hide-list col s6'
             ),
 
             'text_size' => array(
@@ -37,7 +37,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
                     'big' => 'Big'
                 ),
                 'required' => true,
-                'admin_class' => 'input-field hide-list col s6 input-special-margin'
+                'admin_class' => 'input-field hide-list col s6'
             ),
             'content_text' => array(
                 'type' => 'textarea',
@@ -49,14 +49,14 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
-                'admin_class' => 'col s6',
+                'admin_class' => 'acidcode__quote-margin col s6',
             ),
 
             'link' => array(
                 'type' => 'url',
                 'value'       => 'https://',
                 'name' => 'Author link',
-                'admin_class' => 'col s6'
+                'admin_class' => 'acidcode__quote-margin col s6'
             ),
         );
 

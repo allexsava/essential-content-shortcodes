@@ -8,7 +8,7 @@
 
 ?>
 <blockquote <?php echo $classes; ?>>
-    <div class="acidcode__quote-content"><?php echo $this->get_clean_content($content_text); ?></div>
+    <div class="acidcode__quote-content"><?php echo $this->get_clean_content($content); ?></div>
 
     <?php if(!empty($author)) : ?>
 

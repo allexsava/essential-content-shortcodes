@@ -26,10 +26,10 @@ select{
 .row .col {
   @include padding(0);
 }
-//.flex-grid {
-//  display: flex;
-//  flex-wrap: wrap;
-//}
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
 .material-tooltip .backdrop {
   background-color: transparent;
   color: #000;
@@ -54,4 +54,8 @@ input#acidcode__search-id {
 
 .hidden {
   display: none !important;
+}
+input.valid[type=text]:not(.browser-default),input.valid[type=url]:not(.browser-default){
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: none;
 }

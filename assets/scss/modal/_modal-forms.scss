@@ -34,10 +34,6 @@
     }
 
   }
-
-  .input-field .acidcode__textarea{
-    @include margin-direction(20px, bottom);
-  }
   textarea.materialize-textarea.acidcode__textarea {
     @include padding(.8rem 0 3rem 0);
   }

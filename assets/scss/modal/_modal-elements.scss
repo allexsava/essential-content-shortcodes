@@ -117,7 +117,7 @@
     &.col label {
       left: 0;
     }
-    margin-bottom: 0;
+    @include margin-direction(0, bottom);
   }
 
   .select-wrapper input.select-dropdown {
@@ -166,20 +166,24 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-.markers label {
-  @include margin-direction(15px, bottom);
-}
+//.markers label {
+//  @include margin-direction(15px, bottom);
+//}
 span.social-media {
   @include margin(20px 0 20px);
   label {
     font-size: 1rem;
   }
 }
-span.input-special-margin {
-  @include margin-direction(19px, top);
+span.acidcode__quote-margin {
+  margin-top: 15px;
 }
+
 .acidcode__newtab {
   margin-left: 0 !important;
+}
+.row .col.s6.markers {
+  margin-left: 0;
 }
 .align-clear {
   clear: both;
@@ -189,8 +193,11 @@ span.input-special-margin {
 }
 .input-field.col.s12 {
   @include margin-direction(0, top);
-  @include padding-direction(35px, right);
   @include padding-direction(0,left);
+  @include margin-direction(30px, right);
+  &.fourth-child {
+    @include margin-direction(-70px, top);
+  }
 }
 textarea.acidcode__textarea.error {
   margin: 0;
@@ -249,9 +256,9 @@ div.acid_icon_list {
   }
   padding: 0 10px !important;
 }
-//.row .acidcode__list-icon {
-//  @include padding(0!important);
-//}
+.row .acidcode__list-icon {
+  @include margin-direction(30px, right);
+}
 .icon__special-title {
   @include margin-direction(5px, bottom);
   font-weight: 500 !important;

@@ -88,7 +88,7 @@
     }
 
     .s6 {
-      @include padding(0 35px 23px 0);
+      @include padding(0 30px 25px 0);
       &.slider__fix-margin {
         @include padding(0 35px 7px 0);
       }
@@ -97,6 +97,12 @@
       }
       &.checkbox-special-margin {
         @include margin(38px 0 0 0);
+      }
+      &.second-child {
+        transform: translate(100%, -200%);
+      }
+      &.third-child {
+        transform: translateY(-100%);
       }
     }
 
@@ -202,7 +208,7 @@
       .l_modal_body {
         .details_container {
           display: block;
-          @include padding(20px 0px 20px 30px);
+          @include padding(25px 0 0px 30px);
         }
         & > ul {
           @include height-opacity($height: 0, $opacity: 0);

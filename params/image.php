@@ -1,5 +1,5 @@
 <?php
-$class= "span12";
+//$class= "span12";
 if ( isset($param['admin_class'] ) ) $class = $param['admin_class'];
 if (isset($param['tooltip'])) $tooltipped_input = "tooltipped__input";
 if (isset($param['tooltip-position'])) $tooltip_position = $param['tooltip-position'];

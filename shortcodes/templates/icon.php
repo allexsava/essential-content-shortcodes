@@ -1,6 +1,8 @@
 <?php
+$shape = '';
+if ($type === 'no-shape') {$shape = '';} else {$shape = 'shrink-8 ';}
 
-$output = '<i class="acidcode  acidcode__icon '. $name . ' acidcode__icon--type-' . $type . ' ' . $size . ' ' . $class . '" data-fa-transform="shrink-8 '. $transform .'"></i>';
+$output = '<i class="acidcode  acidcode__icon '. $name . ' acidcode__icon--type-' . $type . ' ' . $size . ' ' . $class . '" data-fa-transform="'.$shape . $transform .'"></i>';
 
 if ( ! empty( $link ) ) {
 	$link = ' href="' . esc_attr( $link ) . '" ';

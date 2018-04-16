@@ -31,7 +31,7 @@ class AcidCodesShortcode_Parallax extends AcidCodesShortcode {
             'title' => array(
                 'type'        => 'text',
                 'name'        => 'Heading',
-                'admin_class' => 'col s6'
+                'admin_class' => 'col s6 third-child'
             ),
         );
 

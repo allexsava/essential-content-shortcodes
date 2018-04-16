@@ -4,13 +4,11 @@
 @import "modal/modal";
 
 //MATERIALIZE
-.daVaadinTheme {
-	@import "materialize/materialize";
-}
+@import "materialize/materialize";
+
 //FRONTEND
-.daVaadinTheme {
-	@import "materialize/frontend";
-}
+@import "materialize/frontend";
+
 //FONT-AWESOME
 @import "font-awesome/fontawesome";
 

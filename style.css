@@ -172,19 +172,19 @@ ul.dropdown-content.select-dropdown::-webkit-scrollbar-thumb {
   background-color: #00E676;
   outline: 1px solid slategrey; }
 
-.markers label {
-  margin-bottom: 15px; }
-
 span.social-media {
   margin: 20px 0 20px; }
   span.social-media label {
     font-size: 1rem; }
 
-span.input-special-margin {
-  margin-top: 19px; }
+span.acidcode__quote-margin {
+  margin-top: 15px; }
 
 .acidcode__newtab {
   margin-left: 0 !important; }
+
+.row .col.s6.markers {
+  margin-left: 0; }
 
 .align-clear {
   clear: both; }
@@ -194,8 +194,10 @@ span.input-special-margin {
 
 .input-field.col.s12 {
   margin-top: 0;
-  padding-right: 35px;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-right: 30px; }
+  .input-field.col.s12.fourth-child {
+    margin-top: -70px; }
 
 textarea.acidcode__textarea.error {
   margin: 0; }
@@ -241,6 +243,9 @@ div.acid_icon_list {
   div.acid_icon_list label.error {
     left: 0px;
     position: absolute !important; }
+
+.row .acidcode__list-icon {
+  margin-right: 30px; }
 
 .icon__special-title {
   margin-bottom: 5px;
@@ -292,9 +297,6 @@ div.acid_icon_list {
     padding: 73px 20px; }
   #acidcodes_shortcodes_form .media_image_holder.image__uploader--pr {
     padding: 35px 20px; }
-
-#acidcodes_shortcodes_form .input-field .acidcode__textarea {
-  margin-bottom: 20px; }
 
 #acidcodes_shortcodes_form textarea.materialize-textarea.acidcode__textarea {
   padding: 0.8rem 0 3rem 0; }
@@ -381,13 +383,19 @@ div.acid_icon_list {
   border-bottom: none !important; }
 
 #acidcodes_shortcodes_modal .l_modal_body .s6 {
-  padding: 0 35px 23px 0; }
+  padding: 0 30px 25px 0; }
   #acidcodes_shortcodes_modal .l_modal_body .s6.slider__fix-margin {
     padding: 0 35px 7px 0; }
   #acidcodes_shortcodes_modal .l_modal_body .s6.range-field {
     padding: 0 35px 0 0; }
   #acidcodes_shortcodes_modal .l_modal_body .s6.checkbox-special-margin {
     margin: 38px 0 0 0; }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.second-child {
+    -webkit-transform: translate(100%, -200%);
+            transform: translate(100%, -200%); }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.third-child {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
 
 #acidcodes_shortcodes_modal .l_modal_body span.pb__help-text {
   font-family: 'Roboto', sans-serif;
@@ -475,7 +483,7 @@ div.acid_icon_list {
 
 #acidcodes_shortcodes_modal.l_acid_modal.s_active .l_modal_body .details_container {
   display: block;
-  padding: 20px 0px 20px 30px; }
+  padding: 25px 0 0px 30px; }
 
 #acidcodes_shortcodes_modal.l_acid_modal.s_active .l_modal_body > ul {
   height: 0;
@@ -12981,6 +12989,12 @@ select {
 .row .col {
   padding: 0; }
 
+.flex-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .material-tooltip .backdrop {
   background-color: transparent;
   color: #000; }
@@ -13002,5 +13016,9 @@ input#acidcode__search-id {
 
 .hidden {
   display: none !important; }
+
+input.valid[type=text]:not(.browser-default), input.valid[type=url]:not(.browser-default) {
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: none; }
 
 /*# sourceMappingURL=style.css.map */

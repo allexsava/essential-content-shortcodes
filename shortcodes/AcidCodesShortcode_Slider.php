@@ -51,9 +51,6 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'number' => 5,
                 'required' => true,
             ),
-            'url' => array(
-                'type' => 'hidden'
-            ),
             'social' => array(
                 'type' => 'social-label',
                 'name' => 'Slider Options',

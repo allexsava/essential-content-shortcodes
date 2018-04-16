@@ -396,6 +396,8 @@ div.acid_icon_list {
   #acidcodes_shortcodes_modal .l_modal_body .s6.third-child {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.third-child--parallax {
+    margin-bottom: -80px; }
 
 #acidcodes_shortcodes_modal .l_modal_body span.pb__help-text {
   font-family: 'Roboto', sans-serif;

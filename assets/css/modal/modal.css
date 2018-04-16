@@ -226,7 +226,8 @@ li.icon {
 div.acid_icon_list {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 265px;
+  margin-bottom: 20px;
+  height: 300px;
   position: relative;
   padding: 0 10px !important; }
   div.acid_icon_list .row > li {
@@ -248,9 +249,11 @@ div.acid_icon_list {
   margin-right: 30px; }
 
 .icon__special-title {
+  margin-top: -20px;
   margin-bottom: 5px;
   font-weight: 500 !important;
-  padding-left: 2px !important; }
+  padding-left: 6px !important;
+  font-size: 14px; }
 
 .scroll-height .dropdown-content.select-dropdown {
   height: 150px; }

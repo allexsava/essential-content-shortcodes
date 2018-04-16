@@ -2,21 +2,21 @@
 $content = !empty($content) ? $this->get_clean_content($content) : '';
 ?>
 
-<div class="acidcode  acidcode--team-member  team-member  <?php echo $class ?>">
+<div class="acidcode  acidcode__team-member <?php echo $class ?>">
 
 	<?php if ( !empty($image) ) : ?>
 
-		<div class="team-member__image">
+		<div class="acidcode__team-member--image">
 
     		<?php if ( !empty($imagelink) ) : ?>
 
-                <a href="<?php echo $imagelink ?>" class="team-member__image__link" title="More about <?php echo !empty($name) ? $name : ''; ?>">
-                    <div class="team-member__image__container">
+                <a href="<?php echo $imagelink ?>" class="acidcode__team-member--image-link" title="More about <?php echo !empty($name) ? $name : ''; ?>">
+                    <div class="acidcode__team-member--image-container">
                         <img src="<?php echo $image; ?>" alt="<?php echo !empty($name) ? $name : ''; ?>">
                     </div>
-                    <div class="team-member__profile">
-                        <div class="team-member__profile__table">
-                            <span class="team-member__profile__cell">
+                    <div class="acidcode__team-member--profile">
+                        <div class="acidcode__team-member--profile-table">
+                            <span class="acidcode__team-member--profile-cell">
                                <i class="shc big icon-link"></i>
                             </span>
                         </div>
@@ -25,8 +25,8 @@ $content = !empty($content) ? $this->get_clean_content($content) : '';
 
         	<?php else: ?>
 
-                <div class="team-member__image__link">
-                    <div class="team-member__image__container">
+                <div class="acidcode__team-member--image-link">
+                    <div class="acidcode__team-member--image-container">
                         <img src="<?php echo $image; ?>" alt="<?php echo !empty($name) ? $name : ''; ?>">
                     </div>
                 </div>
@@ -36,47 +36,47 @@ $content = !empty($content) ? $this->get_clean_content($content) : '';
         </div>
     <?php endif; ?>
 
-    <div class="team-member__header">
+    <div class="acidcode__team-member--header">
 		<?php if ( !empty($name) ) : ?>
-    	   <h5 class="team-member__name"><?php echo $name; ?></h5>
+    	   <h5 class="acidcode__team-member--name"><?php echo $name; ?></h5>
     	<?php endif; ?>
     	<?php if ( !empty($title) ) : ?>
-            <h6 class="team-member__position"><?php echo $title; ?></h6>
+            <h6 class="acidcode__team-member--position"><?php echo $title; ?></h6>
     	<?php endif;?>
     </div>
 
-    <div class="team-member__description">
+    <div class="acidcode__team-member--description">
         <?php echo $this->get_clean_content($content); ?>
     </div>
 
     <hr class="separator separator--striped"/>
 
-    <div class="team-member__footer">
-        <ul class="team-member__social-links-list">
+    <div class="acidcode__team-member--footer">
+        <ul class="acidcode__team-member--social-links-list">
         	<?php if ( !empty($social_twitter) ) : ?>
-                <li class="team-member__social-link">
-                    <a class="team-member__social-link__link" href="<?php echo $social_twitter; ?>" target="_blank">
+                <li class="acidcode__team-member--social-link">
+                    <a class="acidcode__team-member--social-link__link" href="<?php echo $social_twitter; ?>" target="_blank">
                         <i class="shc  shc--icon  fab fa-twitter"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_facebook) ) : ?>
-                <li class="team-member__social-link">
-                    <a class="team-member__social-link__link" href="<?php echo $social_facebook; ?>" target="_blank">
+                <li class="acidcode__team-member--social-link">
+                    <a class="acidcode__team-member--social-link__link" href="<?php echo $social_facebook; ?>" target="_blank">
                         <i class="shc  shc--icon  fab fa-facebook-f"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_linkedin) ) : ?>
-                <li class="team-member__social-link">
-                    <a class="team-member__social-link__link" href="<?php echo $social_linkedin; ?>" target="_blank">
+                <li class="acidcode__team-member--social-link">
+                    <a class="acidcode__team-member--social-link__link" href="<?php echo $social_linkedin; ?>" target="_blank">
                         <i class="shc  shc--icon  fab fa-linkedin-in"></i>
                     </a>
                 </li>
         	<?php endif; ?>
         	<?php if ( !empty($social_pinterest) ) : ?>
-                <li class="team-member__social-link">
-                    <a class="team-member__social-link__link" href="<?php echo $social_pinterest; ?>" target="_blank">
+                <li class="acidcode__team-member--social-link">
+                    <a class="acidcode__team-member--social-link__link" href="<?php echo $social_pinterest; ?>" target="_blank">
                         <i class="shc  shc--icon  fab fa-pinterest-p"></i>
                     </a>
                 </li>

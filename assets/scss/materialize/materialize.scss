@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
-// Colors
-@import "color";
+// Color
+@import "color-variables";
+@import "color-classes";
+
 // Variables;
 @import "variables";
+
 // Reset
 @import "normalize";
-// materialize
+
+// components
 @import "global";
 @import "badges";
 @import "icons-material-design";
@@ -28,12 +32,11 @@
 @import "materialbox";
 @import "forms/forms";
 @import "table_of_contents";
-@import "sideNav";
+@import "sidenav";
 @import "preloader";
 @import "slider";
 @import "carousel";
 @import "tapTarget";
 @import "pulse";
-@import "date_picker/default";
-@import "date_picker/default.date";
-@import "date_picker/default.time";
+//@import "datepicker";
+//@import "timepicker";

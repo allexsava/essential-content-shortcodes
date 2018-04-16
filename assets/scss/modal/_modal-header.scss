@@ -7,24 +7,19 @@
 #acidcodes_shortcodes_modal {
   .l_modal_header {
     & {
-      background: $accent-color;
       background-color: $accent-color;
       position: relative;
-      border-bottom: 1px solid $border-color;
+      @include border(1px, solid, $border-color, bottom);
     }
-    .back, .close {
-      box-shadow: none;
+    .acidcode__btn--back, .close {
+      @include box-shadow(none);
     }
-    margin-bottom: 0;
+    @include margin-direction(0,bottom);
   }
 }
 
-.l_modal_title {
-  color: $white;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px 0;
-  font-size: 14px;
-  letter-spacing: 0.98px;
-  line-height: 16px;
+.l_modal_title.col.s8 {
+  @include font-source-roboto($size:14px, $color: $white, $weight: false, $lh: 16px, $ls: 0.98px, $ta: center);
+  @include margin(0 auto);
+  @include padding(10px 0);
 }

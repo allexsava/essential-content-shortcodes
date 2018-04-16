@@ -12,39 +12,52 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
         $this->direct = false;
 
         $this->params = array(
-            'content_text' => array(
-                'type' => 'textarea',
-                'name' => 'Text',
-                'admin_class' => 'input-field col s12',
-                'is_content' => true,
+            'quote_type' => array(
+                'type' => 'select',
+                'name' => 'Quote type',
+                'options' => array(
+                    '' => 'Select Type',
+                    'blockquote' => 'Block Quote',
+                    'quote' => 'Quote'
+                ),
+                'required' => true,
+                'tooltip'  => true,
+                'tooltip-position' => 'right',
+                'admin_class' => 'input-field hide-list col s6'
             ),
+
             'text_size' => array(
                 'type' => 'select',
                 'name' => 'Text size',
                 'options' => array(
                     '' => 'Select Size',
+                    'regular' => 'Regular',
                     'small' => 'Small',
                     'medium' => 'Medium',
                     'big' => 'Big'
                 ),
-                'admin_class' => 'input-field hide-list col s6 input-special-margin'
-            ),            
+                'required' => true,
+                'admin_class' => 'input-field hide-list col s6'
+            ),
+            'content_text' => array(
+                'type' => 'textarea',
+                'name' => 'Text',
+                'required' => true,
+                'admin_class' => 'input-field col s12',
+                'is_content' => true,
+            ),
             'author' => array(
                 'type' => 'text',
                 'name' => 'Author',
-                'admin_class' => 'col s6',
+                'admin_class' => 'acidcode__quote-margin col s6',
             ),
 
             'link' => array(
-                'type' => 'text',
+                'type' => 'url',
+                'value'       => 'https://',
                 'name' => 'Author link',
-                'admin_class' => 'col s6'
+                'admin_class' => 'acidcode__quote-margin col s6'
             ),
-            'author_title' => array(
-                'type' => 'text',
-                'name' => 'Author title',
-                'admin_class' => 'col s6',
-            )
         );
 
 	    // allow the theme or other plugins to "hook" into this shortcode's params
@@ -55,6 +68,7 @@ class AcidCodesShortcode_Quote extends  AcidCodesShortcode {
 
     public function add_shortcode($atts, $content){
         extract( shortcode_atts( array(
+            'quote_type' => '',
 			'content_text' => '',
             'text_size' => 'medium',
 			'author' => '',

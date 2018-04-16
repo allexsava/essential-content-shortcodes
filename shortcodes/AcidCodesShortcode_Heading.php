@@ -14,16 +14,18 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
 		$this->direct      = false;
 
 		$this->params = array(
-            'title' => array(
+            'subtitle' => array(
                 'type'        => 'text',
-                'name'        => 'Title',
+                'name'        => 'Subheading',
+                'required' => true,
                 'admin_class' => 'col s6 span7 push1'
             ),
-			'subtitle' => array(
-				'type'        => 'text',
-				'name'        => 'Subtitle',
-				'admin_class' => 'col s6 span7 push1'
-			),
+            'title' => array(
+                'type'        => 'text',
+                'name'        => 'Heading',
+                'required' => true,
+                'admin_class' => 'col s6 span7 push1'
+            )
 		);
 
 		// allow the theme or other plugins to "hook" into this shortcode's params

@@ -2,17 +2,23 @@
 #acidcodes_shortcodes_modal {
   .l_modal_footer {
     position: relative;
-    padding: 10px 20px;
-    border-top: 1px solid $grayLighter;
+    @include padding(10px 20px);
+    @include border(1px, solid, $grayLighter, top);
     background-color: $border-color;
-    margin-bottom: 0;
-    span {
-      color: $grayDarker;
-      line-height: 35px;
-    }
+    @include margin-direction(0, bottom);
     * .row {
-      margin-bottom: 0;
+      @include margin-direction(0, bottom);
+    }
+    a {
+      font-family: 'Roboto', sans-serif;
     }
   }
 
+}
+.acidcode__span-or {
+  @include font-source-roboto( $color: $grayDarker, $lh: 35px);
+}
+.acidcode__insert-button {
+  cursor: not-allowed;
+  width: 120px !important;
 }

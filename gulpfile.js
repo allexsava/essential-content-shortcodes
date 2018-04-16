@@ -58,22 +58,6 @@ gulp.task('assets/css', function () {
         .pipe(gulp.dest('./assets/css', {"mode": "0644"}));
 });
 
-// gulp.task('browser-sync', function () {
-//     bs({
-//         // Point this to your pre-existing server.
-//         proxy: config.baseurl + (u.env.port ? ':' + u.env.port : ''),
-//         files: ['*.php', 'style.css', 'assets/js/main.js'],
-//         // This tells BrowserSync to auto-open a tab once it boots.
-//         open: true
-//     }, function(err, bs) {
-//         if (err) {
-//             console.log(bs.options);
-//         }
-//     });
-// });
-//
-// gulp.task('bs', ['styles', 'scripts', 'browser-sync', 'watch']);
-
 /**
  *   #SCRIPTS
  */

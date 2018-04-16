@@ -1,0 +1,57 @@
+/* Functions */
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
+@mixin margin-direction($property, $direction: false) {
+  @if $direction { margin-#{$direction}: $property; }
+  @else { margin: $property; }
+}
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+@mixin padding-direction($property, $direction: false) {
+  @if $direction { padding-#{$direction}: $property; }
+}
+@mixin border($width, $style, $color, $direction: false) {
+  @if $direction { border-#{$direction}: $width $style $color; }
+  @else { border: $width $style $color; }
+}
+
+@mixin border-direction($direction, $color){
+  border-#{$direction}: $color;
+}
+
+@mixin height-opacity($height:false, $opacity:false){
+  @if $height { height: $height; }
+  @if $opacity { opacity: $opacity; }
+}
+
+@mixin font-source-roboto($size: false, $color: false, $weight: false,  $lh: false, $ls: false, $td: false, $ta: false) {
+  font-family: 'Roboto', sans-serif;
+  @if $size { font-size: $size; }
+  @if $color { color: $color; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+  @if $ls { letter-spacing: $ls; }
+  @if $td { text-decoration: $td; }
+  @if $ta { text-align: $ta; }
+}
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+@mixin overflow ($x:false, $y:false) {
+  @if $x { overflow-x: $x; }
+  @if $y { overflow-y: $y; }
+}

@@ -1,0 +1,11 @@
+svg.acidcode__icon--type-circle {
+  @extend .icon-height;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  width: 2em !important;
+}
+.acidcode__icon--type-rectangle {
+  @extend .icon-height;
+  background: rgba(0, 0, 0, 0.2);
+  width: 2em !important;
+}

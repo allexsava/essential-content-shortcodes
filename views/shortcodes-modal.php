@@ -14,17 +14,17 @@ if ($_GET['post_id']) {
 } elseif ($post === null) {
     $post = get_post(1);
 } ?>
-<div id="acidcodes_shortcodes">
+<div id="acidcodes_shortcodes" data-plugin-url="<?php echo WP_PLUGIN_DIR.'/acidcodes/'; ?>">
     <div class="l_modal_header row">
         <div class="col s2">
-            <button type="button" class="btn back"><i
+            <button type="button" class="acidcode__btn acidcode__btn--back"><i
                         class="fas fa-chevron-left"></i><span><?php _e('Back', 'acidcodes_txtd'); ?></span></button>
         </div>
         <div class="l_modal_title col s8">
             <span class=""><?php _e('Choose shortcode:', 'acidcodes_txtd'); ?></span>
         </div>
         <div class="col s2">
-            <button type="button" class="btn close close-reveal-modal"><i class="fas fa-times"></i></button>
+            <button type="button" class="acidcode__btn close close-reveal-modal"><i class="fas fa-times"></i></button>
         </div>
     </div>
     <div class="l_modal_body three_col">
@@ -47,7 +47,7 @@ if ($_GET['post_id']) {
                 if ($shortcode["direct"]) {
                     $class .= ' insert-direct-shortcode';
                 } ?>
-                <li class="shortcode">
+                <li class="shortcode <?php echo 'shortcode_'.strtolower($shortcode["code"]); ?>">
                     <a class="details <?php echo $class; ?>" data-params='<?php echo $shortcode_js; ?>'
                        data-trigger-open="<?php echo $data_trigger_open ?>">
                         <i class="icon <?php echo $shortcode["icon"]; ?>"></i>
@@ -55,9 +55,10 @@ if ($_GET['post_id']) {
                     </a>
                     <?php if (!$shortcode['direct'] && !empty($shortcode['params'])) { ?>
                         <div class="shortcode_params details_content">
-                            <form id="acidcodes_shortcodes_form">
+                            <form id="acidcodes_shortcodes_form" novalidate="novalidate">
+                                <div class="alerts"></div>
                                 <fieldset>
-                                    <div class="row">
+                                    <div class="row flex-grid">
                                         <?php
                                         foreach ($shortcode['params'] as $k => $param) {
 
@@ -66,8 +67,7 @@ if ($_GET['post_id']) {
                                             echo $acidcodes_shortcodes->render_param($param);
                                         } ?>
 
-                                        <button type="submit"
-                                                class="btn hidden"><?php _e('Submit', 'acidcodes_txtd'); ?></button>
+                                        <button type="submit" class="btn hidden"><?php _e('Submit', 'acidcodes_txtd'); ?></button>
                                     </div>
                                 </fieldset>
                             </form>
@@ -79,17 +79,19 @@ if ($_GET['post_id']) {
         </ul>
     </div>
     <div class="l_modal_footer row">
-        <div class="col s6"></div>
+        <div class="col s6">
+            <a class="acidcode__btn btn_settings"><i class="fas fa-cogs"></i> <?php _e('Settings', 'acidcodes_txtd'); ?></a>
+        </div>
         <div class="col s6">
             <div class="row">
                 <div class="col s6">
-                    <a class="btn btn_secondary cancel"><?php _e('Cancel', 'acidcodes_txtd'); ?></a>
+                    <a class="acidcode__btn btn_secondary cancel"><?php _e('Reset', 'acidcodes_txtd'); ?></a>
 
-                    <span><?php _e('or', 'acidcodes_txtd'); ?></span>
+                    <span class="acidcode__span-or"><?php _e('or', 'acidcodes_txtd'); ?></span>
 
                 </div>
-                <div class="col s6">
-                    <a class="btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
+                <div class="col s6 acidcode__insert-button">
+                    <a id="insert-button" class="acidcode__btn btn_primary disabled"><?php _e('Insert', 'acidcodes_txtd'); ?></a>
                 </div>
             </div>
         </div>

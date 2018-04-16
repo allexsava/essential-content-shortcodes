@@ -23,23 +23,30 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'name' => 'Alignment',
                 'options' => array(
                     '' => 'Select Alignment',
+                    'no-alignment' => 'No Alignment',
                     'center' => 'Center',
                     'left' => 'Left',
                     'right' => 'Right'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6',
                 'help-text'   => 'eg center, left, right'
             ),
-            'size' => array(
+            'style' => array(
                 'type' => 'select',
-                'name' => 'Size',
+                'name' => 'Style',
                 'options' => array(
-                    '' => 'Select Size',
+                    '' => 'Select Style',
                     'regular' => 'Regular',
-                    'double' => 'Double'
+                    'double' => 'Double',
+                    'dotted' => 'Dotted',
+                    'striped' => 'Striped'
                 ),
-                'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg regular, double'
+                'required' => true,
+                'admin_class' => 'scroll-height input-field hide-list col s6',
+                'tooltip'  => true,
+                'tooltip-position' => 'left',
+                'help-text'   => 'eg regular, dotted, striped'
             ),
             'weight' => array(
                 'type' => 'select',
@@ -49,31 +56,29 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                     'thin' => 'Thin',
                     'thick' => 'Thick'
                 ),
+                'required' => true,
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg thin, thick'
+                'help-text'   => 'eg thin, thick',
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
             ),
             'color' => array(
                 'type' => 'select',
                 'name' => 'Color',
                 'options' => array(
                     '' => 'Select Color',
-                    'dark' => 'Dark',
-                    'white' => 'Light',
-                    'color' => 'Color'
+                    'no-color' =>'No color',
+                    'light' => 'Light',
+                    'red' => 'Red',
+                    'yellow' => 'Yellow',
+                    'orange' => 'Orange',
+                    'purple' => 'Purple',
+                    'green' => 'Green',
+                    'teal' => 'Teal'
                 ),
-                'admin_class' => 'input-field hide-list col s6',
+                'required' => true,
+                'admin_class' => 'scroll-height-separator input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
-            ),
-            'style' => array(
-                'type' => 'select',
-                'name' => 'Style',
-                'options' => array(
-                    '' => 'Select Style',
-                    'dotted' => 'Dotted',
-                    'striped' => 'Striped'
-                ),
-                'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg dotted, striped'
             )
         );
 

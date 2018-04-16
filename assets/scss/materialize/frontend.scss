@@ -1,18 +1,22 @@
-@charset "UTF-8";
+//@charset "UTF-8";
 
-// Colors
-@import "color";
+// Color
+@import "color-variables";
+@import "color-classes";
+
 // Variables;
 @import "variables";
+
 // Reset
 //@import "normalize";
-// materialize
+
+// components
 @import "global";
 //@import "badges";
-//@import "icons-material-design";
+@import "icons-material-design";
 //@import "grid";
 //@import "navbar";
-@import "roboto";
+//@import "roboto_front";
 @import "typography";
 @import "transitions";
 //@import "cards";
@@ -28,12 +32,15 @@
 //@import "materialbox";
 //@import "forms/forms";
 //@import "table_of_contents";
-//@import "sideNav";
+//@import "sidenav";
 //@import "preloader";
 //@import "slider";
-//@import "carousel";
+@import "carousel";
 //@import "tapTarget";
-//@import "pulse";
-//@import "date_picker/default";
-//@import "date_picker/default.date";
-//@import "date_picker/default.time";
+@import "pulse";
+//@import "datepicker";
+//@import "timepicker";
+
+//Components
+
+@import "../components/components";

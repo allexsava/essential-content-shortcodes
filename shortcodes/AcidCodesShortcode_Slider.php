@@ -6,14 +6,6 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
 
     public function __construct($settings = array()) {
 
-        $this->backend_assets["js"] = array(
-            'slider' => array(
-                'name' => 'slider',
-                'path' => 'assets/js/shortcodes/backend_slider.js',
-                'deps'=> array( 'jquery' )
-            )
-        );
-
         // load backend assets only when an editor is present
         add_action( 'mce_buttons_2', array( $this, 'load_backend_assets' ) );
 
@@ -24,11 +16,21 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->icon = "fas fa-images";
 
         $this->params = array(
-            'image' => array(
-                'type' => 'image',
-                'admin_class' => 'col s6 acid_media_uploader'
+            'number' => array(
+                'type' => 'select',
+                'name' => 'Number of images',
+                'options' => array(
+                    '' => 'Select Number',
+                    '1' => '1',
+                    '2' => '2',
+                    '3' => '3',
+                    '4' => '4',
+                    '5' => '5'
+                ),
+                'admin_class' => 'input-field hide-list col s6',
+                'required' => true,
+                'help-text'   => '1, 2...'
             ),
-
             'type' => array(
                 'type' => 'select',
                 'name' => 'Slider Type',
@@ -38,7 +40,16 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                     'carousel-slider' => 'Full-width',
                 ),
                 'admin_class' => 'input-field hide-list col s6',
-                'help-text'   => 'eg carousel, full-width'
+                'required' => true,
+                'tooltip'  => true,
+                'tooltip-position' => 'left'
+            ),
+            'image' => array(
+                'type' => 'image',
+                'name' => 'Image',
+                'admin_class' => 'col s6 acid_media_uploader',
+                'number' => 5,
+                'required' => true,
             ),
             'social' => array(
                 'type' => 'social-label',
@@ -47,33 +58,36 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
             ),
             'slider_duration' => array(
                 'value'       => '200',
-                'type' => 'text',
+                'type' => 'number',
                 'name' => 'Slider Duration',
-                'admin_class' => 'col s6',
-                'help-text'   => 'Transition duration in milliseconds. (Default: 200)'
+                'min'  => '0',
+                'max'  => '5000',
+                'admin_class' => 'col s6 slider__fix-margin',
+                'help-text'   => 'Transition duration in milliseconds.',
+                'is_text_tooltip' => true,
+                'tooltip-position' => 'bottom'
             ),
             'slider_padding' => array(
                 'value'       => '0',
-                'type' => 'text',
+                'type' => 'number',
                 'name' => 'Slider Padding',
-                'admin_class' => 'col s6',
-                'help-text'   => 'Set the padding between non center items. (Default: 0)'
+                'min'  => '0',
+                'max'  => '100',
+                'admin_class' => 'col s6 slider__fix-margin',
+                'tooltip-position' => 'left'
             ),
             'shift'    => array(
                 'type'        => 'range',
                 'name'        => __( 'Slider Shift'),
                 'admin_class' => 'range-field col s6',
-                'help-text'   => 'Set the spacing of the center item. (Default: 0)'
+                'tooltip-position' => 'right'
             ),
-            'navigation'    => array(
+            'autoplay'    => array(
+                'value' => 'off',
                 'type'        => 'switch',
-                'name'        => __( 'Slider Navigation', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6 shame-margin'
-            ),
-            'loop'    => array(
-                'type'        => 'switch',
-                'name'        => __( 'Slider Loop', 'acidcodes_txtd' ),
-                'admin_class' => 'col s6'
+                'name'        => __( 'Slider Autoplay', 'acidcodes_txtd' ),
+                'admin_class' => 'col s6 checkbox-special-margin',
+                'is_text_tooltip' => true
             )
 
         );
@@ -82,7 +96,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
 
         add_shortcode('slider', array( $this, 'add_slider_shortcode') );
-        add_shortcode('slide', array( $this, 'add_slide_shortcode') );
+        //add_shortcode('slide', array( $this, 'add_slide_shortcode') );
 
         // frontend assets needs to be loaded after the add_shortcode function
 //        $this->frontend_assets["js"] = array(
@@ -137,25 +151,25 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         return ob_get_clean();
     }
 
-    public function add_slide_shortcode( $atts, $content ) {
+//    public function add_slide_shortcode( $atts, $content ) {
 //        $title = '';
 //      $icon = '';
 //         extract( shortcode_atts( array(
 //             'title' => '',
 //             'icon' => ''
 //         ), $atts ) );
-
-
-        /**
-         * Template localization between plugin and theme
-         */
-        $located = locate_template("templates/shortcodes/slide.php", false, false);
-        if(!$located) {
-            $located = dirname(__FILE__).'/templates/slide.php';
-        }
-        // load it
-        ob_start();
-        require $located;
-        return ob_get_clean();
-    }
+//
+//
+//        /**
+//         * Template localization between plugin and theme
+//         */
+//        $located = locate_template("templates/shortcodes/slide.php", false, false);
+//        if(!$located) {
+//            $located = dirname(__FILE__).'/templates/slide.php';
+//        }
+//        // load it
+//        ob_start();
+//        require $located;
+//        return ob_get_clean();
+//    }
 }

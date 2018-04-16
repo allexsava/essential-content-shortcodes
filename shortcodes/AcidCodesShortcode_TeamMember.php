@@ -14,29 +14,37 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
         $this->params = array(
             'image' => array(
                 'type' => 'image',
-                'admin_class' => 'col s6 acid_media_uploader'
+                'name'        => 'Image',
+                'required' => true,
+                'admin_class' => 'col s6',
+                'image_uploader' => 'image__uploader--tm'
             ),
             'name' => array(
                 'type' => 'text',
                 'name' => 'Name',
+                'required' => true,
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg Team member name'
-            ),
-            'imagelink' => array(
-                'type' => 'text',
-                'name' => 'Image Link',
-                'admin_class' => 'col s6 align-clear'
+                'help-text'   => 'eg Team member name',
+                'is_text_tooltip' => true
             ),
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
-                'admin_class' => 'col s6',
-                'help-text'   => 'eg Frontend Developer, CEO'
+                'admin_class' => 'col s6 second-child',
+                'help-text'   => 'eg Frontend Developer, CEO',
+                'is_text_tooltip' => true
+            ),
+            'imagelink' => array(
+                'value'       => 'https://',
+                'type' => 'url',
+                'name' => 'Image Link',
+                'admin_class' => 'col s6 third-child'
             ),
             'content' => array(
                 'type' => 'textarea',
                 'name' => 'Description',
-                'admin_class' => 'input-field col s12',
+                'required' => true,
+                'admin_class' => 'input-field col s12 fourth-child',
                 'is_content' => true
             ),
             'social' => array(
@@ -46,25 +54,25 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             ),
             'social_twitter' => array(
                 'value'       => 'https://',
-                'type' => 'text',
+                'type' => 'url',
                 'name' => 'Twitter Link',
                 'admin_class' => 'col s6'
             ),
             'social_facebook' => array(
                 'value'       => 'https://',
-                'type' => 'text',
+                'type' => 'url',
                 'name' => 'Facebook Link',
                 'admin_class' => 'col s6'
             ),
             'social_linkedin' => array(
                 'value'       => 'https://',
-                'type' => 'text',
+                'type' => 'url',
                 'name' => 'LinkedIn Link',
                 'admin_class' => 'col s6'
             ),
             'social_pinterest' => array(
                 'value'       => 'https://',
-                'type' => 'text',
+                'type' => 'url',
                 'name' => 'Pinterest Link',
                 'admin_class' => 'col s6'
             ),
@@ -83,6 +91,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             'title' => '',
             'image' => '',
             'imagelink' => '',
+            'content' => '',
             'social_twitter' => '',
             'social_facebook' => '',
             'social_linkedin' => '',

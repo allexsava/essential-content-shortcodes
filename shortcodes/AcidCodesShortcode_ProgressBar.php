@@ -15,22 +15,23 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
             'title' => array(
                 'type' => 'text',
                 'name' => 'Title',
+                'required' => true,
                 'admin_class' => 'col s6'
             ),
             'progress' => array(
                 'type' => 'text',
                 'name' => 'Progress',
-                'admin_class' => 'col s6'
+                'required' => true,
+                'admin_class' => 'col s6',
+                'help-text'   => 'eg 96%, 100px',
+                'is_text_tooltip' => true
             ),
 	        'markers' => array(
 		        'type' => 'switch',
 		        'name' => 'Markers',
-		        'admin_class' => 'markers'
-	        ),
-	        array(
-		        'type' => 'info',
-		        'value' => 'You can use a simple number to represent the length in pixels or a percentage value (like 96%).',
-		        'admin_class' => 'span8 push1'
+		        'admin_class' => 'col s6 markers',
+                'tooltip'  => true,
+                'tooltip-position' => 'right'
 	        )
         );
 
@@ -40,12 +41,15 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
         add_shortcode('bar', array( $this, 'add_shortcode') );
     }
 
-    public function add_shortcode($atts, $content){
-        extract( shortcode_atts( array(
-            'title' => '',
-			'progress' => '50%',
-			'markers' => true,
-        ), $atts ) );
+    public function add_shortcode( $atts, $content ) {
+        //create an array with only the registered params - dynamic since we filter them and have no way of knowing for sure
+        $extract_params = array();
+        if ( isset( $this->params ) ) {
+            foreach ( $this->params as $key => $value ) {
+                $extract_params[ $key ] = '';
+            }
+        }
+        extract( shortcode_atts( $extract_params, $atts ) );
 
 	    /**
 	     * Template localization between plugin and theme

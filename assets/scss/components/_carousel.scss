@@ -1,0 +1,41 @@
+.carousel .acidcode__carousel-item {
+  @include box-shadow(none);
+  &:hover {
+    @include box-shadow(none);
+  }
+  .acidcode__carousel-img {
+    @include box-shadow(none);
+  }
+  visibility: visible;
+}
+
+.acidcode__carousel {
+  .middle-indicator-text {
+    @include box-shadow(none);
+    &:hover {
+      @include box-shadow(none);
+    }
+    &:focus {
+      @include box-shadow(none);
+      outline: none;
+    }
+  }
+}
+
+
+.carousel-fixed-item {
+  position:absolute;
+  top:50%;
+}
+.middle-indicator-text{
+  font-size: 4.2rem;
+}
+a.middle-indicator-text{
+  color:white !important;
+}
+.content-indicator{
+  width: 64px;
+  height: 64px;
+  background: none;
+  @include border-radius(50px);
+}

@@ -8,11 +8,10 @@
   }
 
   &.l_acid_modal {
-    font-size: 13px;
-    color: $font-color;
+    @include font-source-roboto($size: 13px, $color: $font-color);
     overflow: hidden;
     border-radius: 4px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+    @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.8));
   }
 
   &.reveal-modal {
@@ -20,7 +19,7 @@
     visibility: hidden;
     top: 100px;
     left: 50%;
-    margin-left: -300px;
+    @include margin(0 0 0 -300px);
     width: 580px;
     background: $white;
     position: absolute;
@@ -37,10 +36,8 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: #fff;
     background: rgba(0,0,0,.8);
     z-index: 160000 + 1;
-    display: none;
     top: 0;
     left: 0;
   }

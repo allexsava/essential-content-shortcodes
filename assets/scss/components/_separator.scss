@@ -1,0 +1,66 @@
+.acidcode__separator {
+  background-color: transparent;
+  @include border-width(1px);
+  @include border-color(black);
+  @include border-style(solid);
+}
+.acidcode__separator--align {
+  &-center {
+    @extend .align-center;
+  }
+  &-left {
+    @extend .align-left;
+  }
+  &-right {
+    @extend .align-right;
+  }
+}
+.acidcode__separator--weight {
+  &-thin {
+    @include border-width(1px);
+  }
+  &-thick {
+    @include border-width(5px);
+  }
+}
+.acidcode__separator--color {
+  &-light {
+    @include border-color(lightgray);
+  }
+  &-red {
+    @include border-color(red);
+  }
+  &-yellow {
+    @include border-color(yellow);
+  }
+  &-orange {
+    @include border-color(orange);
+  }
+  &-purple {
+    @include border-color(purple);
+  }
+  &-green {
+    @include border-color(green);
+  }
+  &-teal {
+    @include border-color(gray);
+  }
+}
+.acidcode__separator--style {
+  &-regular {
+    @include border-style(solid);
+  }
+  &-double {
+    @include border-style(double);
+  }
+  &-dotted {
+    @include border-style(dotted);
+  }
+  &-striped {
+    background-image: url("../../images/separator.png");
+    height: 0.5rem;
+  }
+}
+.acidcode__separator--weight-thin.acidcode__separator--style-double {
+  @include border-width(3px);
+}

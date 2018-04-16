@@ -33,7 +33,7 @@ class AcidCodesShortcodes
 
         //hack
         $this->acidcodes = 'acidcodes';
-        $this->version = '1.2.3';
+        $this->version = '1.0.0';
 
         $this->load_dependencies();
         $this->define_public_hooks();
@@ -95,10 +95,12 @@ class AcidCodesShortcodes
 
         // add to the visual mode only
         if (get_user_option('rich_editing') == 'true') {
-            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_fontawesome'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_validate'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
-            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
+//            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
+            //add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
         }
     } // end register_admin_assets
@@ -152,11 +154,19 @@ class AcidCodesShortcodes
         return $plugin_array;
     }
 
-    function addto_mce_acidcodes_main($plugin_array)
+
+    function addto_mce_acidcodes_validate($plugin_array)
     {
-        $plugin_array['main'] = $this->plugin_url . 'assets/js/main.js';
+        $plugin_array['validate'] = 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js';
 
         return $plugin_array;
+    }
+
+    function addto_mce_acidcodes_main($plugin_array)
+    {
+        //$plugin_array['main'] = $this->plugin_url . 'assets/js/main.js';
+
+        //return $plugin_array;
     }
 
     public function acidcodes_get_shortcodes_modal()
@@ -212,7 +222,6 @@ class AcidCodesShortcodes
 
         add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
         add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ) );
-
     }
 
     /**

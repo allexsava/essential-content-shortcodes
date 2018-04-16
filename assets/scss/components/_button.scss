@@ -1,0 +1,59 @@
+.entry-content a.acidcode__btn {
+  z-index: 1;
+  box-shadow: none;
+  background-color: #00e676;
+}
+.entry-content a.acidcode__btn:hover {
+  box-shadow: none;
+}
+.entry-content a.acidcode__btn--size-small {
+  @extend .font-style;
+}
+.entry-content a.acidcode__btn--size-medium {
+  @include font-source-roboto(14px, 43px, 43px, .5px);
+  @include padding(0 20px);
+}
+
+.entry-content a.acidcode__btn--size-large {
+  @extend .font-style;
+}
+
+.entry-content a.acidcode__btn--size-huge {
+  @include font-source-roboto(20px, 70px, 70px, .5px);
+  @include padding(0 35px);
+}
+
+.entry-content a.acidcode__btn--shape-square {
+  @include border-radius(0px);
+}
+
+.entry-content a.acidcode__btn--shape-rounded {
+  @include border-radius(5px);
+}
+
+.entry-content a.acidcode__btn--shape-pill {
+@include border-radius(16px);
+}
+
+.entry-content a.acidcode__btn--shape-outline {
+  border: 2px solid $accent-color;
+  background-color: #fff;
+  color: $accent-color;
+  &:hover {
+    background-color: $accent-color;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+
+.entry-content a.acidcode__btn--alignment-center {
+  @include margin(0 auto);
+  display: table;
+}
+.entry-content a.acidcode__btn--alignment-left {
+  float: left;
+}
+.entry-content a.acidcode__btn--alignment-right {
+  float: right;
+}

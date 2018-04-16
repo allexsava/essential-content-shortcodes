@@ -1,13 +1,14 @@
 <?php
     // get needed classes
-    $classes = 'acidcode  acidcode--testimonial  testimonial';
-    $classes.= !empty($text_size) ? ' testimonial_size--'.$text_size.'-text' : '';
+    $classes = 'acidcode  acidcode__quote';
+    $classes.= !empty($text_size) ? ' acidcode__quote--size-'.$text_size : '';
+    $classes.= !empty($quote_type) ? ' acidcode__quote--type-'.$quote_type : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 
 ?>
 <blockquote <?php echo $classes; ?>>
-    <div class="testimonial__content"><?php echo $this->get_clean_content($content); ?></div>
+    <div class="acidcode__quote-content"><?php echo $this->get_clean_content($content); ?></div>
 
     <?php if(!empty($author)) : ?>
 
@@ -15,14 +16,14 @@
             <a href="<?php echo $link; ?>">
         <?php endif ?>
 
-            <div class="testimonial__author-name"><?php echo $author; ?></div>
+            <div class="acidcode__quote-author-name"><?php echo $author; ?></div>
         
         <?php if(!empty($link)) : ?>
             </a>
         <?php endif ?>
 
         <?php if(!empty($author_title)) : ?>
-            <div class="testimonial__author-title"><?php echo $author_title; ?></div>
+            <div class="acidcode__quote-author-title"><?php echo $author_title; ?></div>
         <?php endif; ?>
 
     <?php endif; ?>

@@ -79,7 +79,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
             'shift'    => array(
                 'type'        => 'range',
                 'name'        => __( 'Slider Shift'),
-                'admin_class' => 'range-field col s6',
+                'admin_class' => 'range-field col s6 special-margin--bottom',
                 'tooltip-position' => 'right'
             ),
             'autoplay'    => array(

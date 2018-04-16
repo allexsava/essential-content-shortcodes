@@ -33,7 +33,7 @@ var gulp 		= require('gulp'),
 /**
  *   #STYLES
  */
-gulp.task('styles', ['style.css'], function () {
+gulp.task('styles', ['style.css', 'materialize-backend.css'], function () {
     return gulp.src('style.css')
         .pipe(rtlcss())
         .pipe(rename('rtl.css'))
@@ -58,6 +58,22 @@ gulp.task('assets/css', function () {
         .pipe(gulp.dest('./assets/css', {"mode": "0644"}));
 });
 
+/* Materialize Only */
+
+gulp.task('material', ['materialize-backend.css'], function () {
+    return gulp.src('materialize-backend.css')
+        .pipe(gulp.dest('.'));
+});
+
+gulp.task('materialize-backend.css', function () {
+    return gulp.src(['assets/scss/backend_materialize.scss'])
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('.', {"mode": "0644"}));
+});
+
 /**
  *   #SCRIPTS
  */
@@ -79,12 +95,12 @@ gulp.task('assets/css', function () {
 
 gulp.task('watch', ['styles'], function () {
     gulp.watch('assets/scss/**/*.scss', ['styles']);
-    // gulp.watch('assets/js/**/*.js', ['scripts']);
 });
 
-// gulp.task('watch-admin', function () {
-//     gulp.watch('assets/scss/admin/*.scss', ['styles-admin']);
-// });
+
+gulp.task('watch-materialize', ['styles'], function () {
+    gulp.watch('assets/scss/materialize/**/*.scss', ['styles']);
+});
 
 // usually there is a default task for lazy people who just wanna type gulp
 gulp.task('start', ['styles'], function () {

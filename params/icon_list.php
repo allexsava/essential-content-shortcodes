@@ -8,7 +8,7 @@ if (isset($param['required'])) $required = "required"; ?>
 <span class="<?php echo $class; ?>">
     <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
     <div class="acid_icon_list">
-        <input <?php echo $required; ?> name="<?php echo $param['param_key'] ?>" class="selected_icon hack"/>
+        <input <?php echo $required; ?> name="<?php echo $param['param_key'] ?>" class="selected_icon acidcode__select-hidden"/>
         <div class="row icon-container">
             <span class="col s12 icon__special-title">Solid icons</span>
             <ul>

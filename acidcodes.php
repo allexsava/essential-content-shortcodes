@@ -99,6 +99,7 @@ class AcidCodesShortcodes
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_validate'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_materialize'));
             add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_shortcodes'));
+            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_reveal'));
 //            add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_parsley'));
             //add_filter('mce_external_plugins', array($this, 'addto_mce_acidcodes_main'));
             add_filter('mce_buttons', array($this, 'register_acidcodes_shortcodes_button'));
@@ -157,7 +158,13 @@ class AcidCodesShortcodes
 
     function addto_mce_acidcodes_validate($plugin_array)
     {
-        $plugin_array['validate'] = 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js';
+        $plugin_array['validate'] = $this->plugin_url . 'assets/js/validate/jquery.validate.js';
+
+        return $plugin_array;
+    }
+    function addto_mce_acidcodes_reveal($plugin_array)
+    {
+        $plugin_array['reveal'] = $this->plugin_url . 'assets/js/reveal/jquery.reveal.js';
 
         return $plugin_array;
     }

@@ -435,6 +435,29 @@ div.acid_icon_list {
 #acidcodes_shortcodes_modal .l_modal_body select:focus, #acidcodes_shortcodes_modal .l_modal_body textarea:focus, #acidcodes_shortcodes_modal .l_modal_body input:focus, #acidcodes_shortcodes_modal .l_modal_body .uneditable-input:focus {
   outline: 0; }
 
+#acidcodes_shortcodes_modal .l_modal_body select {
+  display: inline;
+  position: absolute;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 0px;
+  width: 0px;
+  top: 2em;
+  left: 3em;
+  opacity: 0;
+  pointer-events: none; }
+
+#acidcodes_shortcodes_modal .l_modal_body .acidcode__select-hidden {
+  opacity: 0;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 0px !important;
+  line-height: 0; }
+
 #acidcodes_shortcodes_modal .l_modal_body input[type="checkbox"],
 #acidcodes_shortcodes_modal .l_modal_body input[type="radio"] {
   width: auto; }

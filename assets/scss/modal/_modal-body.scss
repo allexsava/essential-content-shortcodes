@@ -148,6 +148,30 @@
         outline: 0;
       }
     }
+    select {
+      display: inline;
+      position: absolute;
+      float: left;
+      padding: 0px;
+      margin: 0px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      height: 0px;
+      width: 0px;
+      top: 2em;
+      left: 3em;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .acidcode__select-hidden {
+      opacity: 0;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      font-size: 0px !important;
+      line-height: 0;
+      display: -webkit-box;
+    }
     input[type="checkbox"],
     input[type="radio"] {
       width: auto;

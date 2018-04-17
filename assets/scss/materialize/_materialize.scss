@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-// Color
+//Color
 @import "color-variables";
 @import "color-classes";
 
-// Variables;
+//Variables;
 @import "variables";
 
-// Reset
+//Reset
 @import "normalize";
 
-// components
+//components
 @import "global";
 @import "badges";
 @import "icons-material-design";
@@ -38,5 +38,3 @@
 @import "carousel";
 @import "tapTarget";
 @import "pulse";
-//@import "datepicker";
-//@import "timepicker";

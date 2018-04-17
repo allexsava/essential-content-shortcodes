@@ -104,6 +104,9 @@
       &.third-child {
         transform: translateY(-100%);
       }
+      &.third-child--parallax {
+        margin-bottom: -80px;
+      }
     }
 
     span.pb__help-text {

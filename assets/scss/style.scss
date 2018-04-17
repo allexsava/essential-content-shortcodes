@@ -1,10 +1,9 @@
-@charset "UTF-8";
+//BACKEND
+@import "materialize/materialize";
+//@import "backend_materialize";
 
 //COMPONENTS
 @import "modal/modal";
-
-//MATERIALIZE
-@import "materialize/materialize";
 
 //FRONTEND
 @import "materialize/frontend";

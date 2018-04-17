@@ -36,8 +36,17 @@
   }
   textarea.materialize-textarea.acidcode__textarea {
     @include padding(.8rem 0 3rem 0);
+    &:focus {
+      border-bottom: 1px solid $accent-color;
+      box-shadow: 0 1px 0 0 $accent-color;
+    }
+  }
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
+
 .acidcode__image-upload {
   @include font-source-roboto($size: 40px, $color: $white, $ta: center);
 }

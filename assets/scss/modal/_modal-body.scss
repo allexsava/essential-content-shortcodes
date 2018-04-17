@@ -45,6 +45,12 @@
         width: 100%;
       }
     }
+    .input-field.hide-list label.active {
+      display: none;
+    }
+    .input-field label.active.textarea__label {
+      color: $accent-color;
+    }
 
     .l_three_col {
 
@@ -108,24 +114,40 @@
         margin-bottom: -80px;
       }
     }
-
-    span.pb__help-text {
-      @include font-source-roboto($size: 12px, $color: $help-text-color, $lh: 16px);
-      display: block;
-      @include margin( 20px 0 0 0)
-    }
-
-    span.social-label {
-      @include margin(5px 0 20px);
-    }
-
     input[type=text],
     input[type=number],
     input[type=url] {
       &:not(.browser-default) {
         @include height-opacity($height: 2rem, $opacity: false);
         @include margin(0 0 5px 0);
+        &:focus:not([readonly]) {
+          border-bottom: 1px solid $accent-color;
+          @include box-shadow(0 1px 0 0 $accent-color)
+        }
+        &.valid {
+          border-bottom: 1px solid $input-border-color;
+          @include box-shadow(none);
+        }
       }
+    }
+    input#acidcode__search-id {
+      background-image: url(assets/images/search-icon.png);
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: -5px;
+      text-indent: 30px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+    }
+
+    [type="checkbox"]:checked + span:not(.lever):before {
+      @include border-direction(right-color, $rectangle-hover);
+      @include border-direction(bottom-color, $rectangle-hover);
+    }
+    input[type=range] + .thumb {
+      background-color: $accent-color;
     }
 
     //Forms Styling
@@ -136,15 +158,6 @@
       border: none;
       padding: 0;
       margin: 0;
-    }
-
-    .input-field label.active {
-      color: $rectangle-hover;
-    }
-    .help-block {
-      display: block;
-      @include margin(0 0 10px 0);
-      @include font-source-roboto($size: 12px, $color: $grayDarker, $weight: false,  $lh: false, $ls:false);
     }
     select, textarea, input, .uneditable-input {
       &:focus {
@@ -174,21 +187,6 @@
       font-size: 0px !important;
       line-height: 0;
       display: -webkit-box;
-    }
-    input[type="checkbox"],
-    input[type="radio"] {
-      width: auto;
-    }
-
-    [type="checkbox"]:checked + span:not(.lever):before {
-      @include border-direction(right-color, $rectangle-hover);
-      @include border-direction(bottom-color, $rectangle-hover);
-    }
-    input[type=range] + .thumb {
-      background-color: $accent-color;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      background-color: $accent-color;
     }
 
     select {

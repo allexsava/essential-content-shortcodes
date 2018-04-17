@@ -12,6 +12,6 @@ if (isset($param['required'])) $required = "required";
 <span class="<?php echo $class; ?>">
     <textarea <?php echo $required; ?> class="materialize-textarea acidcode__textarea <?php echo $is_content ?>" type="<?php echo $param['type'] ?>" name="<?php echo $param['param_key'] ?>" ></textarea>
         <?php if (!empty($param['name'])) : ?>
-            <label for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
+            <label class="textarea__label" for="<?php echo $param['param_key'] ?>"><?php echo $param['name'] ?></label>
         <?php endif; ?>
 </span>

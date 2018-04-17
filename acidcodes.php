@@ -111,7 +111,7 @@ class AcidCodesShortcodes
      */
     public function register_admin_assets($buttons)
     {
-        wp_enqueue_style('acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'style.css', array('wp-color-picker'));
+        wp_enqueue_style('acidcodes-shortcodes-reveal-styles', $this->plugin_url . 'assets/css/style.css', array('wp-color-picker'));
         return $buttons;
     } // end register_plugin_styles
 

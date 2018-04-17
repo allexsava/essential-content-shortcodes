@@ -1,8 +1,11 @@
 .DS_Store
 node_modules
 bower_components
-package-lock.json
 error_log
 *.sublime-project
 .idea
 labels.json
+package-lock.json
+style.css.map
+rtl.css
+style.css

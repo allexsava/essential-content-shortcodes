@@ -14,7 +14,7 @@
 @import "materialize/global";
 
 #acidcodes_shortcodes {
-  @import "materialize/badges";
+  //@import "materialize/badges";
   @import "materialize/icons-material-design";
   @import "materialize/grid";
   @import "materialize/navbar";
@@ -33,11 +33,11 @@
   @import "materialize/chips";
   @import "materialize/materialbox";
   //@import "materialize/forms/forms";
-  @import "materialize/table_of_contents";
-  @import "materialize/sidenav";
-  @import "materialize/preloader";
+  //@import "materialize/table_of_contents";
+  //@import "materialize/sidenav";
+  //@import "materialize/preloader";
   @import "materialize/slider";
   @import "materialize/carousel";
-  @import "materialize/tapTarget";
+  //@import "materialize/tapTarget";
   @import "materialize/pulse";
 }

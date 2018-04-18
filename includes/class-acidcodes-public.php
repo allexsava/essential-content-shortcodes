@@ -2,7 +2,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://pixelgrade.com
+ * @link       https://acidstudios.ro
  * @since      1.0.0
  *
  * @package    Acidcodes
@@ -17,7 +17,7 @@
  *
  * @package    Acidcodes
  * @subpackage Acidcodes/public
- * @author     Pixelgrade <contact@pixelgrade.com>
+ * @author     Acid Studios <contact@acidstudios.ro>
  */
 class AcidCodesShortcodes_Public {
 
@@ -44,7 +44,7 @@ class AcidCodesShortcodes_Public {
      *
      * @since    1.0.0
      *
-     * @param      string $gridable The name of the plugin.
+     * @param      string $acidcodes The name of the plugin.
      * @param      string $version The version of this plugin.
      */
     public function __construct( $acidcodes, $version ) {
@@ -67,10 +67,10 @@ class AcidCodesShortcodes_Public {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Gridable_Loader as all of the hooks are defined
+         * defined in AcidCodes_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Gridable_Loader will then create the relationship
+         * The AcidCodes_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */

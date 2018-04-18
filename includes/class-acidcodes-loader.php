@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://pixelgrade.com
+ * @link       https://acidstudios.ro
  * @since      1.0.0
  *
  * @package    acidcodes
@@ -19,7 +19,7 @@
  *
  * @package    acidcodes
  * @subpackage acidcodes/includes
- * @author     Pixelgrade <contact@pixelgrade.com>
+ * @author     Acid Studios <contact@acidstudios.ro>
  */
 class AcidCodesShortcodes_Loader {
 

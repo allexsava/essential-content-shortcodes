@@ -59,7 +59,6 @@ class AcidCodesShortcode {
                 'ProgressBar',
                 'Quote',
                 'Heading',
-                'Settings'
 			);
 		}
 

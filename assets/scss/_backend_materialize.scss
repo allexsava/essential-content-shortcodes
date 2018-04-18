@@ -7,37 +7,119 @@
 //Variables;
 @import "materialize/variables";
 
+#acidcodes_shortcodes_modal {
+  @import "materialize/global";
+}
+
+@import "materialize/roboto";
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/grid";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/typography";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/transitions";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/tooltip";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/buttons";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/dropdown";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/waves";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/modal";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/forms/forms";
+}
+
+//NOT USED
+
 //Reset
-@import "materialize/normalize";
+//@import "materialize/normalize";
 
 //components
-@import "materialize/global";
 
-#acidcodes_shortcodes {
-  //@import "materialize/badges";
-  @import "materialize/icons-material-design";
-  @import "materialize/grid";
-  @import "materialize/navbar";
-  @import "materialize/roboto";
-  @import "materialize/typography";
-  @import "materialize/transitions";
-  @import "materialize/cards";
-  @import "materialize/toast";
-  @import "materialize/tabs";
-  @import "materialize/tooltip";
-  @import "materialize/buttons";
-  @import "materialize/dropdown";
-  @import "materialize/waves";
-  @import "materialize/modal";
-  @import "materialize/collapsible";
-  @import "materialize/chips";
-  @import "materialize/materialbox";
-  //@import "materialize/forms/forms";
-  //@import "materialize/table_of_contents";
-  //@import "materialize/sidenav";
-  //@import "materialize/preloader";
+//@import "materialize/global";
+
+#acidcodes_shortcodes_modal {
   @import "materialize/slider";
+}
+
+#acidcodes_shortcodes_modal {
   @import "materialize/carousel";
-  //@import "materialize/tapTarget";
+}
+
+#acidcodes_shortcodes_modal {
   @import "materialize/pulse";
+}
+
+//@import "materialize/icons-material-design";
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/badges";
+}
+
+#acidcodes_shortcodes_modal {
+  //@import "materialize/icons-material-design";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/navbar";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/cards";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/toast";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/tabs";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/collapsible";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/chips";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/materialbox";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/table_of_contents";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/sidenav";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/preloader";
+}
+
+#acidcodes_shortcodes_modal {
+  @import "materialize/tapTarget";
 }

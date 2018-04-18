@@ -7,7 +7,7 @@ if (isset($param['tooltip-position'])) $tooltip_position = $param['tooltip-posit
 
 $url = plugins_url();
 
-$gifs = $url.'/acidcodes/assets/images/gifs/select-style/'.$param['param_key'].'.gif';
+$gifs = $url.'/essential-content-shortcodes/assets/images/gifs/select-style/'.$param['param_key'].'.gif';
 ?>
 
     <span class="<?php echo $class; ?>" >

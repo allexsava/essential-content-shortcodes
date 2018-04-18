@@ -138,9 +138,10 @@
       margin: 0;
     }
 
-    .input-field label.active {
-      color: $rectangle-hover;
-    }
+    //.input-field label.active {
+    //  color: $rectangle-hover;
+    //}
+
     .help-block {
       display: block;
       @include margin(0 0 10px 0);

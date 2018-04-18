@@ -24,7 +24,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'name' => 'Name',
                 'required' => true,
                 'admin_class' => 'col s6',
-                'help-text'   => 'eg Team member name',
+                'help-text'   => 'eg Team Member Name',
                 'is_text_tooltip' => true
             ),
             'title' => array(
@@ -38,7 +38,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'value'       => 'https://',
                 'type' => 'url',
                 'name' => 'Image Link',
-                'admin_class' => 'col s6 third-child'
+                'admin_class' => 'col s6 third-child third-child'
             ),
             'content' => array(
                 'type' => 'textarea',

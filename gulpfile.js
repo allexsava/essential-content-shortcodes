@@ -58,26 +58,6 @@ gulp.task('assets/css', function () {
         .pipe(gulp.dest('./assets/css/', {"mode": "0644"}));
 });
 
-/* Materialize Only */
-
-gulp.task('material', ['materialize-backend.css'], function () {
-    return gulp.src('materialize-backend.css')
-        .pipe(gulp.dest('.'));
-});
-
-gulp.task('materialize-backend.css', function () {
-    return gulp.src(['assets/scss/backend_materialize.scss'])
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('.', {"mode": "0644"}));
-});
-
-gulp.task('watch-materialize', ['styles'], function () {
-    gulp.watch('assets/scss/materialize/**/*.scss', ['styles']);
-});
-
 /**
  *   #SCRIPTS
  */

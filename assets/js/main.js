@@ -61,7 +61,7 @@
                         shift: slider_shift,
                         fullWidth: slider_fullwidth
                     });
-                    console.log(options);
+                    // console.log(options);
 
                 slider.carousel(options,callback());
             });

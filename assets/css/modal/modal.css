@@ -39,10 +39,10 @@
   left: 0; }
 
 .mce-acidcodes_shortcodes button {
-  background: url(assets/images/acid-icon.png) 3px 3px no-repeat !important; }
+  background: url(../images/acid-icon.png) 3px 3px no-repeat !important; }
 
 .mce-acidcodes_shortcodes button:hover {
-  background: url(assets/images/acid-icon.png) 3px -27px no-repeat !important; }
+  background: url(../images/acid-icon.png) 3px -27px no-repeat !important; }
 
 .none, #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back, #acidcodes_shortcodes_modal .acidcode__btn.close, #acidcodes_shortcodes_modal .acidcode__btn.cancel, #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled, #acidcodes_shortcodes_modal .acidcode__btn.btn_settings {
   background: none !important;
@@ -197,7 +197,7 @@ span.acidcode__quote-margin {
   padding-left: 0;
   margin-right: 30px; }
   .input-field.col.s12.fourth-child {
-    margin-top: -70px; }
+    margin-top: -80px !important; }
 
 textarea.acidcode__textarea.error {
   margin: 0; }
@@ -426,9 +426,6 @@ div.acid_icon_list {
   border: none;
   padding: 0;
   margin: 0; }
-
-#acidcodes_shortcodes_modal .l_modal_body .input-field label.active {
-  color: #69F0AE; }
 
 #acidcodes_shortcodes_modal .l_modal_body .help-block {
   display: block;

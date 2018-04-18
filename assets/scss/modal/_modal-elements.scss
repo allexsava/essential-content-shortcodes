@@ -196,7 +196,7 @@ span.acidcode__quote-margin {
   @include padding-direction(0,left);
   @include margin-direction(30px, right);
   &.fourth-child {
-    @include margin-direction(-70px, top);
+    @include margin-direction(-80px !important, top);
   }
 }
 textarea.acidcode__textarea.error {

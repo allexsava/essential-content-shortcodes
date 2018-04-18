@@ -8,7 +8,7 @@ if (isset($param['tooltip-position'])) $tooltip_position = $param['tooltip-posit
 if (isset($param['is_text_tooltip'])) $text_tooltip = 'is_text';
 $url = plugins_url();
 
-$gifs = $url.'/acidcodes/assets/images/gifs/select-carousel/'.$param['param_key'].'.gif';
+$gifs = $url.'/essential-content-shortcodes/assets/images/gifs/select-carousel/'.$param['param_key'].'.gif';
 
 if($param['param_key']==='slider_padding') { $tooltipped_input='tooltipped__input'; $data_tooltip = "<img src='$gifs'/>";}
 if($param['param_key']==='slider_duration') { $tooltipped_input='tooltipped__input'; $data_tooltip = $param['help-text'];}

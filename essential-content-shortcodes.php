@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: AcidCodes
-Plugin URI: http://acidstudios.ro
+Plugin Name: Essential Content Shortcodes
+Plugin URI:
 Description: WordPress shortcodes plugin everywhere. Loaded with shortcodes, awesomeness and more.
-Version: 2.3.4
-Author: acidcodes
+Version: 1.0.0
+Author: Acid Studios
 Author URI: http://acidstudios.ro
 Author Email: contact@acidstudios.ro
 */
@@ -60,13 +60,13 @@ class AcidCodesShortcodes
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'acidcodes/includes/class-acidcodes-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'essential-content-shortcodes/includes/class-acidcodes-loader.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'acidcodes/includes/class-acidcodes-public.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'essential-content-shortcodes/includes/class-acidcodes-public.php';
 
         $this->loader = new AcidCodesShortcodes_Loader();
 
@@ -255,7 +255,7 @@ class AcidCodesShortcodes
      * The reference to the class that orchestrates the hooks with the plugin.
      *
      * @since     1.0.0
-     * @return    Gridable_Loader    Orchestrates the hooks of the plugin.
+     * @return    AcidCodes_Loader    Orchestrates the hooks of the plugin.
      */
     public function get_loader() {
         return $this->loader;

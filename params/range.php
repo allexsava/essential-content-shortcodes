@@ -4,7 +4,7 @@ if ( isset($param['admin_class'] ) ) $class = $param['admin_class'];
 if (isset($param['tooltip-position'])) $tooltip_position = $param['tooltip-position'];
 $url = plugins_url();
 
-$gifs = $url.'/acidcodes/assets/images/gifs/select-carousel/'.$param['param_key'].'.gif';
+$gifs = $url.'/essential-content-shortcodes/assets/images/gifs/select-carousel/'.$param['param_key'].'.gif';
 ?>
 
 <span class="<?php echo $class; ?>" >

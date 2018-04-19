@@ -13,7 +13,7 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
         $this->direct = false;
         $this->name = "Carousel";
         $this->code = "slider";
-        $this->icon = "fas fa-images";
+        $this->icon = "fas fa-image";
 
         $this->params = array(
             'number' => array(

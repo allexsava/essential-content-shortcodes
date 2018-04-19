@@ -50,15 +50,15 @@ class AcidCodesShortcode {
 
 		if ( empty( $shortcodes ) ) {
 			$shortcodes = array(
-				'Button',
                 'Icon',
-                'Separator',
-                'Slider',
+				'Button',
                 'Parallax',
+                'Heading',
+                'Slider',
+                'Quote',
                 'TeamMember',
                 'ProgressBar',
-                'Quote',
-                'Heading',
+                'Separator',
 			);
 		}
 

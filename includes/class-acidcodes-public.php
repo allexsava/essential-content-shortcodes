@@ -75,7 +75,7 @@ class AcidCodesShortcodes_Public {
          * class.
          */
 
-        wp_enqueue_style( $this->acidcodes, plugin_dir_url( __FILE__ ) . '../assets/css/materialize/frontend.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->acidcodes, plugin_dir_url( __FILE__ ) . '../assets/css/materialize/frontend_materialize.css', array(), $this->version, 'all' );
     }
 
     public function enqueue_scripts() {

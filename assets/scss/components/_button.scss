@@ -1,10 +1,13 @@
 .entry-content a.acidcode__btn, .c-page__content a.acidcode__btn {
   z-index: 1;
   box-shadow: none;
-  background-color: #00e676;
+  background-color: #C9E967;
+  color: #484C5D;
 }
 .entry-content a.acidcode__btn:hover, .c-page__content a.acidcode__btn:hover {
   box-shadow: none;
+  color: #fff;
+  background-color: #484C5D;
 }
 .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small {
   @extend .font-style;

@@ -2743,10 +2743,13 @@ button.acidcode__btn--floating {
 .entry-content a.acidcode__btn, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn, .c-page__content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-small {
   z-index: 1;
   box-shadow: none;
-  background-color: #00e676; }
+  background-color: #C9E967;
+  color: #484C5D; }
 
 .entry-content a.acidcode__btn:hover, .entry-content a.acidcode__btn--size-large:hover, .entry-content a.acidcode__btn--size-small:hover, .c-page__content a.acidcode__btn:hover, .c-page__content a.acidcode__btn--size-large:hover, .c-page__content a.acidcode__btn--size-small:hover {
-  box-shadow: none; }
+  box-shadow: none;
+  color: #fff;
+  background-color: #484C5D; }
 
 .entry-content a.acidcode__btn--size-medium, .c-page__content a.acidcode__btn--size-medium {
   font-family: "Roboto", sans-serif;
@@ -2782,11 +2785,11 @@ button.acidcode__btn--floating {
   -moz-border-radius: 16px; }
 
 .entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline {
-  border: 2px solid #00E676;
+  border: 2px solid #C9E967;
   background-color: #fff;
-  color: #00E676; }
+  color: #C9E967; }
   .entry-content a.acidcode__btn--shape-outline:hover, .c-page__content a.acidcode__btn--shape-outline:hover {
-    background-color: #00E676;
+    background-color: #C9E967;
     color: #fff;
     box-shadow: none; }
 
@@ -2906,13 +2909,13 @@ a.middle-indicator-text {
   font-size: 14px; }
 
 .acidcode__team-member--position {
-  margin-top: 20px; }
+  margin: 0px; }
 
 .acidcode__team-member--description {
   margin: 0px 0px 20px 0px; }
 
 .acidcode__progress {
-  background-color: #69F0AE;
+  background-color: #484C5D;
   height: 11px; }
   .acidcode__progress .acidcode__progress-determinate {
     height: 11px;

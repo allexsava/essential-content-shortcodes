@@ -155,7 +155,6 @@ class AcidCodesShortcodes
         return $plugin_array;
     }
 
-
     function addto_mce_acidcodes_validate($plugin_array)
     {
         $plugin_array['validate'] = $this->plugin_url . 'assets/js/validate/jquery.validate.js';

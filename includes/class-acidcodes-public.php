@@ -76,6 +76,7 @@ class AcidCodesShortcodes_Public {
          */
 
         wp_enqueue_style( $this->acidcodes, plugin_dir_url( __FILE__ ) . '../assets/css/materialize/frontend_materialize.css', array(), $this->version, 'all' );
+        wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), $this->version, 'all');
     }
 
     public function enqueue_scripts() {
@@ -84,7 +85,6 @@ class AcidCodesShortcodes_Public {
         wp_enqueue_script('fontawesome-script');
         wp_register_script( 'main-script', plugin_dir_url( __FILE__ ) . '../assets/js/main.js', array(), $this->version, 'all' );
         wp_enqueue_script('main-script');
-
     }
 
 }

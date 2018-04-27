@@ -15,7 +15,7 @@
                     if(slider.hasClass('acidcode__carousel--full-width')){
                         slider_fullwidth = true;
 
-                        var arrows = `<div class="carousel-fixed-item"> 
+                        var arrows = `<div class="carousel-fixed-item">
                                         <div class="left">
                                             <a href="#" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
                                                 <i class="material-icons left  middle-indicator-text">chevron_left</i>

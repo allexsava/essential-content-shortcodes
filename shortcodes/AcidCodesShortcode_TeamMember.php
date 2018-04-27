@@ -40,7 +40,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
                 'name' => 'Image Link',
                 'admin_class' => 'col s6 third-child third-child'
             ),
-            'content' => array(
+            'content_text' => array(
                 'type' => 'textarea',
                 'name' => 'Description',
                 'required' => true,
@@ -91,7 +91,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             'title' => '',
             'image' => '',
             'imagelink' => '',
-            'content' => '',
+            'content_text' => '',
             'social_twitter' => '',
             'social_facebook' => '',
             'social_linkedin' => '',

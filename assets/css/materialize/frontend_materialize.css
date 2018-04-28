@@ -1744,9 +1744,9 @@ video.responsive-video {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1; }
+    z-index: 1; }
     .parallax-container .parallax img {
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       left: 50%;
       bottom: 0;
@@ -2147,13 +2147,13 @@ td, th {
             transform: scale(1); }
 
 .material-tooltip {
-  padding: 10px 8px;
+  padding: 8px;
   font-size: 1rem;
   z-index: 2000;
   background-color: transparent;
   border-radius: 2px;
   color: #fff;
-  min-height: 36px;
+  min-height: auto;
   line-height: 120%;
   opacity: 0;
   position: absolute;

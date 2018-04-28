@@ -1744,9 +1744,9 @@ video.responsive-video {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1; }
+    z-index: 1; }
     .parallax-container .parallax img {
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       left: 50%;
       bottom: 0;

@@ -2505,6 +2505,73 @@ button.acidcode__btn--floating {
   -webkit-transform: none;
           transform: none; }
 
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%; }
+  .carousel.carousel-slider {
+    top: 0;
+    left: 0; }
+    .carousel.carousel-slider .carousel-fixed-item {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      z-index: 1; }
+      .carousel.carousel-slider .carousel-fixed-item.with-indicators {
+        bottom: 68px; }
+    .carousel.carousel-slider .carousel-item {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .carousel.carousel-slider .carousel-item h2 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px; }
+      .carousel.carousel-slider .carousel-item p {
+        font-size: 15px; }
+  .carousel .carousel-item {
+    visibility: hidden;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .carousel .carousel-item > img {
+      width: 100%; }
+  .carousel .indicators {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0; }
+    .carousel .indicators .indicator-item {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      height: 8px;
+      width: 8px;
+      margin: 24px 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: background-color .3s;
+      border-radius: 50%; }
+      .carousel .indicators .indicator-item.active {
+        background-color: #fff; }
+  .carousel.scrolling .carousel-item .materialboxed,
+  .carousel .carousel-item:not(.active) .materialboxed {
+    pointer-events: none; }
+
 /*!
  * Waves v0.6.0
  * http://fian.my.id/Waves
@@ -2644,7 +2711,7 @@ button.acidcode__btn--floating {
     -webkit-transform: scale(1.5);
             transform: scale(1.5); } }
 
-.font-style, .entry-content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large {
+.font-style, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-large {
   font-family: "Roboto", sans-serif;
   font-weight: 300; }
 
@@ -2673,15 +2740,18 @@ button.acidcode__btn--floating {
   color: #00E676;
   margin: -1rem 30px 0px 0px; }
 
-.entry-content a.acidcode__btn, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-small {
+.entry-content a.acidcode__btn, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn, .c-page__content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-small {
   z-index: 1;
   box-shadow: none;
-  background-color: #00e676; }
+  background-color: #C9E967;
+  color: #484C5D; }
 
-.entry-content a.acidcode__btn:hover, .entry-content a.acidcode__btn--size-large:hover, .entry-content a.acidcode__btn--size-small:hover {
-  box-shadow: none; }
+.entry-content a.acidcode__btn:hover, .entry-content a.acidcode__btn--size-large:hover, .entry-content a.acidcode__btn--size-small:hover, .c-page__content a.acidcode__btn:hover, .c-page__content a.acidcode__btn--size-large:hover, .c-page__content a.acidcode__btn--size-small:hover {
+  box-shadow: none;
+  color: #fff;
+  background-color: #484C5D; }
 
-.entry-content a.acidcode__btn--size-medium {
+.entry-content a.acidcode__btn--size-medium, .c-page__content a.acidcode__btn--size-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -2690,7 +2760,7 @@ button.acidcode__btn--floating {
   letter-spacing: 0.5px;
   padding: 0 20px; }
 
-.entry-content a.acidcode__btn--size-huge {
+.entry-content a.acidcode__btn--size-huge, .c-page__content a.acidcode__btn--size-huge {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -2699,43 +2769,43 @@ button.acidcode__btn--floating {
   letter-spacing: 0.5px;
   padding: 0 35px; }
 
-.entry-content a.acidcode__btn--shape-square {
+.entry-content a.acidcode__btn--shape-square, .c-page__content a.acidcode__btn--shape-square {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px; }
 
-.entry-content a.acidcode__btn--shape-rounded {
+.entry-content a.acidcode__btn--shape-rounded, .c-page__content a.acidcode__btn--shape-rounded {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px; }
 
-.entry-content a.acidcode__btn--shape-pill {
+.entry-content a.acidcode__btn--shape-pill, .c-page__content a.acidcode__btn--shape-pill {
   border-radius: 16px;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px; }
 
-.entry-content a.acidcode__btn--shape-outline {
-  border: 2px solid #00E676;
+.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline {
+  border: 2px solid #C9E967;
   background-color: #fff;
-  color: #00E676; }
-  .entry-content a.acidcode__btn--shape-outline:hover {
-    background-color: #00E676;
+  color: #C9E967; }
+  .entry-content a.acidcode__btn--shape-outline:hover, .c-page__content a.acidcode__btn--shape-outline:hover {
+    background-color: #C9E967;
     color: #fff;
     box-shadow: none; }
 
-.entry-content a.acidcode__btn--alignment-center {
+.entry-content a.acidcode__btn--alignment-center, .c-page__content a.acidcode__btn--alignment-center {
   margin: 0 auto;
   display: table; }
 
-.entry-content a.acidcode__btn--alignment-left {
+.entry-content a.acidcode__btn--alignment-left, .c-page__content a.acidcode__btn--alignment-left {
   float: left; }
 
-.entry-content a.acidcode__btn--alignment-right {
+.entry-content a.acidcode__btn--alignment-right, .c-page__content a.acidcode__btn--alignment-right {
   float: right; }
 
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 160px;
   width: 2em !important; }
 
 .acidcode__icon--type-rectangle {
@@ -2743,10 +2813,12 @@ svg.acidcode__icon--type-circle {
   width: 2em !important; }
 
 .acidcode__separator {
+  margin: 50px 0;
   background-color: transparent;
   border-bottom-width: 1px;
   border-bottom-color: black;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-top: none; }
 
 .acidcode__separator--weight-thin {
   border-bottom-width: 1px; }
@@ -2815,6 +2887,7 @@ svg.acidcode__icon--type-circle {
   font-size: 4.2rem; }
 
 a.middle-indicator-text {
+  padding: 20px;
   color: white !important; }
 
 .content-indicator {
@@ -2842,7 +2915,7 @@ a.middle-indicator-text {
   margin: 0px 0px 20px 0px; }
 
 .acidcode__progress {
-  background-color: #69F0AE;
+  background-color: #484C5D;
   height: 11px; }
   .acidcode__progress .acidcode__progress-determinate {
     height: 11px;

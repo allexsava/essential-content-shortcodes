@@ -88,6 +88,9 @@ class AcidCodesShortcode_Slider extends  AcidCodesShortcode {
                 'name'        => __( 'Slider Autoplay', 'acidcodes_txtd' ),
                 'admin_class' => 'col s6 checkbox-special-margin',
                 'is_text_tooltip' => true
+            ),
+            'url' => array(
+                'type' => 'hidden'
             )
 
         );

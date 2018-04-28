@@ -2746,7 +2746,8 @@ svg.acidcode__icon--type-circle {
   background-color: transparent;
   border-bottom-width: 1px;
   border-bottom-color: black;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-top: none; }
 
 .acidcode__separator--weight-thin {
   border-bottom-width: 1px; }

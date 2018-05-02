@@ -2825,7 +2825,8 @@ svg.acidcode__icon--type-circle {
   border-top: none; }
 
 .acidcode__separator--align-center {
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: auto; }
 
 .acidcode__separator--align-left {
   float: left; }

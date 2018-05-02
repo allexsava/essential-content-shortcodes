@@ -45,7 +45,7 @@
         <?php echo $this->get_clean_content($content); ?>
     </div>
 
-    <hr class="separator separator--striped"/>
+    <hr class="acidcode__team-member--separator"/>
 
     <div class="acidcode__team-member--footer">
         <ul class="acidcode__team-member--social-links-list">

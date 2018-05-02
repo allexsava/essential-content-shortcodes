@@ -107,8 +107,8 @@
       &.third-child--parallax {
         margin-bottom: -80px;
       }
-      &.markers {
-        @include margin(0, left);
+      &.markers, &.heading-align {
+        margin: 0;
       }
     }
 

@@ -1,5 +1,5 @@
 .acidcode__separator {
-  margin: 50px 0;
+  //margin: 50px 0;
   background-color: transparent;
   @include border-width(1px);
   @include border-color(black);
@@ -8,13 +8,13 @@
 }
 .acidcode__separator--align {
   &-center {
-    @extend .align-center;
+    @include margin(0 auto)
   }
   &-left {
-    @extend .align-left;
+    float: left;
   }
   &-right {
-    @extend .align-right;
+    float: right;
   }
 }
 .acidcode__separator--weight {

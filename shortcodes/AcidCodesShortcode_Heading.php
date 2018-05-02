@@ -25,6 +25,18 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
                 'name'        => 'Heading',
                 'required' => true,
                 'admin_class' => 'col s6 span7 push1'
+            ),
+            'alignment'      => array(
+                'type'        => 'select',
+                'name'        => __( 'Alignment', 'acidcodes_txtd' ),
+                'options'     => array(
+                    '' => 'Select Alignment',
+                    'left' => __( 'Left', 'acidcodes_txtd' ),
+                    'center'  => __( 'Center', 'acidcodes_txtd' ),
+                    'right'  => __( 'Right', 'acidcodes_txtd' )
+                ),
+                'admin_class' => 'input-field hide-list heading-align scroll-height-separator col s6',
+                'required' => true
             )
 		);
 

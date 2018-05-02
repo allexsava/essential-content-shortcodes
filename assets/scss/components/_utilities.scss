@@ -21,6 +21,10 @@ $rectangle-hover: #69F0AE;
     margin: #{$var};
   }
 }
+@mixin margin-direction($property, $direction: false) {
+  @if $direction { margin-#{$direction}: $property; }
+  @else { margin: $property; }
+}
 @mixin float($float) {
   float: $float;
 }
@@ -92,6 +96,6 @@ $rectangle-hover: #69F0AE;
   font-family: sans-serif;
   display: block;
   @include float(left);
-  color: #00E676;
+  color: #c9e967;
   @include margin(-1rem 30px 0px 0px);
 }

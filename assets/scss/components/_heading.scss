@@ -1,3 +1,23 @@
-.acidcode__heading-subtitle {
-  font-style: italic;
+.acidcode__heading {
+  &-subtitle {
+    font-style: italic;
+    margin-bottom: 0;
+  }
+  &-title {
+    padding-top: 0;
+  }
+  &--alignment {
+    &-left {
+      float: left;
+      text-align: center;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-right {
+      float: right;
+      text-align: center;
+    }
+  }
+
 }

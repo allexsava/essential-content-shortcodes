@@ -12,6 +12,7 @@ require_once 'util.php';
 class AcidCodesShortcode {
 
 	public $plug_dir;
+	public $background;
 	protected $shortcode;
 	protected $settings;
 	protected $params;
@@ -29,7 +30,6 @@ class AcidCodesShortcode {
 	protected $meta_prefix;
 
 	public function __construct() {
-
 		$this->plug_dir    = plugins_url();
 		$this->self_closed = false;
 		$this->one_line    = false;
@@ -86,6 +86,7 @@ class AcidCodesShortcode {
 				$this->shortcodes[ $shortcode_class ]["params"] = $shortcode->params;
 			}
 		}
+
 	}
 
 	public function get_shortcodes() {

@@ -1,18 +1,18 @@
 .acidcode__team-member--social-link {
   &__link {
-    @include padding(0px 35px 0px 0px);
+    @include padding(0 35px 0 0);
     @include box-shadow(none !important);
   }
   display: inline-block;
 }
 .acidcode__team-member--name {
-  @include margin(25px 0px 0px 0px);
+  @include margin(25px 0 15px 0);
   @extend .align-left;
   font-size: 14px;
 }
 .acidcode__team-member--position {
-  @include margin(0px);
+  @include margin(0 0 10px 0);
 }
 .acidcode__team-member--description {
-  @include margin(0px 0px 20px 0px);
+  @include margin(0 0 20px 0);
 }

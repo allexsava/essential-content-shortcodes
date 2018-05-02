@@ -29,7 +29,7 @@ class AcidCodesShortcode_TeamMember extends  AcidCodesShortcode {
             ),
             'title' => array(
                 'type' => 'text',
-                'name' => 'Title',
+                'name' => 'Role',
                 'admin_class' => 'col s6 second-child',
                 'help-text'   => 'eg Frontend Developer, CEO',
                 'is_text_tooltip' => true

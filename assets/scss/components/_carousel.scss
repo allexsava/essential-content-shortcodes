@@ -30,6 +30,7 @@
   font-size: 4.2rem;
 }
 a.middle-indicator-text{
+  padding: 20px;
   color:white !important;
 }
 .content-indicator{
@@ -38,3 +39,4 @@ a.middle-indicator-text{
   background: none;
   @include border-radius(50px);
 }
+

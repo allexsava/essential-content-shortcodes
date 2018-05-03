@@ -9,14 +9,14 @@ if (isset($param['image_uploader'])) $image_uploader = $param['image_uploader'];
 
 $url = plugins_url();
 
-$gifs = $url.'/acidcodes/assets/images/gifs/select-effect/'.$param['param_key'].'.gif';
+$gifs = $url.'/essential-content-shortcodes/assets/images/gifs/select-effect/'.$param['param_key'].'.gif';
 
 if ( !isset($param['number'])){ ?>
     <span class="<?php echo $class; ?>"  >
     <label for="<?php echo $param['param_key'] ?>"></label>
     <div class="media_image_holder <?php echo $tooltipped_input . " " .$image_uploader  ?>" data-gifs-loc="<?php echo $gifs ?>" data-position="<?php echo $tooltip_position ?>">
         <i class="fas fa-image acidcode__image-upload"></i>
-        <label>Add images</label>
+        <label>Add image</label>
         <input type="hidden" class="media_image_input" name="<?php echo $param['param_key'] ?>" />
         <img class="upload_preview" />
         <!--        <i class="fas fa-edit" ></i>-->

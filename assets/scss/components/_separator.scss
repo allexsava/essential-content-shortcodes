@@ -1,18 +1,21 @@
 .acidcode__separator {
+  //margin: 50px 0;
   background-color: transparent;
   @include border-width(1px);
   @include border-color(black);
   @include border-style(solid);
+  border-top: none;
 }
 .acidcode__separator--align {
   &-center {
-    @extend .align-center;
+    margin-right: auto;
+    margin-left: auto;
   }
   &-left {
-    @extend .align-left;
+    float: left;
   }
   &-right {
-    @extend .align-right;
+    float: right;
   }
 }
 .acidcode__separator--weight {

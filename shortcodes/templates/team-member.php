@@ -1,7 +1,3 @@
-<?php
-$content = !empty($content) ? $this->get_clean_content($content) : '';
-?>
-
 <div class="acidcode  acidcode__team-member <?php echo $class ?>">
 
 	<?php if ( !empty($image) ) : ?>
@@ -49,7 +45,7 @@ $content = !empty($content) ? $this->get_clean_content($content) : '';
         <?php echo $this->get_clean_content($content); ?>
     </div>
 
-    <hr class="separator separator--striped"/>
+    <hr class="acidcode__team-member--separator"/>
 
     <div class="acidcode__team-member--footer">
         <ul class="acidcode__team-member--social-links-list">

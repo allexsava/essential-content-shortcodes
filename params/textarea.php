@@ -4,7 +4,7 @@ $is_content = '';
 $required = '';
 $rows = 3;
 if (isset($param['admin_class'])) $class = $param['admin_class'];
-if (isset($param['is_content'])) $is_content = 'is_shortcode_content';
+if (isset($param['is_content'])) $is_content = ' is_shortcode_content';
 if (isset($param['rows'])) $rows = $param['rows'];
 if (isset($param['required'])) $required = "required";
 ?>

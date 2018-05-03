@@ -79,8 +79,19 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
                 'required' => true,
                 'admin_class' => 'scroll-height-separator input-field hide-list col s6',
                 'help-text'   => 'eg dark, light, color'
+            ),
+            'width'    => array(
+                'type'        => 'range',
+                'name'        => __( 'Slider Width'),
+                'admin_class' => 'range-field col s6 special-margin--bottom'
+            ),
+            'margin'    => array(
+                'type'        => 'range',
+                'name'        => __( 'Top & Bottom Spacing'),
+                'admin_class' => 'range-field col s6 special-margin--bottom'
             )
         );
+
 
         // allow the theme or other plugins to "hook" into this shortcode's params
         $this->params = apply_filters('acidcodes_filter_params_for_' . strtolower($this->name), $this->params);
@@ -88,8 +99,10 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
         add_shortcode('hr', array($this, 'add_shortcode'));
     }
 
+
     public function add_shortcode($atts, $content)
     {
+
         //create an array with only the registered params - dynamic since we filter them and have no way of knowing for sure
         $extract_params = array();
         if (isset($this->params)) {
@@ -98,6 +111,8 @@ class AcidCodesShortcode_Separator extends AcidCodesShortcode
             }
         }
         extract(shortcode_atts($extract_params, $atts));
+
+
 
         /**
          * Template localization between plugin and theme

@@ -7,7 +7,7 @@
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 
 ?>
-<blockquote <?php echo $classes; ?>>
+<div <?php echo $classes; ?>>
     <div class="acidcode__quote-content"><?php echo $this->get_clean_content($content); ?></div>
 
     <?php if(!empty($author)) : ?>
@@ -27,4 +27,4 @@
         <?php endif; ?>
 
     <?php endif; ?>
-</blockquote>
+</div>

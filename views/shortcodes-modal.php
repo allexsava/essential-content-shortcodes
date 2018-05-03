@@ -14,7 +14,7 @@ if ($_GET['post_id']) {
 } elseif ($post === null) {
     $post = get_post(1);
 } ?>
-<div id="acidcodes_shortcodes" data-plugin-url="<?php echo WP_PLUGIN_DIR.'/acidcodes/'; ?>">
+<div id="acidcodes_shortcodes" data-plugin-url="<?php echo WP_PLUGIN_DIR.'/essential-content-shortcodes/'; ?>">
     <div class="l_modal_header row">
         <div class="col s2">
             <button type="button" class="acidcode__btn acidcode__btn--back"><i
@@ -80,7 +80,6 @@ if ($_GET['post_id']) {
     </div>
     <div class="l_modal_footer row">
         <div class="col s6">
-            <a class="acidcode__btn btn_settings"><i class="fas fa-cogs"></i> <?php _e('Settings', 'acidcodes_txtd'); ?></a>
         </div>
         <div class="col s6">
             <div class="row">

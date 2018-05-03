@@ -58,24 +58,33 @@ gulp.task('assets/css', function () {
         .pipe(gulp.dest('./assets/css/', {"mode": "0644"}));
 });
 
-/* Materialize Only */
+/* Plugin Front End */
 
-gulp.task('material', ['materialize-backend.css'], function () {
-    return gulp.src('materialize-backend.css')
-        .pipe(gulp.dest('.'));
+gulp.task('frontend', ['frontend.css'], function () {
+    return gulp.src('frontend.css')
+        .pipe(gulp.dest('./assets/css/materialize/'));
 });
 
-gulp.task('materialize-backend.css', function () {
-    return gulp.src(['assets/scss/backend_materialize.scss'])
+gulp.task('frontend.css', ['assets/css/materialize'],  function () {
+    return gulp.src(['assets/scss/frontend_materialize.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('.', {"mode": "0644"}));
+        .pipe(gulp.dest('./assets/css/materialize/', {"mode": "0644"}));
 });
 
-gulp.task('watch-materialize', ['styles'], function () {
-    gulp.watch('assets/scss/materialize/**/*.scss', ['styles']);
+gulp.task('assets/css/materialize', function () {
+    return gulp.src(['assets/scss/frontend_materialize.scss'])
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./assets/css/materialize/', {"mode": "0644"}));
+});
+
+gulp.task('watch-materialize', ['frontend'], function () {
+    gulp.watch('assets/scss/frontend_materialize.scss', ['frontend']);
 });
 
 /**
@@ -112,7 +121,7 @@ gulp.task('start', ['styles'], function () {
 gulp.task( 'zip', ['build'], function() {
 
     return gulp.src( './' )
-        .pipe( exec( 'cd ./../; rm -rf acidcodes.zip; cd ./build/; zip -r -X ./../acidcodes.zip ./acidcodes; cd ./../; rm -rf build' ) );
+        .pipe( exec( 'cd ./../; rm -rf essential-content-shortcodes.zip; cd ./build/; zip -r -X ./../essential-content-shortcodes.zip ./essential-content-shortcodes; cd ./../; rm -rf build' ) );
 
 } );
 
@@ -122,7 +131,7 @@ gulp.task( 'zip', ['build'], function() {
 gulp.task( 'copy-folder', function() {
 
     return gulp.src( './' )
-        .pipe( exec( 'rm -Rf ./../build; mkdir -p ./../build/acidcodes; cp -Rf ./* ./../build/acidcodes/' ) );
+        .pipe( exec( 'rm -Rf ./../build; mkdir -p ./../build/essential-content-shortcodes; cp -Rf ./* ./../build/essential-content-shortcodes/' ) );
 } );
 
 /**
@@ -160,7 +169,7 @@ gulp.task( 'build', ['copy-folder'], function() {
     ];
 
     files_to_remove.forEach( function( e, k ) {
-        files_to_remove[k] = '../build/acidcodes/' + e;
+        files_to_remove[k] = '../build/essential-content-shortcodes/' + e;
     } );
 
     return gulp.src( files_to_remove, {read: false} )

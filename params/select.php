@@ -10,7 +10,7 @@ if (isset($param['tooltip-position'])) $tooltip_position = $param['tooltip-posit
 
 $url = plugins_url();
 
-$gifs = $url.'/acidcodes/assets/images/gifs/';
+$gifs = $url.'/essential-content-shortcodes/assets/images/gifs/';
 
 ?>
 

@@ -1,17 +1,16 @@
-.acidcode__progress {
-  background-color: $rectangle-hover;
+.progress.acidcode__progress {
   height: 11px;
   .acidcode__progress-determinate {
     height: 11px;
-    background-color: #05af5c;
   }
 }
 .acidcode__markers-on {
   position: absolute;
-  top: -3px;
+  top: -8px;
   right: -35px;
   color: #242423;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .acidcode__markers-off {

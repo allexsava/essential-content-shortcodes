@@ -10,7 +10,7 @@ class AcidCodesShortcode_Parallax extends AcidCodesShortcode {
         $this->self_closed = true;
         $this->name        = "Parallax";
         $this->code        = "parallax";
-        $this->icon        = "fas fa-heading";
+        $this->icon        = "fas fa-images";
         $this->direct      = false;
 
         $this->params = array(

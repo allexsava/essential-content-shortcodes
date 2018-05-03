@@ -6,9 +6,7 @@ error_log
 .idea
 labels.json
 package-lock.json
-/assets/css/style.css
-/assets/css/style.css.map
-/assets/css/rtl.css
 style.css.map
 rtl.css
 style.css
+comments.txt

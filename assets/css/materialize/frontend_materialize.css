@@ -2817,6 +2817,69 @@ svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
   width: 2em !important; }
 
+svg.acidcode__icon--color-red {
+  color: #f44336; }
+
+svg.acidcode__icon--color-pink {
+  color: #e91e63; }
+
+svg.acidcode__icon--color-purple {
+  color: #9c27b0; }
+
+svg.acidcode__icon--color-deep-purple {
+  color: #673ab7; }
+
+svg.acidcode__icon--color-indigo {
+  color: #3f51b5; }
+
+svg.acidcode__icon--color-blue {
+  color: #2196f3; }
+
+svg.acidcode__icon--color-light-blue {
+  color: #03a9f4; }
+
+svg.acidcode__icon--color-cyan {
+  color: #00bcd4; }
+
+svg.acidcode__icon--color-teal {
+  color: #009688; }
+
+svg.acidcode__icon--color-green {
+  color: #4caf50; }
+
+svg.acidcode__icon--color-light-green {
+  color: #8bc34a; }
+
+svg.acidcode__icon--color-lime {
+  color: #cddc39; }
+
+svg.acidcode__icon--color-yellow {
+  color: #ffeb3b; }
+
+svg.acidcode__icon--color-amber {
+  color: #ffc107; }
+
+svg.acidcode__icon--color-orange {
+  color: #ff9800; }
+
+svg.acidcode__icon--color-deep-orange {
+  color: #ff5722; }
+
+svg.acidcode__icon--color-brown {
+  color: #795548; }
+
+svg.acidcode__icon--color-gray {
+  color: #9e9e9e; }
+
+svg.acidcode__icon--color-blue-gray {
+  color: #607d8b; }
+
+svg.acidcode__icon--color-black {
+  color: #000000; }
+
+svg.acidcode__icon--color-white {
+  color: #ffffff; }
+
 .acidcode__separator {
   background-color: transparent;
   border-bottom-width: 1px;

@@ -2717,13 +2717,13 @@ button.acidcode__btn--floating {
 
 /* Functions */
 /* Button section */
-.align-center, .acidcode__separator--align-center {
+.align-center {
   text-align: center; }
 
-.align-left, .acidcode__separator--align-left, .acidcode__team-member--name {
+.align-left, .acidcode__team-member--name {
   text-align: left; }
 
-.align-right, .acidcode__separator--align-right {
+.align-right {
   text-align: right; }
 
 /* Separator section */
@@ -2732,12 +2732,12 @@ button.acidcode__btn--floating {
   height: 2em; }
 
 /* Quote Section */
-.blockquote-general, blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-small:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium:before, blockquote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
+.blockquote-general, .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-regular:before, .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-small:before, .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-medium:before, .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
   content: "\201C";
   font-family: sans-serif;
   display: block;
   float: left;
-  color: #00E676;
+  color: #c9e967;
   margin: -1rem 30px 0px 0px; }
 
 .entry-content a.acidcode__btn, .entry-content a.acidcode__btn--size-large, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn, .c-page__content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-small {
@@ -2817,13 +2817,85 @@ svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);
   width: 2em !important; }
 
+svg.acidcode__icon--color-red {
+  color: #f44336; }
+
+svg.acidcode__icon--color-pink {
+  color: #e91e63; }
+
+svg.acidcode__icon--color-purple {
+  color: #9c27b0; }
+
+svg.acidcode__icon--color-deep-purple {
+  color: #673ab7; }
+
+svg.acidcode__icon--color-indigo {
+  color: #3f51b5; }
+
+svg.acidcode__icon--color-blue {
+  color: #2196f3; }
+
+svg.acidcode__icon--color-light-blue {
+  color: #03a9f4; }
+
+svg.acidcode__icon--color-cyan {
+  color: #00bcd4; }
+
+svg.acidcode__icon--color-teal {
+  color: #009688; }
+
+svg.acidcode__icon--color-green {
+  color: #4caf50; }
+
+svg.acidcode__icon--color-light-green {
+  color: #8bc34a; }
+
+svg.acidcode__icon--color-lime {
+  color: #cddc39; }
+
+svg.acidcode__icon--color-yellow {
+  color: #ffeb3b; }
+
+svg.acidcode__icon--color-amber {
+  color: #ffc107; }
+
+svg.acidcode__icon--color-orange {
+  color: #ff9800; }
+
+svg.acidcode__icon--color-deep-orange {
+  color: #ff5722; }
+
+svg.acidcode__icon--color-brown {
+  color: #795548; }
+
+svg.acidcode__icon--color-gray {
+  color: #9e9e9e; }
+
+svg.acidcode__icon--color-blue-gray {
+  color: #607d8b; }
+
+svg.acidcode__icon--color-black {
+  color: #000000; }
+
+svg.acidcode__icon--color-white {
+  color: #ffffff; }
+
 .acidcode__separator {
-  margin: 50px 0;
   background-color: transparent;
   border-bottom-width: 1px;
   border-bottom-color: black;
   border-bottom-style: solid;
   border-top: none; }
+
+.acidcode__separator--align-center {
+  margin-right: auto;
+  margin-left: auto; }
+
+.acidcode__separator--align-left {
+  float: left; }
+
+.acidcode__separator--align-right {
+  float: right; }
 
 .acidcode__separator--weight-thin {
   border-bottom-width: 1px; }
@@ -2906,89 +2978,96 @@ a.middle-indicator-text {
 .acidcode__team-member--social-link {
   display: inline-block; }
   .acidcode__team-member--social-link__link {
-    padding: 0px 35px 0px 0px;
+    padding: 0 35px 0 0;
     box-shadow: none !important; }
 
 .acidcode__team-member--name {
-  margin: 25px 0px 0px 0px;
+  margin: 25px 0 15px 0;
   font-size: 14px; }
 
 .acidcode__team-member--position {
-  margin: 0px; }
+  margin: 0 0 10px 0; }
 
 .acidcode__team-member--description {
-  margin: 0px 0px 20px 0px; }
+  margin: 0 0 20px 0; }
 
-.acidcode__progress {
-  background-color: #69F0AE;
+.progress.acidcode__progress {
   height: 11px; }
-  .acidcode__progress .acidcode__progress-determinate {
-    height: 11px;
-    background-color: #05af5c; }
+  .progress.acidcode__progress .acidcode__progress-determinate {
+    height: 11px; }
 
 .acidcode__markers-on {
   position: absolute;
-  top: -3px;
+  top: -8px;
   right: -35px;
   color: #242423;
-  font-size: 12px; }
+  font-size: 12px;
+  font-weight: bold; }
 
 .acidcode__markers-off {
   display: none; }
 
-blockquote.acidcode__quote--type-quote {
+.acidcode__quote.acidcode__quote--type-quote {
   border: none; }
-  blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular {
+  .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-regular {
     font-size: 16px; }
-    blockquote.acidcode__quote--type-quote.acidcode__quote--size-regular:before {
+    .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-regular:before {
       font-size: 90px;
       line-height: 1.1; }
-  blockquote.acidcode__quote--type-quote.acidcode__quote--size-small {
+  .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-small {
     font-size: 14px; }
-    blockquote.acidcode__quote--type-quote.acidcode__quote--size-small:before {
+    .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-small:before {
       font-size: 70px;
       line-height: 1.2; }
-  blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium {
+  .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-medium {
     font-size: 18px; }
-    blockquote.acidcode__quote--type-quote.acidcode__quote--size-medium:before {
+    .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-medium:before {
       line-height: 1.05;
-      font-size: 110px; }
-  blockquote.acidcode__quote--type-quote.acidcode__quote--size-big {
+      font-size: 110px;
+      margin-bottom: 60px; }
+  .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-big {
     font-size: 20px; }
-    blockquote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
+    .acidcode__quote.acidcode__quote--type-quote.acidcode__quote--size-big:before {
       font-size: 130px;
-      line-height: 1; }
-  blockquote.acidcode__quote--type-quote .acidcode__quote-content {
+      line-height: 1;
+      margin-bottom: 60px; }
+  .acidcode__quote.acidcode__quote--type-quote .acidcode__quote-content {
     margin: 0px 0px 20px 0px; }
-  blockquote.acidcode__quote--type-quote .acidcode__quote-author-name {
+  .acidcode__quote.acidcode__quote--type-quote .acidcode__quote-author-name {
     text-transform: uppercase; }
 
-blockquote.acidcode__quote--type-blockquote {
-  border-color: #00E676; }
-  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-regular {
+.acidcode__quote.acidcode__quote--type-blockquote {
+  border-left: 5px solid #c9e967; }
+  .acidcode__quote.acidcode__quote--type-blockquote.acidcode__quote--size-regular {
     font-size: 16px; }
-  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-small {
+  .acidcode__quote.acidcode__quote--type-blockquote.acidcode__quote--size-small {
     font-size: 14px; }
-  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-medium {
+  .acidcode__quote.acidcode__quote--type-blockquote.acidcode__quote--size-medium {
     font-size: 18px; }
-  blockquote.acidcode__quote--type-blockquote.acidcode__quote--size-big {
+  .acidcode__quote.acidcode__quote--type-blockquote.acidcode__quote--size-big {
     font-size: 20px; }
-  blockquote.acidcode__quote--type-blockquote .acidcode__quote-content {
+  .acidcode__quote.acidcode__quote--type-blockquote .acidcode__quote-content {
     margin: 0px 0px 20px 15px; }
-  blockquote.acidcode__quote--type-blockquote .acidcode__quote-author-name {
+  .acidcode__quote.acidcode__quote--type-blockquote .acidcode__quote-author-name {
     text-transform: uppercase;
     margin: 0px 0px 0px 15px; }
 
 .acidcode__heading-subtitle {
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 0; }
+
+.acidcode__heading-title {
+  padding-top: 0; }
 
 .acidcode__heading--alignment-left {
-  float: left; }
+  float: left;
+  text-align: center; }
 
-.acidcode__heading--alignment-left {
-  margin: 0 auto; }
+.acidcode__heading--alignment-center {
+  text-align: center; }
 
 .acidcode__heading--alignment-right {
-  float: right; }
+  float: right;
+  text-align: center; }
 
 /*# sourceMappingURL=frontend_materialize.css.map */

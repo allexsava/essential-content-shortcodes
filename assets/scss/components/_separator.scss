@@ -27,26 +27,71 @@
   }
 }
 .acidcode__separator--color {
-  &-light {
-    @include border-color(lightgray);
+  &-theia-color {
+    border-bottom-color: $theia-color;
   }
   &-red {
-    @include border-color(red);
+    border-bottom-color: color("red", "base");
   }
-  &-yellow {
-    @include border-color(yellow);
-  }
-  &-orange {
-    @include border-color(orange);
+  &-pink {
+    border-bottom-color: color("pink", "base");
   }
   &-purple {
-    @include border-color(purple);
+    border-bottom-color: color("purple", "base");
   }
-  &-green {
-    @include border-color(green);
+  &-deep-purple {
+    border-bottom-color: color("deep-purple", "base");
+  }
+  &-indigo {
+    border-bottom-color: color("indigo", "base");
+  }
+  &-blue {
+    border-bottom-color: color("blue", "base");
+  }
+  &-light-blue {
+    border-bottom-color: color("light-blue", "base");
+  }
+  &-cyan {
+    border-bottom-color: color("cyan", "base") ;
   }
   &-teal {
-    @include border-color(gray);
+    border-bottom-color: color("teal", "base");
+  }
+  &-green {
+    border-bottom-color: color("green", "base");
+  }
+  &-light-green {
+    border-bottom-color: color("light-green", "base");
+  }
+  &-lime {
+    border-bottom-color: color("lime", "base");
+  }
+  &-yellow {
+    border-bottom-color: color("yellow", "base");
+  }
+  &-amber {
+    border-bottom-color: color("amber", "base") ;
+  }
+  &-orange {
+    border-bottom-color: color("orange", "base") ;
+  }
+  &-deep-orange {
+    border-bottom-color: color("deep-orange", "base");
+  }
+  &-brown {
+    border-bottom-color: color("brown", "base");
+  }
+  &-gray {
+    border-bottom-color: color("grey", "base")
+  }
+  &-blue-gray {
+    border-bottom-color: color("blue-grey", "base");
+  }
+  &-black {
+    border-bottom-color: $black;
+  }
+  &-white {
+    border-bottom-color: $white;
   }
 }
 .acidcode__separator--style {

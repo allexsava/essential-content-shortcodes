@@ -26,6 +26,64 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
                 'required' => true,
                 'admin_class' => 'col s6 span7 push1'
             ),
+            'subheading_color' => array(
+                'type' => 'select',
+                'name' => 'Subheading Color',
+                'options' => array(
+                    '' => 'Select Color',
+                    'theia-color-text' => 'Theia Color',
+                    'red-text' => 'Red',
+                    'pink-text' => 'Pink',
+                    'purple-text' => 'Purple',
+                    'deep-purple-text' => 'Deep Purple',
+                    'indigo-text' => 'Indigo',
+                    'blue-text' => 'Blue',
+                    'light-blue-text' => 'Light Blue',
+                    'cyan-text' => 'Cyan',
+                    'teal-text' => 'Teal',
+                    'green-text' => 'Green',
+                    'light-green-text' => 'Light Green',
+                    'lime-text' => 'Lime',
+                    'yellow-text' => 'Yellow',
+                    'amber-text' => 'Amber',
+                    'orange-text' => 'Orange',
+                    'deep-orange-text' => 'Deep Orange',
+                    'brown-text' => 'Brown',
+                    'grey-text' => 'Grey',
+                    'blue-grey-text' => 'Blue Gray',
+                    'black-text' => 'Black',
+                ),
+                'admin_class' => 'input-field hide-list col s6 scroll-height'
+            ),
+            'heading_color' => array(
+                'type' => 'select',
+                'name' => 'Heading Color',
+                'options' => array(
+                    '' => 'Select Color',
+                    'theia-color-text' => 'Theia Color',
+                    'red-text' => 'Red',
+                    'pink-text' => 'Pink',
+                    'purple-text' => 'Purple',
+                    'deep-purple-text' => 'Deep Purple',
+                    'indigo-text' => 'Indigo',
+                    'blue-text' => 'Blue',
+                    'light-blue-text' => 'Light Blue',
+                    'cyan-text' => 'Cyan',
+                    'teal-text' => 'Teal',
+                    'green-text' => 'Green',
+                    'light-green-text' => 'Light Green',
+                    'lime-text' => 'Lime',
+                    'yellow-text' => 'Yellow',
+                    'amber-text' => 'Amber',
+                    'orange-text' => 'Orange',
+                    'deep-orange-text' => 'Deep Orange',
+                    'brown-text' => 'Brown',
+                    'grey-text' => 'Grey',
+                    'blue-grey-text' => 'Blue Gray',
+                    'black-text' => 'Black',
+                ),
+                'admin_class' => 'input-field hide-list col s6 scroll-height'
+            ),
             'alignment'      => array(
                 'type'        => 'select',
                 'name'        => __( 'Alignment', 'acidcodes_txtd' ),
@@ -35,7 +93,7 @@ class AcidCodesShortcode_Heading extends AcidCodesShortcode {
                     'center'  => __( 'Center', 'acidcodes_txtd' ),
                     'right'  => __( 'Right', 'acidcodes_txtd' )
                 ),
-                'admin_class' => 'input-field hide-list heading-align scroll-height-separator col s6',
+                'admin_class' => 'input-field hide-list tm-color scroll-height-separator col s6',
                 'required' => true
             )
 		);

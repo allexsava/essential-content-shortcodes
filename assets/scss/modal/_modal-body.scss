@@ -107,9 +107,19 @@
       &.third-child--parallax {
         margin-bottom: -80px;
       }
-      &.markers, &.heading-align {
+      &.markers {
+        margin: 0;
+        padding-top: 15px;
+      }
+      &.heading-align {
         margin: 0;
       }
+      &.tm-color {
+        margin-left: 0;
+      }
+      &.acidcode__newtab {
+        padding-top: 15px;
+    }
     }
 
     span.pb__help-text {

@@ -34,14 +34,14 @@
 
     <div class="acidcode__team-member--header">
 		<?php if ( !empty($name) ) : ?>
-    	   <h5 class="acidcode__team-member--name"><?php echo $name; ?></h5>
+    	   <h5 class="acidcode__team-member--name <?php echo $text_color; ?>"><?php echo $name; ?></h5>
     	<?php endif; ?>
     	<?php if ( !empty($title) ) : ?>
-            <h6 class="acidcode__team-member--position"><?php echo $title; ?></h6>
+            <h6 class="acidcode__team-member--position <?php echo $text_color; ?>"><?php echo $title; ?></h6>
     	<?php endif;?>
     </div>
 
-    <div class="acidcode__team-member--description">
+    <div class="acidcode__team-member--description <?php echo $text_color; ?>">
         <?php echo $this->get_clean_content($content); ?>
     </div>
 

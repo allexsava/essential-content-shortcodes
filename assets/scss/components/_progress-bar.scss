@@ -2,6 +2,12 @@
   height: 11px;
   .acidcode__progress-determinate {
     height: 11px;
+    &.theia-color {
+      background-color: $theia-color;
+    }
+  }
+  &.theia-color {
+    background-color: #e5efca;
   }
 }
 .acidcode__markers-on {

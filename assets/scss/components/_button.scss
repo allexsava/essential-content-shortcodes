@@ -1,14 +1,17 @@
 .entry-content a.acidcode__btn, .c-page__content a.acidcode__btn {
   width: max-content;
   box-shadow: none;
-  background-color: #C9E967;
-  color: #484C5D;
+  background-color: $theia-color;
+  color: #fff;
   z-index: 1;
+  &.theia-color-text {
+    color: $theia-color;
+  }
 }
 .entry-content a.acidcode__btn:hover, .c-page__content a.acidcode__btn:hover {
   box-shadow: none;
   color: #fff;
-  background-color: #484C5D;
+  background-color: $theia-color-text;
 }
 .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small {
   @extend .font-style;
@@ -39,17 +42,6 @@
 @include border-radius(16px);
 }
 
-.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline {
-  border: 2px solid $accent-color;
-  background-color: #fff;
-  color: $accent-color;
-  &:hover {
-    background-color: $accent-color;
-    color: #fff;
-    box-shadow: none;
-  }
-}
-
 
 .entry-content a.acidcode__btn--alignment-center, .c-page__content a.acidcode__btn--alignment-center {
   @include margin(0 auto);
@@ -61,4 +53,165 @@
 }
 .entry-content a.acidcode__btn--alignment-right, .c-page__content a.acidcode__btn--alignment-right {
   float: right;
+}
+
+.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline {
+  border: 2px solid $theia-color;
+  background-color: #fff;
+  color: $theia-color;
+  &:hover {
+    background-color: $theia-color;
+    color: #fff;
+    box-shadow: none;
+  }
+  &.red {
+    background-color: #fff!important;
+    border-color: color("red", "base");
+  }
+  &.pink {
+    background-color: #fff!important;
+    border-color: color("pink", "base");
+  }
+  &.purple {
+    background-color: #fff!important;
+    border-color: color("purple", "base");
+  }
+  &.deep-purple {
+    background-color: #fff!important;
+    border-color: color("deep-purple", "base");
+  }
+  &.indigo {
+    background-color: #fff!important;
+    border-color: color("indigo", "base");
+  }
+  &.blue {
+    background-color: #fff!important;
+    border-color: color("blue", "base");
+  }
+  &.light-blue {
+    background-color: #fff!important;
+    border-color: color("light-blue", "base");
+  }
+  &.cyan {
+    background-color: #fff!important;
+    border-color: color("cyan", "base") ;
+  }
+  &.teal {
+    background-color: #fff!important;
+    border-color: color("teal", "base");
+  }
+  &.green {
+    background-color: #fff!important;
+    border-color: color("green", "base");
+  }
+  &.light-green {
+    background-color: #fff!important;
+    border-color: color("light-green", "base");
+  }
+  &.lime {
+    background-color: #fff!important;
+    border-color: color("lime", "base");
+  }
+  &.yellow {
+    background-color: #fff!important;
+    border-color: color("yellow", "base");
+  }
+  &.amber {
+    background-color: #fff!important;
+    border-color: color("amber", "base") ;
+  }
+  &.orange {
+    background-color: #fff!important;
+    border-color: color("orange", "base") ;
+  }
+  &.deep-orange {
+    background-color: #fff!important;
+    border-color: color("deep-orange", "base");
+  }
+  &.brown {
+    background-color: #fff!important;
+    border-color: color("brown", "base");
+  }
+  &.gray {
+    background-color: #fff!important;
+    border-color: color("grey", "base")
+  }
+  &.blue-gray {
+    background-color: #fff!important;
+    border-color: color("blue-grey", "base");
+  }
+  &.black {
+    background-color: #fff!important;
+    border-color: #000000;
+  }
+  &.white {
+    background-color: #fff!important;
+    border-color: #ffffff;
+  }
+}
+
+.entry-content a.acidcode__btn--hover, .c-page__content a.acidcode__btn--hover {
+  &-red:hover {
+    background-color: color("red", "base") !important;
+  }
+  &-pink:hover {
+    background-color: color("pink", "base") !important;
+  }
+  &-purple:hover {
+    background-color: color("purple", "base") !important;
+  }
+  &-deep-purple:hover {
+    background-color: color("deep-purple", "base") !important;
+  }
+  &-indigo:hover {
+    background-color: color("indigo", "base") !important;
+  }
+  &-blue:hover {
+    background-color: color("blue", "base") !important;
+  }
+  &-light-blue:hover {
+    background-color: color("light-blue", "base") !important;
+  }
+  &-cyan:hover {
+    background-color: color("cyan", "base") !important;
+  }
+  &-teal:hover {
+    background-color: color("teal", "base") !important;
+  }
+  &-green:hover {
+    background-color: color("green", "base") !important;
+  }
+  &-light-green:hover {
+    background-color: color("light-green", "base") !important;
+  }
+  &-lime:hover {
+    background-color: color("lime", "base") !important;
+  }
+  &-yellow:hover {
+    background-color: color("yellow", "base") !important;
+  }
+  &-amber:hover {
+    background-color: color("amber", "base") !important;
+  }
+  &-orange:hover {
+    background-color: color("orange", "base") !important;
+  }
+  &-deep-orange:hover {
+    background-color: color("deep-orange", "base") !important;
+  }
+  &-brown:hover {
+    background-color: color("brown", "base") !important;
+  }
+  &-gray:hover {
+    background-color: color("grey", "base") !important;
+  }
+  &-blue-gray:hover {
+    background-color: color("blue-grey", "base") !important;
+  }
+  &-black:hover {
+    background-color: #000000 !important;
+  }
+  &-white:hover {
+    background-color: #ffffff !important;
+  }
 }

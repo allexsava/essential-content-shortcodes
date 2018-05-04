@@ -23,7 +23,7 @@
   left: 50%;
   margin: 0 0 0 -300px;
   width: 580px;
-  background: #FFF;
+  background: #ffffff;
   position: absolute;
   z-index: 160005; }
   #acidcodes_shortcodes_modal.reveal-modal #acidcodes_shortcodes {
@@ -69,17 +69,17 @@ li.icon svg, li.icon.active svg {
   visibility: hidden; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back svg {
     margin-right: 0px;
-    color: #FFF; }
+    color: #ffffff; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back span {
     transition: all 0.1s ease-in;
     opacity: 0;
     float: right;
     margin: 0 0 0 5px;
-    color: #FFF;
+    color: #ffffff;
     line-height: 1.1; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back.active {
     visibility: visible;
-    color: #FFF; }
+    color: #ffffff; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover i {
     margin: 0 5px 0 0; }
   #acidcodes_shortcodes_modal .acidcode__btn.acidcode__btn--back:hover span {
@@ -88,7 +88,7 @@ li.icon svg, li.icon.active svg {
 #acidcodes_shortcodes_modal .acidcode__btn.close {
   padding: 10px 15px;
   float: right;
-  color: #FFF;
+  color: #ffffff;
   opacity: 1; }
   #acidcodes_shortcodes_modal .acidcode__btn.close svg {
     float: right;
@@ -106,7 +106,7 @@ li.icon svg, li.icon.active svg {
   #acidcodes_shortcodes_modal .acidcode__btn.btn_primary:hover {
     background: #00E676;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
-    color: #FFF; }
+    color: #ffffff; }
   #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled {
     cursor: not-allowed; }
     #acidcodes_shortcodes_modal .acidcode__btn.btn_primary.disabled svg {
@@ -149,16 +149,16 @@ li.icon svg, li.icon.active svg {
   display: none; }
 
 #acidcodes_shortcodes_modal .dropdown-content li > a {
-  color: #000; }
+  color: #000000; }
 
 #acidcodes_shortcodes_modal .dropdown-content li > span {
-  color: #000; }
+  color: #000000; }
   #acidcodes_shortcodes_modal .dropdown-content li > span:hover {
-    color: #FFF;
+    color: #ffffff;
     background-color: #69F0AE; }
 
 #acidcodes_shortcodes_modal .dropdown-content li.active > span {
-  color: #FFF;
+  color: #ffffff;
   background-color: #00E676; }
 
 ul.dropdown-content.select-dropdown::-webkit-scrollbar {
@@ -209,7 +209,7 @@ li.icon {
   li.icon.active {
     background-color: #69F0AE; }
     li.icon.active svg {
-      color: #FFF;
+      color: #ffffff;
       padding: 5px;
       transition: padding 0.5s; }
   li.icon:hover {
@@ -307,7 +307,7 @@ div.acid_icon_list {
 .acidcode__image-upload {
   font-family: 'Roboto', sans-serif;
   font-size: 40px;
-  color: #FFF;
+  color: #ffffff;
   text-align: center; }
 
 #TB_window {
@@ -319,7 +319,7 @@ div.acid_icon_list {
   float: left; }
 
 #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover, #acidcodes_shortcodes_modal .l_modal_body .l_three_col > li a:hover svg {
-  color: #FFF;
+  color: #ffffff;
   transition: all 0.4s; }
 
 #acidcodes_shortcodes_modal .l_modal_body {
@@ -401,8 +401,15 @@ div.acid_icon_list {
             transform: translateY(-100%); }
   #acidcodes_shortcodes_modal .l_modal_body .s6.third-child--parallax {
     margin-bottom: -80px; }
-  #acidcodes_shortcodes_modal .l_modal_body .s6.markers, #acidcodes_shortcodes_modal .l_modal_body .s6.heading-align {
+  #acidcodes_shortcodes_modal .l_modal_body .s6.markers {
+    margin: 0;
+    padding-top: 15px; }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.heading-align {
     margin: 0; }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.tm-color {
+    margin-left: 0; }
+  #acidcodes_shortcodes_modal .l_modal_body .s6.acidcode__newtab {
+    padding-top: 15px; }
 
 #acidcodes_shortcodes_modal .l_modal_body span.pb__help-text {
   font-family: 'Roboto', sans-serif;
@@ -533,7 +540,7 @@ div.acid_icon_list {
 .l_modal_title.col.s8 {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: #FFF;
+  color: #ffffff;
   line-height: 16px;
   letter-spacing: 0.98px;
   text-align: center;

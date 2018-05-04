@@ -12,61 +12,61 @@ svg.acidcode__icon--type-circle {
 
 svg.acidcode__icon--color{
   &-red {
-    color: #f44336;
+    color: color("red", "base");
   }
   &-pink {
-    color: #e91e63;
+    color: color("pink", "base");
   }
   &-purple {
-    color: #9c27b0;
+    color: color("purple", "base");
   }
   &-deep-purple {
-    color: #673ab7;
+    color: color("deep-purple", "base");
   }
   &-indigo {
-    color: #3f51b5;
+    color: color("indigo", "base");
   }
   &-blue {
-    color: #2196f3;
+    color: color("blue", "base");
   }
   &-light-blue {
-    color: #03a9f4;
+    color: color("light-blue", "base");
   }
   &-cyan {
-    color: #00bcd4 ;
+    color: color("cyan", "base") ;
   }
   &-teal {
-    color: #009688;
+    color: color("teal", "base");
   }
   &-green {
-    color: #4caf50;
+    color: color("green", "base");
   }
   &-light-green {
-    color: #8bc34a;
+    color: color("light-green", "base");
   }
   &-lime {
-    color: #cddc39;
+    color: color("lime", "base");
   }
   &-yellow {
-    color: #ffeb3b;
+    color: color("yellow", "base");
   }
   &-amber {
-    color: #ffc107 ;
+    color: color("amber", "base") ;
   }
   &-orange {
-    color: #ff9800 ;
+    color: color("orange", "base") ;
   }
   &-deep-orange {
-    color: #ff5722;
+    color: color("deep-orange", "base");
   }
   &-brown {
-    color: #795548;
+    color: color("brown", "base");
   }
   &-gray {
-    color: #9e9e9e;
+    color: color("grey", "base")
   }
   &-blue-gray {
-    color: #607d8b;
+    color: color("blue-grey", "base");
   }
   &-black {
     color: #000000;

@@ -26,12 +26,42 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
                 'help-text'   => 'eg 96%, 100px',
                 'is_text_tooltip' => true
             ),
+            'progress_color' => array(
+                'type' => 'select',
+                'name' => 'Brogress Bar Color',
+                'options' => array(
+                    '' => 'Select Color',
+                    'theia-color' => 'Theia Color',
+                    'red' => 'Red',
+                    'pink' => 'Pink',
+                    'purple' => 'Purple',
+                    'deep-purple' => 'Deep Purple',
+                    'indigo' => 'Indigo',
+                    'blue' => 'Blue',
+                    'light-blue' => 'Light Blue',
+                    'cyan' => 'Cyan',
+                    'teal' => 'Teal',
+                    'green' => 'Green',
+                    'light-green' => 'Light Green',
+                    'lime' => 'Lime',
+                    'yellow' => 'Yellow',
+                    'amber' => 'Amber',
+                    'orange' => 'Orange',
+                    'deep-orange' => 'Deep Orange',
+                    'brown' => 'Brown',
+                    'grey' => 'Grey',
+                    'blue-grey' => 'Blue Grey',
+                    'black' => 'Black',
+                ),
+                'admin_class' => 'input-field hide-list col s6 scroll-height',
+                'required' => true,
+            ),
 	        'markers' => array(
 		        'type' => 'switch',
 		        'name' => 'Markers',
 		        'admin_class' => 'col s6 markers',
                 'tooltip'  => true,
-                'tooltip-position' => 'right'
+                'tooltip-position' => 'left'
 	        )
         );
 

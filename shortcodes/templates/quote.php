@@ -1,8 +1,10 @@
 <?php
     // get needed classes
-    $classes = 'acidcode  acidcode__quote';
+    $classes = 'acidcode acidcode__quote';
     $classes.= !empty($text_size) ? ' acidcode__quote--size-'.$text_size : '';
     $classes.= !empty($quote_type) ? ' acidcode__quote--type-'.$quote_type : '';
+    $classes.=!empty($element_color) ? ' acidcode__quote--color-'.$element_color : '';
+    $classes.=!empty($text_color) ? ' '.$text_color : '';
     // create class attribute
     $classes = $classes !== '' ? 'class="'.$classes.'"' : '';
 

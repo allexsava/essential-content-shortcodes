@@ -1139,7 +1139,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
             'class' => array(
                 'type' => 'select',
                 'name' => 'Icon Alignment',
-                'admin_class' => 'col s6 input-field hide-list special-margin--bottom',
+                'admin_class' => 'col s6 input-field hide-list scroll-height-separator',
                 'options' => array('Select Alignment',
                     '' => 'No Alignment',
                     'fa-pull-right' => 'Pull right',
@@ -1149,7 +1149,7 @@ class AcidCodesShortcode_Icon extends AcidCodesShortcode
             'transform' => array(
                 'type' => 'select',
                 'name' => 'Power Transforms',
-                'admin_class' => 'col s6 input-field hide-list scroll-height special-margin--bottom',
+                'admin_class' => 'col s6 input-field hide-list scroll-height scroll-height-separator',
                 'options' => array('Select Power',
                     '' => 'No Power Transform',
                     'rotate-90' => 'Icon rotate 90',

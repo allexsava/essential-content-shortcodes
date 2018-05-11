@@ -53,7 +53,7 @@ class AcidCodesShortcode_ProgressBar extends AcidCodesShortcode {
                     'blue-grey' => 'Blue Grey',
                     'black' => 'Black',
                 ),
-                'admin_class' => 'input-field hide-list col s6 scroll-height',
+                'admin_class' => 'input-field hide-list col s6 scroll-height scroll-height-separator',
                 'required' => true,
             ),
 	        'markers' => array(

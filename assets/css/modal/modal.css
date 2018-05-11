@@ -528,6 +528,9 @@ div.acid_icon_list {
 #acidcodes_shortcodes_modal .row.flex-grid {
   margin-bottom: 0; }
 
+#acidcodes_shortcodes_modal .parallax-section {
+  display: none; }
+
 #acidcodes_shortcodes_modal .l_modal_header {
   margin-bottom: 0; }
   #acidcodes_shortcodes_modal .l_modal_header {

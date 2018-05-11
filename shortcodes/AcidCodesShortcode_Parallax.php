@@ -18,7 +18,7 @@ class AcidCodesShortcode_Parallax extends AcidCodesShortcode {
                 'type'        => 'image',
                 'name'        => 'Image',
                 'required' => true,
-                'admin_class' => 'col s6',
+                'admin_class' => 'col s6 tm-color',
                 'tooltip'  => true,
                 'tooltip-position' => 'right',
                 'image_uploader' => 'image__uploader--pr'
@@ -26,12 +26,12 @@ class AcidCodesShortcode_Parallax extends AcidCodesShortcode {
             'subtitle' => array(
                 'type'        => 'text',
                 'name'        => 'Subheading',
-                'admin_class' => 'col s6'
+                'admin_class' => 'col s6 parallax-section'
             ),
             'title' => array(
                 'type'        => 'text',
                 'name'        => 'Heading',
-                'admin_class' => 'col s6 third-child third-child--parallax'
+                'admin_class' => 'col s6 third-child third-child--parallax parallax-section'
             ),
         );
 

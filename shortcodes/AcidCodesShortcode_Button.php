@@ -185,7 +185,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'pulse' => __( 'Pulse effect', 'acidcodes_txtd' ),
                     'waves-effect' => __( 'Waves effect', 'acidcodes_txtd' ),
                 ),
-                'admin_class' => 'input-field hide-list col s6 button_effect',
+                'admin_class' => 'input-field hide-list col s6 button_effect scroll-height-separator',
                 'tooltip'  => true,
                 'tooltip-position' => 'left'
             ),

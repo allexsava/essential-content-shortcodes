@@ -2784,9 +2784,9 @@ button.acidcode__btn--floating {
   -moz-border-radius: 5px; }
 
 .entry-content a.acidcode__btn--shape-pill, .c-page__content a.acidcode__btn--shape-pill {
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px; }
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px; }
 
 .entry-content a.acidcode__btn--alignment-center, .c-page__content a.acidcode__btn--alignment-center {
   margin: 0 auto;

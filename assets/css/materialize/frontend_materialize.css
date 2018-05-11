@@ -2710,10 +2710,6 @@ button.acidcode__btn--floating {
     -webkit-transform: scale(1.5);
             transform: scale(1.5); } }
 
-#acidcodes_shortcodes_modal h1, #acidcodes_shortcodes_modal h2, #acidcodes_shortcodes_modal h3, #acidcodes_shortcodes_modal h4, #acidcodes_shortcodes_modal h5, #acidcodes_shortcodes_modal h6, #acidcodes_shortcodes_modal p, #acidcodes_shortcodes_modal span {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
-
 .font-style, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-large {
   font-weight: 300; }
 
@@ -2938,6 +2934,9 @@ button.acidcode__btn--floating {
 
 .entry-content a.acidcode__btn--hover-white:hover, .c-page__content a.acidcode__btn--hover-white:hover {
   background-color: #ffffff !important; }
+
+.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline:hover {
+  color: #fff !important; }
 
 svg.acidcode__icon--type-circle {
   background: rgba(0, 0, 0, 0.2);

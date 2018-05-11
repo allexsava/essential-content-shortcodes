@@ -174,7 +174,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 'admin_class' => 'input-field hide-list col s6 scroll-height',
                 'required' => true,
                 'tooltip'  => true,
-                'tooltip-position' => 'right'
+                'tooltip-position' => 'left'
             ),
             'effect'      => array(
                 'type'        => 'select',
@@ -187,7 +187,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                 ),
                 'admin_class' => 'input-field hide-list col s6 button_effect scroll-height-separator',
                 'tooltip'  => true,
-                'tooltip-position' => 'left'
+                'tooltip-position' => 'right'
             ),
             'newtab'    => array(
                 'type'        => 'switch',
@@ -210,7 +210,7 @@ class AcidCodesShortcode_Button extends AcidCodesShortcode {
                     'waves-teal' => __( 'Teal', 'acidcodes_txtd' ),
 
                 ),
-                'admin_class' => 'input-field hide-list col s6 scroll-height-button hidden acidcode__waves-color',
+                'admin_class' => 'input-field hide-list col s6 scroll-height-button hidden tm-color acidcode__waves-color',
             )
         );
 

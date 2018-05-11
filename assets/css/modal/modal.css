@@ -247,6 +247,8 @@ div.acid_icon_list {
 
 .row .acidcode__list-icon {
   margin-right: 30px; }
+  .row .acidcode__list-icon .hidden {
+    display: none !important; }
 
 .icon__special-title {
   margin-top: -20px;

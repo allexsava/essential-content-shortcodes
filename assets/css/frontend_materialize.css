@@ -3182,7 +3182,7 @@ a.middle-indicator-text {
 
 .acidcode__markers-on {
   position: absolute;
-  top: -8px;
+  line-height: 1;
   right: -35px;
   color: #242423;
   font-size: 12px;

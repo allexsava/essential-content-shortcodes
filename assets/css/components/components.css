@@ -1,6 +1,3 @@
-.font-style, .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small, .entry-content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-large {
-  font-weight: 300; }
-
 /* Functions */
 /* Button section */
 .align-center {
@@ -45,21 +42,29 @@
   color: #fff;
   background-color: #484C5D; }
 
+.entry-content a.acidcode__btn--size-small.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--size-small.acidcode__btn--shape-outline {
+  line-height: 28.4px; }
+
 .entry-content a.acidcode__btn--size-medium, .c-page__content a.acidcode__btn--size-medium {
-  font-weight: 300;
   font-size: 14px;
   height: 43px;
   line-height: 43px;
   letter-spacing: 0.5px;
   padding: 0 20px; }
+  .entry-content a.acidcode__btn--size-medium.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--size-medium.acidcode__btn--shape-outline {
+    line-height: 39px; }
+
+.entry-content a.acidcode__btn--size-large.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--size-large.acidcode__btn--shape-outline {
+  line-height: 50px; }
 
 .entry-content a.acidcode__btn--size-huge, .c-page__content a.acidcode__btn--size-huge {
-  font-weight: 300;
   font-size: 20px;
   height: 70px;
   line-height: 70px;
   letter-spacing: 0.5px;
   padding: 0 35px; }
+  .entry-content a.acidcode__btn--size-huge.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--size-huge.acidcode__btn--shape-outline {
+    line-height: 66px; }
 
 .entry-content a.acidcode__btn--shape-square, .c-page__content a.acidcode__btn--shape-square {
   border-radius: 0px;
@@ -223,7 +228,7 @@
 .entry-content a.acidcode__btn--hover-white:hover, .c-page__content a.acidcode__btn--hover-white:hover {
   background-color: #ffffff !important; }
 
-.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline:hover {
+.entry-content a.acidcode__btn--shape-outline:hover, .c-page__content a.acidcode__btn--shape-outline:hover {
   color: #fff !important; }
 
 svg.acidcode__icon--type-circle {

@@ -14,20 +14,30 @@
   background-color: $theia-color-text;
 }
 .entry-content a.acidcode__btn--size-small, .c-page__content a.acidcode__btn--size-small {
-  @extend .font-style;
+  &.acidcode__btn--shape-outline {
+    line-height: 28.4px;
+  }
 }
 .entry-content a.acidcode__btn--size-medium, .c-page__content a.acidcode__btn--size-medium {
   @include font-source-roboto(14px, 43px, 43px, .5px);
   @include padding(0 20px);
+  &.acidcode__btn--shape-outline {
+    line-height: 39px;
+  }
 }
 
 .entry-content a.acidcode__btn--size-large, .c-page__content a.acidcode__btn--size-large {
-  @extend .font-style;
+  &.acidcode__btn--shape-outline {
+    line-height: 50px;
+  }
 }
 
 .entry-content a.acidcode__btn--size-huge, .c-page__content a.acidcode__btn--size-huge {
   @include font-source-roboto(20px, 70px, 70px, .5px);
   @include padding(0 35px);
+  &.acidcode__btn--shape-outline {
+    line-height: 66px;
+  }
 }
 
 .entry-content a.acidcode__btn--shape-square, .c-page__content a.acidcode__btn--shape-square {
@@ -217,6 +227,6 @@
   }
 }
 
-.entry-content a.acidcode__btn--shape-outline, .c-page__content a.acidcode__btn--shape-outline:hover {
+.entry-content a.acidcode__btn--shape-outline:hover, .c-page__content a.acidcode__btn--shape-outline:hover {
   color: #fff !important;
 }
